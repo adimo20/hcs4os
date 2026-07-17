@@ -98,9 +98,24 @@ class ClassificationSystem(ABC):
             raise ValueError(f"Code {code!r} hat no children. Exeption: {e}")
 
     @abstractmethod
+    def get_prefixes(
+        self,
+        code:str
+    )->list[str]:
+        ...
+
     def get_code_trace(
         self,
-        code: str
-    ) -> list[tuple]:
-        ...
+        code:str
+    ):
+        prefixes = self.get_prefixes(code=code)
+        trace = []
+        for prefix in prefixes:
+            try:
+                trace.append((prefix,self._lookup[prefix].description))
+            except (ValueError, KeyError):
+                # In case a certain code is not inside the classification system/or a trace cannot be identified, because of missing parent elements
+                # the codes that are not inside the system will be skipped silently without breaking the flow. 
+                continue
+        return trace
            
