@@ -10,7 +10,7 @@ mapping = {
         "data_path":make_path("sea2021.xml") # Softpath to the xml or ... file which contains the classification system
     },
     "WZ_2008":{
-        "classification_system":"PS",      
+        "classification_system":"WZ",      
         "loader_name":"KLASS_SERVER",
         "data_path":make_path("wz2008.xml")
     },

@@ -1,7 +1,2 @@
 from .registry import get_classification_system, register  
-from .systems import( 
-    ClassificationSystemSEA,
-    ClassificationSystemPS,
-    ClassificationSystemKldB,
-    ClassificationSystemNS
-)
+from .systems import ClassificationSystems 
