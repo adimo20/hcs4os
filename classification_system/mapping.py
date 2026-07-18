@@ -7,28 +7,39 @@ mapping = {
     "SEA_2021":{
         "classification_system":"SEA", # Decorater-ID within classification system, which implements the given logic
         "loader_name":"KLASS_SERVER", # Decorater-ID within dataloaders, which implements the given logic
-        "data_path":make_path("sea2021.xml") # Softpath to the xml or ... file which contains the classification system
+        "data_path":make_path("sea2021.xml"), # Softpath to the xml or ... file which contains the classification system
+        "metadata":{
+            "url":"https://klassifikationsserver.de/klassService/thyme/variant/sea_2021",
+        }
     },
     "WZ_2008":{
         "classification_system":"WZ",      
         "loader_name":"KLASS_SERVER",
-        "data_path":make_path("wz2008.xml")
+        "data_path":make_path("wz2008.xml"),
+        "metadata":{
+            "url":"https://klassifikationsserver.de/klassService/thyme/variant/wz2008"
+        }
     },
     "KLDB_2010":{
         "classification_system":"KLDB",      
         "loader_name":"KLASS_SERVER",
-        "data_path":make_path("kldb_2010.xml")
+        "data_path":make_path("kldb_2010.xml"),
+        "metadata":{
+            "url":"https://klassifikationsserver.de/klassService/thyme/variant/kldb2010"
+        }
     },
     "KLDB_2010_REPHRASED":{
         "classification_system":"KLDB",      
         "loader_name":"JSON",
-        "data_path":make_path("classification_system_KldB_2010.json")
+        "data_path":make_path("classification_system_KldB_2010.json"),
+        "metadata":{}
     }
     ,
     "SEA_2021_REPHRASED":{
         "classification_system":"SEA_NS",      
         "loader_name":"JSON",
-        "data_path":make_path("classification_system_SEA_2021.json")
+        "data_path":make_path("classification_system_SEA_2021.json"),
+        "metadata":{}
     }
 
 }
