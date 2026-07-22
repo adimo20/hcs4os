@@ -26,7 +26,21 @@ class ClassificationSystem(ABC):
                 code for code in self.codes 
                 if self._is_child(parent.code, code.code)
             ]
-            
+
+    @abstractmethod
+    def get_prefixes(
+        self,
+        code:str
+    )->list[str]:
+        ...
+        
+    
+    @abstractmethod
+    def get_root_categories(
+        self,        
+    )->list[dict]:
+        ...
+
     def _is_child(
         self,
         parent:str,
@@ -62,12 +76,17 @@ class ClassificationSystem(ABC):
             print(f"Code {code!r} hat no children.")
             raise ValueError(f"Code {code!r} hat no children. Exeption: {e}")
 
-    @abstractmethod
-    def get_prefixes(
-        self,
-        code:str
-    )->list[str]:
-        ...
+    def get_parent(
+        self, 
+        parent:str
+    ):
+        prefixes = self.get_prefixes(parent)
+        num_prefixes = len(prefixes)
+        if num_prefixes > 1:
+            return self.get_code(
+                code=prefixes[num_prefixes-2]
+            ).to_dict()
+        
 
     def get_code_trace(
         self,

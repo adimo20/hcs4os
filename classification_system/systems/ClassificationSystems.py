@@ -4,7 +4,12 @@ import re
 
 @register("KLDB")
 class ClassificationSystemKldB(ClassificationSystem):
-    
+
+    def get_root_categories(self) -> list[dict]:
+        return [
+            {"code":c.code, "description":c.description} for c in self.codes if len(c.code) == 1
+        ]
+
     def get_prefixes(self, code: str) -> list[str]:
         code = code.replace(" ", "")
         return [code[:i] for i in range(1,len(code)+1)]
@@ -13,11 +18,24 @@ class ClassificationSystemKldB(ClassificationSystem):
 @register("SEA_NS")
 class ClassificationSystemSEA_NS(ClassificationSystem):
 
+    def get_root_categories(self) -> list[dict]:
+        return [
+            {"code":c.code, "description":c.description} for c in self.codes if len(c.code) == 2
+        ]
+
+    
     def get_prefixes(self, code: str):
         return [code[:i] for i in range(2,len(code)+1)]
     
 @register("WZ")
 class ClassificationSystemWZ(ClassificationSystem):
+    
+    def get_root_categories(self) -> list[dict]:
+        """This is generelly not right because its A,B,C and so on but for the moment it should be fine"""
+        return [
+            {"code":c.code, "description":c.description} for c in self.codes if len(c.code) == 2
+        ]
+
 
     def get_prefixes(self, code: str) -> list[str]:
         prefixes = []
@@ -30,7 +48,12 @@ class ClassificationSystemWZ(ClassificationSystem):
 
 @register("SEA")
 class ClassificationSystemSEA(ClassificationSystem):
-
+    
+    def get_root_categories(self) -> list[dict]:
+        return [
+            {"code":c.code, "description":c.description} for c in self.codes if len(c.code) == 2
+        ]
+    
     def get_prefixes(self, code: str) -> list[str]:
         
         code = code.replace(" ", "")

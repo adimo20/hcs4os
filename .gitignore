@@ -5,3 +5,5 @@ test.py
 data/
 .venv/
 embedding_api/
+.env
+pyrightconfig.json
