@@ -43,7 +43,9 @@ def get_root_categories() -> list[dict]:
     annotations=hints,
     description=doc_strings["get_children"]
 )
-def get_children(parent_code: str) -> list[dict]:
+def get_children(
+    parent_code: str
+) -> list[dict]:
     
     children: list = classification.get_children(
         code=parent_code
@@ -59,7 +61,9 @@ def get_children(parent_code: str) -> list[dict]:
     annotations=hints, 
     description=doc_strings["get_parent"]
 )
-def get_parent(parent_code: str) -> dict|None:
+def get_parent(
+    parent_code: str
+) -> dict|None:
     
     parent = classification.get_parent(
         parent=parent_code
@@ -71,7 +75,9 @@ def get_parent(parent_code: str) -> dict|None:
     annotations=hints, 
     description=doc_strings["get_code_specification"]
 )
-def get_code_specification(list_of_codes: list[str]) -> list[dict]:
+def get_code_specification(
+    list_of_codes: list[str]
+) -> list[dict]:
     
     codes = [
         classification.get_code(
@@ -84,7 +90,7 @@ def get_code_specification(list_of_codes: list[str]) -> list[dict]:
 if __name__ == "__main__":
     
     transport = os.getenv("MCP_TRANSPORT_METHOD", "sse")
-    if transport not in ("stdio", "http", "sse", "streamable-http"):
+    if transport not in ("stdio", "http", "sse"):
         raise ValueError(f"Invalid transport: {transport}")
 
     mcp.run(
