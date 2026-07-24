@@ -2,7 +2,6 @@ from fastmcp import FastMCP
 from dotenv import load_dotenv
 from typing import Any
 import os
-import json
 
 from classification_system.registry import get_classification_system
 from tool_descriptions import doc_strings
@@ -32,12 +31,18 @@ mcp: FastMCP[Any] = FastMCP(
     instructions=doc_strings["server_instructions"]
 )
 
-@mcp.tool(annotations=hints, description=doc_strings["get_root_categories"])
+@mcp.tool(
+    annotations=hints, 
+    description=doc_strings["get_root_categories"]
+)
 def get_root_categories() -> list[dict]:
     
     return classification.get_root_categories()
 
-@mcp.tool(annotations=hints, description=doc_strings["get_children"])
+@mcp.tool(
+    annotations=hints,
+    description=doc_strings["get_children"]
+)
 def get_children(parent_code: str) -> list[dict]:
     
     children: list = classification.get_children(
@@ -50,7 +55,10 @@ def get_children(parent_code: str) -> list[dict]:
     
     return children_json
 
-@mcp.tool(annotations=hints, description=doc_strings["get_parent"])
+@mcp.tool(
+    annotations=hints, 
+    description=doc_strings["get_parent"]
+)
 def get_parent(parent_code: str) -> dict|None:
     
     parent = classification.get_parent(
@@ -59,7 +67,10 @@ def get_parent(parent_code: str) -> dict|None:
     return parent
 
 
-@mcp.tool(annotations=hints, description=doc_strings["get_code_specification"])
+@mcp.tool(
+    annotations=hints, 
+    description=doc_strings["get_code_specification"]
+)
 def get_code_specification(list_of_codes: list[str]) -> list[dict]:
     
     codes = [
