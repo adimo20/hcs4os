@@ -33,7 +33,7 @@ class ClassificationSystem(ABC):
         code:str
     )->list[str]:
         ...
-        
+    
     
     @abstractmethod
     def get_root_categories(
@@ -50,6 +50,25 @@ class ClassificationSystem(ABC):
         num_prefixes = len(potential_child_prefixes)
         if num_prefixes < 2: return False
         return parent == potential_child_prefixes[num_prefixes-2]        
+      
+    def add_code(
+        self, 
+        code:dict,
+        parent:str|None=None
+    ):
+        """
+        Use for adding custom codes into the classification system object. 
+        Paramters:
+            code:dict = needs to be in the form of a dictinary code
+            parent:str = just a marker for the child registry. Will be used as a key insode child registry
+        """
+        _code = Code.from_dict(code)
+        self._lookup[_code.code] = _code
+        if parent:
+            if parent in self._children_register.keys(): 
+                self._children_register[parent].append(_code)
+            else: 
+                self._children_register[parent] =[_code]
         
     
     def get_code(
