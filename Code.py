@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field, fields, asdict
-import re
 import json
 
 @dataclass
