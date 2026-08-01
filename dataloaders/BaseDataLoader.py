@@ -1,7 +1,7 @@
 # dataloaders/base.py
 from abc import ABC, abstractmethod
 from pathlib import Path
-from Code import Code
+from ..shared.Code import Code
 
 class ClassificationLoader(ABC):
     """Template: subclasses provide read_raw() + to_records(); base handles the rest."""
