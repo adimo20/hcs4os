@@ -11,6 +11,7 @@ dependencies = [
 
 [tool.setuptools.packages.find]
 where = ["."]
-include = ["classification_system*", "dataloaders*"]
+include = ["classification_system*", "dataloaders*", "shared*"]
 
-
+[tool.setuptools.package-data]
+"*" = ["*.json", "*.csv", "*.xml"]
