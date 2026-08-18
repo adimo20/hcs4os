@@ -1,0 +1,2216 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Claset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="13.03.2026 17:31:15 GMT+0100" reference="vul_2025" xsi:noNamespaceSchemaLocation="http://ec.europa.eu/eurostat/ramon/miscellaneous/documentation/data_models_and_xml_dtd/XML_schema_claset.xsd">
+    <Classification type="Classification" id="vul_2025">
+        <Label qualifier="Usual">
+            <LabelText language="DE">Verzeichnis der Güter und Leistungen für den Umweltschutz, Ausgabe 2025</LabelText>
+        </Label>
+        <Property name="Comment">
+            <PropertyQualifier name="PlainText" language="DE">
+                <PropertyText type="Content">Dateiinhalt: Gliederung mit Erläuterung
+Letzte Aktualisierung: 13.03.2026 17:31:15 (GMT+0100)
+Letzte Aktualisierung der Stichwörter: 13.03.2026 17:31:15 (GMT+0100)
+Weitere Informationen: klassifikationsserver.de
+Copyright:
+Eigentümer: G23 – Umweltökonomische Statistiken – Statistisches Bundesamt (Destatis)</PropertyText>
+            </PropertyQualifier>
+        </Property>
+        <Level id="1">
+            <Level id="2">
+                <Level id="3">
+                    <Level id="4"/>
+                </Level>
+            </Level>
+        </Level>
+        <Item idLevel="1" type="OfficialGrouping" id="1">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Abfallwirtschaft</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">Die Abfallwirtschaft umfasst die Vermeidung, Verwertung und Entsorgung von Abfällen und sonstigen Maßnahmen der Abfallwirtschaft im Sinne des Kreislaufwirtschaftsgesetzes (KrWG). Ausgenommen sind Entsorgungsdienstleistungen (Umsätze, die direkt mit der Abfallsammlung, -behandlung und / oder -beseitigung erzielt werden).</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">ohne Entsorgungsdienstleistungen (Umsätze, die direkt mit der Abfallsammlung, -behandlung und / oder -beseitigung erzielt werden)</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="11">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Prozessintegrierte Maßnahmen im Rahmen der Abfallwirtschaft</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="110">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Prozessintegrierte Maßnahmen im Rahmen der Abfallwirtschaft</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="1100">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Abfallvermeidung durch prozessintegrierte Maßnahmen</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Herstellung von Verfahren zur anlageninternen Kreislaufführung von Stoffen einschließlich Großkomponenten, Installation, Service und Planung)</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">ohne Entsorgungsdienstleistungen (Umsätze, die direkt mit der Abfallsammlung, -behandlung und / oder -beseitigung erzielt werden)</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="12">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Sammlung und Beförderung von Abfällen</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="120">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Sammlung und Beförderung von Abfällen</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="1210">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Sammlung von Abfällen</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Herstellung von Abfallbehältern, Containern, Silos, Müllsäcken, Kehr- und Kehrsaugmaschinen einschließlich Großkomponenten, Installation, Service und Planung)</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">ohne Entsorgungsdienstleistungen (Umsätze, die direkt mit der Abfallsammlung, -behandlung und / oder -beseitigung erzielt werden)</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="1220">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Beförderung von Abfällen</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Herstellung von Entsorgungsfahrzeugen, Abfallumladeanlagen, Abfallfördereinrichtungen einschließlich Großkomponenten, Installation, Service und Planung)</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">ohne Entsorgungsdienstleistungen (Umsätze, die direkt mit der Abfallsammlung, -behandlung und / oder -beseitigung erzielt werden)</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="13">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Behandlung und Entsorgung von Abfällen</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="131">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Thermische Behandlung</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="1314">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Thermische Abfallbehandlung</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Herstellung von Abfallverbrennungs-, Klärschlammverbrennungs-, Sonderabfallverbrennungs-, Abfallvergasungs- und Abfallpyrolyseanlagen sowie sonstiger Anlagen zur thermischen Behandlung von Abfällen, einschließlich Großkomponenten wie Verbrennungsroste, Installation, Service und Planung. Ohne Entsorgungsdienstleistungen. Feuerungsanlagen mit energetischer Verwertung von Abfällen sind unter Schlüssel 7222 zu melden)</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="CentralContent" language="DE">
+                    <PropertyText type="Content">Feuerungsanlagen mit energetischer Verwertung von Abfällen sind unter Schlüssel 7222 zu melden</PropertyText>
+                </PropertyQualifier>
+            </Property>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">ohne Entsorgungsdienstleistungen (Umsätze, die direkt mit der Abfallsammlung, -behandlung und / oder -beseitigung erzielt werden)</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="132">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Deponierung von Abfällen</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="1325">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Deponien</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Herstellung von Beseitigungsanlagen zur Ablagerung von Abfällen oberhalb der Erdoberfläche (oberirdische Deponien) oder unterhalb der Erdoberfläche (Unterlagedeponien) Einschließlich Deponiebaumaßnahmen, Deponieabdichtungssysteme, Deponiesickerbehandlung, Langzeitlager, Installation, Service und Planung. Ohne Entsorgungsdienstleistungen. Anlagen zur Deponiegasgewinnung sind unter Schlüssel 7225 zu melden)</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="CentralContent" language="DE">
+                    <PropertyText type="Content">Anlagen zur Deponiegasgewinnung sind unter Schlüssel 7225 zu melden</PropertyText>
+                </PropertyQualifier>
+            </Property>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">ohne Entsorgungsdienstleistungen (Umsätze, die direkt mit der Abfallsammlung, -behandlung und / oder -beseitigung erzielt werden)</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="133">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Sonstige Arten der Behandlung und Entsorgung von Abfällen</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="1332">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Chemisch-physikalische Abfallbehandlung</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Herstellung von Anlagen zur chemischen Behandlung von Abfällen wie Extraktions- oder Destillationsanlagen, Anlagen zur chemischen Aufbereitung von zyanidhaltigen Konzentraten, Nitriten, Nitraten, oder Säuren, wenn hierdurch eine Verwertung als Reststoff oder eine Entsorgung ermöglicht wird, sowie Anlagen , die zum Beispiel durch Verdampfen, Trocknen, Kalzinieren, Neutralisieren, Ausfällen etc, Abfälle zur weiteren Entsorgung behandeln. Einschließlich Großkomponenten, Chemikalien und Grundstoffen zur Abfallbehandlung, Installation, Service und Planung.)</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">ohne Entsorgungsdienstleistungen (Umsätze, die direkt mit der Abfallsammlung, -behandlung und / oder -beseitigung erzielt werden)</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="1333">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Biologische Abfallbehandlung</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Herstellung von Kompostierungs- und Vergärungsanlagen einschließlich Großkomponenten, Installation, Service und Planung. Anlagen zur Biogasgewinnung sind unter Schlüssel 7225 zu melden)</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="CentralContent" language="DE">
+                    <PropertyText type="Content">Anlagen zur Biogasgewinnung sind unter Schlüssel 7225 zu melden</PropertyText>
+                </PropertyQualifier>
+            </Property>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">ohne Entsorgungsdienstleistungen (Umsätze, die direkt mit der Abfallsammlung, -behandlung und / oder -beseitigung erzielt werden)</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="1334">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Mechanisch-biologische Abfallbehandlung</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Herstellung von Anlagen zur Aufbereitung, Umwandlung oder Stabilisierung insbesondere von gemischten Siedlungsabfällen und ähnlichen Abfällen durch mechanische oder andere physikalische Verfahren wie Zerkleinern, Sortieren gegebenenfalls in Kombination mit biologischen Verfahren wie Rotte oder Vergärung einschließlich Großkomponenten, Installation, Service und Planung)</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="CentralContent" language="DE">
+                    <PropertyText type="Content">Anlagen zur Biogasgewinnung sind unter Schlüssel 7225 zu melden</PropertyText>
+                </PropertyQualifier>
+            </Property>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">ohne Entsorgungsdienstleistungen (Umsätze, die direkt mit der Abfallsammlung, -behandlung und / oder -beseitigung erzielt werden)</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="1336">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Sortieren von Abfällen</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Herstellung von Sortieranlagen, in denen gemischt erfasste Abfälle in Fraktionen, insbesondere zur Rückgewinnung verwendeter rohstoffe, getrennt werden einschließlich Großkomponenten, Installation, Service und Planung)</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">ohne Entsorgungsdienstleistungen (Umsätze, die direkt mit der Abfallsammlung, -behandlung und / oder -beseitigung erzielt werden)</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="1337">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Zerschlagen und Zerschneiden von Autowracks und anderen Abfällen</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Herstellung von Schredderanlagen und Schrottscheren zum Zerschlagen beziehungsweise Zerschneiden von Autowracks und anderen Abfällen aus Metall, Kunststoff, Holz und sonstigen Materialien mit dem Ziel, den entsprechenden Wertstoff als Rohstoff zurückzugewinnen einschließlich Großkomponenten, Installation, Service und Planung)</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">ohne Entsorgungsdienstleistungen (Umsätze, die direkt mit der Abfallsammlung, -behandlung und / oder -beseitigung erzielt werden)</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="1338">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Demontage von Altfahrzeugen</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Herstellung von Anlagen, in denen Altfahrzeuge der Klasse M1 zur Personenbeförderung und/oder der Klasse N1 zur Güterbeförderung zum Zweck der Nachfolgenden Verwertung behandelt werden, einschließlich Großkomponenten, Installation, Service und Planung)</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">ohne Entsorgungsdienstleistungen (Umsätze, die direkt mit der Abfallsammlung, -behandlung und / oder -beseitigung erzielt werden)</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="1340">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Zerlegen von Elektro- und Elektronikaltgeräten</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Herstellung von Anlagen zur teilweisen oder vollständigen Demontage von Elektro- und Elektroaltgeräten, einschließlich Großkomponenten, Installation, Service und Planung)</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">ohne Entsorgungsdienstleistungen (Umsätze, die direkt mit der Abfallsammlung, -behandlung und / oder -beseitigung erzielt werden)</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="1341">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Stoffliche Verwertung von Kunststoffen</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Herstellung von Kunststoffverwertungsanlagen, einschließlich Großkomponenten, Installation, Service und Planung)</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">ohne Entsorgungsdienstleistungen (Umsätze, die direkt mit der Abfallsammlung, -behandlung und / oder -beseitigung erzielt werden)</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="1399">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Sonstige Behandlung von Abfällen</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Herstellung von Anlagen zur Aufbereitung von Bauschutt zur stofflichen Verwertung von Altöl, Kabelaufbereitungsanlagen, Anlagen die sich den Schlüsseln 1332-1341 nicht zuordnen lassen, einschließlich Großkomponenten, Installation, service und Planung. Anlagen zur Bodenbehandlung sind unter den Schlüsseln 6211 oder 6212 zu melden)</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="CentralContent" language="DE">
+                    <PropertyText type="Content">Anlagen zur Bodenbehandlung sind unter den Schlüsseln 6211 oder 6212 zu melden</PropertyText>
+                </PropertyQualifier>
+            </Property>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">ohne Entsorgungsdienstleistungen (Umsätze, die direkt mit der Abfallsammlung, -behandlung und / oder -beseitigung erzielt werden)</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="14">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Messung, Kontroll- und Analysesysteme im Rahmen der Abfallwirtschaft</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="140">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Messung, Kontroll- und Analysesysteme im Rahmen der Abfallwirtschaft</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="1400">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Messung, Kontroll- und Analysesysteme im Rahmen der Abfallwirtschaft</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Herstellung von Steuer- und Regeltechnik, Untersuchung von Abfällen, Erstellung von Abfallkatastern, Umweltverträglichkeitsprüfungen, einschließlich Großkomponenten, Installation, Service und Planung)</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">ohne Entsorgungsdienstleistungen (Umsätze, die direkt mit der Abfallsammlung, -behandlung und / oder -beseitigung erzielt werden)</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="18">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Forschungs- und Entwicklungsaktivitäten im Rahmen der Abfallwirtschaft</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="180">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Forschungs- und Entwicklungsaktivitäten im Rahmen der Abfallwirtschaft</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="1800">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Forschungs- und Entwicklungsaktivitäten im Rahmen der Abfallwirtschaft</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Forschungsaktivitäten zur Identifizierung von Verschmutzungsquellen, Forschung nach Recyclingtechniken, Forschungstätigkeiten zur Kreislaufwirtschaft, Weiterentwicklung von technischen Systemen und Verfahren zur Vermeidung, Verwertung und Beseitigung von Abfällen)</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">ohne Entsorgungsdienstleistungen (Umsätze, die direkt mit der Abfallsammlung, -behandlung und / oder -beseitigung erzielt werden)</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="19">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Sonstige Aktivitäten im Rahmen der Abfallwirtschaft</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="190">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Sonstige Aktivitäten im Rahmen der Abfallwirtschaft</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="1900">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Sonstige Aktivitäten im Rahmen der Abfallwirtschaft</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(andere Leistungen, die nicht im Zusammenhang mit den oben genannten Schlüsseln stehen zum Beispiel Konzepte, Planungen, Beratungen, Software, Projektbetreuungen, Reparaturen, Instandhaltungen, Wartungen; ohne Entsorgungsdienstleistungen)</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="1" type="OfficialGrouping" id="2">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Abwasserwirtschaft</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">Die Abwasserwirtschaft umfasst Maßnahmen, die zur Verminderung der Abwassermenge beziehungsweise Abwasserfracht (Verringerung oder Beseitigung von Feststoffen und gelösten Stoffen sowie zur Verringerung der Wärmemenge) bestimmt sind. Einzubeziehen sind auch Technologien für die Wasserkreislaufführung. Ausgenommen sind Entsorgungsdienstleistungen (Umsätze, die direkt mit der Abwassersammlung, -behandlung und/oder -beseitigung erzielt werden).</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">ohne Entsorgungsdienstleistungen (Umsätze, die direkt mit der Abwassersammlung, -behandlung und / oder -beseitigung erzielt werden)</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="21">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Prozessintegrierte Maßnahmen im Rahmen der Abwasserwirtschaft</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="210">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Prozessintegrierte Maßnahmen im Rahmen der Abwasserwirtschaft</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="2100">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Vermeidung von Abwasserfracht durch prozessintegrierte Maßnahmen</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Herstellung von Anlagen zur Wasserkreislaufführung beziehungsweise zur Rückführung von Prozesswasser einschließlich Großkomponenten, Installation, Service und Planung)</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">ohne Entsorgungsdienstleistungen (Umsätze, die direkt mit der Abwassersammlung, -behandlung und/oder -beseitigung erzielt werden)</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="22">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Kanalisationssysteme</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="220">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Kanalisationssysteme</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="2200">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Kanalisationssysteme</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Herstellung von Abwasserrohren und -sammlern, Abwasserpumpen, Hebeanlagen, Regenentlastungsanlagen, Ökopflaster und Gittersteinen, Kanalbau, Maßnahmen zur Kanalsanierung, Reparatur und Wartung von Pumpwerken, einschließlich Großkomponenten, Installation, Service und Planung)</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">ohne Entsorgungsdienstleistungen (Umsätze, die direkt mit der Abwassersammlung, -behandlung und/oder -beseitigung erzielt werden)</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="23">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Abwasserbehandlung</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="230">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Abwasserbehandlung</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="2310">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Mechanische Abwasserbehandlung</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Herstellung von Abscheidern, Filtern, Zyklonen, Rechen, Sieben, Sandfängern, Zentrifugen, einschließlich Großkomponenten, Installation, Service und Planung)</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">ohne Entsorgungsdienstleistungen (Umsätze, die direkt mit der Abwassersammlung, -behandlung und/oder -beseitigung erzielt werden)</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="2320">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Biologische Abwasserbehandlung</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Herstellung von aeroben und anaeroben Abwasserbehandlungsanlagen, Anlagen zur Nitrifikation, Denitrifikation, biologischen Phosphoreliminierung einschließlich Großkomponenten wie Biofilter, Installation, Service und Planung)</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">ohne Entsorgungsdienstleistungen (Umsätze, die direkt mit der Abwassersammlung, -behandlung und/oder -beseitigung erzielt werden)</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="2330">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Chemische Abwasserbehandlung</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Herstellung von Anlagen zur chemischen Phosphoreliminierung, Dekontaminations-, Desinfektions-, Entkeimungs‑, Entchlorungsanlagen einschließlich Großkomponenten, Chemikalien zur Fällung und Flockung, Installation, Service und Planung)</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">ohne Entsorgungsdienstleistungen (Umsätze, die direkt mit der Abwassersammlung, -behandlung und/oder -beseitigung erzielt werden)</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="2340">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Membrantrennverfahren im Zusammenhang mit der Abwasserwirtschaft</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Herstellung von Anlagen zur Mikro-, Nano-, Ultrafiltration, Umkehrosmose einschließlich Großkomponenten, Installation, Service und Planung)</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">ohne Entsorgungsdienstleistungen (Umsätze, die direkt mit der Abwassersammlung, -behandlung und/oder -beseitigung erzielt werden)</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="2399">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Sonstige Umweltschutzleistungen (nicht zuordenbar 2310-2340)</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(im Zusammenhang mit der Abwasserbehandlung, die sich den Schlüsseln 2310–2340 nicht zuordnen lassen, zum Beispiel Adsorption, Desodorierung, Emulsionsspaltung, Entgasung, Flotation, Ionenaustausch; ohne Entsorgungsdienstleistungen)</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">ohne Entsorgungsdienstleistungen (Umsätze, die direkt mit der Abwassersammlung, -behandlung und / oder -beseitigung erzielt werden)</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="24">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Klärschlammbehandlung</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="240">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Klärschlammbehandlung</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="2400">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Klärschlammbehandlung und -entsorgung</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Herstellung von Anlagen zur Schlammstabilisierung, -entseuchung, -entwässerung, -enttrocknung, Klärschlammfaulbehälter mit CO Vergärung, einschließlich Großkomponenten wie Rühr- und Umwalzwerke, Schlammpumpen und -pressen, Dekanter, Separatoren, Fahrzeuge zum Klärschlammtransport, Installation, Service und Planung)</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">ohne Entsorgungsdienstleistungen (Umsätze, die direkt mit der Abwassersammlung, -behandlung und/oder -beseitigung erzielt werden)</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="25">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Behandlung von Kühlwasser</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="250">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Behandlung von Kühlwasser</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="2500">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Behandlung von Kühlwasser</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Herstellung von Kühltürmen, Kühlkreisläufen, Anlagen zur Luftkühlung von Kühlwasser einschließlich Großkomponenten, Installation, Service und Planung)</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">ohne Entsorgungsdienstleistungen (Umsätze, die direkt mit der Abwassersammlung, -behandlung und/oder -beseitigung erzielt werden)</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="26">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Messung, Kontroll- und Analysesysteme im Rahmen der Abwasserwirtschaft</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="260">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Messung, Kontroll- und Analysesysteme im Rahmen der Abwasserwirtschaft</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="2600">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Messung, Kontroll- und Analysesysteme im Rahmen der Abwasserwirtschaft</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Herstellung von Geräten zur Messung der Schadstoffkonzentration im Abwasser, Strömungswächtern, Abwassertestsätzen, einschließlich Großkomponenten wie Dosiereinrichtungen für Abwasserbehandlungsanlagen, Kanaluntersuchungen, Analyse von Abwasser, Installation, Service und Planung)</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">ohne Entsorgungsdienstleistungen (Umsätze, die direkt mit der Abwassersammlung, -behandlung und/oder -beseitigung erzielt werden)</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="28">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Forschungs- und Entwicklungsaktivitäten im Rahmen der Abwasserwirtschaft</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="280">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Forschungs- und Entwicklungsaktivitäten im Rahmen der Abwasserwirtschaft</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="2800">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Forschungs- und Entwicklungsaktivitäten im Rahmen der Abwasserwirtschaft</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Forschungsaktivitäten zur Identifizierung von Verschmutzungsquellen, Forschung nach Materialien für Abwassermembranen, Weiterentwicklung von technischen Systemen und Verfahren zur Verminderung der Abwassermenge beziehungsweise Abwasserfracht, Entwicklung neuer Abwasserinfrastrukturen, Forschungstätigkeiten zur Klärschlammbehandlung)</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">ohne Entsorgungsdienstleistungen (Umsätze, die direkt mit der Abwassersammlung, -behandlung und/oder -beseitigung erzielt werden)</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="29">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Sonstige Aktivitäten im Rahmen der Abwasserwirtschaft</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="290">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Sonstige Aktivitäten im Rahmen der Abwasserwirtschaft</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="2900">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Sonstige Aktivitäten im Rahmen der Abwasserwirtschaft</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(andere Leistungen, die nicht im Zusammenhang mit den oben genannten Schlüsseln stehen zum Beispiel Konzepte, Planungen, Beratungen, Software, Projektbetreuungen, Reparaturen, Instandhaltungen, Wartungen, ohne Entsorgungsdienstleistungen)</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">ohne Entsorgungsdienstleistungen (Umsätze, die direkt mit der Abwassersammlung, -behandlung und / oder -beseitigung erzielt werden)</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="1" type="OfficialGrouping" id="3">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Lärmbekämpfung</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">Der Lärmbekämpfung dienen Maßnahmen, die Geräusche verringern oder vermeiden sowie deren Ausbreitung verhindern. Einzubeziehen sind auch Maßnahmen zum Schutz vor Erschütterungen. Ausgenommen ist der Lärm- und Erschütterungsschutz, der dem Arbeitsschutz dient.</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="31">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Vermeidung von Lärm und Erschütterungen durch prozessintegrierte Maßnahmen an der Quelle</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">ohne Lärm- und Erschütterungsschutz, der dem Arbeitsschutz dient.</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="311">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Straßenverkehr</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="3111">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Schalldämmung bei Straßenfahrzeugen</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Herstellung von Auspufftöpfen, Motorenkapselungen, schallgedämmten Bremsen, leiseren Reifen, einschließlich Großkomponenten, Installation, Service und Planung)</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">ohne Lärm- und Erschütterungsschutz, der dem Arbeitsschutz dient.</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="3112">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Geräuscharme Fahrbahnbeläge</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Bau von schalltechnisch optimierten Fahrbahnoberflächen aus Asphaltbeton oder „Split-Mastix-Asphalt“, Einbau von Dehnfugen, Spurrillenfüller, einschließlich Großkomponenten, Installation, Service und Planung)</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">ohne Lärm- und Erschütterungsschutz, der dem Arbeitsschutz dient.</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="312">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Schienenverkehr</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="3121">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Schalldämmung bei Schienenfahrzeugen</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Herstellung von lärmarmen Bremsgestellen, geräuscharmen Drehgestellen, schalloptimierten Rädern, Radschallabsorbern, einschließlich Großkomponenten, Installation, Service und Planung)</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">ohne Lärm- und Erschütterungsschutz, der dem Arbeitsschutz dient.</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="3122">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Geräuscharme Schienentrassen</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Herstellung von schallabsorbierenden Bodenplatten für Gleise, einschließlich Großkomponenten, Installation, Service und Planung)</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">ohne Lärm- und Erschütterungsschutz, der dem Arbeitsschutz dient.</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="313">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Luftverkehr</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="3131">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Flugzeug- und Triebwerkstechnik</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Herstellung von schalloptimierten Flügelkomponenten und Fahrwerken, Installation, Service und Planung)</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">ohne Lärm- und Erschütterungsschutz, der dem Arbeitsschutz dient.</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="314">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Industrielärm und sonstiger Lärm</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="3141">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Prozessintegrierte Maßnahmen in der Industrie</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Herstellung von lärm- und schwingungsarmen Maschinen und Werkzeugen, einschließlich Großkomponenten, Installation, Service und Planung)</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">ohne Lärm- und Erschütterungsschutz, der dem Arbeitsschutz dient.</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="3149">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Sonstige Umweltschutzleistungen (nicht zuordenbar 3141)</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(prozessintegrierte Maßnahmen zur Vermeidung von Lärm und Erschütterungen, die sich dem Schlüssel 3141 nicht zuordnen lassen, zum Beispiel Bau von speziellen Lärmschutzvorkehrungen bei der Errichtung und Sanierung von Gebäuden)</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">ohne Lärm- und Erschütterungsschutz, der dem Arbeitsschutz dient.</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="32">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Bau von Lärm- und Erschütterungsschutzanlagen</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="321">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Straße und Autobahnen</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="3211">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Lärm- und Erschütterungsschutzanlagen an Straßen und Autobahnen</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Herstellung von Lärmschutzwänden aus Beton, Aluminium, Holz, Glas und dergleichen, Bau von Schallschutzmaßnahmen wie Wälle, Tröge, Abdeckungen, einschließlich Großkomponenten, Installation, Service und Planung)</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">ohne Lärm- und Erschütterungsschutz, der dem Arbeitsschutz dient.</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="322">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Schienentrassen</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="3221">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Lärm- und Erschütterungsschutzanlagen an Schienentrassen</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Herstellung von Lärmschutzsystemen, -anlagen an Bahnen und Schienenwegen, einschließlich Großkomponenten, Installation, Service und Planung)</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">ohne Lärm- und Erschütterungsschutz, der dem Arbeitsschutz dient.</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="323">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Flugverkehr</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="3231">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Lärmschutzeinrichtungen an Flughäfen</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Herstellung von Lärmschutzwällen und -wänden an Flughäfen, einschließlich Großkomponenten, Installation, Service und Planung)</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">ohne Lärm- und Erschütterungsschutz, der dem Arbeitsschutz dient.</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="324">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Industrielärm und sonstiger Lärm im Zusammenhang mit Bau von Lärm- und Erschütterungsschutzanlagen</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="3241">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Luftschalldämmung durch Abdeckung und Kapselung der Lärmquelle</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Herstellung von Schallschutzeinhausungen, -kapseln, -hauben, -containern, einschließlich Großkomponenten, Installation, Service und Planung, ohne Maßnahmen, die dem Arbeitsschutz dienen)</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">ohne Lärm- und Erschütterungsschutz, der dem Arbeitsschutz dient.</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="3242">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Luftschalldämmung in Kanälen und Rohrleitungen</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Herstellung von Absorptions- und Rohrschalldämpfern, Rohrisolierungen, einschließlich Großkomponenten, Installation, Service und Planung)</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">ohne Lärm- und Erschütterungsschutz, der dem Arbeitsschutz dient.</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="3243">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Körperschallschwingungsisolierung von Lärmquellen</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Herstellung von Materialien zur Körperschalldämmung und -dämpfung wie Gummi-Metall-Verbindungen, Bitumenschwerfolien, Elastoelementen, Avibratoren, einschließlich Großkomponenten, Installation, Service und Planung, ohne Maßnahmen, die dem Arbeitsschutz dienen)</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">ohne Lärm- und Erschütterungsschutz, der dem Arbeitsschutz dient.</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="3244">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Raumakustische Maßnahmen zur Immisionsvermeidung</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Herstellung von absorbierenden Materialien wie Schaumstoff für Wände und Decken, Trittschalldämmungen von Böden, Schallschirmen, Akustiktrennwänden, einschließlich Großkomponenten, Installation, Service und Planung, ohne Maßnahmen, die dem Arbeitsschutz dienen)</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">ohne Lärm- und Erschütterungsschutz, der dem Arbeitsschutz dient.</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="3245">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Bauliche Schallschutzmaßnahmen an Gebäuden</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel. Herstellung von Dämmungen für Fassaden, Außenwänden, Dächern aus Materialien wie Schaumstoff und Mineralwolle, Lärmschutztüren, Schallschutzfenstern, einschließlich Großkomponenten, Installation, Service und Planung)</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">ohne Lärm- und Erschütterungsschutz, der dem Arbeitsschutz dient.</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="3249">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Sonstige Umweltschutzleistungen (nicht zuordenbar 3241-3245)</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(Maßnahmen (ohne prozessintegrierte) gegen Industrie- und sonstigen Lärm, die sich den Schlüsseln 3241–3245 nicht zuordnen lassen, zum Beispiel Baumaßnahmen zum Schutz vor Nachbarschaftslärm, Lärmschutzmaßnahmen in öffentlichen Einrichtungen wie Schwimmbädern oder Sportanlagen)</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">ohne Lärm- und Erschütterungsschutz, der dem Arbeitsschutz dient.</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="33">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Messung, Kontroll- und Analysesysteme im Rahmen der Lärmbekämpfung</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="330">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Messung, Kontroll- und Analysesysteme im Rahmen der Lärmbekämpfung</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="3300">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Messung, Kontroll- und Analysesysteme im Rahmen der Lärmbekämpfung</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Herstellung von Schallmessgeräten, Frequenzanalysen, Schalldruck- und Erschütterungsmessungen, Lärmschutzgutachten, einschließlich Großkomponenten, Installation, Service und Planung)</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">ohne Lärm- und Erschütterungsschutz, der dem Arbeitsschutz dient.</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="38">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Forschungs- und Entwicklungsaktivitäten im Rahmen der Lärmbekämpfung</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="380">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Forschungs- und Entwicklungsaktivitäten im Rahmen der Lärmbekämpfung</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="3800">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Forschungs- und Entwicklungsaktivitäten im Rahmen der Lärmbekämpfung</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Forschungsaktivitäten zur Identifikation von Lärmquellen, Forschung nach schallgedämmten Technologien im Zusammenhang mit Straßen-, Schienen-, Luftverkehr, Industrie- und sonstigen Lärm, Entwicklung von lärmreduzierenden Technologien)</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">ohne Lärm- und Erschütterungsschutz, der dem Arbeitsschutz dient.</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="39">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Sonstige Aktivitäten im Rahmen der Lärmbekämpfung</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="390">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Sonstige Aktivitäten im Rahmen der Lärmbekämpfung</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="3900">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Sonstige Aktivitäten im Rahmen der Lärmbekämpfung</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(andere Leistungen, die nicht im Zusammenhang mit den oben genannten Schlüsseln stehen, ohne dem Arbeitsschutz dienende Maßnahmen zum Beispiel Konzepte, Planungen, Beratungen, Software, Projektbetreuungen, Reparaturen, Instandhaltungen, Wartungen)</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">ohne Lärm- und Erschütterungsschutz, der dem Arbeitsschutz dient.</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="1" type="OfficialGrouping" id="4">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Luftreinhaltung</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">Der Luftreinhaltung dienen Maßnahmen und Aktivitäten zur Beseitigung, Verringerung oder Vermeidung von luftfremden Stoffen (Rauch, Ruß, Staub, Gase, Aerosole, Dämpfe oder Geruchsstoffe) in Abgas und Abluft. Ausgenommen sind Maßnahmen, die dem Arbeitsschutz dienen.</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">ohne Maßnahmen, die dem Arbeitsschutz dienen</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="41">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Prozessintegrierte Maßnahmen im Rahmen der Luftreinhaltung</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="410">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Prozessintegrierte Maßnahmen im Rahmen der Luftreinhaltung</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="4100">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Vermeidung der Luftverschmutzung (ohne Treibhausgase) durch prozessintegrierte Maßnahmen</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Herstellung von Systemen zur Rückführung von Prozessgasen, einschließlich Großkomponenten, Installation, Service und Planung)</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">ohne Maßnahmen, die dem Arbeitsschutz dienen</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="42">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Behandlung von Abgasen und Abluft</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="421">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Abgas- und Abluftbehandlung für partikelförmige feste und flüssige Stoffe</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="4211">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Trockenverfahren</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Herstellung von Gewebefiltern, Abscheidern, Zyklonen, Entstaubern, Absauganlagen, einschließlich Großkomponenten, Installation, Service und Planung)</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">ohne Maßnahmen, die dem Arbeitsschutz dienen</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="4212">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Nassverfahren</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Herstellung von Waschtürmen, Strahl-, Wirbel-, Rotations-, Venturi-Wäschern zur Behandlung von partikelförmigen Stoffen, einschließlich Großkomponenten, Installation, Service und Planung)</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">ohne Maßnahmen, die dem Arbeitsschutz dienen</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="4219">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Sonstige Umweltschutzleistungen (nicht zuordenbar 4211 und 4212)</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(im Zusammenhang mit der Abgas- und Abluftbehandlung für partikelförmige feste und flüssige Stoffe, die sich den Schlüsseln 4211 und 4212 nicht zuordnen lassen)</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">ohne Maßnahmen, die dem Arbeitsschutz dienen</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="422">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Abgas- und Abluftbehandlung für gas- und dampfförmige Stoffe</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="4221">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Absorption / Gaswäsche</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Herstellung von Absorptionsanlagen wie Faserbett-, Prallplattenwäschern, Sprühtürmen und Absorbern zur Gaswäsche, einschließlich Großkomponenten, Installation, Service und Planung)</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">ohne Maßnahmen, die dem Arbeitsschutz dienen</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="4222">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Adsorption</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Herstellung von Adsorptionsanlagen wie Apparate zur Fest- und kontinuierlichen Wanderbettadsorption, Wirbelschicht-, Rotations- und Flugstromadsorbern, Adsorptionsmitteln wie Aktivkohle, Silicagel, einschließlich Großkomponenten, Installation, Service und Planung)</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">ohne Maßnahmen, die dem Arbeitsschutz dienen</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="4223">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Kondensation</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Herstellung von Kondensationsanlagen einschließlich Großkomponenten wie Kondensatoren, Installation, Service und Planung)</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">ohne Maßnahmen, die dem Arbeitsschutz dienen</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="4224">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Katalytische Abgasreinigung</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Herstellung von Katalysereaktoren, selektiven und nicht selektiven Systemen wie Dieselpartikelfilter, Oxydations-Katalysator, Drei-Wege-Katalysator, einschließlich Großkomponenten, Installation, Service und Planung)</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">ohne Maßnahmen, die dem Arbeitsschutz dienen</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="4225">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Biologische Abgasreinigung</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Herstellung von Biowäschern, Bio(-trickling)filtern, Systemen mit Mikroorganismen, einschließlich Großkomponenten, Installation, Service und Planung)</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">ohne Maßnahmen, die dem Arbeitsschutz dienen</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="4226">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Membranverfahren im Zusammenhang mit der Luftreinhaltung</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Herstellung von Membranen aus Polyethylenglycol, Polyamid zur Abscheidung von gas- und dampfförmigen Stoffen, einschließlich Großkomponenten, Installation, Service und Planung)</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">ohne Maßnahmen, die dem Arbeitsschutz dienen</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="4227">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Verbrennung</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Herstellung von Systemen zur thermischen, regenerativen oder katalytischen Nachverbrennung von gas- und dampfförmigen Stoffen wie Fackelanlagen, einschließlich Großkomponenten, Installation, Service und Planung)</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">ohne Maßnahmen, die dem Arbeitsschutz dienen</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="4229">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Sonstige Umweltschutzleistungen (nicht zuordenbar 4221-4227)</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(im Zusammenhang mit der Abgas- und Abluftbehandlung für gas- und dampfförmige Stoffe, die sich den Schlüsseln 4221‑4227 nicht zuordnen lassen, ohne reine Abgasableitung)</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">ohne Maßnahmen, die dem Arbeitsschutz dienen</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="43">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Messung, Kontroll- und Analysesysteme für Abgas und Abluft</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="430">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Messung, Kontroll- und Analysesysteme für Abgas und Abluft</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="4300">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Messung, Kontroll- und Analysesysteme für Abgas und Abluft</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Herstellung von Dosiereinrichtungen für die Abgasreinigung, Rauch- und Aerosolmessgeräten, Abgasmessung ausschließlich im industriellen Sektor, einschließlich Großkomponenten, Installation, Service und Planung)</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">ohne Maßnahmen, die dem Arbeitsschutz dienen</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="45">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Elektromobilität</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="450">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Elektromobilität</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="4500">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Elektromobilität</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(Herstellung von Antriebs-, Steuerungs- und Speichertechnik für Elektro-, Hybrid- oder Brennstoffzellenfahrzeugen, beschränkt auf Personenkraftwagen, Lastkraftwagen, Busse sowie Komponenten in Zusammenhang mit der Elektromobilität, zum Beispiel Herstellung und Installation von Ladestationen)</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">keine kompletten Fahrzeuge</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="48">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Forschungs- und Entwicklungsaktivitäten im Rahmen der Luftreinhaltung</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="480">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Forschungs- und Entwicklungsaktivitäten im Rahmen der Luftreinhaltung</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="4800">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Forschungs- und Entwicklungsaktivitäten im Rahmen der Luftreinhaltung</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Forschung nach neuen Filtermaterialien, Weiterentwicklung von technischen Systemen und Verfahren zur Beseitigung, Verringerung oder Vermeidung von luftfremden Stoffen in Abgas und Abluft, Entwicklungsaktivitäten im Zusammenhang mit Dach- oder Fassadenbegrünung, Forschungsaktivitäten im Bereich Elektromobilität)</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">ohne Maßnahmen, die dem Arbeitsschutz dienen</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="49">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Sonstige Aktivitäten im Rahmen der Luftreinhaltung</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="490">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Sonstige Aktivitäten im Rahmen der Luftreinhaltung</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="4900">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Sonstige Aktivitäten im Rahmen der Luftreinhaltung</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(andere Leistungen, die nicht im Zusammenhang mit den oben genannten Schlüsseln stehen, ohne dem Arbeitsschutz dienende Maßnahmen zum Beispiel Konzepte, Planungen, Beratungen, Software, Projektbetreuungen, Reparaturen, Instandhaltungen, Wartungen)</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">ohne Maßnahmen, die dem Arbeitsschutz dienen</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="1" type="OfficialGrouping" id="5">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Arten- und Landschaftsschutz</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">Der Arten- und Landschaftsschutz umfasst Maßnahmen und Aktivitäten, die auf den Schutz und die Wiederansiedlung von Tier- und Pflanzenarten, den Schutz und die Wiederherstellung von Ökosystemen und Lebensräumen sowie den Schutz und die Wiederherstellung von natürlichen und semi-natürlichen Landschaften abzielen.</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="51">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Schutz u. Wiederansiedlung v. Tier- u. Pflanzenarten sowie Schutz u. Wiederherstellung v. Lebensräumen</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="510">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Schutz u. Wiederansiedlung v. Tier- u. Pflanzenarten sowie Schutz u. Wiederherstellung v. Lebensräumen</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="5100">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Schutz u. Wiederansiedlung v. Tier- u. Pflanzenarten sowie Schutz u. Wiederherstellung v. Lebensräumen</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Bau von Wildwechseltunneln, Amphibienschutzsystemen, Vogelnistplätzen, Baumschutz, einschließlich Großkomponenten, Installation, Service und Planung)</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="52">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Schutz von natürlichen und semi-natürlichen Landschaften und Wiederansiedlung</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="521">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Rekultivierung</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="5210">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Rekultivierung</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel von Deponien, Halden)</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="522">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Renaturierung</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="5220">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Renaturierung</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel von Flussufern, Mooren)</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="523">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Sonstige Aktivitäten und Maßnahmen zum Schutz von natürlicher und semi-natürlicher Landschaft</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="5230">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Sonstige Aktivitäten und Maßnahmen zum Schutz von natürlicher und semi-natürlicher Landschaft</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel unterirdische Verlegung von Stromkabeln, Erhalt von Landschaften, die durch überkommene landwirtschaftliche Nutzungen geprägt, jedoch durch die derzeitigen wirtschaftlichen Verhältnisse bedroht sind)</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="53">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Messung, Kontroll- und Analysesysteme im Rahmen des Arten- und Landschaftsschutzes</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="530">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Messung, Kontroll- und Analysesysteme im Rahmen des Arten- und Landschaftsschutzes</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="5300">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Messung, Kontroll- und Analysesysteme im Rahmen des Arten- und Landschaftsschutzes</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Flora-, Faunaanalyse)</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="58">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Forschungs- und Entwicklungsaktivitäten im Rahmen des Arten- und Landschaftsschutzes</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="580">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Forschungs- und Entwicklungsaktivitäten im Rahmen des Arten- und Landschaftsschutzes</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="5800">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Forschungs- und Entwicklungsaktivitäten im Rahmen des Arten- und Landschaftsschutzes</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Entwicklung von Schutzgebieten, Biodiversitätsforschung)</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="59">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Sonstige Aktivitäten im Rahmen des Arten- und Landschaftsschutzes</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="590">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Sonstige Aktivitäten im Rahmen des Arten- und Landschaftsschutzes</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="5900">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Sonstige Aktivitäten im Rahmen des Arten- und Landschaftsschutzes</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(andere Leistungen, die nicht im Zusammenhang mit den oben genannten Schlüsseln stehen zum Beispiel Konzepte, Planungen, Beratungen, Software, Projektbetreuungen, Reparaturen, Instandhaltungen, Wartungen)</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="1" type="OfficialGrouping" id="6">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Schutz und Sanierung von Boden, Grund- und Oberflächenwasser</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">Der Schutz und die Sanierung von Boden, Grund- und Oberflächenwasser umfassen Maßnahmen und Aktivitäten, welche darauf abzielen, das Eindringen von Schadstoffen zu verhindern, Böden und Gewässer zu reinigen und den Boden vor Erosion und anderweitiger physischer Degradation sowie vor Versalzung zu schützen. Hierzu zählt auch die Überwachung und Kontrolle der Boden- und Grundwasserverschmutzung. Ausgenommen sind Entsorgungsdienstleistungen.</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">ohne Entsorgungsdienstleistungen</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="61">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Schutz gegen das Eindringen von Schadstoffen</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="611">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Sicherungsverfahren zum Schutz des Bodens</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="6111">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Bautechnische Einschließungsverfahren</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Herstellung von Oberflächenabdichtungen aus Beton, geosynthetischen Dichtungsbahnen, Kapillarsperren, Spund- und Schlitzwänden aus Stahl, einschließlich Großkomponenten, Installation, Service und Planung)</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">ohne Entsorgungsdienstleistungen</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="6112">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Pneumatische Verfahren</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Herstellung von Bodenluft-, Gasdränagen, einschließlich Großkomponenten, Installation, Service und Planung)</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">ohne Entsorgungsdienstleistungen</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="6119">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Sonstige Umweltschutzleistungen (nicht zuordenbar 6111 und 6112)</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(im Zusammenhang mit dem Schutz des Bodens gegen das Eindringen von Schadstoffen, die sich den Schlüsseln 6111 und 6112 nicht zuordnen lassen)</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">ohne Entsorgungsdienstleistungen</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="612">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Sicherungsverfahren zum Schutz von Gewässern</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="6121">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Sicherungsverfahren zum Schutz von Gewässern</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Herstellung von Behältern für wassergefährdende Stoffe, Auffangwannen, passiven hydraulischen Sicherungsmaßnahmen, einschließlich Großkomponenten, Installation, Service und Planung)</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">ohne Entsorgungsdienstleistungen</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="62">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Boden- und Gewässerreinigung</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="621">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Verfahren zur Verringerung der Schadstoffmenge in Böden und in Grund- und Oberflächenwasser</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="6211">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Bodenbehandlung (ex-situ)</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Herstellung von Anlagen zur thermischen Bodenbehandlung, Bodenwäsche einschließlich Großkomponenten, Systemen zum Bodenaushub, Beratung zur mikrobiologischen Bodenbehandlung ex-situ, Installation, Service und Planung; ohne Entsorgungsdienstleistungen)</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">ohne Entsorgungsdienstleistungen</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="6212">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Bodenbehandlung (in-situ)</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Herstellung von Anlagen zur Phytoextraktion, physikalischen, mikrobiologischen, chemischen Bodenbehandlung in-situ einschließlich Großkomponenten, Konzeptionen zur Bodenbehandlung in-situ, Installation, Service und Planung; ohne Entsorgungsdienstleistungen)</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">ohne Entsorgungsdienstleistungen</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="622">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Verfahren zur Verringerung der Schadstoffmenge in Grund- und Oberflächenwasser</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="6221">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Gewässerbehandlung (ex-situ)</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Herstellung von Anlagen zur Behandlung von verunreinigtem Grund- und Oberflächenwasser ex-situ wie Filtrations‑, Fällungs-, Flockungs-, Neutralisationseinrichtungen einschließlich Großkomponenten, Installation, Service und Planung; ohne Entsorgungsdienstleistungen)</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">ohne Entsorgungsdienstleistungen</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="6222">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Gewässerbehandlung (in-situ)</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Herstellung von durchströmten Reinigungswänden, Chemikalien zur Beseitigung von Ölverschmutzungen, einschließlich Großkomponenten, Installation, Service und Planung; ohne Entsorgungsdienstleistungen)</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">ohne Entsorgungsdienstleistungen</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="63">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Schutz des Bodens vor Erosion und anderen physischen Degradationsprozessen</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="630">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Schutz des Bodens vor Erosion und anderen physischen Degradationsprozessen</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="6300">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Schutz des Bodens vor Erosion und anderen physischen Degradationsprozessen</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Herstellung von Erosionsschutzwällen, Maßnahmen zur Wiederherstellung der schützenden Vegetationsabdeckung von Böden, einschließlich Großkomponenten, Installation, Service und Planung)</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">ohne Entsorgungsdienstleistungen</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="64">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Vermeidung und Bekämpfung der Bodenversalzung</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="640">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Vermeidung und Bekämpfung der Bodenversalzung</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="6400">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Vermeidung und Bekämpfung der Bodenversalzung</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Herstellung von Be- und Entwässerungssystemen zur Regeneration versalzener Böden, Systemen zur Verhinderung der Meerwasserinfiltration, einschließlich Großkomponenten, Installation, Service und Planung)</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">ohne Entsorgungsdienstleistungen</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="65">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Messung, Kontroll- u. Analysesysteme im R.d. Schutzes u. d. Sanierung v. Boden, Grund- u. Oberflächenwasser</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="650">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Messung, Kontroll- u. Analysesysteme im R.d. Schutzes u. d. Sanierung v. Boden, Grund- u. Oberflächenwasser</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="6500">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Messung, Kontroll- u. Analysesysteme im R.d. Schutzes u. d. Sanierung v. Boden, Grund- u. Oberflächenwasser</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel zum Beispiel Herstellung von Analysegeräten für die Bodensanierung, Messung der Bodenversalzung, Überwachung von Grund- und Oberflächenwasser, einschließlich Großkomponenten, Installation, Service und Planung)</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">ohne Entsorgungsdienstleistungen</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="68">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Forschungs- und Entwicklungsaktivitäten im Rahmen des Schutzes und der Sanierung von Boden, Grund- und Oberflächenwasser</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="680">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Forschungs- und Entwicklungsaktivitäten im Rahmen des Schutzes und der Sanierung von Boden, Grund- und Oberflächenwasser</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="6800">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Forschungs- und Entwicklungsaktivitäten im Rahmen des Schutzes und der Sanierung von Boden, Grund- und Oberflächenwasser</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Forschungsaktivitäten zur Identifizierung von Verschmutzungsquellen, Weiterentwicklung von technischen Systemen und Verfahren zum Schutz und der Sanierung von Boden, Grund- und Oberflächenwasser)</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">ohne Entsorgungsdienstleistungen</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="69">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Sonstige Aktivitäten im Rahmen d. Schutzes u. d. Sanierung v. Boden, Grund- u. Oberflächenwasser</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="690">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Sonstige Aktivitäten im Rahmen d. Schutzes u. d. Sanierung v. Boden, Grund- u. Oberflächenwasser</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="6900">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Sonstige Aktivitäten im Rahmen d. Schutzes u. d. Sanierung v. Boden, Grund- u. Oberflächenwasser</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(andere Leistungen, die nicht im Zusammenhang mit den oben genannten Schlüsseln stehen zum Beispiel Konzepte, Planungen, Beratungen, Software, Projektbetreuungen, Reparaturen, Instandhaltungen, Wartungen)</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">ohne Entsorgungsdienstleistungen</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="1" type="OfficialGrouping" id="7">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Klimaschutz</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">Dem Klimaschutz dienen Maßnahmen und Aktivitäten zur Vermeidung oder Verminderung der Emission von Treibhausgasen (nach Kyoto- Protokoll: Kohlendioxid (CO2), Methan (CH4), Distickstoffoxid (N20), teilfluorierte Kohlenwasserstoffe (H-FKW), vollfluorierte Kohlenwasserstoffe (FWK), Schwefelhexafluorid (SF6), Stickstofftrifluorid (NF3)). Zum Klimaschutz gehören Maß- nahmen zur Nutzung erneuerbarer Energien sowie Maßnahmen zum Einsparen von Energie oder zur Steigerung der Energieeffizienz. Ausgenommen sind Umsätze aus Elektrizitäts- bzw. Wärmeerzeugung.</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">Ausgenommen sind Umsätze aus Elektrizitäts- bzw. Wärmeerzeugung.</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="71">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Prozessintegrierte Maßnahmen im Rahmen des Klimaschutzes</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="710">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Prozessintegrierte Maßnahmen im Rahmen des Klimaschutzes</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="7100">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Vermeidung bzw. Verminderung der Emission von Treibhausgasen durch prozessintegrierte Maßnahmen</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Herstellung von Systemen zur Rückführung von Treibhausgasen, einschließlich Großkomponenten, Installation, Service und Planung)</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="72">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Maßnahmen zur Nutzung erneuerbarer Energien</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="721">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Windenergie</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="7211">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Onshore-Windkraft</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Herstellung von Onshore-Windenergieanlagen und Großkomponenten wie Rotorblättern, Gondeln, Türmen, Fundamenten, Installation, Service und Planung)</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">Ausgenommen sind Umsätze aus Elektrizitäts- bzw. Wärmeerzeugung.</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="7212">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Offshore-Windkraft</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Herstellung von Offshore-Windenergieanlagen und Großkomponenten wie Rotorblättern, Gondeln, Türmen, Fundamenten, Kapselungen für Bauteile von Offshore-Windenergieanlagen, Installation, Service und Planung)</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">Ausgenommen sind Umsätze aus Elektrizitäts- bzw. Wärmeerzeugung.</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="722">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Umwandlung von Biomasse in Bioenergie</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="7221">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Direkte Verbrennung in Kleinfeuerungsanlagen</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(Herstellung von Feuerungsanlagen &lt; 1 Megawatt thermische Leistung wie Pelletheizungen, Biomassekesseln, einschließlich Großkomponenten, Installation, Service und Planung, bei Verwendung zur Verbesserung der Energieeffizienz von Gebäuden siehe Schlüsselnummer 7334)</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="CentralContent" language="DE">
+                    <PropertyText type="Content">bei Verwendung zur Verbesserung der Energieeffizienz von Gebäuden siehe Schlüssel 7334</PropertyText>
+                </PropertyQualifier>
+            </Property>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">Ausgenommen sind Umsätze aus Elektrizitäts- bzw. Wärmeerzeugung.</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="7222">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Direkte Verbrennung in mittleren und großen Feuerungsanlagen</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(Herstellung von Feuerungsanlagen &gt;= 1 Megawatt thermische Leistung zum Beispiel Biomasseheizkraftwerke und Biomasseheizwerke, Großkomponenten wie Turbinen und Motoren, Installation, Service und Planung)</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">Ausgenommen sind Umsätze aus Elektrizitäts- bzw. Wärmeerzeugung.</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="7223">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Thermo-chemische Umwandlung</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Herstellung von Anlagen zur Erzeugung von Biokraftstoffen durch Biomasseverflüssigung wie synthetische Verfahren zur Herstellung von Biomass to liquid-Kraftstoffen, einschließlich Großkomponenten, Installation, Service und Planung)</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">Ausgenommen sind Umsätze aus Elektrizitäts- bzw. Wärmeerzeugung.</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="7225">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Biologisch-chemische Umwandlung</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Herstellung von Biogas-, Biometh-, Deponiegasgewinnungsanlagen, Gärbehälter, Rottekammern mit entsprechenden Gasbelüftungs- und Entlüftungssystemen und Großkomponenten wie Rührwerke, Pumpen, Kompressoren, Installation, Service und Planung)</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">Ausgenommen sind Umsätze aus Elektrizitäts- bzw. Wärmeerzeugung.</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="7229">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Sonstige Umweltschutzleistungen (nicht zuordenbar 7221-7225)</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zur Umwandlung von Biomasse in Bioenergie, die sich den Schlüsseln 7221–7225 nicht zuordnen lassen, zum Beispiel Herstellung von Anlagen zur Erzeugung von Wasserstoff aus der Umwandlung von Biomasse)</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">Ausgenommen sind Umsätze aus Elektrizitäts- bzw. Wärmeerzeugung.</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="723">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Geothermie</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="7231">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Oberflächennahe Geothermie</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Herstellung von oberflächennahen geothermischen Anlagen und Großkomponenten wie Wärmepumpen, Erdkollektoren, oberflächennahen Erdwärmesonden, Installation, Service und Planung, bei Verwendung zur Verbesserung der Energieeffizienz von Gebäuden siehe Schlüsselnummer 7334)</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="CentralContent" language="DE">
+                    <PropertyText type="Content">bei Verwendung zur Verbesserung der Energieeffizienz von Gebäuden siehe Schlüssel 7334</PropertyText>
+                </PropertyQualifier>
+            </Property>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">Ausgenommen sind Umsätze aus Elektrizitäts- bzw. Wärmeerzeugung.</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="7232">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Tiefengeothermie</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Herstellung von hydrothermalen Systemen, Hot-Dry-Rock-Systemen, Großkomponenten wie tiefe Erdwärmesonden, Installation, Service und Planung)</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">Ausgenommen sind Umsätze aus Elektrizitäts- bzw. Wärmeerzeugung.</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="724">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Wasserkraft/Meeresenergie</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="7241">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Wasserkraft / Meeresenergie</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Herstellung von Wasserkraftwerken, Meeresströmungskraftwerken, Gezeitenkraftwerken, Wellenkraftwerken, Großkomponenten wie Wasserrädern, Durchströmturbinen, Installation, Service und Planung)</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="725">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Solarenergie</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="7251">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Solarthermie (zur Wärmeerzeugung)</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Herstellung von Anlagen zur Trink- und Brauchwassererwärmung, Heizungsunterstützung, Großkomponenten wie Kollektoren, Pumpen, Installation, Service und Planung, bei Verwendung zur Verbesserung der Energieeffizienz von Gebäuden siehe Schlüsselnummer 7334)</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="CentralContent" language="DE">
+                    <PropertyText type="Content">bei Verwendung zur Verbesserung der Energieeffizienz von Gebäuden siehe Schlüssel 7334</PropertyText>
+                </PropertyQualifier>
+            </Property>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">Ausgenommen sind Umsätze aus Elektrizitäts- bzw. Wärmeerzeugung.</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="7252">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Photovoltaik</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Herstellung von Photovoltaikanlagen und Großkomponenten wie Solarmodule, Wechselrichter, Installation, Service und Planung, bei Verwendung zur Verbesserung der Energieeffizienz von Gebäuden siehe Schlüsselnummer 7334)</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="CentralContent" language="DE">
+                    <PropertyText type="Content">bei Verwendung zur Verbesserung der Energieeffizienz von Gebäuden siehe Schlüssel 7334</PropertyText>
+                </PropertyQualifier>
+            </Property>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">Ausgenommen sind Umsätze aus Elektrizitäts- bzw. Wärmeerzeugung.</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="7253">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Solarthermische Kraftwerke (CSP)</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(Herstellung von Großanlagen zur Stromerzeugung aus Hochtemperatur-Solarthermie, Großkomponenten wie Dampferzeuger, Turbinen, Generatoren, Kollektoren, Spiegel, Speicher, Wechselrichter, Installation, Service und Planung)</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">Ausgenommen sind Umsätze aus Elektrizitäts- bzw. Wärmeerzeugung.</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="727">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Speichertechnologien</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="7271">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Speicherung elektrischer Energie</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Herstellung von supraleitenden magnetischen Energiespeichern (SMES), Superkondensatoren, Doppelschichtkondensatoren, einschließlich Großkomponenten, Installation, Service und Planung)</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">Ausgenommen sind Umsätze aus Elektrizitäts- bzw. Wärmeerzeugung.</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="7272">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Speicherung elektro-chemischer Energie</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Herstellung von Akkumulatoren: Blei-Säure, Li-Ionen, Nickel-Cadmium, Nickel-Metallhydrid, Hochtemperatur-Akkumulatoren: Natrium-Nickel-Chlorid Akkumulatoren, Natrium-Schwefel Akkumulatoren, Flow-Batterien: Redox Flow, Hybrid Flow, einschließlich Großkomponenten, Installation, Service und Planung)</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">Ausgenommen sind Umsätze aus Elektrizitäts- bzw. Wärmeerzeugung.</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="7273">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Mechanische Speicherung von Energie</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Herstellung von Druckspeichern, Pumpspeichern, Schwungradspeichern, einschließlich Großkomponenten, Installation, Service und Planung)</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">Ausgenommen sind Umsätze aus Elektrizitäts- bzw. Wärmeerzeugung.</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="7274">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Chemische Speicherung von Energie</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Herstellung von Power-to-Gas-Anlagen (Elektrolyseure, Anlagen zur Erzeugung von Wasserstoff), Hybridspeichern, einschließlich Großkomponenten, Installation, Service und Planung)</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">Ausgenommen sind Umsätze aus Elektrizitäts- bzw. Wärmeerzeugung.</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="7275">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Thermische Speicherung von Energie</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Herstellung von Anlagen zur sensiblen Wärme- und Kältespeicherung wie Warmwasser-Speicher einschließlich Großkomponenten wie Erdwärmesonden, Latentwärmespeicher, thermo-chemische Speicher wie sorptive Speicher, Adsorptions- (Zeolith), Absorptions-Speicher (LiCl), thermo-chemische Materialien (TCM), Installation, Service und Planung, bei Verwendung zur Verbesserung der Energieeffizienz von Gebäuden siehe Schlüsselnummer 7334)</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="CentralContent" language="DE">
+                    <PropertyText type="Content">bei Verwendung zur Verbesserung der Energieeffizienz von Gebäuden siehe Schlüssel 7334</PropertyText>
+                </PropertyQualifier>
+            </Property>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">Ausgenommen sind Umsätze aus Elektrizitäts- bzw. Wärmeerzeugung.</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="728">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Effiziente Netze</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="7281">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Effiziente Netze zur Stromübertragung und -verteilung</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Bau von Netztrassen zum Transport von Strom aus erneuerbarer Energie, Herstellung von Großkomponenten wie Transformatoren, Masten, Umspannwerke, Verkabelungen, Regelungstechnologien, Microgrid, Zähl- und Verbrauchsmessungssystemen wie Smart Meter, Demand Response, Informations- und Kommunikationstechnik, Installation, Service und Planung)</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">Ausgenommen sind Umsätze aus Elektrizitäts- bzw. Wärmeerzeugung.</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="7282">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Wärme- und Kältenetze</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Bau von effizienten Netzen zur Wärme- beziehungsweise Kälteeinspeisung aus Kraft‑Wärme‑(Kälte)‑Kopplungsanlagen, Herstellung von Großkomponenten wie Rohre und Armaturen, Installation, Service und Planung)</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">Ausgenommen sind Umsätze aus Elektrizitäts- bzw. Wärmeerzeugung.</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="729">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Sonstige Umweltschutzleistungen zur Nutzung erneuerbarer Energien</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="7299">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Sonstige Umweltschutzleistungen (nicht zuordenbar 7211, 7212, 7221-7229, 7231, 7232, 7241, 7251-7253, 7271-7275, 7281, 7282)</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(Maßnahmen zur Nutzung erneuerbarer Energien, die sich den Schlüsseln 7211, 7212, 7221–7229, 7231, 7232, 7241, 7251-7253, 7271-7275, 7281, 7282 nicht zuordnen lassen)</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">Ausgenommen sind Umsätze aus Elektrizitäts- bzw. Wärmeerzeugung.</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="73">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Energieeffizienzsteigernde Maßnahmen und Energiesparmaßnahmen</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="731">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Kraft-Wärme-Kopplung</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="7311">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Blockheizkraftwerke</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel auf der Basis von Organic Rankine Cycle-Kreisläufen, Herstellung von Blockheizkraftwerken mit Mikrogasturbinen einschließlich Großkomponenten, Installation, Service und Planung, bei Verwendung zur Verbesserung der Energieeffizienz von Gebäuden siehe Schlüsselnummer 7334)</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="CentralContent" language="DE">
+                    <PropertyText type="Content">bei Verwendung zur Verbesserung der Energieeffizienz von Gebäuden siehe Schlüssel 7334</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="7312">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Anlagen zur Kraft-Wärme-Kopplung (ohne Blockheizkraftwerke)</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Herstellung von Anlagen zur flächigen Fernwärmeversorgung oder zur Erzeugung von Prozesswärme in der Industrie, Großkomponenten wie Gas- und Dampfturbinen, Installation, Service und Planung)</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">ohne Blockheizkraftwerke</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="7313">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Brennstoffzellen im Zusammenhang mit KWK-Anlagen</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Herstellung von Brennstoffzellen-Anlagen auf dem Prinzip der oxid-keramischen (SOFC-) oder Polymer-elektrolytmembran- (PEM-) Brennstoffzelle, einschließlich Großkomponenten, Installation, Service und Planung)</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="732">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Wärmerückgewinnung</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="7321">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Anlagen zur Wärmerückgewinnung</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Herstellung von Wärmetauschern, die dem Zweck der Wärmerückgewinnung dienen, Systemen zur Abwärmenutzung, einschließlich Großkomponenten, Installation, Service und Planung, bei Verwendung zur Verbesserung der Energieeffizienz von Gebäuden siehe Schlüsselnummer 7335)</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="CentralContent" language="DE">
+                    <PropertyText type="Content">bei Verwendung zur Verbesserung der Energieeffizienz von Gebäuden siehe Schlüssel 7335</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="733">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Verbesserung der Energieeffizienz von Gebäuden</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">Energieeffizienz von Gebäuden umfasst die energetische Sanierung von Bestandsgebäuden (zum Beispiel Maßnahmen, die eine Verbesserung der Effizienzklasse bewirken von mindestens KfW-Effizienzhausstandard 85) und den Neubau von Effizienzhäusern (zum Beispiel Bau von Effizienz‑, Passiv- und Plusenergiehäusern mit KfW-Effizienzhausstandard 40, 40 Plus oder besser). Grundsätzlich sind nur die Mehrkosten für Maßnahmen zur Verbesserung der Energieeffizienz von Gebäuden zu melden.</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="7333">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Wärmedämmung der Gebäudehülle</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Einbau oder Herstellung von Fenstern zur Wärmeisolierung mit einem Wärmedurchgangskoeffizienten (U-Wert) von 0,9 Watt pro Quadratmeter und Kelvin (W/m²K) und besser, Großkomponenten wie Fensterrahmen, Beschläge, Folien zur Beschichtung von Glas, Rollladen, Schließung von Wärmebrücken, Großkomponenten wie Dämmstoffe, Dämmplatten und ‑matten für Fassaden, Dächer und andere Gebäudeteile wie Materialien aus Glasfaser, Steinwolle, Zellulose, Polymere und Polyurethan und andere Produkte wie Autoklaven-Porenbeton (AAC, ACC), Installation, Service und Planung)</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="7334">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Energieeffiziente Heizungstechnik</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Einbau oder Herstellung von Brennwertkesseln, Wärmepumpen, Solarthermischen Anlagen, Mikro-Kraft-Wärme-Kopplung, Pelletheizungen, einschließlich Großkomponenten, Installation, Service und Planung)</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="7335">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Energieeffiziente Lüftungs- und Klimatechnik</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Einbau oder Herstellung von Lüftungsanlagen mit Wärmerückgewinnung, spezifische Geräte für das Energiemanagement wie Thermostate für die Heizungs- und Kühlungsregelung, automatisierte Steuerungssysteme zur Überwachung und Anpassung des Raumklimas, einschließlich Großkomponenten, Installation, Service und Planung)</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="7336">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Energieeffiziente Beleuchtungstechnik</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Einbau oder Herstellung von Tageslichtsensoren mit Dimmer, Bewegungsmelder, energieeffiziente Beleuchtungskonzepte, einschließlich Großkomponenten, Installation, Service und Planung)</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="7339">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Sonstige Umweltschutzleistungen (nicht zuordenbar 7333 - 7336)</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Maßnahmen zur Gebäudeautomation, Herstellung von Software zur Steuerung von elektrischen Anlagen, einschließlich Großkomponenten, Installation, Service und Planung)</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="734">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Verbesserung der Energieeffizienz im industriellen und sonstigen Bereich</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="7341">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Wärmedämmung und Kälteisolierung im industriellen Bereich</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Herstellung von Wärmedämmungen und Wärmedämmstoffen für Leitungen, Behältern, Öfen und Kesseln, einschließlich Großkomponenten, Installation, Service und Planung)</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="7342">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Energieeffiziente Antriebs- und Steuerungstechnik (ohne Elektromobilität)</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Herstellung energieeffizienter Komponenten und Bauteile wie Einspritzsystemen für Fahrzeuge, Turbinen und ähnliches (ausgenommen Elektromobilität) sowie Maßnahmen im Zusammenhang mit Druckluftoptimierung, einschließlich Großkomponenten, Installation, Service und Planung)</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Exclusions" language="DE">
+                    <PropertyText type="Content">ohne Elektromobilität</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="7349">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Sonstige Umweltschutzleistungen (nicht zuordenbar 7341 und 7342)</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zur Verbesserung der Energieeffizienz, die sich den Schlüsseln 7341 und 7342 nicht zuordnen lassen)</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="74">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Übergreifende Klimaschutz-Technologieschlüssel</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="740">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Übergreifende Klimaschutz-Technologieschlüssel</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="7400">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Messung, Kontroll- und Analysesysteme im Rahmen des Klimaschutzes</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Herstellung von Anemometern, Regeltechnik für Kraftwerke, Audits zur Energieeffizienz oder –einsparung, Erstellung von Energiebilanzen und –pässen, Thermografie, Luftdichtigkeitsprüfung, Heizungschecks, einschließlich Großkomponenten, Installation, Service und Planung)</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="78">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Forschungs- und Entwicklungsaktivitäten im Rahmen des Klimaschutzes</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="780">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Forschungs- und Entwicklungsaktivitäten im Rahmen des Klimaschutzes</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="7800">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Forschungs- und Entwicklungsaktivitäten im Zusammenhang mit klimawirksamen Stoffen</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Entwicklung von Analysesystemen für Treibhausgase, Entwicklung von Verfahren zur CO2-Abscheidung und ‑speicherung, Entwicklung der Methanisierung und weiteren Wasserstoff-Veredlungsverfahren)</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="7801">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Forschungs- und Entwicklungsaktivitäten im Zusammenhang mit Maßnahmen zur Nutzung erneuerbarer Energien</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Forschung nach Technologien für erneuerbarer Energien, wie Speicherung durch Wasserstofferzeugung)</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="7802">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Forschungs- und Entwicklungsaktivitäten im Zusammenhang mit Energieeffizienz</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Forschungen zur Verbesserung der Energiebereitstellung, –nutzung, –verteilung, und –speicherung, Entwicklung von Verfahren zur Steigerung der Energieeffizienz von Gebäuden)</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="79">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Sonstige Aktivitäten im Rahmen des Klimaschutzes</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="790">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Sonstige Aktivitäten im Rahmen des Klimaschutzes</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="7900">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Sonstige Aktivitäten im Rahmen des Klimaschutzes</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(andere Leistungen, die nicht im Zusammenhang mit den oben genannten Schlüsseln stehen zum Beispiel Konzepte, Planungen, Beratungen, Energiemanagement im Zusammenhang mit Energieeffizienz oder –einsparung, Zertifizierung von Energiemanagementsystemen, Software, Projektbetreuungen, Reparaturen, Instandhaltungen, Wartungen)</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="1" type="OfficialGrouping" id="8">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Umweltbereichsübergreifende Maßnahmen und Aktivitäten</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="80">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Maßnahmen und Aktivitäten, die mehrere Umweltbereiche gleichzeitig betreffen</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="800">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Maßnahmen und Aktivitäten, die mehrere Umweltbereiche gleichzeitig betreffen</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="8000">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Umweltbereichsübergreifende Maßnahmen und Aktivitäten</LabelText>
+            </Label>
+            <Label qualifier="Context">
+                <LabelText language="DE">(zum Beispiel Herstellung von multifunktionalen Gütern und Leistungen für den Umweltschutz, die sich nicht einzelnen Umweltbereichen zuordnen lassen, einschließlich Großkomponenten, Installation, Service und Planung)</LabelText>
+            </Label>
+        </Item>
+    </Classification>
+</Claset>

@@ -1,0 +1,1274 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Claset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="27.08.2024 12:19:10 GMT+0200" reference="nst_2007" xsi:noNamespaceSchemaLocation="http://ec.europa.eu/eurostat/ramon/miscellaneous/documentation/data_models_and_xml_dtd/XML_schema_claset.xsd">
+    <Classification type="Classification" id="nst_2007">
+        <Label qualifier="Usual">
+            <LabelText language="DE">Einheitliches Güterverzeichnis für die Verkehrsstatistik 2007</LabelText>
+        </Label>
+        <Property name="Comment">
+            <PropertyQualifier name="PlainText" language="DE">
+                <PropertyText type="Content">Dateiinhalt: Gliederung mit Erläuterung
+Letzte Aktualisierung: 27.08.2024 12:19:10 (GMT+0200)
+Letzte Aktualisierung der Stichwörter: 27.08.2024 12:19:10 (GMT+0200)
+Weitere Informationen: klassifikationsserver.de
+Copyright:
+Eigentümer:</PropertyText>
+            </PropertyQualifier>
+        </Property>
+        <Level id="1">
+            <Level id="2"/>
+        </Level>
+        <Item idLevel="1" type="OfficialGrouping" id="01">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Erzeugnisse der Landwirtschaft, Jagd und Forstwirtschaft; Fische und Fischereierzeugnisse</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">Landwirtsch. u. verw. Erzeugnisse</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="011">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Getreide</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">Getreide</PropertyText>
+                </PropertyQualifier>
+                <PropertyQualifier name="PlainText" language="DE">
+                    <PropertyText type="Content">Getreide</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="012">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Kartoffeln</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">Kartoffeln</PropertyText>
+                </PropertyQualifier>
+                <PropertyQualifier name="PlainText" language="DE">
+                    <PropertyText type="Content">Kartoffeln</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="013">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Zuckerrüben</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">Zuckerrüben</PropertyText>
+                </PropertyQualifier>
+                <PropertyQualifier name="PlainText" language="DE">
+                    <PropertyText type="Content">Zuckerrüben</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="014">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Anderes frisches Obst und Gemüse</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">Obst und Gemüse</PropertyText>
+                </PropertyQualifier>
+                <PropertyQualifier name="PlainText" language="DE">
+                    <PropertyText type="Content">Obst und Gemüse</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="015">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Forstwirtschaftliche Erzeugnisse</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">Forstwirtsch. Erzeugn.</PropertyText>
+                </PropertyQualifier>
+                <PropertyQualifier name="PlainText" language="DE">
+                    <PropertyText type="Content">Forstwirtschaftliche Erzeugnisse</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="016">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Lebende Pflanzen und Blumen</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">Pflanzen und Blumen</PropertyText>
+                </PropertyQualifier>
+                <PropertyQualifier name="PlainText" language="DE">
+                    <PropertyText type="Content">Pflanzen und Blumen</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="017">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Andere Erzeugnisse pflanzlichen Ursprungs</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">And. Erz. pflanzl. Ursprungs</PropertyText>
+                </PropertyQualifier>
+                <PropertyQualifier name="PlainText" language="DE">
+                    <PropertyText type="Content">Andere Erzeugnisse pflanzlichen Ursprungs</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="018">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Lebende Tiere</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">Lebende Tiere</PropertyText>
+                </PropertyQualifier>
+                <PropertyQualifier name="PlainText" language="DE">
+                    <PropertyText type="Content">Lebende Tiere</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="019">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Kuh-, Schaf- und Ziegenmilch, roh</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">Rohe Milch</PropertyText>
+                </PropertyQualifier>
+                <PropertyQualifier name="PlainText" language="DE">
+                    <PropertyText type="Content">Rohe Milch</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="01A">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Andere Erzeugnisse tierischen Ursprungs</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">And. Erz. tierischen Ursprungs</PropertyText>
+                </PropertyQualifier>
+                <PropertyQualifier name="PlainText" language="DE">
+                    <PropertyText type="Content">Andere Erzeugnisse tierischen Ursprungs</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="01B">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Fische und Fischereierzeugnisse</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">Fische u. Fischereierzeugnisse</PropertyText>
+                </PropertyQualifier>
+                <PropertyQualifier name="PlainText" language="DE">
+                    <PropertyText type="Content">Fische und Fischereierzeugnisse</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="1" type="OfficialGrouping" id="02">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Kohle; rohes Erdöl und Erdgas</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">Kohle, rohes Erdöl und Erdgas</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="021">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Kohle</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">Kohle</PropertyText>
+                </PropertyQualifier>
+                <PropertyQualifier name="PlainText" language="DE">
+                    <PropertyText type="Content">Kohle</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="022">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Erdöl</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">Erdöl</PropertyText>
+                </PropertyQualifier>
+                <PropertyQualifier name="PlainText" language="DE">
+                    <PropertyText type="Content">Erdöl</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="023">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Erdgas</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">Erdgas</PropertyText>
+                </PropertyQualifier>
+                <PropertyQualifier name="PlainText" language="DE">
+                    <PropertyText type="Content">Erdgas</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="1" type="OfficialGrouping" id="03">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Erze, Steine und Erden, sonstige Bergbauerzeugnisse; Torf; Uran- und Thoriumerze</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">Erze, Steine u. Erden u.Ä.</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="031">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Eisenerze</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">Eisenerze</PropertyText>
+                </PropertyQualifier>
+                <PropertyQualifier name="PlainText" language="DE">
+                    <PropertyText type="Content">Eisenerze</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="032">
+            <Label qualifier="Usual">
+                <LabelText language="DE">NE-Metallerze (ohne Uran- und Thoriumerze)</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">NE-Metallerze</PropertyText>
+                </PropertyQualifier>
+                <PropertyQualifier name="PlainText" language="DE">
+                    <PropertyText type="Content">NE-Metallerze</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="033">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Chemische und (natürliche) Düngemittelminerale</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">Düngemittelminerale</PropertyText>
+                </PropertyQualifier>
+                <PropertyQualifier name="PlainText" language="DE">
+                    <PropertyText type="Content">Düngemittelminerale</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="034">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Salz und Natriumchlorid; Meerwasser</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">(Koch-)Salz, Meerwasser</PropertyText>
+                </PropertyQualifier>
+                <PropertyQualifier name="PlainText" language="DE">
+                    <PropertyText type="Content">Salz, Natriumchlorid, Meerwasser</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="035">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Natursteine, Sand, Kies, Ton, Torf, Steine und Erden a.n.g.; sonstige Bergbauerzeugnisse</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">Steine u. Erden, Sand, Ton u.Ä.</PropertyText>
+                </PropertyQualifier>
+                <PropertyQualifier name="PlainText" language="DE">
+                    <PropertyText type="Content">Steine und Erden, Sand, Kies, Ton, Torf</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="036">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Uran- und Thoriumerze</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">Uran- und Thoriumerze</PropertyText>
+                </PropertyQualifier>
+                <PropertyQualifier name="PlainText" language="DE">
+                    <PropertyText type="Content">Uran- und Thoriumerze</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="1" type="OfficialGrouping" id="04">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Nahrungs- und Genussmittel</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">Nahrungs- und Genussmittel</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="041">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Fleisch, rohe Häute und Felle, Fleischerzeugnisse</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">Fleisch, Häute, Felle</PropertyText>
+                </PropertyQualifier>
+                <PropertyQualifier name="PlainText" language="DE">
+                    <PropertyText type="Content">Fleisch, Häute, Felle</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="042">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Fisch und Fischerzeugnisse, verarbeitet und haltbar gemacht</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">Verarb. Fische u. Fischereierz.</PropertyText>
+                </PropertyQualifier>
+                <PropertyQualifier name="PlainText" language="DE">
+                    <PropertyText type="Content">Verarbeitete Fische und Fischereierzeugnisse</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="043">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Obst und Gemüse, verarbeitet und haltbar gemacht</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">Verarbeitetes Obst und Gemüse</PropertyText>
+                </PropertyQualifier>
+                <PropertyQualifier name="PlainText" language="DE">
+                    <PropertyText type="Content">Verarbeitetes Obst und Gemüse</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="044">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Tierische und pflanzliche Öle und Fette</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">Öle und Fette</PropertyText>
+                </PropertyQualifier>
+                <PropertyQualifier name="PlainText" language="DE">
+                    <PropertyText type="Content">Öle und Fette</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="045">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Milch, Milcherzeugnisse und Speiseeis</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">Milch, Milcherzeugn., Speiseeis</PropertyText>
+                </PropertyQualifier>
+                <PropertyQualifier name="PlainText" language="DE">
+                    <PropertyText type="Content">Milch, Milcherzeugnisse, Speiseeis</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="046">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Mahl- und Schälmühlenerzeugnisse; Stärke und Stärkeerzeugnisse; Futtermittel</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">Stärke(-erzeugn.), Futtermittel</PropertyText>
+                </PropertyQualifier>
+                <PropertyQualifier name="PlainText" language="DE">
+                    <PropertyText type="Content">Stärke, Stärkeerzeugnisse, Futtermittel</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="047">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Getränke</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">Getränke</PropertyText>
+                </PropertyQualifier>
+                <PropertyQualifier name="PlainText" language="DE">
+                    <PropertyText type="Content">Getränke</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="048">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Sonstige Nahrungsmittel a.n.g. und Tabakerzeugnisse (außer im Paketdienst oder als Sammelgut)</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">Nahrungsmit. (außer Sammelgut)</PropertyText>
+                </PropertyQualifier>
+                <PropertyQualifier name="PlainText" language="DE">
+                    <PropertyText type="Content">Sonst. Nahrungsmittel (außer im Paketdienst u. Sammelgut)</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="049">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Sonstige Nahrungsmittel und Tabakerzeugnisse im Paketdienst oder als Sammelgut</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">Nahrungsmit. (Pakete/Sammelgut)</PropertyText>
+                </PropertyQualifier>
+                <PropertyQualifier name="PlainText" language="DE">
+                    <PropertyText type="Content">Sonst. Nahrungsmittel (im Paketdienst oder als Sammelgut)</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="1" type="OfficialGrouping" id="05">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Textilien und Bekleidung; Leder und Lederwaren</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">Textilien, Bekleidung, Leder u.Ä.</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="051">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Textilien</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">Textilien</PropertyText>
+                </PropertyQualifier>
+                <PropertyQualifier name="PlainText" language="DE">
+                    <PropertyText type="Content">Textilien</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="052">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Bekleidung und Pelzwaren</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">Bekleidung und Pelzwaren</PropertyText>
+                </PropertyQualifier>
+                <PropertyQualifier name="PlainText" language="DE">
+                    <PropertyText type="Content">Bekleidung und Pelzwaren</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="053">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Leder und Lederwaren</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">Leder und Lederwaren</PropertyText>
+                </PropertyQualifier>
+                <PropertyQualifier name="PlainText" language="DE">
+                    <PropertyText type="Content">Leder und Lederwaren</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="1" type="OfficialGrouping" id="06">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Holz sowie Holz-, Kork- und Flechtwaren (ohne Möbel); Papier, Pappe und Waren daraus; Verlags- und Druckerzeugnisse, bespielte Ton-, Bild- und Datenträger</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">Holzw., Papier, Pappe, Druckerz.</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="061">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Holz-, Kork- und Flechtwaren (ohne Möbel)</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">Holz-, Kork- und Flechtwaren</PropertyText>
+                </PropertyQualifier>
+                <PropertyQualifier name="PlainText" language="DE">
+                    <PropertyText type="Content">Holz-, Kork- und Flechtwaren</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="062">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Papier, Pappe und Waren daraus</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">Papier, Pappe und -waren</PropertyText>
+                </PropertyQualifier>
+                <PropertyQualifier name="PlainText" language="DE">
+                    <PropertyText type="Content">Papier, Pappe und -waren</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="063">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Verlags- und Druckerzeugnisse, bespielte Ton-, Bild- und Datenträger</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">Druckerz., besp. Medienträger</PropertyText>
+                </PropertyQualifier>
+                <PropertyQualifier name="PlainText" language="DE">
+                    <PropertyText type="Content">Druckerzeugnisse, bespielte Ton-, Bild u. Datenträger</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="1" type="OfficialGrouping" id="07">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Kokereierzeugnisse und Mineralölerzeugnisse</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">Kokerei- und Mineralölerzeugnisse</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="071">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Kokereierzeugnisse; Briketts und ähnliche feste Brennstoffe</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">Kokereierzeugnisse</PropertyText>
+                </PropertyQualifier>
+                <PropertyQualifier name="PlainText" language="DE">
+                    <PropertyText type="Content">Kokereierzeugnisse</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="072">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Flüssige Mineralölerzeugnisse</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">Flüssige Mineralölerzeugnisse</PropertyText>
+                </PropertyQualifier>
+                <PropertyQualifier name="PlainText" language="DE">
+                    <PropertyText type="Content">Flüssige Mineralölerzeugnisse</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="073">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Gasförmige, verflüssigte oder verdichtete Mineralölerzeugnisse</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">Gasf. / verdicht. Mineralölerz.</PropertyText>
+                </PropertyQualifier>
+                <PropertyQualifier name="PlainText" language="DE">
+                    <PropertyText type="Content">Gasförmige oder verdichtete Mineralölerzeugnisse</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="074">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Feste oder wachsartige Mineralölerzeugnisse</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">Feste / wachsart. Mineralölerz.</PropertyText>
+                </PropertyQualifier>
+                <PropertyQualifier name="PlainText" language="DE">
+                    <PropertyText type="Content">Feste oder wachsartige Mineralölerzeugnisse</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="1" type="OfficialGrouping" id="08">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Chemische Erzeugnisse und Chemiefasern; Gummi- und Kunststoffwaren; Spalt- und Brutstoffe</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">Chemische Erzeugnisse etc.</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="081">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Chemische Grundstoffe, mineralisch</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">Chem. Grundstoffe (mineralisch)</PropertyText>
+                </PropertyQualifier>
+                <PropertyQualifier name="PlainText" language="DE">
+                    <PropertyText type="Content">Chemische Grundstoffe (mineralisch)</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="082">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Chemische Grundstoffe, organisch</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">Chem. Grundstoffe (organisch)</PropertyText>
+                </PropertyQualifier>
+                <PropertyQualifier name="PlainText" language="DE">
+                    <PropertyText type="Content">Chemische Grundstoffe (organisch)</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="083">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Stickstoffverbindungen und Düngemittel (ohne natürliche Düngemittel)</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">Stickstoffverbind., Düngemittel</PropertyText>
+                </PropertyQualifier>
+                <PropertyQualifier name="PlainText" language="DE">
+                    <PropertyText type="Content">Stickstoffverbindungen, Düngemittel</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="084">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Basiskunststoffe und synthetischer Kautschuk, in Primärformen</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">Basiskunststoffe, Kautschuk</PropertyText>
+                </PropertyQualifier>
+                <PropertyQualifier name="PlainText" language="DE">
+                    <PropertyText type="Content">Basiskunststoffe, Kautschuk</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="085">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Pharm. und parachemische Erzeugnisse einschließlich Pestizide und andere agrochemische Erzeugnisse</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">Pharmazeutische Erzeugnisse</PropertyText>
+                </PropertyQualifier>
+                <PropertyQualifier name="PlainText" language="DE">
+                    <PropertyText type="Content">Pharmazeutische Erzeugnisse</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="086">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Gummi- oder Kunststoffwaren</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">Gummi- oder Kunststoffwaren</PropertyText>
+                </PropertyQualifier>
+                <PropertyQualifier name="PlainText" language="DE">
+                    <PropertyText type="Content">Gummi- oder Kunststoffwaren</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="087">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Spalt- und Brutstoffe</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">Spalt- und Brutstoffe</PropertyText>
+                </PropertyQualifier>
+                <PropertyQualifier name="PlainText" language="DE">
+                    <PropertyText type="Content">Spalt- und Brutstoffe</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="1" type="OfficialGrouping" id="09">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Sonstige Mineralerzeugnisse</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">Sonst. Mineralerzeugnisse</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="091">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Glas und Glaswaren, Porzellan und keramische Erzeugnisse</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">Glas, Porzellan u.Ä. Erzeugn.</PropertyText>
+                </PropertyQualifier>
+                <PropertyQualifier name="PlainText" language="DE">
+                    <PropertyText type="Content">Glas, Porzellan, keramische Erzeugnisse</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="092">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Zement, Kalk, gebrannter Gips</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">Zement, Kalk, gebrannter Gips</PropertyText>
+                </PropertyQualifier>
+                <PropertyQualifier name="PlainText" language="DE">
+                    <PropertyText type="Content">Zement, Kalk, gebrannter Gips</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="093">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Sonstige Baumaterialien und -erzeugnisse</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">Sonst. Baumaterialien und -erz.</PropertyText>
+                </PropertyQualifier>
+                <PropertyQualifier name="PlainText" language="DE">
+                    <PropertyText type="Content">Sonst. Baumaterialien und -erzeugnisse</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="1" type="OfficialGrouping" id="10">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Metalle und Halbzeug daraus; Metallerzeugnisse, ohne Maschinen und Geräte</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">Metalle und Metallerzeugnisse</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="101">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Roheisen u. Stahl / Ferrolegierungen u. Erzeugnisse d. ersten Bearb. v. Eisen u. Stahl (ohne Rohre)</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">Roheisen, Stahl, Ferrolegier.</PropertyText>
+                </PropertyQualifier>
+                <PropertyQualifier name="PlainText" language="DE">
+                    <PropertyText type="Content">Roheisen, Stahl, Ferrolegierungen</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="102">
+            <Label qualifier="Usual">
+                <LabelText language="DE">NE-Metalle und Halbzeug daraus</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">NE-Metalle, Halbzeug</PropertyText>
+                </PropertyQualifier>
+                <PropertyQualifier name="PlainText" language="DE">
+                    <PropertyText type="Content">NE-Metalle, Halbzeug</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="103">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Rohre und Hohlprofile; Rohr-form-, Rohrverschluss- und Rohrverbindungsstücke</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">Rohre</PropertyText>
+                </PropertyQualifier>
+                <PropertyQualifier name="PlainText" language="DE">
+                    <PropertyText type="Content">Rohre</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="104">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Stahl- und Leichtmetallbauerzeugnisse</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">Stahl- und Leichtmetallbauerz.</PropertyText>
+                </PropertyQualifier>
+                <PropertyQualifier name="PlainText" language="DE">
+                    <PropertyText type="Content">Stahl- und Leichtmetallbauerzeugnisse</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="105">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Heizkessel, Waffen und sonstige Metallerzeugnisse</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">Heizkessel, sonst. Metallerz.</PropertyText>
+                </PropertyQualifier>
+                <PropertyQualifier name="PlainText" language="DE">
+                    <PropertyText type="Content">Heizkessel, Waffen, sonst. Metallerzeugnisse</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="1" type="OfficialGrouping" id="11">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Maschinen und Ausrüstungen a.n.g.; Büromaschinen, Datenverarbeitungsgeräte und -einrichtungen; Geräte der Elektrizitätserzeugung und -verteilung u. Ä.; Nachrichtentechnik, Rundfunk- und Fernsehgeräte sowie elektronische Bauelemente; Medizin-, Mess-, steue</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">Maschinen u. Ausrüstungen u.Ä.</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="111">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Land- und forstwirtschaftliche Maschinen</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">Land-/forstwirtsch. Maschinen</PropertyText>
+                </PropertyQualifier>
+                <PropertyQualifier name="PlainText" language="DE">
+                    <PropertyText type="Content">Land- und forstwirtschaftliche Maschinen</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="112">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Haushaltsgeräte a.n.g. (Weiße Ware)</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">Haushaltsgräte (weiße Waren)</PropertyText>
+                </PropertyQualifier>
+                <PropertyQualifier name="PlainText" language="DE">
+                    <PropertyText type="Content">Haushaltsgräte (weiße Waren)</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="113">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Büromaschinen, Datenverarbeitungsgeräte und -einrichtungen</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">Büromaschinen, EDV-Geräte u.Ä.</PropertyText>
+                </PropertyQualifier>
+                <PropertyQualifier name="PlainText" language="DE">
+                    <PropertyText type="Content">Büromaschinen, EDV-Geräte u. -einrichtungen</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="114">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Geräte der Elektrizitätserzeugung und -verteilung u. Ä.</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">Geräte d. Elektr.-Erzeug. u.Ä.</PropertyText>
+                </PropertyQualifier>
+                <PropertyQualifier name="PlainText" language="DE">
+                    <PropertyText type="Content">Geräte der Elektrizitätserzeugung und -verteilung</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="115">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Elektronische Bauelemente, Ausstrahlungs- und Übertragungsgeräte</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">Elektronische Bauelemente</PropertyText>
+                </PropertyQualifier>
+                <PropertyQualifier name="PlainText" language="DE">
+                    <PropertyText type="Content">Elektronische Bauelemente</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="116">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Rundfunk- und Fernsehgeräte; Geräte zur Bild- und Tonaufzeichnung oder -wiedergabe (Braune Ware)</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">Rundfunk- u. Fernsehgeräte</PropertyText>
+                </PropertyQualifier>
+                <PropertyQualifier name="PlainText" language="DE">
+                    <PropertyText type="Content">Rundfunk- und Fernsehgeräte (braune Ware)</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="117">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Medizin-, Mess-, steuerungs- und regelungstechnische Erzeugnisse; optische Erzeugnisse; Uhren</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">Medizin-/Messtechn. Erz. u.Ä.</PropertyText>
+                </PropertyQualifier>
+                <PropertyQualifier name="PlainText" language="DE">
+                    <PropertyText type="Content">Medizin-, Mess- und Steuerungstechnische Erzeugnisse</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="118">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Sonstige Maschinen, Werkzeugmaschinen und Teile dafür</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">Sonstige Maschinen</PropertyText>
+                </PropertyQualifier>
+                <PropertyQualifier name="PlainText" language="DE">
+                    <PropertyText type="Content">Sonstige Maschinen</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="1" type="OfficialGrouping" id="12">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Fahrzeuge</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">Fahrzeuge</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="121">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Erzeugnisse der Automobilindustrie</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">Erzeugn. der Automobilindustrie</PropertyText>
+                </PropertyQualifier>
+                <PropertyQualifier name="PlainText" language="DE">
+                    <PropertyText type="Content">Erzeugnisse der Automobilindustrie</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="122">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Sonstige Fahrzeuge</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">Sonstige Fahrzeuge</PropertyText>
+                </PropertyQualifier>
+                <PropertyQualifier name="PlainText" language="DE">
+                    <PropertyText type="Content">Sonstige Fahrzeuge</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="1" type="OfficialGrouping" id="13">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Möbel, Schmuck, Musikinstrumente, Sportgeräte, Spielwaren und sonstige Erzeugnisse</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">Möbel, Musikinstrumente u.Ä.</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="131">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Möbel</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">Möbel</PropertyText>
+                </PropertyQualifier>
+                <PropertyQualifier name="PlainText" language="DE">
+                    <PropertyText type="Content">Möbel</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="132">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Sonstige Erzeugnisse</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">Sonstige Erzeugnisse</PropertyText>
+                </PropertyQualifier>
+                <PropertyQualifier name="PlainText" language="DE">
+                    <PropertyText type="Content">Sonstige Erzeugnisse</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="1" type="OfficialGrouping" id="14">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Sekundärrohstoffe; kommunale Abfälle und sonstige Abfälle</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">Sekundärrohstoffe, Abfälle</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="141">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Hausmüll und kommunale Abfälle</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">Hausmüll und kommunale Abfälle</PropertyText>
+                </PropertyQualifier>
+                <PropertyQualifier name="PlainText" language="DE">
+                    <PropertyText type="Content">Hausmüll und kommunale Abfälle</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="142">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Sonstige Abfälle und Sekundärrohstoffe</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">Sonst. Abf. u. Sekundärrohst.</PropertyText>
+                </PropertyQualifier>
+                <PropertyQualifier name="PlainText" language="DE">
+                    <PropertyText type="Content">Sonstige Abfälle und Sekundärrohstoffe</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="1" type="OfficialGrouping" id="15">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Post, Pakete</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">Post, Pakete</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="151">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Post</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">Post</PropertyText>
+                </PropertyQualifier>
+                <PropertyQualifier name="PlainText" language="DE">
+                    <PropertyText type="Content">Post</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="152">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Pakete, Päckchen</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">Pakete, Päckchen</PropertyText>
+                </PropertyQualifier>
+                <PropertyQualifier name="PlainText" language="DE">
+                    <PropertyText type="Content">Pakete, Päckchen</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="1" type="OfficialGrouping" id="16">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Geräte und Material für die Güterbeförderung</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">Geräte u. Material zur Güterbef.</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="161">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Container und Wechselbehälter im Einsatz, leer</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">Leere Cont. u. Wechselbehälter</PropertyText>
+                </PropertyQualifier>
+                <PropertyQualifier name="PlainText" language="DE">
+                    <PropertyText type="Content">Leere Container und Wechselbehälter</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="162">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Paletten und anderes Verpackungsmaterial im Einsatz, leer</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">Paletten, Verpackungsmaterial</PropertyText>
+                </PropertyQualifier>
+                <PropertyQualifier name="PlainText" language="DE">
+                    <PropertyText type="Content">Paletten, Verpackungsmaterial</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="1" type="OfficialGrouping" id="17">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Im Rahmen von privaten und gewerblichen Umzügen beförderte Güter; Gepäckstücke und Gegenstände, die von Reisenden mitgenommen werden; zum Zwecke der Reparatur bewegte Fahrzeuge; sonstige nichtmarktbestimmte Güter a.n.g.</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">Umzugsgut, nicht marktbest. Güter</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="171">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Privates Umzugsgut</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">Privates Umzugsgut</PropertyText>
+                </PropertyQualifier>
+                <PropertyQualifier name="PlainText" language="DE">
+                    <PropertyText type="Content">Privates Umzugsgut</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="172">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Gepäckstücke und Gegenstände, die von Reisenden mitgenommen werden</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">Gepäckstücke</PropertyText>
+                </PropertyQualifier>
+                <PropertyQualifier name="PlainText" language="DE">
+                    <PropertyText type="Content">Gepäckstücke</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="173">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Fahrzeuge in Reparatur</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">Fahrzeuge in Reparatur</PropertyText>
+                </PropertyQualifier>
+                <PropertyQualifier name="PlainText" language="DE">
+                    <PropertyText type="Content">Fahrzeuge in Reparatur</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="174">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Ausrüstungen, Gerüste</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">Ausrüstungen, Gerüste</PropertyText>
+                </PropertyQualifier>
+                <PropertyQualifier name="PlainText" language="DE">
+                    <PropertyText type="Content">Ausrüstungen, Gerüste</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="175">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Sonstige nichtmarktbestimmte Güter a.n.g.</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">Sonst. nicht marktbest. Güter</PropertyText>
+                </PropertyQualifier>
+                <PropertyQualifier name="PlainText" language="DE">
+                    <PropertyText type="Content">Sonstige nicht marktbestimmte Güter</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="1" type="OfficialGrouping" id="18">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Sammelgut: eine Mischung verschiedener Arten von Gütern, die zusammen befördert werden</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">Sammelgut</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="180">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Sammelgut</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">Sammelgut</PropertyText>
+                </PropertyQualifier>
+                <PropertyQualifier name="PlainText" language="DE">
+                    <PropertyText type="Content">Sammelgut</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="1" type="OfficialGrouping" id="19">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Nicht identifizierbare Güter: Güter, die sich aus irgendeinem Grund nicht genau bestimmen lassen und daher nicht den Gruppen 01-16 zugeordnet werden können</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">Nicht identifizierbare Güter</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="191">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Nicht identifizierbare Güter in Containern oder Wechselbehältern</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">Unbekannte Güter in Containern</PropertyText>
+                </PropertyQualifier>
+                <PropertyQualifier name="PlainText" language="DE">
+                    <PropertyText type="Content">Nicht identifizierbare Güter in Containern</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="192">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Sonstige nicht identifizierbare Güter</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">Sonst. unidentifizierbare Güter</PropertyText>
+                </PropertyQualifier>
+                <PropertyQualifier name="PlainText" language="DE">
+                    <PropertyText type="Content">Sonstige nichtidentifizierbare Güter</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="1" type="OfficialGrouping" id="20">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Sonstige Güter a.n.g.</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">Sonstige Güter a.n.g.</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="200">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Sonstige Güter, die anderweitig nicht klassifiziert sind</LabelText>
+            </Label>
+            <Property name="Name">
+                <PropertyQualifier name="LimitContent" language="DE">
+                    <PropertyText type="Content">Sonstige Güter</PropertyText>
+                </PropertyQualifier>
+                <PropertyQualifier name="PlainText" language="DE">
+                    <PropertyText type="Content">Sonstige Güter</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+    </Classification>
+</Claset>

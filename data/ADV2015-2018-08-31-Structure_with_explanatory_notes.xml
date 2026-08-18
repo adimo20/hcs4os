@@ -1,0 +1,2210 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Claset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="31.08.2018 18:06:32 GMT+0200" reference="adv2015" xsi:noNamespaceSchemaLocation="http://ec.europa.eu/eurostat/ramon/miscellaneous/documentation/data_models_and_xml_dtd/XML_schema_claset.xsd">
+    <Classification type="Classification" id="adv2015">
+        <Label qualifier="Usual">
+            <LabelText language="DE">ADV-Nutzungskatalog</LabelText>
+        </Label>
+        <Property name="Comment">
+            <PropertyQualifier name="PlainText" language="DE">
+                <PropertyText type="Content">Dateiinhalt: Gliederung mit Erläuterung
+Letzte Aktualisierung: 31.08.2018 18:06:32 (GMT+0200)
+Letzte Aktualisierung der Stichwörter: 31.08.2018 18:06:32 (GMT+0200)
+Weitere Informationen: https://www.klassifikationsserver.de/
+Copyright:
+Eigentümer:</PropertyText>
+            </PropertyQualifier>
+            <PropertyQualifier name="PlainText" language="EN">
+                <PropertyText type="Content">File content: Structure with explanatory notes
+Last update: 31.08.2018 18:06:32 (GMT+0200)
+Last update of keywords: 31.08.2018 18:06:32 (GMT+0200)
+Further information: https://www.klassifikationsserver.de/
+Copyright:
+Owner:</PropertyText>
+            </PropertyQualifier>
+        </Property>
+        <Level id="1">
+            <Level id="2">
+                <Level id="3">
+                    <Level id="4">
+                        <Level id="5"/>
+                    </Level>
+                </Level>
+            </Level>
+        </Level>
+        <Item idLevel="1" type="OfficialGrouping" id="10000">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Siedlung</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="11000">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Wohnbaufläche 1)</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="12000">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Industrie- und Gewerbefläche</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="12100">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Industrie und Gewerbe</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="12101">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Gebäude- und Freifläche Industrie und Gewerbe 2)</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="12110">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Produktion</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="12120">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Handwerk</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="12130">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Tankstelle</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="12140">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Lagerplatz</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="12141">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Abraum</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="12142">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Baustoffe</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="12143">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Erde</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="12144">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Kohle</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="12145">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Öl</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="12146">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Schlacke</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="12147">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Schrott, Altmaterial</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="12148">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Schutt</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="1214_R">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Lagerplatz - nicht weiter untergliedert</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="12150">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Transport</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="12160">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Forschung</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="12170">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Grundstoff</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="12180">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Betriebliche Sozialeinrichtung</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="12190">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Werft</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="121_R">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Industrie und Gewerbe - nicht weiter untergliedert</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="12200">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Handel und Dienstleistung</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="12210">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Verwaltung, freie Berufe</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="12220">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Bank, Kredit</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="12230">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Versicherung</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="12240">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Handel</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="12250">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Ausstellung, Messe</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="12260">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Beherbergung</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="12270">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Restauration</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="12280">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Vergnügung</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="12290">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Gärtnerei</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="122_R">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Handel und Dienstleistung - nicht weiter untergliedert</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="12300">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Versorgungsanlage</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="12301">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Gebäude- und Freifläche Versorgungsanlage</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="12302">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Betriebsfläche Versorgungsanlage</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="12310">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Förderanlage</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="12311">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Erdöl</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="12312">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Erdgas</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="12313">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Sole, Lauge</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="12314">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Kohlensäure</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="12315">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Erdwärme</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="1231_R">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Förderanlage - nicht weiter untergliedert</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="12320">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Wasserwerk</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="12321">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Gebäude- und Freifläche Versorgungsanlage, Wasser</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="12322">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Betriebsfläche Versorgungsanlage, Wasser</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="1232_R">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Wasserwerk - nicht weiter untergliedert</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="12330">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Kraftwerk</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="12331">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Gebäude- und Freifläche Versorgungsanlage, Elektrizität</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="12332">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Betriebsfläche Versorgungsanlage, Elektrizität</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="1233_R">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Kraftwerk - nicht weiter untergliedert</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="12340">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Umspannstation</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="12350">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Raffinerie</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="12351">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Gebäude- und Freifläche Versorgungsanlage, Öl</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="12352">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Betriebsfläche Versorgungsanlage, Öl</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="1235_R">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Raffinerie - nicht weiter untergliedert</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="12360">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Gaswerk</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="12361">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Gebäude- und Freifläche Versorgungsanlage, Gas</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="12362">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Betriebsfläche Versorgungsanlage, Gas</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="1236_R">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Gaswerk - nicht weiter untergliedert</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="12370">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Heizwerk</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="12371">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Gebäude- und Freifläche Versorgungsanlage, Wärme</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="12372">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Betriebsfläche Versorgungsanlage, Wärme</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="1237_R">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Heizwerk - nicht weiter untergliedert</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="12380">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Funk- und Fernmeldeanlage</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="12381">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Gebäude- und Freifläche Versorgungsanlage, Funk- und Fernmeldewesen</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="12382">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Betriebsfläche Versorgungsanlage, Funk- und Fernmeldewesen</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="1238_R">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Funk- und Fernmeldeanlage - nicht weiter untergliedert</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="123_R">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Versorgungsanlage - nicht weiter untergliedert</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="12400">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Entsorgung</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="12401">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Gebäude- und Freifläche Entsorgungsanlage</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="12402">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Betriebsfläche Entsorgungsanlage</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="12410">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Kläranlage, Klärwerk</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="12411">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Gebäude- und Freifläche Entsorgungsanlage, Abwasserbeseitigung</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="12412">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Betriebsfläche Entsorgungsanlage, Abwasserbeseitigung</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="1241_R">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Kläranlage, Klärwerk - nicht weiter untergliedert</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="12420">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Abfallbehandlungsanlage</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="12421">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Gebäude- und Freifläche Entsorgungsanlage, Abfallbeseitigung</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="12422">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Betriebsfläche Entsorgungsanlage, Abfallbeseitigung</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="12423">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Betriebsfläche Entsorgungsanlage, Schlamm</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="1242_R">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Abfallbehandlungsanlage - nicht weiter untergliedert</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="12430">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Deponie (oberirdisch)</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="12440">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Deponie (untertägig)</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="124_R">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Entsorgung - nicht weiter untergliedert</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="12_R">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Industrie- und Gewerbefläche - nicht weiter untergliedert</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="13000">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Halde</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="DummyGrouping" id="130001">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Halde</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="DummyGrouping" id="130002">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Halde</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="13001">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Baustoffe</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="13002">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Kohle</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="13003">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Erde</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="13004">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Schutt</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="13005">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Schlacke</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="13006">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Abraum</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="13007">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Schrott, Altmaterial</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="13_R">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Halde - nicht weiter untergliedert</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="14000">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Bergbaubetrieb</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="DummyGrouping" id="140001">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Bergbaubetrieb</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="14010">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Erden, Lockergestein</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="14011">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Ton</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="14012">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Kalk, Kalktuff, Kreide</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="1401_R">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Erden, Lockergestein - nicht weiter untergliedert</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="14020">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Steine, Gestein, Festgestein</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="14021">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Schiefer, Dachschiefer</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="14022">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Metamorpher Schiefer</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="14023">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Kalkstein</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="14024">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Dolomitstein</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="14025">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Basalt, Diabas</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="14026">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Talkschiefer, Speckstein</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="1402_R">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Steine, Gestein, Festgestein - nicht weiter untergliedert</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="14030">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Erze</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="14031">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Eisen</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="14032">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Buntmetallerze</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="14033">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Kupfer</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="14034">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Blei</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="14035">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Zink</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="14036">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Zinn</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="14037">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Wismut, Kobalt, Nickel</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="14038">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Uran</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="14039">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Mangan</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="14041">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Antimon</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="14042">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Edelmetallerze</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="1403_R">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Erze - nicht weiter untergliedert</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="14050">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Treib- und Brennstoffe</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="14051">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Kohle</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="14052">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Braunkohle</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="14053">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Steinkohle</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="14054">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Ölschiefer</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="1405_R">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Treib- und Brennstoffe - nicht weiter untergliedert</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="14060">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Industrieminerale, Salze</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="14061">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Gipsstein</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="14062">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Anhydritstein</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="14063">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Steinsalz</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="14064">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Kalisalz</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="14065">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Kalkspat</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="14066">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Flussspat</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="14067">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Schwerspat</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="14068">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Graphit</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="1406_R">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Industrieminerale, Salze - nicht weiter untergliedert</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="14_R">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Bergbaubetrieb - nicht weiter untergliedert</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="15000">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Tagebau, Grube, Steinbruch</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="DummyGrouping" id="15002">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Tagebau, Grube, Steinbruch</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="15010">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Erden, Lockergestein</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="15011">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Ton</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="15012">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Bentonit</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="15013">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Kaolin</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="15014">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Lehm</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="15015">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Löß, Lößlehm</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="15016">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Mergel</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="15017">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Kalk, Kalktuff, Kreide</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="15018">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Sand</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="15019">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Kies, Kiessand</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="15021">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Farberden</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="15022">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Quarzsand</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="15023">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Kieselerde</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="1501_R">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Erden, Lockergestein - nicht weiter untergliedert</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="15030">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Steine, Gestein, Festgestein</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="15031">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Tonstein</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="15032">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Schiefer, Dachschiefer</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="15033">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Metamorpher Schiefer</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="15034">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Mergelstein</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="15035">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Kalkstein</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="15036">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Dolomitstein</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="15037">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Travertin</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="15038">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Marmor</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="15039">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Sandstein</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="15041">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Grauwacke</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="15042">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Quarzit</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="15043">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Gneis</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="15044">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Basalt, Diabas</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="15045">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Andesit</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="15046">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Porphyr, Quarzporphyr</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="15047">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Granit</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="15048">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Granodiorit</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="15049">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Tuff-, Bimsstein</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="15051">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Trass</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="15052">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Lavaschlacke</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="15053">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Talkschiefer, Speckstein</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="1503_R">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Steine, Gestein, Festgestein - nicht weiter untergliedert</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="15060">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Treib- und Brennstoffe</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="15061">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Torf</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="15062">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Kohle</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="15063">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Braunkohle</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="15064">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Steinkohle</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="15065">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Ölschiefer</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="1506_R">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Treib- und Brennstoffe - nicht weiter untergliedert</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="15070">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Industrieminerale, Salze</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="15071">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Gipsstein</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="15072">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Anhydritstein</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="15073">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Kalkspat</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="15074">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Schwerspat</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="15075">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Quarz</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="15076">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Feldspat</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="15077">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Pegmatitsand</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="1507_R">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Industrieminerale, Salze - nicht weiter untergliedert</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="15_R">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Tagebau, Grube, Steinbruch - nicht weiter untergliedert</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="16000">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Fläche gemischter Nutzung</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="16100">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Gebäude- und Freifläche, Mischnutzung mit Wohnen</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="16110">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Wohnen mit Öffentlich</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="16120">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Wohnen mit Handel und Dienstleistungen</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="16130">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Wohnen mit Gewerbe und Industrie</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="16140">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Öffentlich mit Wohnen</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="16150">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Handel und Dienstleistungen mit Wohnen</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="16160">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Gewerbe und Industrie mit Wohnen</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="161_R">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Gebäude- und Freifläche, Mischnutzung mit Wohnen - nicht weiter untergliedert</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="16200">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Gebäude- und Freifläche Land- und Forstwirtschaft</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="16210">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Wohnen und Betrieb</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="16211">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Wohnen</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="16212">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Betrieb</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="1621_R">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Wohnen und Betrieb - nicht weiter untergliedert</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="162_R">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Gebäude- und Freifläche Land- und Forstwirtschaft - nicht weiter untergliedert</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="16300">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Landwirtschaftliche Betriebsfläche</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="16400">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Forstwirtschaftliche Betriebsfläche</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="16_R">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Fläche gemischter Nutzung - nicht weiter untergliedert</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="17000">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Fläche besonderer funktionaler Prägung</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="17100">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Öffentliche Zwecke</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="17110">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Verwaltung</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="17120">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Bildung und Forschung</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="17130">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Kultur</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="17140">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Religiöse Einrichtung</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="17150">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Gesundheit, Kur</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="17160">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Soziales</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="17170">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Sicherheit und Ordnung</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="171_R">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Öffentliche Zwecke - nicht weiter untergliedert</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="17200">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Parken</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="17300">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Historische Anlage</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="17310">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Burg-, Festungsanlage</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="17320">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Schlossanlage</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="173_R">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Historische Anlage - nicht weiter untergliedert</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="17_R">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Fläche besonderer funktionaler Prägung - nicht weiter untergliedert</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="18000">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Sport-, Freizeit- und Erholungsfläche</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="18001">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Gebäude- und Freifläche Sport, Freizeit und Erholung</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="18100">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Sportanlage</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="18101">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Gebäude- und Freifläche Erholung, Sport</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="18110">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Golfplatz</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="18120">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Sportplatz</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="18130">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Rennbahn</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="18140">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Reitplatz</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="18150">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Schießanlage</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="18160">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Eis-, Rollschuhbahn</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="18170">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Tennisplatz</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="181_R">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Sportanlage - nicht weiter untergliedert</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="18200">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Freizeitanlage</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="18210">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Zoo</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="18211">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Gebäude- und Freifläche Erholung, Zoologie</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="1821_R">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Zoo - nicht weiter untergliedert</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="18220">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Safaripark, Wildpark</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="18230">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Freizeitpark</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="18240">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Freilichttheater</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="18250">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Freilichtmuseum</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="18260">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Autokino, Freilichtkino</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="18270">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Verkehrsübungsplatz</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="18280">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Hundeübungsplatz</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="18290">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Modellflugplatz</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="182_R">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Freizeitanlage - nicht weiter untergliedert</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="18300">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Erholungsfläche</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="18301">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Gebäude- und Freifläche Erholung</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="18310">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Wochenend- und Ferienhausfläche</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="18320">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Schwimmbad, Freibad</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="18321">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Gebäude- und Freifläche Erholung, Bad</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="1832_R">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Schwimmbad, Freibad - nicht weiter untergliedert</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="18330">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Campingplatz</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="18331">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Gebäude- und Freifläche Erholung, Camping</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="1833_R">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Campingplatz - nicht weiter untergliedert</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="183_R">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Erholungsfläche - nicht weiter untergliedert</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="18400">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Grünanlage</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="18410">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Grünfläche</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="18420">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Park</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="18430">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Botanischer Garten</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="18431">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Gebäude- und Freifläche Erholung, Botanik</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="1843_R">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Botanischer Garten - nicht weiter untergliedert</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="18440">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Kleingarten</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="18450">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Wochenendplatz</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="18460">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Garten</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="18470">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Spielplatz, Bolzplatz</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="184_R">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Grünanlage - nicht weiter untergliedert</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="18_R">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Sport-, Freizeit- und Erholungsfläche - nicht weiter untergliedert</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="19000">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Friedhof</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="DummyGrouping" id="190011">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Friedhof</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="19001">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Gebäude- und Freifläche Friedhof</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="19002">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Friedhof (ohne Gebäude)</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="19010">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Friedhof (Park)</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="19020">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Historischer Friedhof</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="19_R">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Friedhof - nicht weiter untergliedert</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="1" type="OfficialGrouping" id="20000">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Verkehr</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="21000">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Straßenverkehr</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="DummyGrouping" id="210001">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Straßenverkehr</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="21001">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Gebäude- und Freifläche zu Verkehrsanlagen, Straße</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="21002">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Verkehrsbegleitfläche Straße</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="21003">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Straßenentwässerungsanlage</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="21010">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Fußgängerzone</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="21_R">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Straßenverkehr - nicht weiter untergliedert</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="22000">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Weg</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="DummyGrouping" id="220001">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Weg</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="22010">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Fahrweg</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="22011">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Hauptwirtschaftsweg</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="22012">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Wirtschaftsweg</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="2201_R">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Fahrweg - nicht weiter untergliedert</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="22020">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Fußweg</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="22030">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Gang</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="22040">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Radweg</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="22050">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Rad- und Fußweg</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="22060">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Reitweg</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="22_R">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Weg - nicht weiter untergliedert</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="23000">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Platz</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="DummyGrouping" id="23001">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Platz</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="23010">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Fußgängerzone</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="23020">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Parkplatz</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="23030">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Rastplatz</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="23040">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Raststätte</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="23050">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Marktplatz</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="23060">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Festplatz</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="23_R">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Platz - nicht weiter untergliedert</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="24000">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Bahnverkehr</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="DummyGrouping" id="240011">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Bahnverkehr</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="24001">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Gebäude- und Freifläche zu Verkehrsanlagen, Schiene</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="24002">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Verkehrsbegleitfläche Bahnverkehr</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="24010">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Eisenbahn</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="24011">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Güterverkehr</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="24012">
+            <Label qualifier="Usual">
+                <LabelText language="DE">S-Bahn</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="24013">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Museumsbahn</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="2401_R">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Eisenbahn - nicht weiter untergliedert</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="24020">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Stadtbahn</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="24021">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Straßenbahn</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="24022">
+            <Label qualifier="Usual">
+                <LabelText language="DE">U-Bahn</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="2402_R">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Stadtbahn - nicht weiter untergliedert</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="24030">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Seilbahn, Bergbahn</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="24031">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Zahnradbahn</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="24032">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Standseilbahn</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="2403_R">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Seilbahn, Bergbahn - nicht weiter untergliedert</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="24040">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Magnetschwebebahn</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="24_R">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Bahnverkehr - nicht weiter untergliedert</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="25000">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Flugverkehr</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="DummyGrouping" id="250010">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Flugverkehr</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="25001">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Gebäude- und Freifläche zu Verkehrsanlagen, Luftfahrt</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="25010">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Flughafen</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="25011">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Internationaler Flughafen</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="25012">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Regionalflughafen</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="2501_R">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Flughafen - nicht weiter untergliedert</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="25020">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Verkehrslandeplatz</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="25030">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Hubschrauberflugplatz</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="25040">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Landeplatz, Sonderlandeplatz</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="25050">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Segelfluggelände</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="25_R">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Flugverkehr - nicht weiter untergliedert</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="26000">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Schiffsverkehr</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="DummyGrouping" id="260011">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Schiffsverkehr</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="26001">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Gebäude- und Freifläche zu Verkehrsanlagen, Schifffahrt</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="26010">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Hafenanlage (Landfläche)</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="26020">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Schleuse (Landfläche)</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="26030">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Anlegestelle</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="26040">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Fähranlage</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="26_R">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Schiffsverkehr - nicht weiter untergliedert</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="1" type="OfficialGrouping" id="30000">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Vegetation</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="31000">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Landwirtschaft</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="31100">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Ackerland</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="31110">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Streuobstacker</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="31120">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Hopfen</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="31130">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Spargel</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="311_R">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Ackerland - nicht weiter untergliedert</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="31200">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Grünland</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="31210">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Streuobstwiese</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="312_R">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Grünland - nicht weiter untergliedert</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="31300">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Gartenland</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="31310">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Baumschule</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="313_R">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Gartenland - nicht weiter untergliedert</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="31400">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Weingarten</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="31500">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Obstplantage</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="31510">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Obstbaumplantage</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="31520">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Obststrauchplantage</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="315_R">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Obstplantage - nicht weiter untergliedert</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="31600">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Brachland</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="31_R">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Landwirtschaft - nicht weiter untergliedert</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="32000">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Wald</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="32100">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Laubholz</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="32200">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Nadelholz</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="32300">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Laub- und Nadelholz</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="32310">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Laubwald mit Nadelholz</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="32320">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Nadelwald mit Laubholz</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="323_R">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Laub- und Nadelholz - nicht weiter untergliedert</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="32_R">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Wald - nicht weiter untergliedert</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="33000">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Gehölz</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="DummyGrouping" id="33001">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Gehölz</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="33010">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Latschenkiefer</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="33_R">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Gehölz - nicht weiter untergliedert</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="34000">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Heide</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="35000">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Moor</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="36000">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Sumpf</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="37000">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Unland, Vegetationslose Fläche</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="DummyGrouping" id="37001">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Unland, Vegetationslose Fläche</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="37010">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Vegetationslose Fläche</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="37011">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Fels</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="37012">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Steine, Schotter</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="37013">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Geröll</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="37014">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Sand</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="37015">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Schnee</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="37016">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Eis, Firn</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="3701_R">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Vegetationslose Fläche - nicht weiter untergliedert</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="37020">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Gewässerbegleitfläche</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="37021">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Bebaute Gewässerbegleitfläche</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="37022">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Unbebaute Gewässerbegleitfläche</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="3702_R">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Gewässerbegleitfläche - nicht weiter untergliedert</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="37030">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Sukzessionsfläche</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="37_R">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Unland, Vegetationslose Fläche - nicht weiter untergliedert</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="1" type="OfficialGrouping" id="40000">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Gewässer</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="41000">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Fließgewässer</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="41100">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Fluss</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="41110">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Altwasser</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="41120">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Altarm</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="41130">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Flussmündungstrichter</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="411_R">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Fluss - nicht weiter untergliedert</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="41200">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Kanal</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="41300">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Graben</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="41310">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Fleet</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="413_R">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Graben - nicht weiter untergliedert</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="41400">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Bach</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="41_R">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Fließgewässer - nicht weiter untergliedert</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="42000">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Hafenbecken</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="DummyGrouping" id="42001">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Hafenbecken</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="42010">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Sportboothafenbecken</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="42_R">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Hafenbecken - nicht weiter untergliedert</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="43000">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Stehendes Gewässer</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="43100">
+            <Label qualifier="Usual">
+                <LabelText language="DE">See</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="43110">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Stausee</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="43111">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Speicherbecken</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="5" type="OfficialGrouping" id="4311_R">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Stausee - nicht weiter untergliedert</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="43120">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Baggersee</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="431_R">
+            <Label qualifier="Usual">
+                <LabelText language="DE">See - nicht weiter untergliedert</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="43200">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Teich</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="43_R">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Stehendes Gewässer - nicht weiter untergliedert</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="44000">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Meer</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="DummyGrouping" id="44001">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Meer</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="4" type="OfficialGrouping" id="44010">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Küstengewässer</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="44_R">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Meer - nicht weiter untergliedert</LabelText>
+            </Label>
+        </Item>
+    </Classification>
+</Claset>

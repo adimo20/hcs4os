@@ -1,0 +1,2048 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Claset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="06.07.2021 00:00:00 GMT+0200" reference="60bauleistungen" xsi:noNamespaceSchemaLocation="http://ec.europa.eu/eurostat/ramon/miscellaneous/documentation/data_models_and_xml_dtd/XML_schema_claset.xsd">
+    <Classification type="Classification" id="60bauleistungen">
+        <Label qualifier="Usual">
+            <LabelText language="DE">Klassifikation der Bauleistungen für die Preisindizes der Bauwirtschaft, Basisjahr 2015</LabelText>
+        </Label>
+        <Property name="Comment">
+            <PropertyQualifier name="PlainText" language="DE">
+                <PropertyText type="Content">Dateiinhalt: Gliederung mit Erläuterung
+Letzte Aktualisierung: 06.07.2021 00:00:00 (GMT+0200)
+Letzte Aktualisierung der Stichwörter: 06.07.2021 00:00:00 (GMT+0200)
+Weitere Informationen: https://www.klassifikationsserver.de/
+Copyright:
+Eigentümer: Referat &quot;Agrar, Bau- und Immobilienpreise&quot;, Sachgebiet &quot;Baupreise&quot;</PropertyText>
+            </PropertyQualifier>
+        </Property>
+        <Level id="1">
+            <Level id="2">
+                <Level id="3"/>
+            </Level>
+        </Level>
+        <Item idLevel="1" type="OfficialGrouping" id="1">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Rohbau</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="1.100">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Erdarbeiten</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="1.100.101">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Baugrube ausheben im Hochbau</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="1.100.102">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Graben ausheben</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="1.100.103">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Boden laden und fördern</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="1.100.104">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Untergrundverbesserung im Hochbau</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="1.100.105">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Arbeitsräume verfüllen</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="1.120">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Verbauarbeiten</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="1.120.106">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Baugrubenverbau</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="1.140">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Ramm-, Rüttel- u. Pressarbeiten</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="1.140.107">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Stahl-Spundwand einbringen und wieder ziehen</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="1.140.108">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Verlorene Spundwand einbringen</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="1.160">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Entwässerungskanalarbeiten</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="1.160.109">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Rohrleitung aus Beton oder Stahlbeton</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="1.160.110">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Rohrleitung aus Steinzeug</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="1.160.111">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Rohrleitung aus Kunststoff für Entwässerung</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="1.160.112">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Rohrleitungszubehör</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="1.260">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Landschaftsbauarbeiten</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="1.260.113">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Gebrauchsrasen anlegen</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="1.260.115">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Großgehölze pflanzen</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="1.280">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Mauerarbeiten</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="1.280.116">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Großformatiges Mauerwerk</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="1.280.117">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Kleinformatiges Mauerwerk</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="1.280.118">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Porenbetonmauerwerk</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="1.280.119">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Zweischaliges Mauerwerk</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="1.280.120">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Nichttragende Trennwand</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="1.280.121">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Schornstein aus Formstücken</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="1.300">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Betonarbeiten</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="1.300.123">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Beton der Fundamente</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="1.300.124">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Beton der Wände</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="1.300.125">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Beton der Decke</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="1.300.126">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Beton der Skelettbauten</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="1.300.127">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Schalung der Fundamente</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="1.300.129">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Betonstahlmatten</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="1.300.130">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Betonstabstahl im Hochbau</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="1.300.131">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Betonfertigteile</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="1.300.132">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Vorgefertigte Außenwandplatte</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="1.300.133">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Systemdecke</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="1.300.134">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Systemtreppe</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="1.320">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Zimmer- und Holzbauarbeiten</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="1.320.136">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Dachverbandholz liefern</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="1.320.137">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Dachverbandholz abbinden und aufstellen</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="1.320.138">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Wangentreppe</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="1.320.139">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Schalung</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="1.320.140">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Dachbinder</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="1.340">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Stahlbauarbeiten</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="1.340.141">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Stahlfachwerk</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">Z</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="1.340.142">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Stahlskelettkonstruktion</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">Z</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="1.360">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Abdichtungsarbeiten</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="1.360.143">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Waagerechte Abdichtung</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="1.360.144">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Senkrechte Abdichtung</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="1.380">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Dachdeckungs- und Dachabdichtungsarbeiten</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="1.380.145">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Unterspannbahn</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="1.380.146">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Dachdeckung mit Lattung</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="1.380.147">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Dachabdichtung mit Bitumenbahnen</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="1.380.149">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Dachabdichtung auf Massivdecke</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="1.380.150">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Deckung mit Stahlblechen</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="1.380.151">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Dachflächenfenster</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="1.380.152">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Lichtkuppeln aus Kunststoff</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="1.400">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Klempnerarbeiten</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="1.400.153">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Metalldachdeckung</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="1.400.154">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Dachrinne</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="1.400.155">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Regenfallrohr</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="1.400.156">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Abdeckung</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="1.400.157">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Einfassung auf Dächern</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="1.420">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Gerüstarbeiten</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="1.420.158">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Arbeitsgerüst</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="1" type="OfficialGrouping" id="2">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Nicht-technischer Ausbau</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="2.440">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Naturwerksteinarbeiten</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="2.440.201">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Bodenbelag aus Naturwerkstein</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="2.440.202">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Stufe aus Naturwerkstein</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="2.440.204">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Fensterbank aus Naturwerkstein</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="2.460">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Betonwerksteinarbeiten</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="2.460.205">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Bodenbelag aus Betonwerkstein</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="2.460.206">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Stufe aus Betonwerkstein</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="2.480">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Putz- und Stuckarbeiten</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="2.480.207">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Innenwandputz</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="2.480.208">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Deckenputz</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="2.480.210">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Außenwandputz</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="2.490">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Wärmedämm-Verbundsysteme</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="2.490.209">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Wärmedämm-Verbundsystem</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="2.500">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Trockenbauarbeiten</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="2.500.211">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Wandtrockenputz</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="2.500.212">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Deckenbekleidung</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="2.500.213">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Brandschutzbekleidung</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="2.500.214">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Nichttragende Montagewand</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="2.500.215">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Innenbekleidung aus Holz</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="2.500.256">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Unterdecke</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="2.520">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Vorgehängte hinterlüftete Fassaden</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="2.520.217">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Außenwandbekleidung aus Faserzementelementen</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="2.520.218">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Außenwandbekleidung aus Metallelementen</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="2.540">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Fliesen- und Plattenarbeiten</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="2.540.219">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Wandbekleidung aus keramischen Fliesen</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="2.540.220">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Bodenbelag aus keramischen Fliesen</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="2.560">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Estricharbeiten</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="2.560.221">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Dämmschicht</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="2.560.222">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Estrich</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="2.600">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Tischlerarbeiten</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="2.600.216">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Umsetzbare Innenwände</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="2.600.224">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Einfachfenster</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="2.600.225">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Innentürelement</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="2.600.226">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Holztürblatt</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="2.600.227">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Haustürelement aus Holz oder Kunststoff</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="2.620">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Parkett- und Holzpflasterarbeiten</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="2.620.229">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Parkettboden</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="2.640">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Rollladenarbeiten</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="2.640.231">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Rollladen</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="2.640.232">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Jalousie aus Aluminium</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="2.660">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Metallbauarbeiten</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="2.660.234">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Aluminiumfenster</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="2.660.235">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Fensterwand</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="2.660.237">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Türelement aus Metall</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="2.660.238">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Haustürelement aus Metall</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="2.660.239">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Torelement aus Metall</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="2.660.240">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Treppengeländer</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="2.660.241">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Stahlumfassungszarge</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="2.680">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Verglasungsarbeiten</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="2.680.244">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Ganzglaskonstruktion</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="2.700">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Maler- und Lackierarbeiten − Beschichtungen</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="2.700.246">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Beschichtung mit Dispersionsfarbe, innen</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="2.700.247">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Beschichtung mit Dispersionsfarbe, außen</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="2.700.248">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Bodenbeschichtung</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="2.700.249">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Lackfarbe auf Holz</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="2.700.250">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Beschichtung auf Stahl</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="2.720">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Korrosionsschutzarbeiten an Stahlbauten</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="2.720.251">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Korrosionsschutzsystem auf Stahl</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="2.740">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Bodenbelagarbeiten</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="2.740.252">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Bodenbelag aus Linoleum</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="2.740.253">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Bodenbelag aus PVC</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="2.740.254">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Textiler Bodenbelag</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="2.760">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Tapezierarbeiten</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="2.760.255">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Wandfläche tapezieren</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="1" type="OfficialGrouping" id="3">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Technischer Ausbau</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="3.780">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Raumlufttechnische Anlagen</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="3.780.301">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Klimagerät</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="3.780.302">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Abluftgerät</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="3.780.303">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Lüftungskanal mit Formteilen</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="3.800">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Heizanlagen und zentrale Wassererwärmungsanlagen</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="3.800.304">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Brennwertkessel</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="3.800.307">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Wärmepumpe</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="3.800.308">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Warmwasserspeicher</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="3.800.309">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Heizkörper</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="3.800.310">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Fußbodenheizung</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="3.800.312">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Ventile installieren</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="3.800.350">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Sonnenkollektor</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="3.820">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Gas-, Wasser- u. Entwässerungsanl. innerh. v. Geb.</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="3.820.317">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Rohrleitung aus Metall</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="3.820.319">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Abwasserrohrleitung</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="3.820.321">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Installationsblock</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="3.820.322">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Waschtisch</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="3.820.324">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Brausewanne</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="3.820.325">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Einbau-Badewanne</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="3.820.326">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Spülklosettanlage</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="3.820.327">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Wannen- und Brausearmatur</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="3.820.328">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Waschtischarmatur</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="3.820.329">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Druckerhöhungsanlage</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="3.820.351">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Rohrleitung aus Kunststoff für Hausinstallationen</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="3.840">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Nieder- und Mittelspannungsanlagen bis 36 kV</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="3.840.332">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Erdkabel verlegen</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="3.840.333">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Hauptleitung verlegen</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="3.840.334">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Installationskleinverteiler</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="3.840.335">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Stromkreis unter Putz</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="3.840.337">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Stromkreis auf Putz</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="3.840.338">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Leuchte mit Lampen</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="3.840.339">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Elektro-Warmwasserbereiter</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="3.840.340">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Kommunikationsanlage</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="3.840.342">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Empfangsantennenanlage</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="3.860">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Gebäudeautomation</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="3.860.343">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Meldeanlage</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="3.860.344">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Raumautomationseinrichtung</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="3.860.352">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Datenübertragungsnetzwerk</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="3.880">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Blitzschutzanlagen</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="3.880.345">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Blitzschutzanlage</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="3.900">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Dämm- und Brandschutzarbeiten an techn. Anlagen</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="3.900.346">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Rohrdämmung</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="3.920">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Aufzugsanlagen, Fahrtrepp., Fahrsteige, Förderanl.</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="3.920.347">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Aufzugsanlage</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">Z</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="1" type="OfficialGrouping" id="4">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Tiefbau</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="4.100">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Erdarbeiten</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="4.100.401">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Oberboden abtragen</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="4.100.402">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Oberboden andecken</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="4.100.403">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Graben ausheben im Tiefbau</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="4.100.404">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Boden lösen und fördern</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="4.100.405">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Boden lösen und weiterverwenden</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="4.100.406">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Fels lösen und weiterverwenden</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="4.100.407">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Boden verdichten</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="4.100.408">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Baugrube ausheben im Tiefbau</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="4.100.409">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Untergrundverbesserung im Tiefbau</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="4.180">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Verkehrswegebau, Oberbausch. ohne Bindemittel</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="4.180.410">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Frostschutzschicht</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="4.180.411">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Ungebundene Tragschicht</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="4.200">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Verkehrswegebau, Oberbausch. m. hydr. Bindemitteln</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="4.200.413">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Bodenverfestigung</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="4.200.414">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Betonfahrbahndecke</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="4.200.429">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Hydraulisch gebundene Tragschicht</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="4.220">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Verkehrswegebau, Oberbausch. aus Asphalt</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="4.220.417">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Asphalttragschicht</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="4.220.418">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Asphaltbinderschicht</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="4.220.419">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Asphaltdeckschicht aus Gussasphalt</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="4.220.420">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Asphaltdeckschicht aus Asphaltbeton</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="4.240">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Verkehrswegebau, Pflaster., Platten., Einfassungen</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="4.240.421">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Pflasterdecke</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="4.240.422">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Bordsteine aus Beton</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="4.240.423">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Plattenbelag aus Beton</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="4.300">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Betonarbeiten</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="4.300.425">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Beton der Bauteile im Tiefbau</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="4.300.426">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Betonstabstahl im Tiefbau</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="4.300.427">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Spannstahl</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="4.340">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Stahlbauarbeiten</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="4.340.428">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Deckbrücke in Stahlverbund mit orthotroper Platte</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">Z</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="1" type="OfficialGrouping" id="5">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Instandhaltung</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="5.320">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Zimmer- und Holzbauarbeiten</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="5.320.501">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Holzfußboden erneuern</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="5.380">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Dachdeckungs- und Dachabdichtungsarbeiten</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="5.380.502">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Dachdeckung mit Lattung erneuern</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="5.380.503">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Dachabdichtung mit Bitumenbahnen erneuern</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="5.400">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Klempnerarbeiten</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="5.400.504">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Dachrinne erneuern</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="5.600">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Tischlerarbeiten</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="5.600.506">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Einfachfenster erneuern</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="5.640">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Rollladenarbeiten</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="5.640.507">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Rollladen erneuern</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="5.700">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Maler- und Lackierarbeiten − Beschichtungen</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="5.700.508">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Beschichtung mit Dispersionsfarbe erneuern</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="5.700.510">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Lackfarbe auf Heizkörper erneuern</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="5.760">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Tapezierarbeiten</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="5.760.512">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Tapete auf Wandfläche erneuern</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="2" type="OfficialGrouping" id="5.820">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Gas-, Wasser- u. Entwässerungsanl. innerh. v. Geb.</LabelText>
+            </Label>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="5.820.513">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Rohrleitung aus Metall erneuern</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="5.820.514">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Einbau-Badewanne erneuern</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+        <Item idLevel="3" type="OfficialGrouping" id="5.820.515">
+            <Label qualifier="Usual">
+                <LabelText language="DE">Spülklosettanlage erneuern</LabelText>
+            </Label>
+            <Property name="ExplanatoryNote">
+                <PropertyQualifier name="Value">
+                    <PropertyText type="Content">D</PropertyText>
+                </PropertyQualifier>
+            </Property>
+        </Item>
+    </Classification>
+</Claset>

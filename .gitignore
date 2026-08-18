@@ -2,7 +2,6 @@
 start_venv.sh
 Note.md
 test.py
-data/
 .venv/
 embedding_api/
 .env
