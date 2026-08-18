@@ -40,6 +40,32 @@ mapping = {
         "loader_name":"JSON",
         "data_path":make_path("classification_system_SEA_2021.json"),
         "metadata":{}
+    },
+    "EAV":{
+        "classification_system":"EAV",      
+        "loader_name":"KLASS_SERVER",
+        "data_path":make_path("EAV2026.xml"),
+        "metadata":{}
+    },
+    "VUL":{
+        "classification_system":"VUL",      
+        "loader_name":"KLASS_SERVER",
+        "data_path":make_path("VUL_2025-2026-03-13-Gliederung_mit_Erläuterung.xml"),
+        "metadata":{}
+    },
+    "NST":{
+        "classification_system":"NST",      
+        "loader_name":"KLASS_SERVER",
+        "data_path":make_path("NST_2007-2024-08-27-Gliederung_mit_Erläuterung.xml"),
+        "metadata":{}
+        
+    },
+    "GP":{
+        "classification_system":"GP",      
+        "loader_name":"KLASS_SERVER",
+        "data_path":make_path("GP_2026-2026-04-10-Structure.xml"),
+        "metadata":{}
+        
     }
 
 }

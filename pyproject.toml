@@ -6,7 +6,8 @@ build-backend = "setuptools.build_meta"
 name = "hcs4os"
 version = "0.1.0"
 dependencies = [
-    "pandas"
+    "pandas",
+    "openpyxl"
 ]
 
 [tool.setuptools.packages.find]
@@ -14,4 +15,4 @@ where = ["."]
 include = ["classification_system*", "dataloaders*", "shared*", "data*"]
 
 [tool.setuptools.package-data]
-"*" = ["*.json", "*.csv", "*.xml"]
+"*" = ["*.json", "*.csv", "*.xml", "*.xlsx"]

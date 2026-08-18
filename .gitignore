@@ -7,3 +7,5 @@ data/
 embedding_api/
 .env
 pyrightconfig.json
+*Klassifikationsverzeichnis.xlsx
+Klassifikationsverzeichnis.xlsx
