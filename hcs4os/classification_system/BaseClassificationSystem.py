@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
-from dataloaders.BaseDataLoader import ClassificationLoader
-from _shared.Code import Code
+from ..dataloaders.BaseDataLoader import ClassificationLoader
+from .._shared.Code import Code
 
 
 

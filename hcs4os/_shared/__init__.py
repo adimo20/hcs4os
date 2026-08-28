@@ -1,1 +1,1 @@
-from shared.Code import Code
+from .._shared.Code import Code

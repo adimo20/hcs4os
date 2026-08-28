@@ -1,6 +1,6 @@
 from .BaseClassificationSystem import ClassificationSystem
 from .mapping import mapping
-from dataloaders.registry import get_loader
+from ..dataloaders.registry import get_loader
 
 _REGISTRY_CS: dict[str, type[ClassificationSystem]] = {}
 
