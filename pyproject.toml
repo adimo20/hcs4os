@@ -4,15 +4,17 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "hcs4os"
-version = "0.1.0"
+version = "0.2.0"
+requires-python = ">=3.10"
 dependencies = [
     "pandas",
-    "openpyxl"
+    "openpyxl",
+    "dspy"
 ]
 
 [tool.setuptools.packages.find]
 where = ["./hcs4os"]
-include = ["classification_system*", "dataloaders*", "shared*", "data*"]
+include = ["classification_system*", "dataloaders*", "shared*", "data*", "agents*"]
 
 [tool.setuptools.package-data]
 "*" = ["*.json", "*.csv", "*.xml", "*.xlsx"]
