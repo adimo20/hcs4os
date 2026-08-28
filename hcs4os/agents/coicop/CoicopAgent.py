@@ -1,69 +1,85 @@
 import dspy
 from ...classification_system import get_classification_system
 from pathlib import Path
+import warnings
+
+warnings.filterwarnings(
+  "ignore", 
+  category=UserWarning, 
+  module="pydantic"
+)
+
+def create_system_prompt(
+  target_level:int=4
+)->str:
+  
+  return f"""
+      Classify a household expense into a single COICOP code by searching the
+      classification hierarchy top-down, using the available tools rather than
+      relying on memorized codes.
+
+      COICOP is a tree. The top level is a set of divisions (e.g. "01" Food and
+      non-alcoholic beverages), and each code has children one level deeper
+      (division -> group -> class -> subclass), e.g. 01 -> 01.1 -> 01.1.1 ->
+      01.1.1.1. A valid final answer is a real code that exists in the system;
+      prefer the most specific (deepest, leaf) code that correctly covers the
+      expense.
+
+      Tools:
+      - get_root_categories_tool(): list the top-level divisions. Start here.
+      - get_children_tool(code): list the direct child codes one level down, each
+        with its description and includes/excludes notes.
+      - get_code_tool(code): read one code's full record (description, elaborated
+        definition, and 'includes' / 'alsoIncludes' / 'excludes' notes).
+      - get_parent_tool(code): move one level up to re-read broader context or
+        reconsider a branch.
+
+      Reasoning protocol:
+      1. Identify the essence of the expense: what good or service was actually
+        purchased. Note any detail that affects placement (state/form of the
+        item, purpose, whether it is a good vs. a service).
+      2. Call get_root_categories() and choose the single best-fitting division.
+        If two divisions seem plausible, note the alternative to revisit later.
+      3. Descend one level at a time with get_children on the current code.
+        At each level:
+          - Compare the expense against every child's description and notes.
+          - Read the 'includes' and 'alsoIncludes' notes to confirm a match.
+          - Read the 'excludes' notes carefully: they explicitly redirect
+            items that look like they belong here but are classified
+            elsewhere, and usually name the correct code. Follow those
+            pointers instead of forcing a fit.
+          - Pick the best-matching child and repeat.
+      4. Continue descending until you reach a leaf (get_children returns an
+        empty list) or until no deeper code fits better than the current one.
+      5. Before committing, verify the chosen code with get_code and check that
+        its notes do not exclude this expense. If they do, backtrack using
+        get_parent or return to a noted alternative branch and search again.
+      6. If, after searching, no specific code fits, choose the most appropriate
+        "other" / residual code within the correct branch rather than guessing
+        a code from a different branch.
+
+      Rules:
+      - Never invent or guess a code from memory. Every code in the final answer
+        and in your reasoning must have been returned by a tool.
+      - The final coicop_code must be an exact code string that the tools
+        returned (e.g. "01.1.1.1"), not a paraphrase or a made-up variant.
+      - The target level for the classification of the expense is **{str(target_level)}**,
+      always try to find a code from level **{str(target_level)}** the level of a code
+      is returned by get_code.
+      - When evidence is ambiguous, prefer the interpretation supported by the
+        includes/excludes notes over intuition.      
+
+      Output:
+      - coicop_code: the single most specific COICOP code that correctly
+        classifies the expense.
+      - explaination: a concise justification tracing the path taken (division
+        -> ... -> final code) and citing the decisive includes/excludes note(s)
+        that determined the choice, including any branch you rejected and why.
+      """
+    
 
 class CoicopHierarchicalSearchAgentSignature(dspy.Signature):
-    """
-    Classify a household expense into a single COICOP code by searching the
-    classification hierarchy top-down, using the available tools rather than
-    relying on memorized codes.
-
-    COICOP is a tree. The top level is a set of divisions (e.g. "01" Food and
-    non-alcoholic beverages), and each code has children one level deeper
-    (division -> group -> class -> subclass), e.g. 01 -> 01.1 -> 01.1.1 ->
-    01.1.1.1. A valid final answer is a real code that exists in the system;
-    prefer the most specific (deepest, leaf) code that correctly covers the
-    expense.
-
-    Tools:
-    - get_root_categories_tool(): list the top-level divisions. Start here.
-    - get_children_tool(code): list the direct child codes one level down, each
-      with its description and includes/excludes notes.
-    - get_code_tool(code): read one code's full record (description, elaborated
-      definition, and 'includes' / 'alsoIncludes' / 'excludes' notes).
-    - get_parent_tool(code): move one level up to re-read broader context or
-      reconsider a branch.
-
-    Reasoning protocol:
-    1. Identify the essence of the expense: what good or service was actually
-       purchased. Note any detail that affects placement (state/form of the
-       item, purpose, whether it is a good vs. a service).
-    2. Call get_root_categories() and choose the single best-fitting division.
-       If two divisions seem plausible, note the alternative to revisit later.
-    3. Descend one level at a time with get_children on the current code.
-       At each level:
-         - Compare the expense against every child's description and notes.
-         - Read the 'includes' and 'alsoIncludes' notes to confirm a match.
-         - Read the 'excludes' notes carefully: they explicitly redirect
-           items that look like they belong here but are classified
-           elsewhere, and usually name the correct code. Follow those
-           pointers instead of forcing a fit.
-         - Pick the best-matching child and repeat.
-    4. Continue descending until you reach a leaf (get_children returns an
-       empty list) or until no deeper code fits better than the current one.
-    5. Before committing, verify the chosen code with get_code and check that
-       its notes do not exclude this expense. If they do, backtrack using
-       get_parent or return to a noted alternative branch and search again.
-    6. If, after searching, no specific code fits, choose the most appropriate
-       "other" / residual code within the correct branch rather than guessing
-       a code from a different branch.
-
-    Rules:
-    - Never invent or guess a code from memory. Every code in the final answer
-      and in your reasoning must have been returned by a tool.
-    - The final coicop_code must be an exact code string that the tools
-      returned (e.g. "01.1.1.1"), not a paraphrase or a made-up variant.
-    - If it is possible always return a least a level 4 code, that has 5 digits
-    - When evidence is ambiguous, prefer the interpretation supported by the
-      includes/excludes notes over intuition.
-
-    Output:
-    - coicop_code: the single most specific COICOP code that correctly
-      classifies the expense.
-    - explaination: a concise justification tracing the path taken (division
-      -> ... -> final code) and citing the decisive includes/excludes note(s)
-      that determined the choice, including any branch you rejected and why.
-    """
+    
     input_expense: str = dspy.InputField(
         desc="A household expense to classify, e.g. a receipt line item or a short description of a purchased good or service."
     )
@@ -86,7 +102,8 @@ class CoicopHierarchicalSearchAent(dspy.Module):
         self,
         api_key:str,
         model_name:str,
-        api_base:str|None=None
+        api_base:str|None=None,
+        target_level:int=4
     )->None:
         
         assert api_key is not None
@@ -101,9 +118,10 @@ class CoicopHierarchicalSearchAent(dspy.Module):
         dspy.configure(lm=self.lm)
         
         self.coicop = get_classification_system("COICOP_2018")     
-        
+        self.signature = CoicopHierarchicalSearchAgentSignature
+        self.signature.__doc__ = create_system_prompt()
         self.agent = dspy.ReAct(
-            CoicopHierarchicalSearchAgentSignature,
+            self.signature,
             tools=[
                 dspy.Tool(self.get_root_categories_tool, name="get_root_categories",
                           desc=load_doc_strings("get_root_categories")),
