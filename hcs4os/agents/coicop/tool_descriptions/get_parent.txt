@@ -1,0 +1,14 @@
+Retrieve the immediate parent (one level up) of the given code.
+
+Use this to move back up the hierarchy — to reconsider a branch, read
+the broader category's definition for context, or verify that a code
+sits under the intended higher-level group. Returns the parent's full
+record.
+
+Args:
+    code: The classification code whose parent you want, e.g. "01.1.1".
+
+Returns:
+    A Code object for the parent (e.g. "01.1"), with the same fields as
+    get_code returns. The scope note on a parent often summarises what
+    the whole branch covers and excludes.

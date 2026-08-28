@@ -56,12 +56,7 @@ class ClassificationSystem(ABC):
         code:dict,
         parent:str|None=None
     ):
-        """
-        Use for adding custom codes into the classification system object. 
-        Paramters:
-            code:dict = needs to be in the form of a dictinary code
-            parent:str = just a marker for the child registry. Will be used as a key insode child registry
-        """
+        
         _code = Code.from_dict(code)
         self._lookup[_code.code] = _code
         if parent:
@@ -88,7 +83,7 @@ class ClassificationSystem(ABC):
         self,
         code:str
     )->list[Code]:
-
+        
         try:
             return self._children_register[code]
         except Exception as e:
@@ -99,6 +94,7 @@ class ClassificationSystem(ABC):
         self, 
         parent:str
     ):
+        
         prefixes = self.get_prefixes(parent)
         num_prefixes = len(prefixes)
         if num_prefixes > 1:

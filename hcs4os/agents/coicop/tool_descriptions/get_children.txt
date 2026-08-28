@@ -1,0 +1,20 @@
+Retrieve the full record for a single classification code.
+
+Use this to inspect one specific code in detail — its description,
+level in the hierarchy, and (for leaf/lower levels) an elaborated
+description plus 'includes', 'alsoIncludes' and 'excludes' notes that
+disambiguate what belongs under it. The 'excludes' notes are especially
+useful: they point to the correct sibling or related code when an item
+looks like it fits here but doesn't.
+
+Args:
+    code: The classification code, e.g. "01.1.1".
+
+Returns:
+    A Code object with fields:
+        - code: the code string (e.g. "01.1.1")
+        - description: short label (e.g. "Cereals and cereal products (ND)")
+        - level: depth in the hierarchy (e.g. 2 = group, 3, 4 = subclass)
+        - detailled_description: longer prose definition (may be empty)
+        - details: dict with 'includes', 'alsoIncludes', 'excludes' notes
+            (may be empty strings at higher levels)
