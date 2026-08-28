@@ -119,7 +119,7 @@ class CoicopHierarchicalSearchAent(dspy.Module):
         
         self.coicop = get_classification_system("COICOP_2018")     
         self.signature = CoicopHierarchicalSearchAgentSignature
-        self.signature.__doc__ = create_system_prompt()
+        self.signature.__doc__ = create_system_prompt(target_level=target_level)
         self.agent = dspy.ReAct(
             self.signature,
             tools=[
