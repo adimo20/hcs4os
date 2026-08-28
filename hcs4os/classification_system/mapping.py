@@ -1,7 +1,7 @@
 from pathlib import Path
 
 def make_path(filename:str):
-    return Path(__file__).resolve().parent.parent / "data" / filename
+    return Path(__file__).resolve().parent.parent / "_data" / filename
 
 mapping = {
     "SEA_2021":{
