@@ -11,7 +11,7 @@ dependencies = [
 ]
 
 [tool.setuptools.packages.find]
-where = ["."]
+where = ["./hcs4os"]
 include = ["classification_system*", "dataloaders*", "shared*", "data*"]
 
 [tool.setuptools.package-data]

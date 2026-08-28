@@ -12,6 +12,14 @@ mapping = {
             "url":"https://klassifikationsserver.de/klassService/thyme/variant/sea_2021",
         }
     },
+    "COICOP_2018":{
+        "classification_system":"COICOP", # Decorater-ID within classification system, which implements the given logic
+        "loader_name":"COICOP", # Decorater-ID within dataloaders, which implements the given logic
+        "data_path":make_path("COICOP_2018_English_structure.xlsx"), # Softpath to the xml or ... file which contains the classification system
+        "metadata":{
+            "url":"",
+        }
+    },
     "WZ_2008":{
         "classification_system":"WZ",      
         "loader_name":"KLASS_SERVER",

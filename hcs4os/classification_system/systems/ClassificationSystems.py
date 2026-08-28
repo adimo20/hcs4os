@@ -2,6 +2,20 @@ from ..BaseClassificationSystem import ClassificationSystem
 from ..registry import register
 import re
 
+
+@register("COICOP")
+class ClassificationSystemCOICOP(ClassificationSystem):
+
+    def get_root_categories(self) -> list[dict]:
+        return [
+            {"code":c.code, "description":c.description} for c in self.codes if len(c.code) == 2
+        ]
+
+    def get_prefixes(self, code: str) -> list[str]:        
+        codes = code.split(".")
+        return [".".join(codes[:i]) for i in range(1,len(codes)+1)]
+
+
 @register("KLDB")
 class ClassificationSystemKldB(ClassificationSystem):
 

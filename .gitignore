@@ -8,3 +8,6 @@ embedding_api/
 pyrightconfig.json
 *Klassifikationsverzeichnis.xlsx
 Klassifikationsverzeichnis.xlsx
+*__pycache__
+*test*
+.vscode/
