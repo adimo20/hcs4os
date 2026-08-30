@@ -13,8 +13,8 @@ dependencies = [
 ]
 
 [tool.setuptools.packages.find]
-where = ["./hcs4os"]
-include = ["classification_system*", "dataloaders*", "shared*", "data*", "agents*"]
+where = ["."]
+include = ["hcs4os*"]
 
 [tool.setuptools.package-data]
 "*" = ["*.json", "*.csv", "*.xml", "*.xlsx"]
