@@ -3,5 +3,6 @@ from .loaders import (
     CoicopDataLoader,
     NaceDataLoader,
     KlassServerDataLoader,
-    PredefinedJsonLoader
+    PredefinedJsonLoader,
+    ICATUSLoader
 )

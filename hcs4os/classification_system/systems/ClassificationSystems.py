@@ -2,6 +2,18 @@ from ..BaseClassificationSystem import ClassificationSystem
 from ..registry import register
 import re
 
+@register("ICATUS")
+class ClassificationSystemICATUS(ClassificationSystem):
+
+    def get_root_categories(self) -> list[dict]:
+        return [
+            {"code":c.code, "description":c.description} for c in self.codes if len(c.code) == 1
+        ]
+
+    def get_prefixes(self, code:str)->list[str]:
+        return [code[:i] for i in range(1, len(code)+1)]
+
+
 
 @register("COICOP")
 class ClassificationSystemCOICOP(ClassificationSystem):

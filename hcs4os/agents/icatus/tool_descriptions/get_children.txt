@@ -1,0 +1,18 @@
+List the direct child codes one level below the given code.
+
+Use this to drill down the hierarchy: given a code you've decided the
+activity falls under, this returns the candidate sub-codes to choose
+from next. Each child comes with its full record (title, definition,
+includes/excludes notes), so you can compare siblings and pick the best
+match without additional lookups. Returns an empty list for group-level
+(leaf) codes that have no children.
+
+The hierarchy has three levels: major division (1 digit, e.g. "1") ->
+division (2 digits, e.g. "11") -> group (3 digits, e.g. "110").
+
+Args:
+    code: The parent classification code, e.g. "11".
+
+Returns:
+    A list of Code objects for the direct children (e.g. "110",
+    "111", ...), each with the same fields as get_code returns.

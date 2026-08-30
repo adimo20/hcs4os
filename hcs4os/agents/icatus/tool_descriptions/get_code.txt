@@ -1,0 +1,25 @@
+Retrieve the full record for a single classification code.
+
+Use this to inspect one specific code in detail — its title, level in
+the hierarchy, and the definition plus 'includes', 'excludes' and
+'examples' notes that disambiguate what belongs under it. The
+'excludes' notes are especially useful: they point to the correct
+sibling or related code when an activity looks like it fits here but
+doesn't.
+
+The hierarchy has three levels: major division (1 digit, e.g. "1") ->
+division (2 digits, e.g. "11") -> group (3 digits, e.g. "110").
+
+Args:
+    code: The classification code, e.g. "110".
+
+Returns:
+    A Code object with fields:
+        - code: the code string (e.g. "110")
+        - description: short label / title (e.g. "Employment in
+            corporations, government and non-profit institutions")
+        - level: depth in the hierarchy (1 = major division,
+            2 = division, 3 = group)
+        - detailled_description: longer prose definition (may be empty)
+        - details: dict with 'includes', 'excludes' and 'examples' notes
+            (may be empty strings at higher levels)

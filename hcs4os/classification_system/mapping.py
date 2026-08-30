@@ -4,6 +4,14 @@ def make_path(filename:str):
     return Path(__file__).resolve().parent.parent / "_data" / filename
 
 mapping = {
+    "ICATUS_2016":{
+        "classification_system":"ICATUS", # Decorater-ID within classification system, which implements the given logic
+        "loader_name":"ICATUS", # Decorater-ID within dataloaders, which implements the given logic
+        "data_path":make_path("UNSD_Time_Use_Statistics.csv"), # Softpath to the xml or ... file which contains the classification system
+        "metadata":{
+            "url":"https://unstats.un.org/unsd/demographic-social/time-use/icatus-2016/tableview",
+        }
+    },
     "SEA_2021":{
         "classification_system":"SEA", # Decorater-ID within classification system, which implements the given logic
         "loader_name":"KLASS_SERVER", # Decorater-ID within dataloaders, which implements the given logic
