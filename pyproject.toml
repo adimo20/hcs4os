@@ -17,4 +17,4 @@ where = ["."]
 include = ["hcs4os*"]
 
 [tool.setuptools.package-data]
-"*" = ["*.json", "*.csv", "*.xml", "*.xlsx"]
+"*" = ["*.txt", "*.json", "*.csv", "*.xml", "*.xlsx"]
