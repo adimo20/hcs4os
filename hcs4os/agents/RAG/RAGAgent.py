@@ -1,8 +1,8 @@
-from inspect import signature
 from typing import Literal
 import dspy
 from ...classification_system import get_classification_system
 from .vector_database import VectorStore
+from .registry import tool_descriptions
 
 class RAGAgent(dspy.Module):
     
@@ -10,7 +10,7 @@ class RAGAgent(dspy.Module):
         self,
         embedding_model_name:str,
         collection_name:str,
-        classification_name:Literal["COICOP", "ICATUS"],
+        classification_name:Literal["COICOP_2018", "ICATUS_2016"],
         api_key:str,
         model_name:str,
         api_base:str|None=None,
@@ -41,16 +41,20 @@ class RAGAgent(dspy.Module):
         )
         if create_new_collection:
             self.index()
-        
-        self.signature.__doc__ = ""
-        
+
+        self.signature = tool_descriptions.get(self.classification_name).get("signature")  # type: ignore
+        self.signature.__doc__ = tool_descriptions.get(self.classification_name).get("system_prompt")  # type: ignore
+
         self.agent = dspy.ReAct(
-             signature=signature,
-             tools=[dspy.Tool(
-                 self.search_category,
-                 desc="pass"
-             )]
-         )
+            self.signature,  # type: ignore
+            tools=[
+                dspy.Tool(
+                    self.search_category,
+                    name="search_category",
+                    desc=tool_descriptions.get(self.classification_name).get("search_category")  # type: ignore
+                )
+            ],
+        )
         
     def index(
         self

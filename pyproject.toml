@@ -6,9 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "hcs4os"
 version = "0.2.0"
 requires-python = ">=3.11"
-authors = [
-    { name = "Adrian Montag", email = "adrimontag@gmail.com" }
-]
+authors = [{ name = "Adrian Montag", email = "adrimontag@gmail.com" }]
 keywords = [
     "classification",
     "icatus",
@@ -34,7 +32,9 @@ classifiers = [
 dependencies = [
     "pandas",
     "openpyxl",
-    "dspy"
+    "dspy",
+    "chromadb",
+    "sentence-transformers"
 ]
 license-files = ["LICENSE"]
 
