@@ -6,11 +6,37 @@ build-backend = "setuptools.build_meta"
 name = "hcs4os"
 version = "0.2.0"
 requires-python = ">=3.11"
+authors = [
+    { name = "Adrian Montag", email = "adrimontag@gmail.com" }
+]
+keywords = [
+    "classification",
+    "icatus"
+    "coicop", 
+    "sea",
+    "nace"
+    "household-survey",
+    "official-statistics"
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "Natural Language :: German",
+    "Natural Language :: English",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",   
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Typing :: Typed",
+]
 dependencies = [
     "pandas",
     "openpyxl",
     "dspy"
 ]
+license-files = ["LICENSE"]
 
 [tool.setuptools.packages.find]
 where = ["."]
