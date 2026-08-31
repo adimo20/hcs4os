@@ -85,7 +85,7 @@ class ClassificationSystem(ABC):
     )->list[Code]:
         
         try:
-            return self._children_register[code]
+            return self._children_register.get(code, [])
         except Exception as e:
             print(f"Code {code!r} hat no children.")
             raise ValueError(f"Code {code!r} hat no children. Exeption: {e}")

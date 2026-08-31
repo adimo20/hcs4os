@@ -44,3 +44,7 @@ include = ["hcs4os*"]
 
 [tool.setuptools.package-data]
 "*" = ["*.txt", "*.json", "*.csv", "*.xml", "*.xlsx"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
