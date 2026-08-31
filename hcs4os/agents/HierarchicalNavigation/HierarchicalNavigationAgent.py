@@ -1,7 +1,7 @@
 from typing import Literal
+
 import dspy
 from ...classification_system import get_classification_system
-from pathlib import Path
 import warnings
 from .registry import tool_descriptions
 
@@ -33,8 +33,10 @@ class HierarchicalNavigationAgent(dspy.Module):
         )
         dspy.configure(lm=self.lm)
         
-        self.coicop = get_classification_system("COICOP_2018")     
         self.classification_name = classification_name
+        self.classification_system = get_classification_system(
+            classification_name
+        )
         self.signature = tool_descriptions.get(self.classification_name).get("signature") # type: ignore
         self.signature.__doc__ = tool_descriptions.get(self.classification_name).get("system_prompt")  # type: ignore
         self.agent = dspy.ReAct(
@@ -63,14 +65,14 @@ class HierarchicalNavigationAgent(dspy.Module):
         )
     
     def get_code_tool(self, code: str) -> dict:
-        return self.coicop.get_code(code).to_dict()
+        return self.classification_system.get_code(code).to_dict()
 
     def get_children_tool(self, code: str) -> list[dict]:
-        return [c.to_dict() for c in self.coicop.get_children(code)]
+        return [c.to_dict() for c in self.classification_system.get_children(code)]
 
     def get_parent_tool(self, code: str) -> dict:
-        return self.coicop.get_parent(code).to_dict() # type: ignore
+        return self.classification_system.get_parent(code).to_dict() # type: ignore
 
     def get_root_categories_tool(self) -> list[dict]:
-        return self.coicop.get_root_categories() 
+        return self.classification_system.get_root_categories() 
       
