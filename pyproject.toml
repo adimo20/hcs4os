@@ -11,12 +11,12 @@ authors = [
 ]
 keywords = [
     "classification",
-    "icatus"
-    "coicop", 
+    "icatus",
+    "coicop",
     "sea",
-    "nace"
+    "nace",
     "household-survey",
-    "official-statistics"
+    "official-statistics",
 ]
 classifiers = [
     "Development Status :: 3 - Alpha",
