@@ -1,5 +1,3 @@
-from inspect import signature
-
 import dspy
 
 
