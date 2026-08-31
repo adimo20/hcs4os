@@ -33,8 +33,7 @@ dependencies = [
     "pandas",
     "openpyxl",
     "dspy",
-    "chromadb",
-    "sentence-transformers"
+    "chromadb"
 ]
 license-files = ["LICENSE"]
 
