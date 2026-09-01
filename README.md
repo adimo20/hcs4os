@@ -34,6 +34,10 @@ Two things follow from the design:
 pip install -e .
 ```
 
+```bash
+pip install git+https://github.com/adimo20/hcs4os.git
+```
+
 Requires Python ≥ 3.11. Runtime dependencies: `pandas`, `openpyxl`, `dspy`,
 `chromadb` and `sentence-transformers` (the last two only matter for `RAGAgent`).
 The classification source files ship inside the package (`hcs4os/_data/`), so no
@@ -431,4 +435,5 @@ uniform `ClassificationSystem` interface.
 
 ## License
 
-MIT — see [LICENSE](LICENSE).
+Copyright (c) 2026 Adrian Montag
+Licensed under the EUPL v. 1.2
