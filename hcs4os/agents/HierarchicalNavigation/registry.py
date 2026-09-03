@@ -28,7 +28,7 @@ class IcatusHierarchicalSearchAgentSignature(dspy.Signature):
  
 
 tool_descriptions = {
-    "COICOP":{
+    "COICOP_2018":{
         "system_prompt":"""
         Classify a household expense into a single COICOP code by searching the
         classification hierarchy top-down, using the available tools rather than
@@ -162,7 +162,7 @@ tool_descriptions = {
         """,
         "signature":CoicopHierarchicalSearchAgentSignature
     },
-    "ICATUS":{
+    "ICATUS_2016":{
         "system_prompt":"""
         Classify a time-use activity into a single ICATUS 2016 code by searching
         the classification hierarchy top-down, using the available tools rather
