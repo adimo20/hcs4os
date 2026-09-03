@@ -84,7 +84,7 @@ import os
 from hcs4os.agents.HierarchicalNavigation import HierarchicalNavigationAgent
 
 agent = HierarchicalNavigationAgent(
-    classification_name="COICOP",          # or "ICATUS"
+    classification_name="COICOP_2018",          # or "ICATUS_2016"
     api_key=os.getenv("MISTRAL_API_KEY"),
     model_name="mistral/mistral-small-latest",
 )
