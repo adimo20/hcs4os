@@ -100,7 +100,7 @@ print(result.coicop_code, result.explaination)
 
 ```python
 import os
-from hcs4os.agents.RAG import RAGAgent
+from hcs4os.agents.RAG.RAGAgent import RAGAgent
 
 agent = RAGAgent(
     classification_name="COICOP_2018",     # or "ICATUS_2016" — the dataset/registry key
