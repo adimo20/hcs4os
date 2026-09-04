@@ -9,7 +9,6 @@ pyrightconfig.json
 *Klassifikationsverzeichnis.xlsx
 Klassifikationsverzeichnis.xlsx
 *__pycache__
-*test*
 .vscode/
 data/
 chroma/
