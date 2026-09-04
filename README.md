@@ -30,9 +30,7 @@ Two things follow from the design:
 
 ## Installation
 
-```bash
-pip install -e .
-```
+Installation via pip:
 
 ```bash
 pip install git+https://github.com/adimo20/hcs4os.git
