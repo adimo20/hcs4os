@@ -12,3 +12,5 @@ Klassifikationsverzeichnis.xlsx
 *test*
 .vscode/
 data/
+chroma/
+*.ipynb
