@@ -4,6 +4,14 @@ def make_path(filename:str):
     return Path(__file__).resolve().parent.parent / "_data" / filename
 
 mapping = {
+    "NAF":{
+        "classification_system":"NAF", # Decorater-ID within classification system, which implements the given logic
+        "loader_name":"JSON", # Decorater-ID within dataloaders, which implements the given logic
+        "data_path":make_path("NAF_INSEE.json"), # Softpath to the xml or ... file which contains the classification system
+        "metadata":{
+            "url":"https://unstats.un.org/unsd/demographic-social/time-use/icatus-2016/tableview",
+        }
+    },
     "ICATUS_2016":{
         "classification_system":"ICATUS", # Decorater-ID within classification system, which implements the given logic
         "loader_name":"ICATUS", # Decorater-ID within dataloaders, which implements the given logic

@@ -1,0 +1,6830 @@
+[
+    {
+        "code": "01",
+        "description": "Culture et production animale, chasse et services annexes"
+    },
+    {
+        "code": "01.1",
+        "description": "Cultures non permanentes"
+    },
+    {
+        "code": "01.11",
+        "description": "Culture de céréales (à l'exception du riz), de légumineuses et de graines oléagineuses"
+    },
+    {
+        "code": "01.11Z",
+        "description": "Culture de céréales (à l'exception du riz), de légumineuses et de graines oléagineuses"
+    },
+    {
+        "code": "01.12",
+        "description": "Culture du riz"
+    },
+    {
+        "code": "01.12Z",
+        "description": "Culture du riz"
+    },
+    {
+        "code": "01.13",
+        "description": "Culture de légumes, de melons, de racines et de tubercules"
+    },
+    {
+        "code": "01.13Z",
+        "description": "Culture de légumes, de melons, de racines et de tubercules"
+    },
+    {
+        "code": "01.14",
+        "description": "Culture de la canne à sucre"
+    },
+    {
+        "code": "01.14Z",
+        "description": "Culture de la canne à sucre"
+    },
+    {
+        "code": "01.15",
+        "description": "Culture du tabac"
+    },
+    {
+        "code": "01.15Z",
+        "description": "Culture du tabac"
+    },
+    {
+        "code": "01.16",
+        "description": "Culture de plantes à fibres"
+    },
+    {
+        "code": "01.16Z",
+        "description": "Culture de plantes à fibres"
+    },
+    {
+        "code": "01.19",
+        "description": "Autres cultures non permanentes"
+    },
+    {
+        "code": "01.19Z",
+        "description": "Autres cultures non permanentes"
+    },
+    {
+        "code": "01.2",
+        "description": "Cultures permanentes"
+    },
+    {
+        "code": "01.21",
+        "description": "Culture de la vigne"
+    },
+    {
+        "code": "01.21Z",
+        "description": "Culture de la vigne"
+    },
+    {
+        "code": "01.22",
+        "description": "Culture de fruits tropicaux et subtropicaux"
+    },
+    {
+        "code": "01.22Z",
+        "description": "Culture de fruits tropicaux et subtropicaux"
+    },
+    {
+        "code": "01.23",
+        "description": "Culture d'agrumes"
+    },
+    {
+        "code": "01.23Z",
+        "description": "Culture d'agrumes"
+    },
+    {
+        "code": "01.24",
+        "description": "Culture de fruits à pépins et à noyau"
+    },
+    {
+        "code": "01.24Z",
+        "description": "Culture de fruits à pépins et à noyau"
+    },
+    {
+        "code": "01.25",
+        "description": "Culture d'autres fruits d'arbres ou d'arbustes et de fruits à coque"
+    },
+    {
+        "code": "01.25Z",
+        "description": "Culture d'autres fruits d'arbres ou d'arbustes et de fruits à coque"
+    },
+    {
+        "code": "01.26",
+        "description": "Culture de fruits oléagineux"
+    },
+    {
+        "code": "01.26Z",
+        "description": "Culture de fruits oléagineux"
+    },
+    {
+        "code": "01.27",
+        "description": "Culture de plantes à boissons"
+    },
+    {
+        "code": "01.27Z",
+        "description": "Culture de plantes à boissons"
+    },
+    {
+        "code": "01.28",
+        "description": "Culture de plantes à épices, aromatiques, médicinales et pharmaceutiques"
+    },
+    {
+        "code": "01.28Z",
+        "description": "Culture de plantes à épices, aromatiques, médicinales et pharmaceutiques"
+    },
+    {
+        "code": "01.29",
+        "description": "Autres cultures permanentes"
+    },
+    {
+        "code": "01.29Z",
+        "description": "Autres cultures permanentes"
+    },
+    {
+        "code": "01.3",
+        "description": "Reproduction de plantes"
+    },
+    {
+        "code": "01.30",
+        "description": "Reproduction de plantes"
+    },
+    {
+        "code": "01.30Z",
+        "description": "Reproduction de plantes"
+    },
+    {
+        "code": "01.4",
+        "description": "Production animale"
+    },
+    {
+        "code": "01.41",
+        "description": "Élevage de vaches laitières"
+    },
+    {
+        "code": "01.41Z",
+        "description": "Élevage de vaches laitières"
+    },
+    {
+        "code": "01.42",
+        "description": "Élevage d'autres bovins et de buffles"
+    },
+    {
+        "code": "01.42Z",
+        "description": "Élevage d'autres bovins et de buffles"
+    },
+    {
+        "code": "01.43",
+        "description": "Élevage de chevaux et d'autres équidés"
+    },
+    {
+        "code": "01.43Z",
+        "description": "Élevage de chevaux et d'autres équidés"
+    },
+    {
+        "code": "01.44",
+        "description": "Élevage de chameaux et d'autres camélidés"
+    },
+    {
+        "code": "01.44Z",
+        "description": "Élevage de chameaux et d'autres camélidés"
+    },
+    {
+        "code": "01.45",
+        "description": "Élevage d'ovins et de caprins"
+    },
+    {
+        "code": "01.45Z",
+        "description": "Élevage d'ovins et de caprins"
+    },
+    {
+        "code": "01.46",
+        "description": "Élevage de porcins"
+    },
+    {
+        "code": "01.46Z",
+        "description": "Élevage de porcins"
+    },
+    {
+        "code": "01.47",
+        "description": "Élevage de volailles"
+    },
+    {
+        "code": "01.47Z",
+        "description": "Élevage de volailles"
+    },
+    {
+        "code": "01.49",
+        "description": "Élevage d'autres animaux"
+    },
+    {
+        "code": "01.49Z",
+        "description": "Élevage d'autres animaux"
+    },
+    {
+        "code": "01.5",
+        "description": "Culture et élevage associés"
+    },
+    {
+        "code": "01.50",
+        "description": "Culture et élevage associés"
+    },
+    {
+        "code": "01.50Z",
+        "description": "Culture et élevage associés"
+    },
+    {
+        "code": "01.6",
+        "description": "Activités de soutien à l'agriculture et traitement primaire des récoltes"
+    },
+    {
+        "code": "01.61",
+        "description": "Activités de soutien aux cultures"
+    },
+    {
+        "code": "01.61Z",
+        "description": "Activités de soutien aux cultures"
+    },
+    {
+        "code": "01.62",
+        "description": "Activités de soutien à la production animale"
+    },
+    {
+        "code": "01.62Z",
+        "description": "Activités de soutien à la production animale"
+    },
+    {
+        "code": "01.63",
+        "description": "Traitement primaire des récoltes"
+    },
+    {
+        "code": "01.63Z",
+        "description": "Traitement primaire des récoltes"
+    },
+    {
+        "code": "01.64",
+        "description": "Traitement des semences"
+    },
+    {
+        "code": "01.64Z",
+        "description": "Traitement des semences"
+    },
+    {
+        "code": "01.7",
+        "description": "Chasse, piégeage et services annexes"
+    },
+    {
+        "code": "01.70",
+        "description": "Chasse, piégeage et services annexes"
+    },
+    {
+        "code": "01.70Z",
+        "description": "Chasse, piégeage et services annexes"
+    },
+    {
+        "code": "02",
+        "description": "Sylviculture et exploitation forestière"
+    },
+    {
+        "code": "02.1",
+        "description": "Sylviculture et autres activités forestières"
+    },
+    {
+        "code": "02.10",
+        "description": "Sylviculture et autres activités forestières"
+    },
+    {
+        "code": "02.10Z",
+        "description": "Sylviculture et autres activités forestières"
+    },
+    {
+        "code": "02.2",
+        "description": "Exploitation forestière"
+    },
+    {
+        "code": "02.20",
+        "description": "Exploitation forestière"
+    },
+    {
+        "code": "02.20Z",
+        "description": "Exploitation forestière"
+    },
+    {
+        "code": "02.3",
+        "description": "Récolte de produits forestiers non ligneux poussant à l'état sauvage"
+    },
+    {
+        "code": "02.30",
+        "description": "Récolte de produits forestiers non ligneux poussant à l'état sauvage"
+    },
+    {
+        "code": "02.30Z",
+        "description": "Récolte de produits forestiers non ligneux poussant à l'état sauvage"
+    },
+    {
+        "code": "02.4",
+        "description": "Services de soutien à l'exploitation forestière"
+    },
+    {
+        "code": "02.40",
+        "description": "Services de soutien à l'exploitation forestière"
+    },
+    {
+        "code": "02.40Z",
+        "description": "Services de soutien à l'exploitation forestière"
+    },
+    {
+        "code": "03",
+        "description": "Pêche et aquaculture"
+    },
+    {
+        "code": "03.1",
+        "description": "Pêche"
+    },
+    {
+        "code": "03.11",
+        "description": "Pêche en mer"
+    },
+    {
+        "code": "03.11Z",
+        "description": "Pêche en mer"
+    },
+    {
+        "code": "03.12",
+        "description": "Pêche en eau douce"
+    },
+    {
+        "code": "03.12Z",
+        "description": "Pêche en eau douce"
+    },
+    {
+        "code": "03.2",
+        "description": "Aquaculture"
+    },
+    {
+        "code": "03.21",
+        "description": "Aquaculture en mer"
+    },
+    {
+        "code": "03.21Z",
+        "description": "Aquaculture en mer"
+    },
+    {
+        "code": "03.22",
+        "description": "Aquaculture en eau douce"
+    },
+    {
+        "code": "03.22Z",
+        "description": "Aquaculture en eau douce"
+    },
+    {
+        "code": "05",
+        "description": "Extraction de houille et de lignite"
+    },
+    {
+        "code": "05.1",
+        "description": "Extraction de houille"
+    },
+    {
+        "code": "05.10",
+        "description": "Extraction de houille"
+    },
+    {
+        "code": "05.10Z",
+        "description": "Extraction de houille"
+    },
+    {
+        "code": "05.2",
+        "description": "Extraction de lignite"
+    },
+    {
+        "code": "05.20",
+        "description": "Extraction de lignite"
+    },
+    {
+        "code": "05.20Z",
+        "description": "Extraction de lignite"
+    },
+    {
+        "code": "06",
+        "description": "Extraction d'hydrocarbures"
+    },
+    {
+        "code": "06.1",
+        "description": "Extraction de pétrole brut"
+    },
+    {
+        "code": "06.10",
+        "description": "Extraction de pétrole brut"
+    },
+    {
+        "code": "06.10Z",
+        "description": "Extraction de pétrole brut"
+    },
+    {
+        "code": "06.2",
+        "description": "Extraction de gaz naturel"
+    },
+    {
+        "code": "06.20",
+        "description": "Extraction de gaz naturel"
+    },
+    {
+        "code": "06.20Z",
+        "description": "Extraction de gaz naturel"
+    },
+    {
+        "code": "07",
+        "description": "Extraction de minerais métalliques"
+    },
+    {
+        "code": "07.1",
+        "description": "Extraction de minerais de fer"
+    },
+    {
+        "code": "07.10",
+        "description": "Extraction de minerais de fer"
+    },
+    {
+        "code": "07.10Z",
+        "description": "Extraction de minerais de fer"
+    },
+    {
+        "code": "07.2",
+        "description": "Extraction de minerais de métaux non ferreux"
+    },
+    {
+        "code": "07.21",
+        "description": "Extraction de minerais d'uranium et de thorium"
+    },
+    {
+        "code": "07.21Z",
+        "description": "Extraction de minerais d'uranium et de thorium"
+    },
+    {
+        "code": "07.29",
+        "description": "Extraction d'autres minerais de métaux non ferreux"
+    },
+    {
+        "code": "07.29Z",
+        "description": "Extraction d'autres minerais de métaux non ferreux"
+    },
+    {
+        "code": "08",
+        "description": "Autres industries extractives"
+    },
+    {
+        "code": "08.1",
+        "description": "Extraction de pierres, de sables et d'argiles"
+    },
+    {
+        "code": "08.11",
+        "description": "Extraction de pierres ornementales et de construction, de calcaire industriel, de gypse, de craie et d'ardoise"
+    },
+    {
+        "code": "08.11Z",
+        "description": "Extraction de pierres ornementales et de construction, de calcaire industriel, de gypse, de craie et d'ardoise"
+    },
+    {
+        "code": "08.12",
+        "description": "Exploitation de gravières et sablières, extraction d’argiles et de kaolin"
+    },
+    {
+        "code": "08.12Z",
+        "description": "Exploitation de gravières et sablières, extraction d’argiles et de kaolin"
+    },
+    {
+        "code": "08.9",
+        "description": "Activités extractives n.c.a."
+    },
+    {
+        "code": "08.91",
+        "description": "Extraction des minéraux chimiques et d'engrais minéraux "
+    },
+    {
+        "code": "08.91Z",
+        "description": "Extraction des minéraux chimiques et d'engrais minéraux "
+    },
+    {
+        "code": "08.92",
+        "description": "Extraction de tourbe"
+    },
+    {
+        "code": "08.92Z",
+        "description": "Extraction de tourbe"
+    },
+    {
+        "code": "08.93",
+        "description": "Production de sel "
+    },
+    {
+        "code": "08.93Z",
+        "description": "Production de sel "
+    },
+    {
+        "code": "08.99",
+        "description": "Autres activités extractives n.c.a."
+    },
+    {
+        "code": "08.99Z",
+        "description": "Autres activités extractives n.c.a."
+    },
+    {
+        "code": "09",
+        "description": "Services de soutien aux industries extractives"
+    },
+    {
+        "code": "09.1",
+        "description": "Activités de soutien à l'extraction d'hydrocarbures"
+    },
+    {
+        "code": "09.10",
+        "description": "Activités de soutien à l'extraction d'hydrocarbures"
+    },
+    {
+        "code": "09.10Z",
+        "description": "Activités de soutien à l'extraction d'hydrocarbures"
+    },
+    {
+        "code": "09.9",
+        "description": "Activités de soutien aux autres industries extractives"
+    },
+    {
+        "code": "09.90",
+        "description": "Activités de soutien aux autres industries extractives "
+    },
+    {
+        "code": "09.90Z",
+        "description": "Activités de soutien aux autres industries extractives "
+    },
+    {
+        "code": "10",
+        "description": "Industries alimentaires"
+    },
+    {
+        "code": "10.1",
+        "description": "Transformation et conservation de la viande et préparation de produits à base de viande"
+    },
+    {
+        "code": "10.11",
+        "description": "Transformation et conservation de la viande de boucherie"
+    },
+    {
+        "code": "10.11Z",
+        "description": "Transformation et conservation de la viande de boucherie"
+    },
+    {
+        "code": "10.12",
+        "description": "Transformation et conservation de la viande de volaille"
+    },
+    {
+        "code": "10.12Z",
+        "description": "Transformation et conservation de la viande de volaille"
+    },
+    {
+        "code": "10.13",
+        "description": "Préparation de produits à base de viande"
+    },
+    {
+        "code": "10.13A",
+        "description": "Préparation industrielle de produits à base de viande"
+    },
+    {
+        "code": "10.13B",
+        "description": "Charcuterie"
+    },
+    {
+        "code": "10.2",
+        "description": "Transformation et conservation de poisson, de crustacés et de mollusques"
+    },
+    {
+        "code": "10.20",
+        "description": "Transformation et conservation de poisson, de crustacés et de mollusques"
+    },
+    {
+        "code": "10.20Z",
+        "description": "Transformation et conservation de poisson, de crustacés et de mollusques"
+    },
+    {
+        "code": "10.3",
+        "description": "Transformation et conservation de fruits et légumes"
+    },
+    {
+        "code": "10.31",
+        "description": "Transformation et conservation de pommes de terre"
+    },
+    {
+        "code": "10.31Z",
+        "description": "Transformation et conservation de pommes de terre"
+    },
+    {
+        "code": "10.32",
+        "description": "Préparation de jus de fruits et légumes"
+    },
+    {
+        "code": "10.32Z",
+        "description": "Préparation de jus de fruits et légumes"
+    },
+    {
+        "code": "10.39",
+        "description": "Autre transformation et conservation de fruits et légumes"
+    },
+    {
+        "code": "10.39A",
+        "description": "Autre transformation et conservation de légumes"
+    },
+    {
+        "code": "10.39B",
+        "description": "Transformation et conservation de fruits"
+    },
+    {
+        "code": "10.4",
+        "description": "Fabrication d’huiles et graisses végétales et animales"
+    },
+    {
+        "code": "10.41",
+        "description": "Fabrication d'huiles et graisses"
+    },
+    {
+        "code": "10.41A",
+        "description": "Fabrication d'huiles et graisses brutes"
+    },
+    {
+        "code": "10.41B",
+        "description": "Fabrication d'huiles et graisses raffinées"
+    },
+    {
+        "code": "10.42",
+        "description": "Fabrication de margarine et graisses comestibles similaires"
+    },
+    {
+        "code": "10.42Z",
+        "description": "Fabrication de margarine et graisses comestibles similaires"
+    },
+    {
+        "code": "10.5",
+        "description": "Fabrication de produits laitiers"
+    },
+    {
+        "code": "10.51",
+        "description": "Exploitation de laiteries et fabrication de fromage"
+    },
+    {
+        "code": "10.51A",
+        "description": "Fabrication de lait liquide et de produits frais"
+    },
+    {
+        "code": "10.51B",
+        "description": "Fabrication de beurre"
+    },
+    {
+        "code": "10.51C",
+        "description": "Fabrication de fromage"
+    },
+    {
+        "code": "10.51D",
+        "description": "Fabrication d'autres produits laitiers"
+    },
+    {
+        "code": "10.52",
+        "description": "Fabrication de glaces et sorbets"
+    },
+    {
+        "code": "10.52Z",
+        "description": "Fabrication de glaces et sorbets"
+    },
+    {
+        "code": "10.6",
+        "description": "Travail des grains ; fabrication de produits amylacés"
+    },
+    {
+        "code": "10.61",
+        "description": "Travail des grains"
+    },
+    {
+        "code": "10.61A",
+        "description": "Meunerie"
+    },
+    {
+        "code": "10.61B",
+        "description": "Autres activités du travail des grains"
+    },
+    {
+        "code": "10.62",
+        "description": "Fabrication de produits amylacés"
+    },
+    {
+        "code": "10.62Z",
+        "description": "Fabrication de produits amylacés"
+    },
+    {
+        "code": "10.7",
+        "description": "Fabrication de produits de boulangerie-pâtisserie et de pâtes alimentaires"
+    },
+    {
+        "code": "10.71",
+        "description": "Fabrication de pain et de pâtisserie fraîche"
+    },
+    {
+        "code": "10.71A",
+        "description": "Fabrication industrielle de pain et de pâtisserie fraîche"
+    },
+    {
+        "code": "10.71B",
+        "description": "Cuisson de produits de boulangerie"
+    },
+    {
+        "code": "10.71C",
+        "description": "Boulangerie et boulangerie-pâtisserie"
+    },
+    {
+        "code": "10.71D",
+        "description": "Pâtisserie"
+    },
+    {
+        "code": "10.72",
+        "description": "Fabrication de biscuits, biscottes et pâtisseries de conservation"
+    },
+    {
+        "code": "10.72Z",
+        "description": "Fabrication de biscuits, biscottes et pâtisseries de conservation"
+    },
+    {
+        "code": "10.73",
+        "description": "Fabrication de pâtes alimentaires"
+    },
+    {
+        "code": "10.73Z",
+        "description": "Fabrication de pâtes alimentaires"
+    },
+    {
+        "code": "10.8",
+        "description": "Fabrication d'autres produits alimentaires"
+    },
+    {
+        "code": "10.81",
+        "description": "Fabrication de sucre"
+    },
+    {
+        "code": "10.81Z",
+        "description": "Fabrication de sucre"
+    },
+    {
+        "code": "10.82",
+        "description": "Fabrication de cacao, chocolat et de produits de confiserie"
+    },
+    {
+        "code": "10.82Z",
+        "description": "Fabrication de cacao, chocolat et de produits de confiserie"
+    },
+    {
+        "code": "10.83",
+        "description": "Transformation du thé et du café"
+    },
+    {
+        "code": "10.83Z",
+        "description": "Transformation du thé et du café"
+    },
+    {
+        "code": "10.84",
+        "description": "Fabrication de condiments et assaisonnements"
+    },
+    {
+        "code": "10.84Z",
+        "description": "Fabrication de condiments et assaisonnements"
+    },
+    {
+        "code": "10.85",
+        "description": "Fabrication de plats préparés"
+    },
+    {
+        "code": "10.85Z",
+        "description": "Fabrication de plats préparés"
+    },
+    {
+        "code": "10.86",
+        "description": "Fabrication d'aliments homogénéisés et diététiques"
+    },
+    {
+        "code": "10.86Z",
+        "description": "Fabrication d'aliments homogénéisés et diététiques"
+    },
+    {
+        "code": "10.89",
+        "description": "Fabrication d'autres produits alimentaires n.c.a."
+    },
+    {
+        "code": "10.89Z",
+        "description": "Fabrication d'autres produits alimentaires n.c.a."
+    },
+    {
+        "code": "10.9",
+        "description": "Fabrication d'aliments pour animaux"
+    },
+    {
+        "code": "10.91",
+        "description": "Fabrication d'aliments pour animaux de ferme"
+    },
+    {
+        "code": "10.91Z",
+        "description": "Fabrication d'aliments pour animaux de ferme"
+    },
+    {
+        "code": "10.92",
+        "description": "Fabrication d'aliments pour animaux de compagnie"
+    },
+    {
+        "code": "10.92Z",
+        "description": "Fabrication d'aliments pour animaux de compagnie"
+    },
+    {
+        "code": "11",
+        "description": "Fabrication de boissons"
+    },
+    {
+        "code": "11.0",
+        "description": "Fabrication de boissons"
+    },
+    {
+        "code": "11.01",
+        "description": "Production de boissons alcooliques distillées"
+    },
+    {
+        "code": "11.01Z",
+        "description": "Production de boissons alcooliques distillées"
+    },
+    {
+        "code": "11.02",
+        "description": "Production de vin (de raisin)"
+    },
+    {
+        "code": "11.02A",
+        "description": "Fabrication de vins effervescents"
+    },
+    {
+        "code": "11.02B",
+        "description": "Vinification"
+    },
+    {
+        "code": "11.03",
+        "description": "Fabrication de cidre et de vins de fruits  "
+    },
+    {
+        "code": "11.03Z",
+        "description": "Fabrication de cidre et de vins de fruits "
+    },
+    {
+        "code": "11.04",
+        "description": "Production d'autres boissons fermentées non distillées"
+    },
+    {
+        "code": "11.04Z",
+        "description": "Production d'autres boissons fermentées non distillées"
+    },
+    {
+        "code": "11.05",
+        "description": "Fabrication de bière"
+    },
+    {
+        "code": "11.05Z",
+        "description": "Fabrication de bière"
+    },
+    {
+        "code": "11.06",
+        "description": "Fabrication de malt"
+    },
+    {
+        "code": "11.06Z",
+        "description": "Fabrication de malt"
+    },
+    {
+        "code": "11.07",
+        "description": "Industrie des eaux minérales et autres eaux embouteillées et des boissons rafraîchissantes"
+    },
+    {
+        "code": "11.07A",
+        "description": "Industrie des eaux de table"
+    },
+    {
+        "code": "11.07B",
+        "description": "Production de boissons rafraîchissantes"
+    },
+    {
+        "code": "12",
+        "description": "Fabrication de produits à base de tabac"
+    },
+    {
+        "code": "12.0",
+        "description": "Fabrication de produits à base de tabac"
+    },
+    {
+        "code": "12.00",
+        "description": "Fabrication de produits à base de tabac"
+    },
+    {
+        "code": "12.00Z",
+        "description": "Fabrication de produits à base de tabac"
+    },
+    {
+        "code": "13",
+        "description": "Fabrication de textiles"
+    },
+    {
+        "code": "13.1",
+        "description": "Préparation de fibres textiles et filature"
+    },
+    {
+        "code": "13.10",
+        "description": "Préparation de fibres textiles et filature"
+    },
+    {
+        "code": "13.10Z",
+        "description": "Préparation de fibres textiles et filature"
+    },
+    {
+        "code": "13.2",
+        "description": "Tissage"
+    },
+    {
+        "code": "13.20",
+        "description": "Tissage"
+    },
+    {
+        "code": "13.20Z",
+        "description": "Tissage"
+    },
+    {
+        "code": "13.3",
+        "description": "Ennoblissement textile"
+    },
+    {
+        "code": "13.30",
+        "description": "Ennoblissement textile"
+    },
+    {
+        "code": "13.30Z",
+        "description": "Ennoblissement textile"
+    },
+    {
+        "code": "13.9",
+        "description": "Fabrication d'autres textiles"
+    },
+    {
+        "code": "13.91",
+        "description": "Fabrication d'étoffes à mailles"
+    },
+    {
+        "code": "13.91Z",
+        "description": "Fabrication d'étoffes à mailles"
+    },
+    {
+        "code": "13.92",
+        "description": "Fabrication d'articles textiles, sauf habillement"
+    },
+    {
+        "code": "13.92Z",
+        "description": "Fabrication d'articles textiles, sauf habillement"
+    },
+    {
+        "code": "13.93",
+        "description": "Fabrication de tapis et moquettes"
+    },
+    {
+        "code": "13.93Z",
+        "description": "Fabrication de tapis et moquettes"
+    },
+    {
+        "code": "13.94",
+        "description": "Fabrication de ficelles, cordes et filets"
+    },
+    {
+        "code": "13.94Z",
+        "description": "Fabrication de ficelles, cordes et filets"
+    },
+    {
+        "code": "13.95",
+        "description": "Fabrication de non-tissés, sauf habillement"
+    },
+    {
+        "code": "13.95Z",
+        "description": "Fabrication de non-tissés, sauf habillement"
+    },
+    {
+        "code": "13.96",
+        "description": "Fabrication d'autres textiles techniques et industriels"
+    },
+    {
+        "code": "13.96Z",
+        "description": "Fabrication d'autres textiles techniques et industriels"
+    },
+    {
+        "code": "13.99",
+        "description": "Fabrication d'autres textiles n.c.a."
+    },
+    {
+        "code": "13.99Z",
+        "description": "Fabrication d'autres textiles n.c.a."
+    },
+    {
+        "code": "14",
+        "description": "Industrie de l'habillement"
+    },
+    {
+        "code": "14.1",
+        "description": "Fabrication de vêtements, autres qu'en fourrure"
+    },
+    {
+        "code": "14.11",
+        "description": "Fabrication de vêtements en cuir"
+    },
+    {
+        "code": "14.11Z",
+        "description": "Fabrication de vêtements en cuir"
+    },
+    {
+        "code": "14.12",
+        "description": "Fabrication de vêtements de travail"
+    },
+    {
+        "code": "14.12Z",
+        "description": "Fabrication de vêtements de travail"
+    },
+    {
+        "code": "14.13",
+        "description": "Fabrication de vêtements de dessus"
+    },
+    {
+        "code": "14.13Z",
+        "description": "Fabrication de vêtements de dessus"
+    },
+    {
+        "code": "14.14",
+        "description": "Fabrication de vêtements de dessous"
+    },
+    {
+        "code": "14.14Z",
+        "description": "Fabrication de vêtements de dessous"
+    },
+    {
+        "code": "14.19",
+        "description": "Fabrication d'autres vêtements et accessoires"
+    },
+    {
+        "code": "14.19Z",
+        "description": "Fabrication d'autres vêtements et accessoires"
+    },
+    {
+        "code": "14.2",
+        "description": "Fabrication d'articles en fourrure"
+    },
+    {
+        "code": "14.20",
+        "description": "Fabrication d'articles en fourrure"
+    },
+    {
+        "code": "14.20Z",
+        "description": "Fabrication d'articles en fourrure"
+    },
+    {
+        "code": "14.3",
+        "description": "Fabrication d'articles à mailles"
+    },
+    {
+        "code": "14.31",
+        "description": "Fabrication d'articles chaussants à mailles"
+    },
+    {
+        "code": "14.31Z",
+        "description": "Fabrication d'articles chaussants à mailles"
+    },
+    {
+        "code": "14.39",
+        "description": "Fabrication d'autres articles à mailles"
+    },
+    {
+        "code": "14.39Z",
+        "description": "Fabrication d'autres articles à mailles"
+    },
+    {
+        "code": "15",
+        "description": "Industrie du cuir et de la chaussure"
+    },
+    {
+        "code": "15.1",
+        "description": "Apprêt et tannage des cuirs ; préparation et teinture des fourrures ; fabrication d'articles de voyage, de maroquinerie et de sellerie"
+    },
+    {
+        "code": "15.11",
+        "description": "Apprêt et tannage des cuirs ; préparation et teinture des fourrures"
+    },
+    {
+        "code": "15.11Z",
+        "description": "Apprêt et tannage des cuirs ; préparation et teinture des fourrures"
+    },
+    {
+        "code": "15.12",
+        "description": "Fabrication d'articles de voyage, de maroquinerie et de sellerie"
+    },
+    {
+        "code": "15.12Z",
+        "description": "Fabrication d'articles de voyage, de maroquinerie et de sellerie"
+    },
+    {
+        "code": "15.2",
+        "description": "Fabrication de chaussures"
+    },
+    {
+        "code": "15.20",
+        "description": "Fabrication de chaussures"
+    },
+    {
+        "code": "15.20Z",
+        "description": "Fabrication de chaussures"
+    },
+    {
+        "code": "16",
+        "description": "Travail du bois et fabrication d'articles en bois et en liège, à l’exception des meubles ; fabrication d’articles en vannerie et sparterie"
+    },
+    {
+        "code": "16.1",
+        "description": "Sciage et rabotage du bois"
+    },
+    {
+        "code": "16.10",
+        "description": "Sciage et rabotage du bois"
+    },
+    {
+        "code": "16.10A",
+        "description": "Sciage et rabotage du bois, hors imprégnation"
+    },
+    {
+        "code": "16.10B",
+        "description": "Imprégnation du bois"
+    },
+    {
+        "code": "16.2",
+        "description": "Fabrication d'articles en bois, liège, vannerie et sparterie"
+    },
+    {
+        "code": "16.21",
+        "description": "Fabrication de placage et de panneaux de bois"
+    },
+    {
+        "code": "16.21Z",
+        "description": "Fabrication de placage et de panneaux de bois"
+    },
+    {
+        "code": "16.22",
+        "description": "Fabrication de parquets assemblés"
+    },
+    {
+        "code": "16.22Z",
+        "description": "Fabrication de parquets assemblés"
+    },
+    {
+        "code": "16.23",
+        "description": "Fabrication de charpentes et d'autres menuiseries"
+    },
+    {
+        "code": "16.23Z",
+        "description": "Fabrication de charpentes et d'autres menuiseries"
+    },
+    {
+        "code": "16.24",
+        "description": "Fabrication d'emballages en bois"
+    },
+    {
+        "code": "16.24Z",
+        "description": "Fabrication d'emballages en bois"
+    },
+    {
+        "code": "16.29",
+        "description": "Fabrication d'objets divers en bois ; fabrication d'objets en liège, vannerie et sparterie"
+    },
+    {
+        "code": "16.29Z",
+        "description": "Fabrication d'objets divers en bois ; fabrication d'objets en liège, vannerie et sparterie"
+    },
+    {
+        "code": "17",
+        "description": "Industrie du papier et du carton"
+    },
+    {
+        "code": "17.1",
+        "description": "Fabrication de pâte à papier, de papier et de carton"
+    },
+    {
+        "code": "17.11",
+        "description": "Fabrication de pâte à papier"
+    },
+    {
+        "code": "17.11Z",
+        "description": "Fabrication de pâte à papier"
+    },
+    {
+        "code": "17.12",
+        "description": "Fabrication de papier et de carton"
+    },
+    {
+        "code": "17.12Z",
+        "description": "Fabrication de papier et de carton"
+    },
+    {
+        "code": "17.2",
+        "description": "Fabrication d'articles en papier ou en carton"
+    },
+    {
+        "code": "17.21",
+        "description": "Fabrication de papier et carton ondulés et d'emballages en papier ou en carton"
+    },
+    {
+        "code": "17.21A",
+        "description": "Fabrication de carton ondulé"
+    },
+    {
+        "code": "17.21B",
+        "description": "Fabrication de cartonnages "
+    },
+    {
+        "code": "17.21C",
+        "description": "Fabrication d'emballages en papier"
+    },
+    {
+        "code": "17.22",
+        "description": "Fabrication d'articles en papier à usage sanitaire ou domestique"
+    },
+    {
+        "code": "17.22Z",
+        "description": "Fabrication d'articles en papier à usage sanitaire ou domestique"
+    },
+    {
+        "code": "17.23",
+        "description": "Fabrication d'articles de papeterie"
+    },
+    {
+        "code": "17.23Z",
+        "description": "Fabrication d'articles de papeterie"
+    },
+    {
+        "code": "17.24",
+        "description": "Fabrication de papiers peints"
+    },
+    {
+        "code": "17.24Z",
+        "description": "Fabrication de papiers peints"
+    },
+    {
+        "code": "17.29",
+        "description": "Fabrication d'autres articles en papier ou en carton"
+    },
+    {
+        "code": "17.29Z",
+        "description": "Fabrication d'autres articles en papier ou en carton"
+    },
+    {
+        "code": "18",
+        "description": "Imprimerie et reproduction d'enregistrements"
+    },
+    {
+        "code": "18.1",
+        "description": "Imprimerie et services annexes"
+    },
+    {
+        "code": "18.11",
+        "description": "Imprimerie de journaux"
+    },
+    {
+        "code": "18.11Z",
+        "description": "Imprimerie de journaux"
+    },
+    {
+        "code": "18.12",
+        "description": "Autre imprimerie (labeur)"
+    },
+    {
+        "code": "18.12Z",
+        "description": "Autre imprimerie (labeur)"
+    },
+    {
+        "code": "18.13",
+        "description": "Activités de pré-presse "
+    },
+    {
+        "code": "18.13Z",
+        "description": "Activités de pré-presse "
+    },
+    {
+        "code": "18.14",
+        "description": "Reliure et activités connexes"
+    },
+    {
+        "code": "18.14Z",
+        "description": "Reliure et activités connexes"
+    },
+    {
+        "code": "18.2",
+        "description": "Reproduction d'enregistrements"
+    },
+    {
+        "code": "18.20",
+        "description": "Reproduction d'enregistrements"
+    },
+    {
+        "code": "18.20Z",
+        "description": "Reproduction d'enregistrements"
+    },
+    {
+        "code": "19",
+        "description": "Cokéfaction et raffinage"
+    },
+    {
+        "code": "19.1",
+        "description": "Cokéfaction"
+    },
+    {
+        "code": "19.10",
+        "description": "Cokéfaction"
+    },
+    {
+        "code": "19.10Z",
+        "description": "Cokéfaction"
+    },
+    {
+        "code": "19.2",
+        "description": "Raffinage du pétrole"
+    },
+    {
+        "code": "19.20",
+        "description": "Raffinage du pétrole"
+    },
+    {
+        "code": "19.20Z",
+        "description": "Raffinage du pétrole"
+    },
+    {
+        "code": "20",
+        "description": "Industrie chimique"
+    },
+    {
+        "code": "20.1",
+        "description": "Fabrication de produits chimiques de base, de produits azotés et d'engrais, de matières plastiques de base et de caoutchouc synthétique"
+    },
+    {
+        "code": "20.11",
+        "description": "Fabrication de gaz industriels"
+    },
+    {
+        "code": "20.11Z",
+        "description": "Fabrication de gaz industriels"
+    },
+    {
+        "code": "20.12",
+        "description": "Fabrication de colorants et de pigments"
+    },
+    {
+        "code": "20.12Z",
+        "description": "Fabrication de colorants et de pigments"
+    },
+    {
+        "code": "20.13",
+        "description": "Fabrication d'autres produits chimiques inorganiques de base"
+    },
+    {
+        "code": "20.13A",
+        "description": "Enrichissement et  retraitement de matières nucléaires"
+    },
+    {
+        "code": "20.13B",
+        "description": "Fabrication d'autres produits chimiques inorganiques de base n.c.a."
+    },
+    {
+        "code": "20.14",
+        "description": "Fabrication d'autres produits chimiques organiques de base"
+    },
+    {
+        "code": "20.14Z",
+        "description": "Fabrication d'autres produits chimiques organiques de base"
+    },
+    {
+        "code": "20.15",
+        "description": "Fabrication de produits azotés et d'engrais"
+    },
+    {
+        "code": "20.15Z",
+        "description": "Fabrication de produits azotés et d'engrais"
+    },
+    {
+        "code": "20.16",
+        "description": "Fabrication de matières plastiques de base"
+    },
+    {
+        "code": "20.16Z",
+        "description": "Fabrication de matières plastiques de base"
+    },
+    {
+        "code": "20.17",
+        "description": "Fabrication de caoutchouc synthétique"
+    },
+    {
+        "code": "20.17Z",
+        "description": "Fabrication de caoutchouc synthétique"
+    },
+    {
+        "code": "20.2",
+        "description": "Fabrication de pesticides et d’autres produits agrochimiques "
+    },
+    {
+        "code": "20.20",
+        "description": "Fabrication de pesticides et d’autres produits agrochimiques"
+    },
+    {
+        "code": "20.20Z",
+        "description": "Fabrication de pesticides et d’autres produits agrochimiques"
+    },
+    {
+        "code": "20.3",
+        "description": "Fabrication de peintures, vernis, encres et mastics"
+    },
+    {
+        "code": "20.30",
+        "description": "Fabrication de peintures, vernis, encres et mastics"
+    },
+    {
+        "code": "20.30Z",
+        "description": "Fabrication de peintures, vernis, encres et mastics"
+    },
+    {
+        "code": "20.4",
+        "description": "Fabrication de savons, de produits d'entretien et de parfums"
+    },
+    {
+        "code": "20.41",
+        "description": "Fabrication de savons, détergents et produits d'entretien"
+    },
+    {
+        "code": "20.41Z",
+        "description": "Fabrication de savons, détergents et produits d'entretien"
+    },
+    {
+        "code": "20.42",
+        "description": "Fabrication de parfums et de produits pour la toilette"
+    },
+    {
+        "code": "20.42Z",
+        "description": "Fabrication de parfums et de produits pour la toilette"
+    },
+    {
+        "code": "20.5",
+        "description": "Fabrication d'autres produits chimiques"
+    },
+    {
+        "code": "20.51",
+        "description": "Fabrication de produits explosifs"
+    },
+    {
+        "code": "20.51Z",
+        "description": "Fabrication de produits explosifs"
+    },
+    {
+        "code": "20.52",
+        "description": "Fabrication de colles"
+    },
+    {
+        "code": "20.52Z",
+        "description": "Fabrication de colles"
+    },
+    {
+        "code": "20.53",
+        "description": "Fabrication d'huiles essentielles"
+    },
+    {
+        "code": "20.53Z",
+        "description": "Fabrication d'huiles essentielles"
+    },
+    {
+        "code": "20.59",
+        "description": "Fabrication d'autres produits chimiques n.c.a."
+    },
+    {
+        "code": "20.59Z",
+        "description": "Fabrication d'autres produits chimiques n.c.a."
+    },
+    {
+        "code": "20.6",
+        "description": "Fabrication de fibres artificielles ou synthétiques"
+    },
+    {
+        "code": "20.60",
+        "description": "Fabrication de fibres artificielles ou synthétiques"
+    },
+    {
+        "code": "20.60Z",
+        "description": "Fabrication de fibres artificielles ou synthétiques"
+    },
+    {
+        "code": "21",
+        "description": "Industrie pharmaceutique"
+    },
+    {
+        "code": "21.1",
+        "description": "Fabrication de produits pharmaceutiques de base"
+    },
+    {
+        "code": "21.10",
+        "description": "Fabrication de produits pharmaceutiques de base"
+    },
+    {
+        "code": "21.10Z",
+        "description": "Fabrication de produits pharmaceutiques de base"
+    },
+    {
+        "code": "21.2",
+        "description": "Fabrication de préparations pharmaceutiques"
+    },
+    {
+        "code": "21.20",
+        "description": "Fabrication de préparations pharmaceutiques"
+    },
+    {
+        "code": "21.20Z",
+        "description": "Fabrication de préparations pharmaceutiques"
+    },
+    {
+        "code": "22",
+        "description": "Fabrication de produits en caoutchouc et en plastique"
+    },
+    {
+        "code": "22.1",
+        "description": "Fabrication de produits en caoutchouc"
+    },
+    {
+        "code": "22.11",
+        "description": "Fabrication et rechapage de pneumatiques"
+    },
+    {
+        "code": "22.11Z",
+        "description": "Fabrication et rechapage de pneumatiques"
+    },
+    {
+        "code": "22.19",
+        "description": "Fabrication d'autres articles en caoutchouc"
+    },
+    {
+        "code": "22.19Z",
+        "description": "Fabrication d'autres articles en caoutchouc"
+    },
+    {
+        "code": "22.2",
+        "description": "Fabrication  de produits en plastique"
+    },
+    {
+        "code": "22.21",
+        "description": "Fabrication de plaques, feuilles, tubes et profilés en matières plastiques"
+    },
+    {
+        "code": "22.21Z",
+        "description": "Fabrication de plaques, feuilles, tubes et profilés en matières plastiques"
+    },
+    {
+        "code": "22.22",
+        "description": "Fabrication d'emballages en matières plastiques"
+    },
+    {
+        "code": "22.22Z",
+        "description": "Fabrication d'emballages en matières plastiques"
+    },
+    {
+        "code": "22.23",
+        "description": "Fabrication d'éléments en matières plastiques pour la construction"
+    },
+    {
+        "code": "22.23Z",
+        "description": "Fabrication d'éléments en matières plastiques pour la construction"
+    },
+    {
+        "code": "22.29",
+        "description": "Fabrication d'autres articles en matières plastiques"
+    },
+    {
+        "code": "22.29A",
+        "description": "Fabrication de pièces techniques à base de matières plastiques"
+    },
+    {
+        "code": "22.29B",
+        "description": "Fabrication de produits de consommation courante en matières plastiques"
+    },
+    {
+        "code": "23",
+        "description": "Fabrication d'autres produits minéraux non métalliques"
+    },
+    {
+        "code": "23.1",
+        "description": "Fabrication de verre et d'articles en verre"
+    },
+    {
+        "code": "23.11",
+        "description": "Fabrication de verre plat"
+    },
+    {
+        "code": "23.11Z",
+        "description": "Fabrication de verre plat"
+    },
+    {
+        "code": "23.12",
+        "description": "Façonnage et transformation du verre plat"
+    },
+    {
+        "code": "23.12Z",
+        "description": "Façonnage et transformation du verre plat"
+    },
+    {
+        "code": "23.13",
+        "description": "Fabrication de verre creux"
+    },
+    {
+        "code": "23.13Z",
+        "description": "Fabrication de verre creux"
+    },
+    {
+        "code": "23.14",
+        "description": "Fabrication de fibres de verre"
+    },
+    {
+        "code": "23.14Z",
+        "description": "Fabrication de fibres de verre"
+    },
+    {
+        "code": "23.19",
+        "description": "Fabrication et façonnage d'autres articles en verre, y compris verre technique"
+    },
+    {
+        "code": "23.19Z",
+        "description": "Fabrication et façonnage d'autres articles en verre, y compris verre technique"
+    },
+    {
+        "code": "23.2",
+        "description": "Fabrication de produits réfractaires"
+    },
+    {
+        "code": "23.20",
+        "description": "Fabrication de produits réfractaires"
+    },
+    {
+        "code": "23.20Z",
+        "description": "Fabrication de produits réfractaires"
+    },
+    {
+        "code": "23.3",
+        "description": "Fabrication de matériaux de construction en terre cuite"
+    },
+    {
+        "code": "23.31",
+        "description": "Fabrication de carreaux en céramique"
+    },
+    {
+        "code": "23.31Z",
+        "description": "Fabrication de carreaux en céramique"
+    },
+    {
+        "code": "23.32",
+        "description": "Fabrication de briques, tuiles et produits de construction, en terre cuite"
+    },
+    {
+        "code": "23.32Z",
+        "description": "Fabrication de briques, tuiles et produits de construction, en terre cuite"
+    },
+    {
+        "code": "23.4",
+        "description": "Fabrication d'autres produits en céramique et en porcelaine "
+    },
+    {
+        "code": "23.41",
+        "description": "Fabrication d'articles céramiques à usage domestique ou ornemental"
+    },
+    {
+        "code": "23.41Z",
+        "description": "Fabrication d'articles céramiques à usage domestique ou ornemental"
+    },
+    {
+        "code": "23.42",
+        "description": "Fabrication d'appareils sanitaires en céramique"
+    },
+    {
+        "code": "23.42Z",
+        "description": "Fabrication d'appareils sanitaires en céramique"
+    },
+    {
+        "code": "23.43",
+        "description": "Fabrication d'isolateurs et pièces isolantes en céramique"
+    },
+    {
+        "code": "23.43Z",
+        "description": "Fabrication d'isolateurs et pièces isolantes en céramique"
+    },
+    {
+        "code": "23.44",
+        "description": "Fabrication d'autres produits céramiques à usage technique"
+    },
+    {
+        "code": "23.44Z",
+        "description": "Fabrication d'autres produits céramiques à usage technique"
+    },
+    {
+        "code": "23.49",
+        "description": "Fabrication d'autres produits céramiques "
+    },
+    {
+        "code": "23.49Z",
+        "description": "Fabrication d'autres produits céramiques"
+    },
+    {
+        "code": "23.5",
+        "description": "Fabrication de ciment, chaux et plâtre"
+    },
+    {
+        "code": "23.51",
+        "description": "Fabrication de ciment"
+    },
+    {
+        "code": "23.51Z",
+        "description": "Fabrication de ciment"
+    },
+    {
+        "code": "23.52",
+        "description": "Fabrication de chaux et plâtre"
+    },
+    {
+        "code": "23.52Z",
+        "description": "Fabrication de chaux et plâtre"
+    },
+    {
+        "code": "23.6",
+        "description": "Fabrication d'ouvrages en béton, en ciment ou en plâtre"
+    },
+    {
+        "code": "23.61",
+        "description": "Fabrication d'éléments en béton pour la construction"
+    },
+    {
+        "code": "23.61Z",
+        "description": "Fabrication d'éléments en béton pour la construction"
+    },
+    {
+        "code": "23.62",
+        "description": "Fabrication d'éléments en plâtre pour la construction"
+    },
+    {
+        "code": "23.62Z",
+        "description": "Fabrication d'éléments en plâtre pour la construction"
+    },
+    {
+        "code": "23.63",
+        "description": "Fabrication de béton prêt à l'emploi"
+    },
+    {
+        "code": "23.63Z",
+        "description": "Fabrication de béton prêt à l'emploi"
+    },
+    {
+        "code": "23.64",
+        "description": "Fabrication de mortiers et bétons secs"
+    },
+    {
+        "code": "23.64Z",
+        "description": "Fabrication de mortiers et bétons secs"
+    },
+    {
+        "code": "23.65",
+        "description": "Fabrication d'ouvrages en fibre-ciment"
+    },
+    {
+        "code": "23.65Z",
+        "description": "Fabrication d'ouvrages en fibre-ciment"
+    },
+    {
+        "code": "23.69",
+        "description": "Fabrication d'autres ouvrages en béton, en ciment ou en plâtre"
+    },
+    {
+        "code": "23.69Z",
+        "description": "Fabrication d'autres ouvrages en béton, en ciment ou en plâtre"
+    },
+    {
+        "code": "23.7",
+        "description": "Taille, façonnage et finissage de pierres "
+    },
+    {
+        "code": "23.70",
+        "description": "Taille, façonnage et finissage de pierres"
+    },
+    {
+        "code": "23.70Z",
+        "description": "Taille, façonnage et finissage de pierres"
+    },
+    {
+        "code": "23.9",
+        "description": "Fabrication de produits abrasifs et de produits minéraux non métalliques n.c.a."
+    },
+    {
+        "code": "23.91",
+        "description": "Fabrication de produits abrasifs"
+    },
+    {
+        "code": "23.91Z",
+        "description": "Fabrication de produits abrasifs"
+    },
+    {
+        "code": "23.99",
+        "description": "Fabrication d'autres produits minéraux non métalliques n.c.a."
+    },
+    {
+        "code": "23.99Z",
+        "description": "Fabrication d'autres produits minéraux non métalliques n.c.a."
+    },
+    {
+        "code": "24",
+        "description": "Métallurgie"
+    },
+    {
+        "code": "24.1",
+        "description": "Sidérurgie"
+    },
+    {
+        "code": "24.10",
+        "description": "Sidérurgie"
+    },
+    {
+        "code": "24.10Z",
+        "description": "Sidérurgie"
+    },
+    {
+        "code": "24.2",
+        "description": "Fabrication de tubes, tuyaux, profilés creux et accessoires correspondants en acier "
+    },
+    {
+        "code": "24.20",
+        "description": "Fabrication de tubes, tuyaux, profilés creux et accessoires correspondants en acier "
+    },
+    {
+        "code": "24.20Z",
+        "description": "Fabrication de tubes, tuyaux, profilés creux et accessoires correspondants en acier "
+    },
+    {
+        "code": "24.3",
+        "description": "Fabrication d'autres produits de première transformation de l'acier"
+    },
+    {
+        "code": "24.31",
+        "description": "Étirage à froid de barres"
+    },
+    {
+        "code": "24.31Z",
+        "description": "Étirage à froid de barres"
+    },
+    {
+        "code": "24.32",
+        "description": "Laminage à froid de feuillards"
+    },
+    {
+        "code": "24.32Z",
+        "description": "Laminage à froid de feuillards"
+    },
+    {
+        "code": "24.33",
+        "description": "Profilage à froid par formage ou pliage"
+    },
+    {
+        "code": "24.33Z",
+        "description": "Profilage à froid par formage ou pliage"
+    },
+    {
+        "code": "24.34",
+        "description": "Tréfilage à froid"
+    },
+    {
+        "code": "24.34Z",
+        "description": "Tréfilage à froid"
+    },
+    {
+        "code": "24.4",
+        "description": "Production de métaux précieux et d'autres métaux non ferreux"
+    },
+    {
+        "code": "24.41",
+        "description": "Production de métaux précieux"
+    },
+    {
+        "code": "24.41Z",
+        "description": "Production de métaux précieux"
+    },
+    {
+        "code": "24.42",
+        "description": "Métallurgie de l'aluminium"
+    },
+    {
+        "code": "24.42Z",
+        "description": "Métallurgie de l'aluminium"
+    },
+    {
+        "code": "24.43",
+        "description": "Métallurgie du plomb, du zinc ou de l'étain"
+    },
+    {
+        "code": "24.43Z",
+        "description": "Métallurgie du plomb, du zinc ou de l'étain"
+    },
+    {
+        "code": "24.44",
+        "description": "Métallurgie du cuivre"
+    },
+    {
+        "code": "24.44Z",
+        "description": "Métallurgie du cuivre"
+    },
+    {
+        "code": "24.45",
+        "description": "Métallurgie des autres métaux non ferreux"
+    },
+    {
+        "code": "24.45Z",
+        "description": "Métallurgie des autres métaux non ferreux"
+    },
+    {
+        "code": "24.46",
+        "description": "Élaboration et transformation de matières nucléaires"
+    },
+    {
+        "code": "24.46Z",
+        "description": "Élaboration et transformation de matières nucléaires"
+    },
+    {
+        "code": "24.5",
+        "description": "Fonderie"
+    },
+    {
+        "code": "24.51",
+        "description": "Fonderie de fonte"
+    },
+    {
+        "code": "24.51Z",
+        "description": "Fonderie de fonte"
+    },
+    {
+        "code": "24.52",
+        "description": "Fonderie d'acier"
+    },
+    {
+        "code": "24.52Z",
+        "description": "Fonderie d'acier"
+    },
+    {
+        "code": "24.53",
+        "description": "Fonderie de métaux légers"
+    },
+    {
+        "code": "24.53Z",
+        "description": "Fonderie de métaux légers"
+    },
+    {
+        "code": "24.54",
+        "description": "Fonderie d'autres métaux non ferreux"
+    },
+    {
+        "code": "24.54Z",
+        "description": "Fonderie d'autres métaux non ferreux"
+    },
+    {
+        "code": "25",
+        "description": "Fabrication de produits métalliques, à l’exception des machines et des équipements"
+    },
+    {
+        "code": "25.1",
+        "description": "Fabrication d'éléments en métal pour la construction"
+    },
+    {
+        "code": "25.11",
+        "description": "Fabrication de structures métalliques et de parties de structures"
+    },
+    {
+        "code": "25.11Z",
+        "description": "Fabrication de structures métalliques et de parties de structures"
+    },
+    {
+        "code": "25.12",
+        "description": "Fabrication de portes et fenêtres en métal"
+    },
+    {
+        "code": "25.12Z",
+        "description": "Fabrication de portes et fenêtres en métal"
+    },
+    {
+        "code": "25.2",
+        "description": "Fabrication de réservoirs, citernes et conteneurs métalliques"
+    },
+    {
+        "code": "25.21",
+        "description": "Fabrication de radiateurs et de chaudières pour le chauffage central"
+    },
+    {
+        "code": "25.21Z",
+        "description": "Fabrication de radiateurs et de chaudières pour le chauffage central"
+    },
+    {
+        "code": "25.29",
+        "description": "Fabrication d'autres réservoirs, citernes et conteneurs métalliques"
+    },
+    {
+        "code": "25.29Z",
+        "description": "Fabrication d'autres réservoirs, citernes et conteneurs métalliques"
+    },
+    {
+        "code": "25.3",
+        "description": "Fabrication de générateurs de vapeur, à l'exception des chaudières pour le chauffage central"
+    },
+    {
+        "code": "25.30",
+        "description": "Fabrication de générateurs de vapeur, à l'exception des chaudières pour le chauffage central"
+    },
+    {
+        "code": "25.30Z",
+        "description": "Fabrication de générateurs de vapeur, à l'exception des chaudières pour le chauffage central"
+    },
+    {
+        "code": "25.4",
+        "description": "Fabrication d'armes et de munitions"
+    },
+    {
+        "code": "25.40",
+        "description": "Fabrication d'armes et de munitions"
+    },
+    {
+        "code": "25.40Z",
+        "description": "Fabrication d'armes et de munitions"
+    },
+    {
+        "code": "25.5",
+        "description": "Forge, emboutissage, estampage ; métallurgie des poudres"
+    },
+    {
+        "code": "25.50",
+        "description": "Forge, emboutissage, estampage ; métallurgie des poudres"
+    },
+    {
+        "code": "25.50A",
+        "description": "Forge, estampage, matriçage ; métallurgie des poudres"
+    },
+    {
+        "code": "25.50B",
+        "description": "Découpage, emboutissage"
+    },
+    {
+        "code": "25.6",
+        "description": "Traitement et revêtement des métaux ; usinage"
+    },
+    {
+        "code": "25.61",
+        "description": "Traitement et revêtement des métaux"
+    },
+    {
+        "code": "25.61Z",
+        "description": "Traitement et revêtement des métaux"
+    },
+    {
+        "code": "25.62",
+        "description": "Usinage"
+    },
+    {
+        "code": "25.62A",
+        "description": "Décolletage"
+    },
+    {
+        "code": "25.62B",
+        "description": "Mécanique industrielle"
+    },
+    {
+        "code": "25.7",
+        "description": "Fabrication de coutellerie, d'outillage et de quincaillerie"
+    },
+    {
+        "code": "25.71",
+        "description": "Fabrication de coutellerie"
+    },
+    {
+        "code": "25.71Z",
+        "description": "Fabrication de coutellerie"
+    },
+    {
+        "code": "25.72",
+        "description": "Fabrication de serrures et de ferrures"
+    },
+    {
+        "code": "25.72Z",
+        "description": "Fabrication de serrures et de ferrures"
+    },
+    {
+        "code": "25.73",
+        "description": "Fabrication d'outillage"
+    },
+    {
+        "code": "25.73A",
+        "description": "Fabrication de moules et modèles"
+    },
+    {
+        "code": "25.73B",
+        "description": "Fabrication d'autres outillages"
+    },
+    {
+        "code": "25.9",
+        "description": "Fabrication d'autres ouvrages en métaux"
+    },
+    {
+        "code": "25.91",
+        "description": "Fabrication de fûts et emballages métalliques similaires"
+    },
+    {
+        "code": "25.91Z",
+        "description": "Fabrication de fûts et emballages métalliques similaires"
+    },
+    {
+        "code": "25.92",
+        "description": "Fabrication d'emballages métalliques légers"
+    },
+    {
+        "code": "25.92Z",
+        "description": "Fabrication d'emballages métalliques légers"
+    },
+    {
+        "code": "25.93",
+        "description": "Fabrication d'articles en fils métalliques, de chaînes et de ressorts"
+    },
+    {
+        "code": "25.93Z",
+        "description": "Fabrication d'articles en fils métalliques, de chaînes et de ressorts"
+    },
+    {
+        "code": "25.94",
+        "description": "Fabrication de vis et de boulons"
+    },
+    {
+        "code": "25.94Z",
+        "description": "Fabrication de vis et de boulons"
+    },
+    {
+        "code": "25.99",
+        "description": "Fabrication d'autres produits métalliques n.c.a."
+    },
+    {
+        "code": "25.99A",
+        "description": "Fabrication d'articles métalliques ménagers"
+    },
+    {
+        "code": "25.99B",
+        "description": "Fabrication d'autres articles métalliques"
+    },
+    {
+        "code": "26",
+        "description": "Fabrication de produits informatiques, électroniques et optiques"
+    },
+    {
+        "code": "26.1",
+        "description": "Fabrication de composants et cartes électroniques"
+    },
+    {
+        "code": "26.11",
+        "description": "Fabrication de composants électroniques"
+    },
+    {
+        "code": "26.11Z",
+        "description": "Fabrication de composants électroniques"
+    },
+    {
+        "code": "26.12",
+        "description": "Fabrication de cartes électroniques assemblées"
+    },
+    {
+        "code": "26.12Z",
+        "description": "Fabrication de cartes électroniques assemblées"
+    },
+    {
+        "code": "26.2",
+        "description": "Fabrication d'ordinateurs et d'équipements périphériques"
+    },
+    {
+        "code": "26.20",
+        "description": "Fabrication d'ordinateurs et d'équipements périphériques"
+    },
+    {
+        "code": "26.20Z",
+        "description": "Fabrication d'ordinateurs et d'équipements périphériques"
+    },
+    {
+        "code": "26.3",
+        "description": "Fabrication d'équipements de communication"
+    },
+    {
+        "code": "26.30",
+        "description": "Fabrication d'équipements de communication "
+    },
+    {
+        "code": "26.30Z",
+        "description": "Fabrication d'équipements de communication "
+    },
+    {
+        "code": "26.4",
+        "description": "Fabrication de produits électroniques grand public"
+    },
+    {
+        "code": "26.40",
+        "description": "Fabrication de produits électroniques grand public"
+    },
+    {
+        "code": "26.40Z",
+        "description": "Fabrication de produits électroniques grand public"
+    },
+    {
+        "code": "26.5",
+        "description": "Fabrication d'instruments et d'appareils de mesure, d'essai et de navigation ; horlogerie"
+    },
+    {
+        "code": "26.51",
+        "description": "Fabrication d'instruments et d'appareils de mesure, d'essai et de navigation"
+    },
+    {
+        "code": "26.51A",
+        "description": "Fabrication d'équipements d'aide à la navigation"
+    },
+    {
+        "code": "26.51B",
+        "description": "Fabrication d'instrumentation scientifique et technique"
+    },
+    {
+        "code": "26.52",
+        "description": "Horlogerie"
+    },
+    {
+        "code": "26.52Z",
+        "description": "Horlogerie"
+    },
+    {
+        "code": "26.6",
+        "description": "Fabrication d'équipements d'irradiation médicale, d'équipements électromédicaux et électrothérapeutiques"
+    },
+    {
+        "code": "26.60",
+        "description": "Fabrication d'équipements d'irradiation médicale, d'équipements électromédicaux et électrothérapeutiques "
+    },
+    {
+        "code": "26.60Z",
+        "description": "Fabrication d'équipements d'irradiation médicale, d'équipements électromédicaux et électrothérapeutiques "
+    },
+    {
+        "code": "26.7",
+        "description": "Fabrication de matériels optique et photographique"
+    },
+    {
+        "code": "26.70",
+        "description": "Fabrication de matériels optique et photographique"
+    },
+    {
+        "code": "26.70Z",
+        "description": "Fabrication de matériels optique et photographique"
+    },
+    {
+        "code": "26.8",
+        "description": "Fabrication de supports magnétiques et optiques"
+    },
+    {
+        "code": "26.80",
+        "description": "Fabrication de supports magnétiques et optiques"
+    },
+    {
+        "code": "26.80Z",
+        "description": "Fabrication de supports magnétiques et optiques"
+    },
+    {
+        "code": "27",
+        "description": "Fabrication d'équipements électriques"
+    },
+    {
+        "code": "27.1",
+        "description": "Fabrication de moteurs, génératrices et transformateurs électriques et de matériel de distribution et de commande électrique"
+    },
+    {
+        "code": "27.11",
+        "description": "Fabrication de moteurs, génératrices et transformateurs électriques"
+    },
+    {
+        "code": "27.11Z",
+        "description": "Fabrication de moteurs, génératrices et transformateurs électriques"
+    },
+    {
+        "code": "27.12",
+        "description": "Fabrication de matériel de distribution et de commande électrique"
+    },
+    {
+        "code": "27.12Z",
+        "description": "Fabrication de matériel de distribution et de commande électrique"
+    },
+    {
+        "code": "27.2",
+        "description": "Fabrication de piles et d'accumulateurs électriques"
+    },
+    {
+        "code": "27.20",
+        "description": "Fabrication de piles et d'accumulateurs électriques"
+    },
+    {
+        "code": "27.20Z",
+        "description": "Fabrication de piles et d'accumulateurs électriques"
+    },
+    {
+        "code": "27.3",
+        "description": "Fabrication de fils et câbles et de matériel d'installation électrique"
+    },
+    {
+        "code": "27.31",
+        "description": "Fabrication de câbles de fibres optiques"
+    },
+    {
+        "code": "27.31Z",
+        "description": "Fabrication de câbles de fibres optiques"
+    },
+    {
+        "code": "27.32",
+        "description": "Fabrication d'autres fils et câbles électroniques ou électriques"
+    },
+    {
+        "code": "27.32Z",
+        "description": "Fabrication d'autres fils et câbles électroniques ou électriques"
+    },
+    {
+        "code": "27.33",
+        "description": "Fabrication de matériel d'installation électrique"
+    },
+    {
+        "code": "27.33Z",
+        "description": "Fabrication de matériel d'installation électrique"
+    },
+    {
+        "code": "27.4",
+        "description": "Fabrication d'appareils d'éclairage électrique"
+    },
+    {
+        "code": "27.40",
+        "description": "Fabrication d'appareils d'éclairage électrique"
+    },
+    {
+        "code": "27.40Z",
+        "description": "Fabrication d'appareils d'éclairage électrique"
+    },
+    {
+        "code": "27.5",
+        "description": "Fabrication d'appareils ménagers"
+    },
+    {
+        "code": "27.51",
+        "description": "Fabrication d'appareils électroménagers"
+    },
+    {
+        "code": "27.51Z",
+        "description": "Fabrication d'appareils électroménagers"
+    },
+    {
+        "code": "27.52",
+        "description": "Fabrication d'appareils ménagers non électriques"
+    },
+    {
+        "code": "27.52Z",
+        "description": "Fabrication d'appareils ménagers non électriques"
+    },
+    {
+        "code": "27.9",
+        "description": "Fabrication d'autres matériels électriques"
+    },
+    {
+        "code": "27.90",
+        "description": "Fabrication d'autres matériels électriques"
+    },
+    {
+        "code": "27.90Z",
+        "description": "Fabrication d'autres matériels électriques"
+    },
+    {
+        "code": "28",
+        "description": "Fabrication de machines et équipements n.c.a."
+    },
+    {
+        "code": "28.1",
+        "description": "Fabrication de machines d'usage général"
+    },
+    {
+        "code": "28.11",
+        "description": "Fabrication de moteurs et turbines, à l'exception des moteurs d’avions et de véhicules"
+    },
+    {
+        "code": "28.11Z",
+        "description": "Fabrication de moteurs et turbines, à l'exception des moteurs d’avions et de véhicules"
+    },
+    {
+        "code": "28.12",
+        "description": "Fabrication d'équipements hydrauliques et pneumatiques"
+    },
+    {
+        "code": "28.12Z",
+        "description": "Fabrication d'équipements hydrauliques et pneumatiques"
+    },
+    {
+        "code": "28.13",
+        "description": "Fabrication d'autres pompes et compresseurs"
+    },
+    {
+        "code": "28.13Z",
+        "description": "Fabrication d'autres pompes et compresseurs"
+    },
+    {
+        "code": "28.14",
+        "description": "Fabrication d'autres articles de robinetterie"
+    },
+    {
+        "code": "28.14Z",
+        "description": "Fabrication d'autres articles de robinetterie"
+    },
+    {
+        "code": "28.15",
+        "description": "Fabrication d'engrenages et d'organes mécaniques de transmission"
+    },
+    {
+        "code": "28.15Z",
+        "description": "Fabrication d'engrenages et d'organes mécaniques de transmission"
+    },
+    {
+        "code": "28.2",
+        "description": "Fabrication d'autres machines d'usage général"
+    },
+    {
+        "code": "28.21",
+        "description": "Fabrication de fours et brûleurs"
+    },
+    {
+        "code": "28.21Z",
+        "description": "Fabrication de fours et brûleurs"
+    },
+    {
+        "code": "28.22",
+        "description": "Fabrication de matériel de levage et de manutention"
+    },
+    {
+        "code": "28.22Z",
+        "description": "Fabrication de matériel de levage et de manutention"
+    },
+    {
+        "code": "28.23",
+        "description": "Fabrication de machines et d'équipements de bureau (à l'exception des ordinateurs et équipements périphériques)"
+    },
+    {
+        "code": "28.23Z",
+        "description": "Fabrication de machines et d'équipements de bureau (à l'exception des ordinateurs et équipements périphériques)"
+    },
+    {
+        "code": "28.24",
+        "description": "Fabrication d'outillage portatif à moteur incorporé"
+    },
+    {
+        "code": "28.24Z",
+        "description": "Fabrication d'outillage portatif à moteur incorporé"
+    },
+    {
+        "code": "28.25",
+        "description": "Fabrication d'équipements aérauliques et frigorifiques industriels"
+    },
+    {
+        "code": "28.25Z",
+        "description": "Fabrication d'équipements aérauliques et frigorifiques industriels"
+    },
+    {
+        "code": "28.29",
+        "description": "Fabrication de machines diverses d'usage général"
+    },
+    {
+        "code": "28.29A",
+        "description": "Fabrication d'équipements d'emballage, de conditionnement et de pesage "
+    },
+    {
+        "code": "28.29B",
+        "description": "Fabrication d'autres machines d'usage général"
+    },
+    {
+        "code": "28.3",
+        "description": "Fabrication de machines agricoles et forestières"
+    },
+    {
+        "code": "28.30",
+        "description": "Fabrication de machines agricoles et forestières"
+    },
+    {
+        "code": "28.30Z",
+        "description": "Fabrication de machines agricoles et forestières"
+    },
+    {
+        "code": "28.4",
+        "description": "Fabrication de machines de formage des métaux et de machines-outils"
+    },
+    {
+        "code": "28.41",
+        "description": "Fabrication de machines de formage des métaux"
+    },
+    {
+        "code": "28.41Z",
+        "description": "Fabrication de machines-outils pour le travail des métaux"
+    },
+    {
+        "code": "28.49",
+        "description": "Fabrication d'autres machines-outils "
+    },
+    {
+        "code": "28.49Z",
+        "description": "Fabrication d'autres machines-outils "
+    },
+    {
+        "code": "28.9",
+        "description": "Fabrication d'autres machines d'usage spécifique"
+    },
+    {
+        "code": "28.91",
+        "description": "Fabrication de machines pour la métallurgie"
+    },
+    {
+        "code": "28.91Z",
+        "description": "Fabrication de machines pour la métallurgie"
+    },
+    {
+        "code": "28.92",
+        "description": "Fabrication de machines pour l'extraction ou la construction"
+    },
+    {
+        "code": "28.92Z",
+        "description": "Fabrication de machines pour l'extraction ou la construction"
+    },
+    {
+        "code": "28.93",
+        "description": "Fabrication de machines pour l'industrie agro-alimentaire"
+    },
+    {
+        "code": "28.93Z",
+        "description": "Fabrication de machines pour l'industrie agro-alimentaire"
+    },
+    {
+        "code": "28.94",
+        "description": "Fabrication de machines pour les industries textiles"
+    },
+    {
+        "code": "28.94Z",
+        "description": "Fabrication de machines pour les industries textiles"
+    },
+    {
+        "code": "28.95",
+        "description": "Fabrication de machines pour les industries du papier et du carton"
+    },
+    {
+        "code": "28.95Z",
+        "description": "Fabrication de machines pour les industries du papier et du carton"
+    },
+    {
+        "code": "28.96",
+        "description": "Fabrication de machines pour le travail du caoutchouc ou des plastiques"
+    },
+    {
+        "code": "28.96Z",
+        "description": "Fabrication de machines pour le travail du caoutchouc ou des plastiques"
+    },
+    {
+        "code": "28.99",
+        "description": "Fabrication d'autres machines d'usage spécifique n.c.a."
+    },
+    {
+        "code": "28.99A",
+        "description": "Fabrication de machines d'imprimerie"
+    },
+    {
+        "code": "28.99B",
+        "description": "Fabrication d'autres machines spécialisées"
+    },
+    {
+        "code": "29",
+        "description": "Industrie automobile"
+    },
+    {
+        "code": "29.1",
+        "description": "Construction de véhicules automobiles"
+    },
+    {
+        "code": "29.10",
+        "description": "Construction de véhicules automobiles"
+    },
+    {
+        "code": "29.10Z",
+        "description": "Construction de véhicules automobiles"
+    },
+    {
+        "code": "29.2",
+        "description": "Fabrication de carrosseries et remorques"
+    },
+    {
+        "code": "29.20",
+        "description": "Fabrication de carrosseries et remorques"
+    },
+    {
+        "code": "29.20Z",
+        "description": "Fabrication de carrosseries et remorques"
+    },
+    {
+        "code": "29.3",
+        "description": "Fabrication d'équipements automobiles"
+    },
+    {
+        "code": "29.31",
+        "description": "Fabrication d'équipements électriques et électroniques automobiles"
+    },
+    {
+        "code": "29.31Z",
+        "description": "Fabrication d'équipements électriques et électroniques automobiles"
+    },
+    {
+        "code": "29.32",
+        "description": "Fabrication d'autres équipements automobiles"
+    },
+    {
+        "code": "29.32Z",
+        "description": "Fabrication d'autres équipements automobiles"
+    },
+    {
+        "code": "30",
+        "description": "Fabrication d'autres matériels de transport"
+    },
+    {
+        "code": "30.1",
+        "description": "Construction navale"
+    },
+    {
+        "code": "30.11",
+        "description": "Construction de navires et de structures flottantes"
+    },
+    {
+        "code": "30.11Z",
+        "description": "Construction de navires et de structures flottantes"
+    },
+    {
+        "code": "30.12",
+        "description": "Construction de bateaux de plaisance"
+    },
+    {
+        "code": "30.12Z",
+        "description": "Construction de bateaux de plaisance"
+    },
+    {
+        "code": "30.2",
+        "description": "Construction de locomotives et d'autre matériel ferroviaire roulant"
+    },
+    {
+        "code": "30.20",
+        "description": "Construction de locomotives et d'autre matériel ferroviaire roulant "
+    },
+    {
+        "code": "30.20Z",
+        "description": "Construction de locomotives et d'autre matériel ferroviaire roulant "
+    },
+    {
+        "code": "30.3",
+        "description": "Construction aéronautique et spatiale "
+    },
+    {
+        "code": "30.30",
+        "description": "Construction aéronautique et spatiale "
+    },
+    {
+        "code": "30.30Z",
+        "description": "Construction aéronautique et spatiale "
+    },
+    {
+        "code": "30.4",
+        "description": "Construction de véhicules militaires de combat"
+    },
+    {
+        "code": "30.40",
+        "description": "Construction de véhicules militaires de combat "
+    },
+    {
+        "code": "30.40Z",
+        "description": "Construction de véhicules militaires de combat "
+    },
+    {
+        "code": "30.9",
+        "description": "Fabrication de matériels de transport n.c.a."
+    },
+    {
+        "code": "30.91",
+        "description": "Fabrication de motocycles"
+    },
+    {
+        "code": "30.91Z",
+        "description": "Fabrication de motocycles"
+    },
+    {
+        "code": "30.92",
+        "description": "Fabrication de bicyclettes et de véhicules pour invalides"
+    },
+    {
+        "code": "30.92Z",
+        "description": "Fabrication de bicyclettes et de véhicules pour invalides"
+    },
+    {
+        "code": "30.99",
+        "description": "Fabrication d’autres équipements de transport n.c.a."
+    },
+    {
+        "code": "30.99Z",
+        "description": "Fabrication d’autres équipements de transport n.c.a."
+    },
+    {
+        "code": "31",
+        "description": "Fabrication de meubles"
+    },
+    {
+        "code": "31.0",
+        "description": "Fabrication de meubles"
+    },
+    {
+        "code": "31.01",
+        "description": "Fabrication de meubles de bureau et de magasin"
+    },
+    {
+        "code": "31.01Z",
+        "description": "Fabrication de meubles de bureau et de magasin"
+    },
+    {
+        "code": "31.02",
+        "description": "Fabrication de meubles de cuisine "
+    },
+    {
+        "code": "31.02Z",
+        "description": "Fabrication de meubles de cuisine "
+    },
+    {
+        "code": "31.03",
+        "description": "Fabrication de matelas"
+    },
+    {
+        "code": "31.03Z",
+        "description": "Fabrication de matelas"
+    },
+    {
+        "code": "31.09",
+        "description": "Fabrication d'autres meubles"
+    },
+    {
+        "code": "31.09A",
+        "description": "Fabrication de sièges d'ameublement d'intérieur"
+    },
+    {
+        "code": "31.09B",
+        "description": "Fabrication d’autres meubles et industries connexes de l’ameublement"
+    },
+    {
+        "code": "32",
+        "description": "Autres industries manufacturières"
+    },
+    {
+        "code": "32.1",
+        "description": "Fabrication d’articles de joaillerie, bijouterie et articles similaires"
+    },
+    {
+        "code": "32.11",
+        "description": "Frappe de monnaie"
+    },
+    {
+        "code": "32.11Z",
+        "description": "Frappe de monnaie"
+    },
+    {
+        "code": "32.12",
+        "description": "Fabrication d’articles de joaillerie et bijouterie"
+    },
+    {
+        "code": "32.12Z",
+        "description": "Fabrication d’articles de joaillerie et bijouterie"
+    },
+    {
+        "code": "32.13",
+        "description": "Fabrication d’articles de bijouterie fantaisie et articles similaires"
+    },
+    {
+        "code": "32.13Z",
+        "description": "Fabrication d’articles de bijouterie fantaisie et articles similaires"
+    },
+    {
+        "code": "32.2",
+        "description": "Fabrication d'instruments de musique"
+    },
+    {
+        "code": "32.20",
+        "description": "Fabrication d'instruments de musique"
+    },
+    {
+        "code": "32.20Z",
+        "description": "Fabrication d'instruments de musique"
+    },
+    {
+        "code": "32.3",
+        "description": "Fabrication d'articles de sport"
+    },
+    {
+        "code": "32.30",
+        "description": "Fabrication d'articles de sport"
+    },
+    {
+        "code": "32.30Z",
+        "description": "Fabrication d'articles de sport"
+    },
+    {
+        "code": "32.4",
+        "description": "Fabrication de jeux et jouets"
+    },
+    {
+        "code": "32.40",
+        "description": "Fabrication de jeux et jouets"
+    },
+    {
+        "code": "32.40Z",
+        "description": "Fabrication de jeux et jouets"
+    },
+    {
+        "code": "32.5",
+        "description": "Fabrication d'instruments et de fournitures à usage médical et dentaire"
+    },
+    {
+        "code": "32.50",
+        "description": "Fabrication d'instruments et de fournitures à usage médical et dentaire "
+    },
+    {
+        "code": "32.50A",
+        "description": "Fabrication de matériel médico-chirurgical et dentaire"
+    },
+    {
+        "code": "32.50B",
+        "description": "Fabrication de lunettes"
+    },
+    {
+        "code": "32.9",
+        "description": "Activités manufacturières n.c.a."
+    },
+    {
+        "code": "32.91",
+        "description": "Fabrication d’articles de brosserie"
+    },
+    {
+        "code": "32.91Z",
+        "description": "Fabrication d’articles de brosserie"
+    },
+    {
+        "code": "32.99",
+        "description": "Autres activités manufacturières n.c.a. "
+    },
+    {
+        "code": "32.99Z",
+        "description": "Autres activités manufacturières n.c.a. "
+    },
+    {
+        "code": "33",
+        "description": "Réparation et installation de machines et d'équipements "
+    },
+    {
+        "code": "33.1",
+        "description": "Réparation d'ouvrages en métaux, de machines et d'équipements"
+    },
+    {
+        "code": "33.11",
+        "description": "Réparation d'ouvrages en métaux"
+    },
+    {
+        "code": "33.11Z",
+        "description": "Réparation d'ouvrages en métaux"
+    },
+    {
+        "code": "33.12",
+        "description": "Réparation de machines et équipements mécaniques"
+    },
+    {
+        "code": "33.12Z",
+        "description": "Réparation de machines et équipements mécaniques"
+    },
+    {
+        "code": "33.13",
+        "description": "Réparation de matériels électroniques et optiques"
+    },
+    {
+        "code": "33.13Z",
+        "description": "Réparation de matériels électroniques et optiques"
+    },
+    {
+        "code": "33.14",
+        "description": "Réparation d'équipements électriques"
+    },
+    {
+        "code": "33.14Z",
+        "description": "Réparation d'équipements électriques"
+    },
+    {
+        "code": "33.15",
+        "description": "Réparation et maintenance navale"
+    },
+    {
+        "code": "33.15Z",
+        "description": "Réparation et maintenance navale"
+    },
+    {
+        "code": "33.16",
+        "description": "Réparation et maintenance d'aéronefs et d'engins spatiaux "
+    },
+    {
+        "code": "33.16Z",
+        "description": "Réparation et maintenance d'aéronefs et d'engins spatiaux "
+    },
+    {
+        "code": "33.17",
+        "description": "Réparation et maintenance d'autres équipements de transport"
+    },
+    {
+        "code": "33.17Z",
+        "description": "Réparation et maintenance d'autres équipements de transport"
+    },
+    {
+        "code": "33.19",
+        "description": "Réparation d'autres équipements"
+    },
+    {
+        "code": "33.19Z",
+        "description": "Réparation d'autres équipements"
+    },
+    {
+        "code": "33.2",
+        "description": "Installation de machines et d'équipements industriels"
+    },
+    {
+        "code": "33.20",
+        "description": "Installation de machines et d'équipements industriels"
+    },
+    {
+        "code": "33.20A",
+        "description": "Installation de structures métalliques, chaudronnées et de tuyauterie"
+    },
+    {
+        "code": "33.20B",
+        "description": "Installation de machines et équipements mécaniques"
+    },
+    {
+        "code": "33.20C",
+        "description": "Conception d'ensemble et assemblage sur site industriel d'équipements de contrôle des processus industriels "
+    },
+    {
+        "code": "33.20D",
+        "description": "Installation d'équipements électriques, de matériels électroniques et optiques ou d'autres matériels"
+    },
+    {
+        "code": "35",
+        "description": "Production et distribution d'électricité, de gaz, de vapeur et d'air conditionné"
+    },
+    {
+        "code": "35.1",
+        "description": "Production, transport et distribution d'électricité"
+    },
+    {
+        "code": "35.11",
+        "description": "Production d'électricité"
+    },
+    {
+        "code": "35.11Z",
+        "description": "Production d'électricité"
+    },
+    {
+        "code": "35.12",
+        "description": "Transport d'électricité"
+    },
+    {
+        "code": "35.12Z",
+        "description": "Transport d'électricité"
+    },
+    {
+        "code": "35.13",
+        "description": "Distribution d'électricité"
+    },
+    {
+        "code": "35.13Z",
+        "description": "Distribution d'électricité"
+    },
+    {
+        "code": "35.14",
+        "description": "Commerce d'électricité"
+    },
+    {
+        "code": "35.14Z",
+        "description": "Commerce d'électricité"
+    },
+    {
+        "code": "35.2",
+        "description": "Production et distribution de combustibles gazeux"
+    },
+    {
+        "code": "35.21",
+        "description": "Production de combustibles gazeux"
+    },
+    {
+        "code": "35.21Z",
+        "description": "Production de combustibles gazeux"
+    },
+    {
+        "code": "35.22",
+        "description": "Distribution de combustibles gazeux par conduites"
+    },
+    {
+        "code": "35.22Z",
+        "description": "Distribution de combustibles gazeux par conduites"
+    },
+    {
+        "code": "35.23",
+        "description": "Commerce de combustibles gazeux par conduites"
+    },
+    {
+        "code": "35.23Z",
+        "description": "Commerce de combustibles gazeux par conduites"
+    },
+    {
+        "code": "35.3",
+        "description": "Production et distribution de vapeur et d'air conditionné"
+    },
+    {
+        "code": "35.30",
+        "description": "Production et distribution de vapeur et d'air conditionné "
+    },
+    {
+        "code": "35.30Z",
+        "description": "Production et distribution de vapeur et d'air conditionné "
+    },
+    {
+        "code": "36",
+        "description": "Captage, traitement et distribution d'eau "
+    },
+    {
+        "code": "36.0",
+        "description": "Captage, traitement et distribution d'eau"
+    },
+    {
+        "code": "36.00",
+        "description": "Captage, traitement et distribution d'eau"
+    },
+    {
+        "code": "36.00Z",
+        "description": "Captage, traitement et distribution d'eau"
+    },
+    {
+        "code": "37",
+        "description": "Collecte et traitement des eaux usées"
+    },
+    {
+        "code": "37.0",
+        "description": "Collecte et traitement des eaux usées"
+    },
+    {
+        "code": "37.00",
+        "description": "Collecte et traitement des eaux usées"
+    },
+    {
+        "code": "37.00Z",
+        "description": "Collecte et traitement des eaux usées"
+    },
+    {
+        "code": "38",
+        "description": "Collecte, traitement et élimination des déchets ; récupération"
+    },
+    {
+        "code": "38.1",
+        "description": "Collecte des déchets"
+    },
+    {
+        "code": "38.11",
+        "description": "Collecte des déchets non dangereux"
+    },
+    {
+        "code": "38.11Z",
+        "description": "Collecte des déchets non dangereux"
+    },
+    {
+        "code": "38.12",
+        "description": "Collecte des déchets dangereux"
+    },
+    {
+        "code": "38.12Z",
+        "description": "Collecte des déchets dangereux"
+    },
+    {
+        "code": "38.2",
+        "description": "Traitement et élimination des déchets"
+    },
+    {
+        "code": "38.21",
+        "description": "Traitement et élimination des déchets non dangereux"
+    },
+    {
+        "code": "38.21Z",
+        "description": "Traitement et élimination des déchets non dangereux"
+    },
+    {
+        "code": "38.22",
+        "description": "Traitement et élimination des déchets dangereux"
+    },
+    {
+        "code": "38.22Z",
+        "description": "Traitement et élimination des déchets dangereux"
+    },
+    {
+        "code": "38.3",
+        "description": "Récupération"
+    },
+    {
+        "code": "38.31",
+        "description": "Démantèlement d'épaves"
+    },
+    {
+        "code": "38.31Z",
+        "description": "Démantèlement d'épaves"
+    },
+    {
+        "code": "38.32",
+        "description": "Récupération de déchets triés"
+    },
+    {
+        "code": "38.32Z",
+        "description": "Récupération de déchets triés"
+    },
+    {
+        "code": "39",
+        "description": "Dépollution et autres services de gestion des déchets"
+    },
+    {
+        "code": "39.0",
+        "description": "Dépollution et autres services de gestion des déchets"
+    },
+    {
+        "code": "39.00",
+        "description": "Dépollution et autres services de gestion des déchets"
+    },
+    {
+        "code": "39.00Z",
+        "description": "Dépollution et autres services de gestion des déchets"
+    },
+    {
+        "code": "41",
+        "description": "Construction de bâtiments "
+    },
+    {
+        "code": "41.1",
+        "description": "Promotion immobilière"
+    },
+    {
+        "code": "41.10",
+        "description": "Promotion immobilière"
+    },
+    {
+        "code": "41.10A",
+        "description": "Promotion immobilière de logements"
+    },
+    {
+        "code": "41.10B",
+        "description": "Promotion immobilière de bureaux"
+    },
+    {
+        "code": "41.10C",
+        "description": "Promotion immobilière d'autres bâtiments"
+    },
+    {
+        "code": "41.10D",
+        "description": "Supports juridiques de programmes"
+    },
+    {
+        "code": "41.2",
+        "description": "Construction de bâtiments résidentiels et non résidentiels"
+    },
+    {
+        "code": "41.20",
+        "description": "Construction de bâtiments résidentiels et non résidentiels"
+    },
+    {
+        "code": "41.20A",
+        "description": "Construction de maisons individuelles"
+    },
+    {
+        "code": "41.20B",
+        "description": "Construction d'autres bâtiments"
+    },
+    {
+        "code": "42",
+        "description": "Génie civil"
+    },
+    {
+        "code": "42.1",
+        "description": "Construction de routes et de voies ferrées "
+    },
+    {
+        "code": "42.11",
+        "description": "Construction de routes et autoroutes"
+    },
+    {
+        "code": "42.11Z",
+        "description": "Construction de routes et autoroutes"
+    },
+    {
+        "code": "42.12",
+        "description": "Construction de voies ferrées de surface et souterraines"
+    },
+    {
+        "code": "42.12Z",
+        "description": "Construction de voies ferrées de surface et souterraines"
+    },
+    {
+        "code": "42.13",
+        "description": "Construction de ponts et tunnels"
+    },
+    {
+        "code": "42.13A",
+        "description": "Construction d'ouvrages d'art"
+    },
+    {
+        "code": "42.13B",
+        "description": "Construction et entretien de tunnels"
+    },
+    {
+        "code": "42.2",
+        "description": "Construction de réseaux et de lignes"
+    },
+    {
+        "code": "42.21",
+        "description": "Construction de réseaux pour fluides"
+    },
+    {
+        "code": "42.21Z",
+        "description": "Construction de réseaux pour fluides"
+    },
+    {
+        "code": "42.22",
+        "description": "Construction de réseaux électriques et de télécommunications"
+    },
+    {
+        "code": "42.22Z",
+        "description": "Construction de réseaux électriques et de télécommunications"
+    },
+    {
+        "code": "42.9",
+        "description": "Construction d'autres ouvrages de génie civil "
+    },
+    {
+        "code": "42.91",
+        "description": "Construction d'ouvrages maritimes et fluviaux"
+    },
+    {
+        "code": "42.91Z",
+        "description": "Construction d'ouvrages maritimes et fluviaux"
+    },
+    {
+        "code": "42.99",
+        "description": "Construction d'autres ouvrages de génie civil n.c.a."
+    },
+    {
+        "code": "42.99Z",
+        "description": "Construction d'autres ouvrages de génie civil n.c.a."
+    },
+    {
+        "code": "43",
+        "description": "Travaux de construction spécialisés "
+    },
+    {
+        "code": "43.1",
+        "description": "Démolition et préparation des sites"
+    },
+    {
+        "code": "43.11",
+        "description": "Travaux de démolition"
+    },
+    {
+        "code": "43.11Z",
+        "description": "Travaux de démolition"
+    },
+    {
+        "code": "43.12",
+        "description": "Travaux de préparation des sites"
+    },
+    {
+        "code": "43.12A",
+        "description": "Travaux de terrassement courants et travaux préparatoires"
+    },
+    {
+        "code": "43.12B",
+        "description": "Travaux de terrassement spécialisés ou de grande masse"
+    },
+    {
+        "code": "43.13",
+        "description": "Forages et sondages"
+    },
+    {
+        "code": "43.13Z",
+        "description": "Forages et sondages"
+    },
+    {
+        "code": "43.2",
+        "description": "Travaux d'installation électrique, plomberie et autres travaux d'installation"
+    },
+    {
+        "code": "43.21",
+        "description": "Installation électrique"
+    },
+    {
+        "code": "43.21A",
+        "description": "Travaux d'installation électrique dans tous locaux"
+    },
+    {
+        "code": "43.21B",
+        "description": "Travaux d'installation électrique sur la voie publique"
+    },
+    {
+        "code": "43.22",
+        "description": "Travaux de plomberie et installation de chauffage et de conditionnement d'air"
+    },
+    {
+        "code": "43.22A",
+        "description": "Travaux d'installation d'eau et de gaz en tous locaux"
+    },
+    {
+        "code": "43.22B",
+        "description": "Travaux d'installation d'équipements thermiques et de climatisation"
+    },
+    {
+        "code": "43.29",
+        "description": "Autres travaux d'installation"
+    },
+    {
+        "code": "43.29A",
+        "description": "Travaux d'isolation"
+    },
+    {
+        "code": "43.29B",
+        "description": "Autres travaux d'installation n.c.a."
+    },
+    {
+        "code": "43.3",
+        "description": "Travaux de finition"
+    },
+    {
+        "code": "43.31",
+        "description": "Travaux de plâtrerie"
+    },
+    {
+        "code": "43.31Z",
+        "description": "Travaux de plâtrerie"
+    },
+    {
+        "code": "43.32",
+        "description": "Travaux de menuiserie"
+    },
+    {
+        "code": "43.32A",
+        "description": "Travaux de menuiserie bois et PVC"
+    },
+    {
+        "code": "43.32B",
+        "description": "Travaux de menuiserie métallique et serrurerie"
+    },
+    {
+        "code": "43.32C",
+        "description": "Agencement de lieux de vente"
+    },
+    {
+        "code": "43.33",
+        "description": "Travaux de revêtement des sols et des murs"
+    },
+    {
+        "code": "43.33Z",
+        "description": "Travaux de revêtement des sols et des murs"
+    },
+    {
+        "code": "43.34",
+        "description": "Travaux de peinture et vitrerie"
+    },
+    {
+        "code": "43.34Z",
+        "description": "Travaux de peinture et vitrerie"
+    },
+    {
+        "code": "43.39",
+        "description": "Autres travaux de finition"
+    },
+    {
+        "code": "43.39Z",
+        "description": "Autres travaux de finition"
+    },
+    {
+        "code": "43.9",
+        "description": "Autres travaux de construction spécialisés"
+    },
+    {
+        "code": "43.91",
+        "description": "Travaux de couverture"
+    },
+    {
+        "code": "43.91A",
+        "description": "Travaux de charpente"
+    },
+    {
+        "code": "43.91B",
+        "description": "Travaux de couverture par éléments"
+    },
+    {
+        "code": "43.99",
+        "description": "Autres travaux de construction spécialisés n.c.a."
+    },
+    {
+        "code": "43.99A",
+        "description": "Travaux d'étanchéification"
+    },
+    {
+        "code": "43.99B",
+        "description": "Travaux de montage de structures métalliques"
+    },
+    {
+        "code": "43.99C",
+        "description": "Travaux de maçonnerie générale et gros œuvre de bâtiment"
+    },
+    {
+        "code": "43.99D",
+        "description": "Autres travaux spécialisés de construction"
+    },
+    {
+        "code": "43.99E",
+        "description": "Location avec opérateur de matériel de construction"
+    },
+    {
+        "code": "45",
+        "description": "Commerce et réparation d'automobiles et de motocycles"
+    },
+    {
+        "code": "45.1",
+        "description": "Commerce de véhicules automobiles"
+    },
+    {
+        "code": "45.11",
+        "description": "Commerce de voitures et de véhicules automobiles légers"
+    },
+    {
+        "code": "45.11Z",
+        "description": "Commerce de voitures et de véhicules automobiles légers"
+    },
+    {
+        "code": "45.19",
+        "description": "Commerce d'autres véhicules automobiles"
+    },
+    {
+        "code": "45.19Z",
+        "description": "Commerce d'autres véhicules automobiles"
+    },
+    {
+        "code": "45.2",
+        "description": "Entretien et réparation de véhicules automobiles"
+    },
+    {
+        "code": "45.20",
+        "description": "Entretien et réparation de véhicules automobiles"
+    },
+    {
+        "code": "45.20A",
+        "description": "Entretien et réparation de véhicules automobiles légers"
+    },
+    {
+        "code": "45.20B",
+        "description": "Entretien et réparation d'autres véhicules automobiles"
+    },
+    {
+        "code": "45.3",
+        "description": "Commerce d'équipements automobiles"
+    },
+    {
+        "code": "45.31",
+        "description": "Commerce de gros d'équipements automobiles"
+    },
+    {
+        "code": "45.31Z",
+        "description": "Commerce de gros d'équipements automobiles"
+    },
+    {
+        "code": "45.32",
+        "description": "Commerce de détail d'équipements automobiles"
+    },
+    {
+        "code": "45.32Z",
+        "description": "Commerce de détail d'équipements automobiles"
+    },
+    {
+        "code": "45.4",
+        "description": "Commerce et réparation de motocycles"
+    },
+    {
+        "code": "45.40",
+        "description": "Commerce et réparation de motocycles"
+    },
+    {
+        "code": "45.40Z",
+        "description": "Commerce et réparation de motocycles"
+    },
+    {
+        "code": "46",
+        "description": "Commerce de gros, à l’exception des automobiles et des motocycles"
+    },
+    {
+        "code": "46.1",
+        "description": "Intermédiaires du commerce de gros"
+    },
+    {
+        "code": "46.11",
+        "description": "Intermédiaires du commerce en matières premières agricoles, animaux vivants, matières premières textiles et produits semi-finis"
+    },
+    {
+        "code": "46.11Z",
+        "description": "Intermédiaires du commerce en matières premières agricoles, animaux vivants, matières premières textiles et produits semi-finis"
+    },
+    {
+        "code": "46.12",
+        "description": "Intermédiaires du commerce en combustibles, métaux, minéraux et produits chimiques"
+    },
+    {
+        "code": "46.12A",
+        "description": "Centrales d'achat de carburant"
+    },
+    {
+        "code": "46.12B",
+        "description": "Autres intermédiaires du commerce en combustibles, métaux, minéraux et produits chimiques"
+    },
+    {
+        "code": "46.13",
+        "description": "Intermédiaires du commerce en bois et matériaux de construction"
+    },
+    {
+        "code": "46.13Z",
+        "description": "Intermédiaires du commerce en bois et matériaux de construction"
+    },
+    {
+        "code": "46.14",
+        "description": "Intermédiaires du commerce en machines, équipements industriels, navires et avions"
+    },
+    {
+        "code": "46.14Z",
+        "description": "Intermédiaires du commerce en machines, équipements industriels, navires et avions"
+    },
+    {
+        "code": "46.15",
+        "description": "Intermédiaires du commerce en meubles, articles de ménage et quincaillerie"
+    },
+    {
+        "code": "46.15Z",
+        "description": "Intermédiaires du commerce en meubles, articles de ménage et quincaillerie"
+    },
+    {
+        "code": "46.16",
+        "description": "Intermédiaires du commerce en textiles, habillement, fourrures, chaussures et articles en cuir"
+    },
+    {
+        "code": "46.16Z",
+        "description": "Intermédiaires du commerce en textiles, habillement, fourrures, chaussures et articles en cuir"
+    },
+    {
+        "code": "46.17",
+        "description": "Intermédiaires du commerce en denrées, boissons et tabac"
+    },
+    {
+        "code": "46.17A",
+        "description": "Centrales d'achat alimentaires"
+    },
+    {
+        "code": "46.17B",
+        "description": "Autres intermédiaires du commerce en denrées, boissons et tabac"
+    },
+    {
+        "code": "46.18",
+        "description": "Intermédiaires spécialisés dans le commerce d'autres produits spécifiques"
+    },
+    {
+        "code": "46.18Z",
+        "description": "Intermédiaires spécialisés dans le commerce d'autres produits spécifiques"
+    },
+    {
+        "code": "46.19",
+        "description": "Intermédiaires du commerce en produits divers"
+    },
+    {
+        "code": "46.19A",
+        "description": "Centrales d'achat non alimentaires"
+    },
+    {
+        "code": "46.19B",
+        "description": "Autres intermédiaires du commerce en produits divers"
+    },
+    {
+        "code": "46.2",
+        "description": "Commerce de gros de produits agricoles bruts et d'animaux vivants"
+    },
+    {
+        "code": "46.21",
+        "description": "Commerce de gros de céréales, de tabac non manufacturé, de semences et d'aliments pour le bétail "
+    },
+    {
+        "code": "46.21Z",
+        "description": "Commerce de gros (commerce interentreprises) de céréales, de tabac non manufacturé, de semences et d'aliments pour le bétail "
+    },
+    {
+        "code": "46.22",
+        "description": "Commerce de gros de fleurs et plantes"
+    },
+    {
+        "code": "46.22Z",
+        "description": "Commerce de gros (commerce interentreprises) de fleurs et plantes"
+    },
+    {
+        "code": "46.23",
+        "description": "Commerce de gros d'animaux vivants"
+    },
+    {
+        "code": "46.23Z",
+        "description": "Commerce de gros (commerce interentreprises) d'animaux vivants"
+    },
+    {
+        "code": "46.24",
+        "description": "Commerce de gros de cuirs et peaux"
+    },
+    {
+        "code": "46.24Z",
+        "description": "Commerce de gros (commerce interentreprises) de cuirs et peaux"
+    },
+    {
+        "code": "46.3",
+        "description": "Commerce de gros de produits alimentaires, de boissons et de tabac"
+    },
+    {
+        "code": "46.31",
+        "description": "Commerce de gros de fruits et légumes"
+    },
+    {
+        "code": "46.31Z",
+        "description": "Commerce de gros (commerce interentreprises) de fruits et légumes"
+    },
+    {
+        "code": "46.32",
+        "description": "Commerce de gros de viandes et de produits à base de viande"
+    },
+    {
+        "code": "46.32A",
+        "description": "Commerce de gros (commerce interentreprises) de viandes de boucherie"
+    },
+    {
+        "code": "46.32B",
+        "description": "Commerce de gros (commerce interentreprises) de produits à base de viande"
+    },
+    {
+        "code": "46.32C",
+        "description": "Commerce de gros (commerce interentreprises) de volailles et gibier"
+    },
+    {
+        "code": "46.33",
+        "description": "Commerce de gros de produits laitiers, œufs, huiles et matières grasses comestibles"
+    },
+    {
+        "code": "46.33Z",
+        "description": "Commerce de gros (commerce interentreprises) de produits laitiers, œufs, huiles et matières grasses comestibles"
+    },
+    {
+        "code": "46.34",
+        "description": "Commerce de gros de boissons"
+    },
+    {
+        "code": "46.34Z",
+        "description": "Commerce de gros (commerce interentreprises) de boissons"
+    },
+    {
+        "code": "46.35",
+        "description": "Commerce de gros de produits à base de tabac"
+    },
+    {
+        "code": "46.35Z",
+        "description": "Commerce de gros (commerce interentreprises) de produits à base de tabac"
+    },
+    {
+        "code": "46.36",
+        "description": "Commerce de gros de sucre, chocolat et confiserie"
+    },
+    {
+        "code": "46.36Z",
+        "description": "Commerce de gros (commerce interentreprises) de sucre, chocolat et confiserie"
+    },
+    {
+        "code": "46.37",
+        "description": "Commerce de gros de café, thé, cacao et épices"
+    },
+    {
+        "code": "46.37Z",
+        "description": "Commerce de gros (commerce interentreprises) de café, thé, cacao et épices"
+    },
+    {
+        "code": "46.38",
+        "description": "Commerce de gros d'autres produits alimentaires, y compris poissons, crustacés et mollusques"
+    },
+    {
+        "code": "46.38A",
+        "description": "Commerce de gros (commerce interentreprises) de poissons, crustacés et mollusques"
+    },
+    {
+        "code": "46.38B",
+        "description": "Commerce de gros (commerce interentreprises) alimentaire spécialisé divers"
+    },
+    {
+        "code": "46.39",
+        "description": "Commerce de gros non spécialisé de denrées, boissons et tabac"
+    },
+    {
+        "code": "46.39A",
+        "description": "Commerce de gros (commerce interentreprises) de produits surgelés"
+    },
+    {
+        "code": "46.39B",
+        "description": "Commerce de gros (commerce interentreprises) alimentaire non spécialisé"
+    },
+    {
+        "code": "46.4",
+        "description": "Commerce de gros de biens domestiques"
+    },
+    {
+        "code": "46.41",
+        "description": "Commerce de gros de textiles"
+    },
+    {
+        "code": "46.41Z",
+        "description": "Commerce de gros (commerce interentreprises) de textiles"
+    },
+    {
+        "code": "46.42",
+        "description": "Commerce de gros d'habillement et de chaussures"
+    },
+    {
+        "code": "46.42Z",
+        "description": "Commerce de gros (commerce interentreprises) d'habillement et de chaussures"
+    },
+    {
+        "code": "46.43",
+        "description": "Commerce de gros d'appareils électroménagers"
+    },
+    {
+        "code": "46.43Z",
+        "description": "Commerce de gros (commerce interentreprises) d'appareils électroménagers"
+    },
+    {
+        "code": "46.44",
+        "description": "Commerce de gros de vaisselle, verrerie et produits d'entretien"
+    },
+    {
+        "code": "46.44Z",
+        "description": "Commerce de gros (commerce interentreprises) de vaisselle, verrerie et produits d'entretien"
+    },
+    {
+        "code": "46.45",
+        "description": "Commerce de gros de parfumerie et de produits de beauté"
+    },
+    {
+        "code": "46.45Z",
+        "description": "Commerce de gros (commerce interentreprises) de parfumerie et de produits de beauté"
+    },
+    {
+        "code": "46.46",
+        "description": "Commerce de gros de produits pharmaceutiques"
+    },
+    {
+        "code": "46.46Z",
+        "description": "Commerce de gros (commerce interentreprises) de produits pharmaceutiques"
+    },
+    {
+        "code": "46.47",
+        "description": "Commerce de gros de meubles, de tapis et d'appareils d'éclairage "
+    },
+    {
+        "code": "46.47Z",
+        "description": "Commerce de gros (commerce interentreprises) de meubles, de tapis et d'appareils d'éclairage "
+    },
+    {
+        "code": "46.48",
+        "description": "Commerce de gros d'articles d'horlogerie et de bijouterie"
+    },
+    {
+        "code": "46.48Z",
+        "description": "Commerce de gros (commerce interentreprises) d'articles d'horlogerie et de bijouterie"
+    },
+    {
+        "code": "46.49",
+        "description": "Commerce de gros d'autres biens domestiques"
+    },
+    {
+        "code": "46.49Z",
+        "description": "Commerce de gros (commerce interentreprises) d'autres biens domestiques "
+    },
+    {
+        "code": "46.5",
+        "description": "Commerce de gros d'équipements de l'information et de la communication "
+    },
+    {
+        "code": "46.51",
+        "description": "Commerce de gros d'ordinateurs, d'équipements informatiques périphériques et de logiciels"
+    },
+    {
+        "code": "46.51Z",
+        "description": "Commerce de gros (commerce interentreprises) d'ordinateurs, d'équipements informatiques périphériques et de logiciels"
+    },
+    {
+        "code": "46.52",
+        "description": "Commerce de gros de composants et d'équipements électroniques et de télécommunication"
+    },
+    {
+        "code": "46.52Z",
+        "description": "Commerce de gros (commerce interentreprises) de composants et d'équipements électroniques et de télécommunication"
+    },
+    {
+        "code": "46.6",
+        "description": "Commerce de gros d'autres équipements industriels"
+    },
+    {
+        "code": "46.61",
+        "description": "Commerce de gros de matériel agricole"
+    },
+    {
+        "code": "46.61Z",
+        "description": "Commerce de gros (commerce interentreprises) de matériel agricole"
+    },
+    {
+        "code": "46.62",
+        "description": "Commerce de gros de machines-outils"
+    },
+    {
+        "code": "46.62Z",
+        "description": "Commerce de gros (commerce interentreprises) de machines-outils"
+    },
+    {
+        "code": "46.63",
+        "description": "Commerce de gros de machines pour l'extraction, la construction et le génie civil "
+    },
+    {
+        "code": "46.63Z",
+        "description": "Commerce de gros (commerce interentreprises) de machines pour l'extraction, la construction et le génie civil "
+    },
+    {
+        "code": "46.64",
+        "description": "Commerce de gros de machines pour l'industrie textile et l'habillement"
+    },
+    {
+        "code": "46.64Z",
+        "description": "Commerce de gros (commerce interentreprises) de machines pour l'industrie textile et l'habillement"
+    },
+    {
+        "code": "46.65",
+        "description": "Commerce de gros de mobilier de bureau"
+    },
+    {
+        "code": "46.65Z",
+        "description": "Commerce de gros (commerce interentreprises) de mobilier de bureau"
+    },
+    {
+        "code": "46.66",
+        "description": "Commerce de gros d'autres machines et équipements de bureau "
+    },
+    {
+        "code": "46.66Z",
+        "description": "Commerce de gros (commerce interentreprises) d'autres machines et équipements de bureau "
+    },
+    {
+        "code": "46.69",
+        "description": "Commerce de gros d'autres machines et équipements"
+    },
+    {
+        "code": "46.69A",
+        "description": "Commerce de gros (commerce interentreprises) de matériel électrique"
+    },
+    {
+        "code": "46.69B",
+        "description": "Commerce de gros (commerce interentreprises) de fournitures et équipements industriels divers"
+    },
+    {
+        "code": "46.69C",
+        "description": "Commerce de gros (commerce interentreprises) de fournitures et équipements divers pour le commerce et les services"
+    },
+    {
+        "code": "46.7",
+        "description": "Autres commerces de gros spécialisés"
+    },
+    {
+        "code": "46.71",
+        "description": "Commerce de gros de combustibles et de produits annexes"
+    },
+    {
+        "code": "46.71Z",
+        "description": "Commerce de gros (commerce interentreprises) de combustibles et de produits annexes"
+    },
+    {
+        "code": "46.72",
+        "description": "Commerce de gros de minerais et métaux"
+    },
+    {
+        "code": "46.72Z",
+        "description": "Commerce de gros (commerce interentreprises) de minerais et métaux"
+    },
+    {
+        "code": "46.73",
+        "description": "Commerce de gros de bois, de matériaux de construction et d'appareils sanitaires "
+    },
+    {
+        "code": "46.73A",
+        "description": "Commerce de gros (commerce interentreprises) de bois et de matériaux de construction "
+    },
+    {
+        "code": "46.73B",
+        "description": "Commerce de gros (commerce interentreprises) d'appareils sanitaires et de produits de décoration"
+    },
+    {
+        "code": "46.74",
+        "description": "Commerce de gros de quincaillerie et fournitures pour plomberie et chauffage"
+    },
+    {
+        "code": "46.74A",
+        "description": "Commerce de gros (commerce interentreprises) de quincaillerie"
+    },
+    {
+        "code": "46.74B",
+        "description": "Commerce de gros (commerce interentreprises) de fournitures pour la plomberie et le chauffage"
+    },
+    {
+        "code": "46.75",
+        "description": "Commerce de gros de produits chimiques"
+    },
+    {
+        "code": "46.75Z",
+        "description": "Commerce de gros (commerce interentreprises) de produits chimiques"
+    },
+    {
+        "code": "46.76",
+        "description": "Commerce de gros d'autres produits intermédiaires"
+    },
+    {
+        "code": "46.76Z",
+        "description": "Commerce de gros (commerce interentreprises) d'autres produits intermédiaires"
+    },
+    {
+        "code": "46.77",
+        "description": "Commerce de gros de déchets et débris"
+    },
+    {
+        "code": "46.77Z",
+        "description": "Commerce de gros (commerce interentreprises) de déchets et débris"
+    },
+    {
+        "code": "46.9",
+        "description": "Commerce de gros non spécialisé"
+    },
+    {
+        "code": "46.90",
+        "description": "Commerce de gros non spécialisé"
+    },
+    {
+        "code": "46.90Z",
+        "description": "Commerce de gros (commerce interentreprises) non spécialisé"
+    },
+    {
+        "code": "47",
+        "description": "Commerce de détail, à l’exception des automobiles et des motocycles"
+    },
+    {
+        "code": "47.1",
+        "description": "Commerce de détail en magasin non spécialisé"
+    },
+    {
+        "code": "47.11",
+        "description": "Commerce de détail en magasin non spécialisé à prédominance alimentaire"
+    },
+    {
+        "code": "47.11A",
+        "description": "Commerce de détail de produits surgelés"
+    },
+    {
+        "code": "47.11B",
+        "description": "Commerce d'alimentation générale"
+    },
+    {
+        "code": "47.11C",
+        "description": "Supérettes"
+    },
+    {
+        "code": "47.11D",
+        "description": "Supermarchés"
+    },
+    {
+        "code": "47.11E",
+        "description": "Magasins multi-commerces"
+    },
+    {
+        "code": "47.11F",
+        "description": "Hypermarchés"
+    },
+    {
+        "code": "47.19",
+        "description": "Autre commerce de détail en magasin non spécialisé"
+    },
+    {
+        "code": "47.19A",
+        "description": "Grands magasins"
+    },
+    {
+        "code": "47.19B",
+        "description": "Autres commerces de détail en magasin non spécialisé"
+    },
+    {
+        "code": "47.2",
+        "description": "Commerce de détail alimentaire en magasin spécialisé"
+    },
+    {
+        "code": "47.21",
+        "description": "Commerce de détail de fruits et légumes en magasin spécialisé"
+    },
+    {
+        "code": "47.21Z",
+        "description": "Commerce de détail de fruits et légumes en magasin spécialisé"
+    },
+    {
+        "code": "47.22",
+        "description": "Commerce de détail de viandes et de produits à base de viande en magasin spécialisé"
+    },
+    {
+        "code": "47.22Z",
+        "description": "Commerce de détail de viandes et de produits à base de viande en magasin spécialisé"
+    },
+    {
+        "code": "47.23",
+        "description": "Commerce de détail de poissons, crustacés et mollusques en magasin spécialisé"
+    },
+    {
+        "code": "47.23Z",
+        "description": "Commerce de détail de poissons, crustacés et mollusques en magasin spécialisé"
+    },
+    {
+        "code": "47.24",
+        "description": "Commerce de détail de pain, pâtisserie et confiserie en magasin spécialisé"
+    },
+    {
+        "code": "47.24Z",
+        "description": "Commerce de détail de pain, pâtisserie et confiserie en magasin spécialisé"
+    },
+    {
+        "code": "47.25",
+        "description": "Commerce de détail de boissons en magasin spécialisé"
+    },
+    {
+        "code": "47.25Z",
+        "description": "Commerce de détail de boissons en magasin spécialisé"
+    },
+    {
+        "code": "47.26",
+        "description": "Commerce de détail de produits à base de tabac en magasin spécialisé"
+    },
+    {
+        "code": "47.26Z",
+        "description": "Commerce de détail de produits à base de tabac en magasin spécialisé"
+    },
+    {
+        "code": "47.29",
+        "description": "Autres commerces de détail alimentaires en magasin spécialisé "
+    },
+    {
+        "code": "47.29Z",
+        "description": "Autres commerces de détail alimentaires en magasin spécialisé "
+    },
+    {
+        "code": "47.3",
+        "description": "Commerce de détail de carburants en magasin spécialisé"
+    },
+    {
+        "code": "47.30",
+        "description": "Commerce de détail de carburants en magasin spécialisé"
+    },
+    {
+        "code": "47.30Z",
+        "description": "Commerce de détail de carburants en magasin spécialisé"
+    },
+    {
+        "code": "47.4",
+        "description": "Commerce de détail d'équipements de l'information et de la communication en magasin spécialisé"
+    },
+    {
+        "code": "47.41",
+        "description": "Commerce de détail d'ordinateurs, d'unités périphériques et de logiciels en magasin spécialisé"
+    },
+    {
+        "code": "47.41Z",
+        "description": "Commerce de détail d'ordinateurs, d'unités périphériques et de logiciels en magasin spécialisé"
+    },
+    {
+        "code": "47.42",
+        "description": "Commerce de détail de matériels de télécommunication en magasin spécialisé"
+    },
+    {
+        "code": "47.42Z",
+        "description": "Commerce de détail de matériels de télécommunication en magasin spécialisé"
+    },
+    {
+        "code": "47.43",
+        "description": "Commerce de détail de matériels audio/vidéo en magasin spécialisé"
+    },
+    {
+        "code": "47.43Z",
+        "description": "Commerce de détail de matériels audio et vidéo en magasin spécialisé"
+    },
+    {
+        "code": "47.5",
+        "description": "Commerce de détail d'autres équipements du foyer en magasin spécialisé"
+    },
+    {
+        "code": "47.51",
+        "description": "Commerce de détail de textiles en magasin spécialisé"
+    },
+    {
+        "code": "47.51Z",
+        "description": "Commerce de détail de textiles en magasin spécialisé"
+    },
+    {
+        "code": "47.52",
+        "description": "Commerce de détail de quincaillerie, peintures et verres en magasin spécialisé"
+    },
+    {
+        "code": "47.52A",
+        "description": "Commerce de détail de quincaillerie, peintures et verres en petites surfaces (moins de 400 m2)"
+    },
+    {
+        "code": "47.52B",
+        "description": "Commerce de détail de quincaillerie, peintures et verres en grandes surfaces (400 m2et plus)"
+    },
+    {
+        "code": "47.53",
+        "description": "Commerce de détail de tapis, moquettes et revêtements de murs et de sols en magasin spécialisé"
+    },
+    {
+        "code": "47.53Z",
+        "description": "Commerce de détail de tapis, moquettes et revêtements de murs et de sols en magasin spécialisé"
+    },
+    {
+        "code": "47.54",
+        "description": "Commerce de détail d'appareils électroménagers en magasin spécialisé"
+    },
+    {
+        "code": "47.54Z",
+        "description": "Commerce de détail d'appareils électroménagers en magasin spécialisé"
+    },
+    {
+        "code": "47.59",
+        "description": "Commerce de détail de meubles, appareils d'éclairage et autres articles de ménage en magasin spécialisé"
+    },
+    {
+        "code": "47.59A",
+        "description": "Commerce de détail de meubles"
+    },
+    {
+        "code": "47.59B",
+        "description": "Commerce de détail d'autres équipements du foyer"
+    },
+    {
+        "code": "47.6",
+        "description": "Commerce de détail de biens culturels et de loisirs en magasin spécialisé"
+    },
+    {
+        "code": "47.61",
+        "description": "Commerce de détail de livres en magasin spécialisé"
+    },
+    {
+        "code": "47.61Z",
+        "description": "Commerce de détail de livres en magasin spécialisé"
+    },
+    {
+        "code": "47.62",
+        "description": "Commerce de détail de journaux et papeterie en magasin spécialisé"
+    },
+    {
+        "code": "47.62Z",
+        "description": "Commerce de détail de journaux et papeterie en magasin spécialisé"
+    },
+    {
+        "code": "47.63",
+        "description": "Commerce de détail d'enregistrements musicaux et vidéo en magasin spécialisé"
+    },
+    {
+        "code": "47.63Z",
+        "description": "Commerce de détail d'enregistrements musicaux et vidéo en magasin spécialisé"
+    },
+    {
+        "code": "47.64",
+        "description": "Commerce de détail d'articles de sport en magasin spécialisé"
+    },
+    {
+        "code": "47.64Z",
+        "description": "Commerce de détail d'articles de sport en magasin spécialisé"
+    },
+    {
+        "code": "47.65",
+        "description": "Commerce de détail de jeux et jouets en magasin spécialisé"
+    },
+    {
+        "code": "47.65Z",
+        "description": "Commerce de détail de jeux et jouets en magasin spécialisé"
+    },
+    {
+        "code": "47.7",
+        "description": "Autres commerces de détail en magasin spécialisé"
+    },
+    {
+        "code": "47.71",
+        "description": "Commerce de détail d'habillement en magasin spécialisé"
+    },
+    {
+        "code": "47.71Z",
+        "description": "Commerce de détail d'habillement en magasin spécialisé"
+    },
+    {
+        "code": "47.72",
+        "description": "Commerce de détail de chaussures et d'articles en cuir en magasin spécialisé"
+    },
+    {
+        "code": "47.72A",
+        "description": "Commerce de détail de la chaussure"
+    },
+    {
+        "code": "47.72B",
+        "description": "Commerce de détail de maroquinerie et d'articles de voyage"
+    },
+    {
+        "code": "47.73",
+        "description": "Commerce de détail de produits pharmaceutiques en magasin spécialisé"
+    },
+    {
+        "code": "47.73Z",
+        "description": "Commerce de détail de produits pharmaceutiques en magasin spécialisé"
+    },
+    {
+        "code": "47.74",
+        "description": "Commerce de détail d'articles médicaux et orthopédiques en magasin spécialisé"
+    },
+    {
+        "code": "47.74Z",
+        "description": "Commerce de détail d'articles médicaux et orthopédiques en magasin spécialisé"
+    },
+    {
+        "code": "47.75",
+        "description": "Commerce de détail de parfumerie et de produits de beauté en magasin spécialisé"
+    },
+    {
+        "code": "47.75Z",
+        "description": "Commerce de détail de parfumerie et de produits de beauté en magasin spécialisé"
+    },
+    {
+        "code": "47.76",
+        "description": "Commerce de détail de fleurs, plantes, graines, engrais, animaux de compagnie et aliments pour ces animaux en magasin spécialisé"
+    },
+    {
+        "code": "47.76Z",
+        "description": "Commerce de détail de fleurs, plantes, graines, engrais, animaux de compagnie et aliments pour ces animaux en magasin spécialisé"
+    },
+    {
+        "code": "47.77",
+        "description": "Commerce de détail d'articles d'horlogerie et de bijouterie en magasin spécialisé"
+    },
+    {
+        "code": "47.77Z",
+        "description": "Commerce de détail d'articles d'horlogerie et de bijouterie en magasin spécialisé"
+    },
+    {
+        "code": "47.78",
+        "description": "Autre commerce de détail de biens neufs en magasin spécialisé"
+    },
+    {
+        "code": "47.78A",
+        "description": "Commerces de détail d'optique"
+    },
+    {
+        "code": "47.78B",
+        "description": "Commerces de détail de charbons et combustibles"
+    },
+    {
+        "code": "47.78C",
+        "description": "Autres commerces de détail spécialisés divers"
+    },
+    {
+        "code": "47.79",
+        "description": "Commerce de détail de biens d'occasion en magasin"
+    },
+    {
+        "code": "47.79Z",
+        "description": "Commerce de détail de biens d'occasion en magasin"
+    },
+    {
+        "code": "47.8",
+        "description": "Commerce de détail sur éventaires et marchés"
+    },
+    {
+        "code": "47.81",
+        "description": "Commerce de détail alimentaire sur éventaires et marchés"
+    },
+    {
+        "code": "47.81Z",
+        "description": "Commerce de détail alimentaire sur éventaires et marchés"
+    },
+    {
+        "code": "47.82",
+        "description": "Commerce de détail de textiles, d'habillement et de chaussures sur éventaires et marchés"
+    },
+    {
+        "code": "47.82Z",
+        "description": "Commerce de détail de textiles, d'habillement et de chaussures sur éventaires et marchés"
+    },
+    {
+        "code": "47.89",
+        "description": "Autres commerces de détail sur éventaires et marchés"
+    },
+    {
+        "code": "47.89Z",
+        "description": "Autres commerces de détail sur éventaires et marchés"
+    },
+    {
+        "code": "47.9",
+        "description": "Commerce de détail hors magasin, éventaires ou marchés"
+    },
+    {
+        "code": "47.91",
+        "description": "Vente à distance"
+    },
+    {
+        "code": "47.91A",
+        "description": "Vente à distance sur catalogue général"
+    },
+    {
+        "code": "47.91B",
+        "description": "Vente à distance sur catalogue spécialisé"
+    },
+    {
+        "code": "47.99",
+        "description": "Autres commerces de détail hors magasin, éventaires ou marchés"
+    },
+    {
+        "code": "47.99A",
+        "description": "Vente à domicile"
+    },
+    {
+        "code": "47.99B",
+        "description": "Vente par automates et autres commerces de détail hors magasin, éventaires ou marchés n.c.a."
+    },
+    {
+        "code": "49",
+        "description": "Transports terrestres et transport par conduites"
+    },
+    {
+        "code": "49.1",
+        "description": "Transport ferroviaire interurbain de voyageurs"
+    },
+    {
+        "code": "49.10",
+        "description": "Transport ferroviaire interurbain de voyageurs"
+    },
+    {
+        "code": "49.10Z",
+        "description": "Transport ferroviaire interurbain de voyageurs"
+    },
+    {
+        "code": "49.2",
+        "description": "Transports ferroviaires de fret"
+    },
+    {
+        "code": "49.20",
+        "description": "Transports ferroviaires de fret "
+    },
+    {
+        "code": "49.20Z",
+        "description": "Transports ferroviaires de fret "
+    },
+    {
+        "code": "49.3",
+        "description": "Autres transports terrestres de voyageurs"
+    },
+    {
+        "code": "49.31",
+        "description": "Transports urbains et suburbains de voyageurs"
+    },
+    {
+        "code": "49.31Z",
+        "description": "Transports urbains et suburbains de voyageurs"
+    },
+    {
+        "code": "49.32",
+        "description": "Transports de voyageurs par taxis"
+    },
+    {
+        "code": "49.32Z",
+        "description": "Transports de voyageurs par taxis"
+    },
+    {
+        "code": "49.39",
+        "description": "Autres transports terrestres de voyageurs n.c.a."
+    },
+    {
+        "code": "49.39A",
+        "description": "Transports routiers réguliers de voyageurs"
+    },
+    {
+        "code": "49.39B",
+        "description": "Autres transports routiers de voyageurs "
+    },
+    {
+        "code": "49.39C",
+        "description": "Téléphériques et remontées mécaniques"
+    },
+    {
+        "code": "49.4",
+        "description": "Transports routiers de fret et services de déménagement"
+    },
+    {
+        "code": "49.41",
+        "description": "Transports routiers de fret"
+    },
+    {
+        "code": "49.41A",
+        "description": "Transports routiers de fret interurbains"
+    },
+    {
+        "code": "49.41B",
+        "description": "Transports routiers de fret de proximité"
+    },
+    {
+        "code": "49.41C",
+        "description": "Location de camions avec chauffeur"
+    },
+    {
+        "code": "49.42",
+        "description": "Services de déménagement"
+    },
+    {
+        "code": "49.42Z",
+        "description": "Services de déménagement"
+    },
+    {
+        "code": "49.5",
+        "description": "Transports par conduites"
+    },
+    {
+        "code": "49.50",
+        "description": "Transports par conduites"
+    },
+    {
+        "code": "49.50Z",
+        "description": "Transports par conduites"
+    },
+    {
+        "code": "50",
+        "description": "Transports par eau"
+    },
+    {
+        "code": "50.1",
+        "description": "Transports maritimes et côtiers de passagers"
+    },
+    {
+        "code": "50.10",
+        "description": "Transports maritimes et côtiers de passagers"
+    },
+    {
+        "code": "50.10Z",
+        "description": "Transports maritimes et côtiers de passagers"
+    },
+    {
+        "code": "50.2",
+        "description": "Transports maritimes et côtiers de fret"
+    },
+    {
+        "code": "50.20",
+        "description": "Transports maritimes et côtiers de fret"
+    },
+    {
+        "code": "50.20Z",
+        "description": "Transports maritimes et côtiers de fret"
+    },
+    {
+        "code": "50.3",
+        "description": "Transports fluviaux de passagers"
+    },
+    {
+        "code": "50.30",
+        "description": "Transports fluviaux de passagers"
+    },
+    {
+        "code": "50.30Z",
+        "description": "Transports fluviaux de passagers"
+    },
+    {
+        "code": "50.4",
+        "description": "Transports fluviaux de fret"
+    },
+    {
+        "code": "50.40",
+        "description": "Transports fluviaux de fret "
+    },
+    {
+        "code": "50.40Z",
+        "description": "Transports fluviaux de fret "
+    },
+    {
+        "code": "51",
+        "description": "Transports aériens"
+    },
+    {
+        "code": "51.1",
+        "description": "Transports aériens de passagers"
+    },
+    {
+        "code": "51.10",
+        "description": "Transports aériens de passagers"
+    },
+    {
+        "code": "51.10Z",
+        "description": "Transports aériens de passagers"
+    },
+    {
+        "code": "51.2",
+        "description": "Transports aériens de fret et transports spatiaux"
+    },
+    {
+        "code": "51.21",
+        "description": "Transports aériens de fret"
+    },
+    {
+        "code": "51.21Z",
+        "description": "Transports aériens de fret"
+    },
+    {
+        "code": "51.22",
+        "description": "Transports spatiaux"
+    },
+    {
+        "code": "51.22Z",
+        "description": "Transports spatiaux"
+    },
+    {
+        "code": "52",
+        "description": "Entreposage et services auxiliaires des transports"
+    },
+    {
+        "code": "52.1",
+        "description": "Entreposage et stockage"
+    },
+    {
+        "code": "52.10",
+        "description": "Entreposage et stockage"
+    },
+    {
+        "code": "52.10A",
+        "description": "Entreposage et stockage frigorifique"
+    },
+    {
+        "code": "52.10B",
+        "description": "Entreposage et stockage non frigorifique"
+    },
+    {
+        "code": "52.2",
+        "description": "Services auxiliaires des transports"
+    },
+    {
+        "code": "52.21",
+        "description": "Services auxiliaires des transports terrestres"
+    },
+    {
+        "code": "52.21Z",
+        "description": "Services auxiliaires des transports terrestres"
+    },
+    {
+        "code": "52.22",
+        "description": "Services auxiliaires des transports par eau"
+    },
+    {
+        "code": "52.22Z",
+        "description": "Services auxiliaires des transports par eau"
+    },
+    {
+        "code": "52.23",
+        "description": "Services auxiliaires des transports aériens"
+    },
+    {
+        "code": "52.23Z",
+        "description": "Services auxiliaires des transports aériens"
+    },
+    {
+        "code": "52.24",
+        "description": "Manutention"
+    },
+    {
+        "code": "52.24A",
+        "description": "Manutention portuaire"
+    },
+    {
+        "code": "52.24B",
+        "description": "Manutention non portuaire"
+    },
+    {
+        "code": "52.29",
+        "description": "Autres services auxiliaires des transports "
+    },
+    {
+        "code": "52.29A",
+        "description": "Messagerie, fret express"
+    },
+    {
+        "code": "52.29B",
+        "description": "Affrètement et organisation des transports "
+    },
+    {
+        "code": "53",
+        "description": "Activités de poste et de courrier"
+    },
+    {
+        "code": "53.1",
+        "description": "Activités de poste dans le cadre d'une obligation de service universel"
+    },
+    {
+        "code": "53.10",
+        "description": "Activités de poste dans le cadre d'une obligation de service universel "
+    },
+    {
+        "code": "53.10Z",
+        "description": "Activités de poste dans le cadre d'une obligation de service universel "
+    },
+    {
+        "code": "53.2",
+        "description": "Autres activités de poste et de courrier"
+    },
+    {
+        "code": "53.20",
+        "description": "Autres activités de poste et de courrier"
+    },
+    {
+        "code": "53.20Z",
+        "description": "Autres activités de poste et de courrier"
+    },
+    {
+        "code": "55",
+        "description": "Hébergement"
+    },
+    {
+        "code": "55.1",
+        "description": "Hôtels et hébergement similaire"
+    },
+    {
+        "code": "55.10",
+        "description": "Hôtels et hébergement similaire "
+    },
+    {
+        "code": "55.10Z",
+        "description": "Hôtels et hébergement similaire "
+    },
+    {
+        "code": "55.2",
+        "description": "Hébergement touristique et autre hébergement de courte durée "
+    },
+    {
+        "code": "55.20",
+        "description": "Hébergement touristique et autre hébergement de courte durée "
+    },
+    {
+        "code": "55.20Z",
+        "description": "Hébergement touristique et autre hébergement de courte durée "
+    },
+    {
+        "code": "55.3",
+        "description": "Terrains de camping et parcs pour caravanes ou véhicules de loisirs"
+    },
+    {
+        "code": "55.30",
+        "description": "Terrains de camping et parcs pour caravanes ou véhicules de loisirs"
+    },
+    {
+        "code": "55.30Z",
+        "description": "Terrains de camping et parcs pour caravanes ou véhicules de loisirs"
+    },
+    {
+        "code": "55.9",
+        "description": "Autres hébergements "
+    },
+    {
+        "code": "55.90",
+        "description": "Autres hébergements "
+    },
+    {
+        "code": "55.90Z",
+        "description": "Autres hébergements "
+    },
+    {
+        "code": "56",
+        "description": "Restauration"
+    },
+    {
+        "code": "56.1",
+        "description": "Restaurants et services de restauration mobile"
+    },
+    {
+        "code": "56.10",
+        "description": "Restaurants et services de restauration mobile"
+    },
+    {
+        "code": "56.10A",
+        "description": "Restauration traditionnelle"
+    },
+    {
+        "code": "56.10B",
+        "description": "Cafétérias et autres libres-services"
+    },
+    {
+        "code": "56.10C",
+        "description": "Restauration de type rapide"
+    },
+    {
+        "code": "56.2",
+        "description": "Traiteurs et autres services de restauration"
+    },
+    {
+        "code": "56.21",
+        "description": "Services des traiteurs "
+    },
+    {
+        "code": "56.21Z",
+        "description": "Services des traiteurs "
+    },
+    {
+        "code": "56.29",
+        "description": "Autres services de restauration "
+    },
+    {
+        "code": "56.29A",
+        "description": "Restauration collective sous contrat"
+    },
+    {
+        "code": "56.29B",
+        "description": "Autres services de restauration n.c.a."
+    },
+    {
+        "code": "56.3",
+        "description": "Débits de boissons"
+    },
+    {
+        "code": "56.30",
+        "description": "Débits de boissons"
+    },
+    {
+        "code": "56.30Z",
+        "description": "Débits de boissons"
+    },
+    {
+        "code": "58",
+        "description": "Édition"
+    },
+    {
+        "code": "58.1",
+        "description": "Édition de livres et périodiques et autres activités d'édition "
+    },
+    {
+        "code": "58.11",
+        "description": "Édition de livres"
+    },
+    {
+        "code": "58.11Z",
+        "description": "Édition de livres"
+    },
+    {
+        "code": "58.12",
+        "description": "Édition de répertoires et de fichiers d'adresses"
+    },
+    {
+        "code": "58.12Z",
+        "description": "Édition de répertoires et de fichiers d'adresses"
+    },
+    {
+        "code": "58.13",
+        "description": "Édition de journaux"
+    },
+    {
+        "code": "58.13Z",
+        "description": "Édition de journaux"
+    },
+    {
+        "code": "58.14",
+        "description": "Édition de revues et périodiques"
+    },
+    {
+        "code": "58.14Z",
+        "description": "Édition de revues et périodiques"
+    },
+    {
+        "code": "58.19",
+        "description": "Autres activités d'édition"
+    },
+    {
+        "code": "58.19Z",
+        "description": "Autres activités d'édition"
+    },
+    {
+        "code": "58.2",
+        "description": "Édition de logiciels"
+    },
+    {
+        "code": "58.21",
+        "description": "Édition de jeux électroniques"
+    },
+    {
+        "code": "58.21Z",
+        "description": "Édition de jeux électroniques"
+    },
+    {
+        "code": "58.29",
+        "description": "Édition d'autres logiciels"
+    },
+    {
+        "code": "58.29A",
+        "description": "Édition de logiciels système et de réseau"
+    },
+    {
+        "code": "58.29B",
+        "description": "Edition de logiciels outils de développement et de langages"
+    },
+    {
+        "code": "58.29C",
+        "description": "Edition de logiciels applicatifs"
+    },
+    {
+        "code": "59",
+        "description": "Production de films cinématographiques, de vidéo et de programmes de télévision ; enregistrement sonore et édition musicale"
+    },
+    {
+        "code": "59.1",
+        "description": "Activités cinématographiques, vidéo et de télévision"
+    },
+    {
+        "code": "59.11",
+        "description": "Production de films cinématographiques, de vidéo et de programmes de télévision "
+    },
+    {
+        "code": "59.11A",
+        "description": "Production de films et de programmes pour la télévision "
+    },
+    {
+        "code": "59.11B",
+        "description": "Production de films institutionnels et publicitaires"
+    },
+    {
+        "code": "59.11C",
+        "description": "Production de films pour le cinéma"
+    },
+    {
+        "code": "59.12",
+        "description": "Post-production de films cinématographiques, de vidéo et de programmes de télévision"
+    },
+    {
+        "code": "59.12Z",
+        "description": "Post-production de films cinématographiques, de vidéo et de programmes de télévision"
+    },
+    {
+        "code": "59.13",
+        "description": "Distribution de films cinématographiques, de vidéo et de programmes de télévision "
+    },
+    {
+        "code": "59.13A",
+        "description": "Distribution de films cinématographiques"
+    },
+    {
+        "code": "59.13B",
+        "description": "Edition et distribution vidéo"
+    },
+    {
+        "code": "59.14",
+        "description": "Projection de films cinématographiques"
+    },
+    {
+        "code": "59.14Z",
+        "description": "Projection de films cinématographiques"
+    },
+    {
+        "code": "59.2",
+        "description": "Enregistrement sonore et édition musicale"
+    },
+    {
+        "code": "59.20",
+        "description": "Enregistrement sonore et édition musicale "
+    },
+    {
+        "code": "59.20Z",
+        "description": "Enregistrement sonore et édition musicale "
+    },
+    {
+        "code": "60",
+        "description": "Programmation et diffusion"
+    },
+    {
+        "code": "60.1",
+        "description": "Édition et diffusion de programmes radio"
+    },
+    {
+        "code": "60.10",
+        "description": "Édition et diffusion de programmes radio"
+    },
+    {
+        "code": "60.10Z",
+        "description": "Édition et diffusion de programmes radio"
+    },
+    {
+        "code": "60.2",
+        "description": "Programmation de télévision et télédiffusion"
+    },
+    {
+        "code": "60.20",
+        "description": "Programmation de télévision et télédiffusion"
+    },
+    {
+        "code": "60.20A",
+        "description": "Edition de chaînes généralistes"
+    },
+    {
+        "code": "60.20B",
+        "description": "Edition de chaînes thématiques"
+    },
+    {
+        "code": "61",
+        "description": "Télécommunications"
+    },
+    {
+        "code": "61.1",
+        "description": "Télécommunications filaires"
+    },
+    {
+        "code": "61.10",
+        "description": "Télécommunications filaires"
+    },
+    {
+        "code": "61.10Z",
+        "description": "Télécommunications filaires"
+    },
+    {
+        "code": "61.2",
+        "description": "Télécommunications sans fil "
+    },
+    {
+        "code": "61.20",
+        "description": "Télécommunications sans fil "
+    },
+    {
+        "code": "61.20Z",
+        "description": "Télécommunications sans fil "
+    },
+    {
+        "code": "61.3",
+        "description": "Télécommunications par satellite"
+    },
+    {
+        "code": "61.30",
+        "description": "Télécommunications par satellite"
+    },
+    {
+        "code": "61.30Z",
+        "description": "Télécommunications par satellite"
+    },
+    {
+        "code": "61.9",
+        "description": "Autres activités de télécommunication"
+    },
+    {
+        "code": "61.90",
+        "description": "Autres activités de télécommunication "
+    },
+    {
+        "code": "61.90Z",
+        "description": "Autres activités de télécommunication "
+    },
+    {
+        "code": "62",
+        "description": "Programmation, conseil et autres activités informatiques "
+    },
+    {
+        "code": "62.0",
+        "description": "Programmation, conseil et autres activités informatiques "
+    },
+    {
+        "code": "62.01",
+        "description": "Programmation informatique"
+    },
+    {
+        "code": "62.01Z",
+        "description": "Programmation informatique"
+    },
+    {
+        "code": "62.02",
+        "description": "Conseil informatique "
+    },
+    {
+        "code": "62.02A",
+        "description": "Conseil en systèmes et logiciels informatiques"
+    },
+    {
+        "code": "62.02B",
+        "description": "Tierce maintenance de systèmes et d’applications informatiques"
+    },
+    {
+        "code": "62.03",
+        "description": "Gestion d'installations informatiques"
+    },
+    {
+        "code": "62.03Z",
+        "description": "Gestion d'installations informatiques"
+    },
+    {
+        "code": "62.09",
+        "description": "Autres activités informatiques"
+    },
+    {
+        "code": "62.09Z",
+        "description": "Autres activités informatiques"
+    },
+    {
+        "code": "63",
+        "description": "Services d'information"
+    },
+    {
+        "code": "63.1",
+        "description": "Traitement de données, hébergement et activités connexes ; portails Internet"
+    },
+    {
+        "code": "63.11",
+        "description": "Traitement de données, hébergement et activités connexes"
+    },
+    {
+        "code": "63.11Z",
+        "description": "Traitement de données, hébergement et activités connexes"
+    },
+    {
+        "code": "63.12",
+        "description": "Portails Internet"
+    },
+    {
+        "code": "63.12Z",
+        "description": "Portails Internet"
+    },
+    {
+        "code": "63.9",
+        "description": "Autres services d'information"
+    },
+    {
+        "code": "63.91",
+        "description": "Activités des agences de presse"
+    },
+    {
+        "code": "63.91Z",
+        "description": "Activités des agences de presse"
+    },
+    {
+        "code": "63.99",
+        "description": "Autres services d'information n.c.a."
+    },
+    {
+        "code": "63.99Z",
+        "description": "Autres services d'information n.c.a."
+    },
+    {
+        "code": "64",
+        "description": "Activités des services financiers, hors assurance et caisses de retraite"
+    },
+    {
+        "code": "64.1",
+        "description": "Intermédiation monétaire"
+    },
+    {
+        "code": "64.11",
+        "description": "Activités de banque centrale"
+    },
+    {
+        "code": "64.11Z",
+        "description": "Activités de banque centrale"
+    },
+    {
+        "code": "64.19",
+        "description": "Autres intermédiations monétaires"
+    },
+    {
+        "code": "64.19Z",
+        "description": "Autres intermédiations monétaires"
+    },
+    {
+        "code": "64.2",
+        "description": "Activités des sociétés holding"
+    },
+    {
+        "code": "64.20",
+        "description": "Activités des sociétés holding"
+    },
+    {
+        "code": "64.20Z",
+        "description": "Activités des sociétés holding"
+    },
+    {
+        "code": "64.3",
+        "description": "Fonds de placement et entités financières similaires"
+    },
+    {
+        "code": "64.30",
+        "description": "Fonds de placement et entités financières similaires"
+    },
+    {
+        "code": "64.30Z",
+        "description": "Fonds de placement et entités financières similaires"
+    },
+    {
+        "code": "64.9",
+        "description": "Autres activités des services financiers, hors assurance et caisses de retraite"
+    },
+    {
+        "code": "64.91",
+        "description": "Crédit-bail "
+    },
+    {
+        "code": "64.91Z",
+        "description": "Crédit-bail "
+    },
+    {
+        "code": "64.92",
+        "description": "Autre distribution de crédit"
+    },
+    {
+        "code": "64.92Z",
+        "description": "Autre distribution de crédit"
+    },
+    {
+        "code": "64.99",
+        "description": "Autres activités des services financiers, hors assurance et caisses de retraite, n.c.a."
+    },
+    {
+        "code": "64.99Z",
+        "description": "Autres activités des services financiers, hors assurance et caisses de retraite, n.c.a."
+    },
+    {
+        "code": "65",
+        "description": "Assurance"
+    },
+    {
+        "code": "65.1",
+        "description": "Assurance"
+    },
+    {
+        "code": "65.11",
+        "description": "Assurance vie "
+    },
+    {
+        "code": "65.11Z",
+        "description": "Assurance vie"
+    },
+    {
+        "code": "65.12",
+        "description": "Autres assurances"
+    },
+    {
+        "code": "65.12Z",
+        "description": "Autres assurances"
+    },
+    {
+        "code": "65.2",
+        "description": "Réassurance"
+    },
+    {
+        "code": "65.20",
+        "description": "Réassurance"
+    },
+    {
+        "code": "65.20Z",
+        "description": "Réassurance"
+    },
+    {
+        "code": "65.3",
+        "description": "Caisses de retraite"
+    },
+    {
+        "code": "65.30",
+        "description": "Caisses de retraite"
+    },
+    {
+        "code": "65.30Z",
+        "description": "Caisses de retraite"
+    },
+    {
+        "code": "66",
+        "description": "Activités auxiliaires de services financiers et d'assurance "
+    },
+    {
+        "code": "66.1",
+        "description": "Activités auxiliaires de services financiers, hors assurance et caisses de retraite"
+    },
+    {
+        "code": "66.11",
+        "description": "Administration de marchés financiers"
+    },
+    {
+        "code": "66.11Z",
+        "description": "Administration de marchés financiers"
+    },
+    {
+        "code": "66.12",
+        "description": "Courtage de valeurs mobilières et de marchandises"
+    },
+    {
+        "code": "66.12Z",
+        "description": "Courtage de valeurs mobilières et de marchandises"
+    },
+    {
+        "code": "66.19",
+        "description": "Autres activités auxiliaires de services financiers, hors assurance et caisses de retraite"
+    },
+    {
+        "code": "66.19A",
+        "description": "Supports juridiques de gestion de patrimoine mobilier"
+    },
+    {
+        "code": "66.19B",
+        "description": "Autres activités auxiliaires de services financiers, hors assurance et caisses de retraite, n.c.a."
+    },
+    {
+        "code": "66.2",
+        "description": "Activités auxiliaires d'assurance et de caisses de retraite"
+    },
+    {
+        "code": "66.21",
+        "description": "Évaluation des risques et dommages"
+    },
+    {
+        "code": "66.21Z",
+        "description": "Évaluation des risques et dommages"
+    },
+    {
+        "code": "66.22",
+        "description": "Activités des agents et courtiers d'assurances"
+    },
+    {
+        "code": "66.22Z",
+        "description": "Activités des agents et courtiers d'assurances"
+    },
+    {
+        "code": "66.29",
+        "description": "Autres activités auxiliaires d'assurance et de caisses de retraite"
+    },
+    {
+        "code": "66.29Z",
+        "description": "Autres activités auxiliaires d'assurance et de caisses de retraite"
+    },
+    {
+        "code": "66.3",
+        "description": "Gestion de fonds"
+    },
+    {
+        "code": "66.30",
+        "description": "Gestion de fonds"
+    },
+    {
+        "code": "66.30Z",
+        "description": "Gestion de fonds"
+    },
+    {
+        "code": "68",
+        "description": "Activités immobilières"
+    },
+    {
+        "code": "68.1",
+        "description": "Activités des marchands de biens immobiliers"
+    },
+    {
+        "code": "68.10",
+        "description": "Activités des marchands de biens immobiliers"
+    },
+    {
+        "code": "68.10Z",
+        "description": "Activités des marchands de biens immobiliers"
+    },
+    {
+        "code": "68.2",
+        "description": "Location et exploitation de biens immobiliers propres ou loués"
+    },
+    {
+        "code": "68.20",
+        "description": "Location et exploitation de biens immobiliers propres ou loués "
+    },
+    {
+        "code": "68.20A",
+        "description": "Location de logements"
+    },
+    {
+        "code": "68.20B",
+        "description": "Location de terrains et d'autres biens immobiliers"
+    },
+    {
+        "code": "68.3",
+        "description": "Activités immobilières pour compte de tiers"
+    },
+    {
+        "code": "68.31",
+        "description": "Agences immobilières"
+    },
+    {
+        "code": "68.31Z",
+        "description": "Agences immobilières"
+    },
+    {
+        "code": "68.32",
+        "description": "Administration de biens immobiliers"
+    },
+    {
+        "code": "68.32A",
+        "description": "Administration d'immeubles et autres biens immobiliers"
+    },
+    {
+        "code": "68.32B",
+        "description": "Supports juridiques de gestion de patrimoine immobilier"
+    },
+    {
+        "code": "69",
+        "description": "Activités juridiques et comptables"
+    },
+    {
+        "code": "69.1",
+        "description": "Activités juridiques"
+    },
+    {
+        "code": "69.10",
+        "description": "Activités juridiques"
+    },
+    {
+        "code": "69.10Z",
+        "description": "Activités juridiques"
+    },
+    {
+        "code": "69.2",
+        "description": "Activités comptables"
+    },
+    {
+        "code": "69.20",
+        "description": "Activités comptables"
+    },
+    {
+        "code": "69.20Z",
+        "description": "Activités comptables"
+    },
+    {
+        "code": "70",
+        "description": "Activités des sièges sociaux ; conseil de gestion"
+    },
+    {
+        "code": "70.1",
+        "description": "Activités des sièges sociaux"
+    },
+    {
+        "code": "70.10",
+        "description": "Activités des sièges sociaux"
+    },
+    {
+        "code": "70.10Z",
+        "description": "Activités des sièges sociaux"
+    },
+    {
+        "code": "70.2",
+        "description": "Conseil de gestion"
+    },
+    {
+        "code": "70.21",
+        "description": "Conseil en relations publiques et communication"
+    },
+    {
+        "code": "70.21Z",
+        "description": "Conseil en relations publiques et communication"
+    },
+    {
+        "code": "70.22",
+        "description": "Conseil pour les affaires et autres conseils de gestion"
+    },
+    {
+        "code": "70.22Z",
+        "description": "Conseil pour les affaires et autres conseils de gestion"
+    },
+    {
+        "code": "71",
+        "description": "Activités d'architecture et d'ingénierie ; activités de contrôle et analyses techniques"
+    },
+    {
+        "code": "71.1",
+        "description": "Activités d'architecture et d'ingénierie"
+    },
+    {
+        "code": "71.11",
+        "description": "Activités d'architecture "
+    },
+    {
+        "code": "71.11Z",
+        "description": "Activités d'architecture "
+    },
+    {
+        "code": "71.12",
+        "description": "Activités d'ingénierie"
+    },
+    {
+        "code": "71.12A",
+        "description": "Activité des géomètres"
+    },
+    {
+        "code": "71.12B",
+        "description": "Ingénierie, études techniques"
+    },
+    {
+        "code": "71.2",
+        "description": "Activités de contrôle et analyses techniques"
+    },
+    {
+        "code": "71.20",
+        "description": "Activités de contrôle et analyses techniques"
+    },
+    {
+        "code": "71.20A",
+        "description": "Contrôle technique automobile"
+    },
+    {
+        "code": "71.20B",
+        "description": "Analyses, essais et inspections techniques"
+    },
+    {
+        "code": "72",
+        "description": "Recherche-développement scientifique"
+    },
+    {
+        "code": "72.1",
+        "description": "Recherche-développement en sciences physiques et naturelles"
+    },
+    {
+        "code": "72.11",
+        "description": "Recherche-développement en biotechnologie"
+    },
+    {
+        "code": "72.11Z",
+        "description": "Recherche-développement en biotechnologie"
+    },
+    {
+        "code": "72.19",
+        "description": "Recherche-développement en autres sciences physiques et naturelles"
+    },
+    {
+        "code": "72.19Z",
+        "description": "Recherche-développement en autres sciences physiques et naturelles"
+    },
+    {
+        "code": "72.2",
+        "description": "Recherche-développement en sciences humaines et sociales"
+    },
+    {
+        "code": "72.20",
+        "description": "Recherche-développement en sciences humaines et sociales"
+    },
+    {
+        "code": "72.20Z",
+        "description": "Recherche-développement en sciences humaines et sociales"
+    },
+    {
+        "code": "73",
+        "description": "Publicité et études de marché"
+    },
+    {
+        "code": "73.1",
+        "description": "Publicité"
+    },
+    {
+        "code": "73.11",
+        "description": "Activités des agences de publicité"
+    },
+    {
+        "code": "73.11Z",
+        "description": "Activités des agences de publicité"
+    },
+    {
+        "code": "73.12",
+        "description": "Régie publicitaire de médias"
+    },
+    {
+        "code": "73.12Z",
+        "description": "Régie publicitaire de médias"
+    },
+    {
+        "code": "73.2",
+        "description": "Études de marché et sondages"
+    },
+    {
+        "code": "73.20",
+        "description": "Études de marché et sondages"
+    },
+    {
+        "code": "73.20Z",
+        "description": "Études de marché et sondages"
+    },
+    {
+        "code": "74",
+        "description": "Autres activités spécialisées, scientifiques et techniques"
+    },
+    {
+        "code": "74.1",
+        "description": "Activités spécialisées de design"
+    },
+    {
+        "code": "74.10",
+        "description": "Activités spécialisées de design"
+    },
+    {
+        "code": "74.10Z",
+        "description": "Activités spécialisées de design"
+    },
+    {
+        "code": "74.2",
+        "description": "Activités photographiques"
+    },
+    {
+        "code": "74.20",
+        "description": "Activités photographiques"
+    },
+    {
+        "code": "74.20Z",
+        "description": "Activités photographiques"
+    },
+    {
+        "code": "74.3",
+        "description": "Traduction et interprétation"
+    },
+    {
+        "code": "74.30",
+        "description": "Traduction et interprétation"
+    },
+    {
+        "code": "74.30Z",
+        "description": "Traduction et interprétation"
+    },
+    {
+        "code": "74.9",
+        "description": "Autres activités spécialisées, scientifiques et techniques n.c.a."
+    },
+    {
+        "code": "74.90",
+        "description": "Autres activités spécialisées, scientifiques et techniques n.c.a."
+    },
+    {
+        "code": "74.90A",
+        "description": "Activité des économistes de la construction"
+    },
+    {
+        "code": "74.90B",
+        "description": "Activités spécialisées, scientifiques et techniques diverses"
+    },
+    {
+        "code": "75",
+        "description": "Activités vétérinaires"
+    },
+    {
+        "code": "75.0",
+        "description": "Activités vétérinaires"
+    },
+    {
+        "code": "75.00",
+        "description": "Activités vétérinaires"
+    },
+    {
+        "code": "75.00Z",
+        "description": "Activités vétérinaires"
+    },
+    {
+        "code": "77",
+        "description": "Activités de location et location-bail"
+    },
+    {
+        "code": "77.1",
+        "description": "Location et location-bail de véhicules automobiles"
+    },
+    {
+        "code": "77.11",
+        "description": "Location et location-bail de voitures et de véhicules automobiles légers"
+    },
+    {
+        "code": "77.11A",
+        "description": "Location de courte durée de voitures et de véhicules automobiles légers"
+    },
+    {
+        "code": "77.11B",
+        "description": "Location de longue durée de voitures et de véhicules automobiles légers"
+    },
+    {
+        "code": "77.12",
+        "description": "Location et location-bail de camions"
+    },
+    {
+        "code": "77.12Z",
+        "description": "Location et location-bail de camions"
+    },
+    {
+        "code": "77.2",
+        "description": "Location et location-bail de biens personnels et domestiques"
+    },
+    {
+        "code": "77.21",
+        "description": "Location et location-bail d'articles de loisirs et de sport "
+    },
+    {
+        "code": "77.21Z",
+        "description": "Location et location-bail d'articles de loisirs et de sport "
+    },
+    {
+        "code": "77.22",
+        "description": "Location de vidéocassettes et disques vidéo"
+    },
+    {
+        "code": "77.22Z",
+        "description": "Location de vidéocassettes et disques vidéo"
+    },
+    {
+        "code": "77.29",
+        "description": "Location et location-bail d'autres biens personnels et domestiques"
+    },
+    {
+        "code": "77.29Z",
+        "description": "Location et location-bail d'autres biens personnels et domestiques"
+    },
+    {
+        "code": "77.3",
+        "description": "Location et location-bail d'autres machines, équipements et biens"
+    },
+    {
+        "code": "77.31",
+        "description": "Location et location-bail de machines et équipements agricoles"
+    },
+    {
+        "code": "77.31Z",
+        "description": "Location et location-bail de machines et équipements agricoles"
+    },
+    {
+        "code": "77.32",
+        "description": "Location et location-bail de machines et équipements pour la construction"
+    },
+    {
+        "code": "77.32Z",
+        "description": "Location et location-bail de machines et équipements pour la construction"
+    },
+    {
+        "code": "77.33",
+        "description": "Location et location-bail de machines de bureau et de matériel informatique"
+    },
+    {
+        "code": "77.33Z",
+        "description": "Location et location-bail de machines de bureau et de matériel informatique"
+    },
+    {
+        "code": "77.34",
+        "description": "Location et location-bail de matériels de transport par eau"
+    },
+    {
+        "code": "77.34Z",
+        "description": "Location et location-bail de matériels de transport par eau"
+    },
+    {
+        "code": "77.35",
+        "description": "Location et location-bail de matériels de transport aérien"
+    },
+    {
+        "code": "77.35Z",
+        "description": "Location et location-bail de matériels de transport aérien"
+    },
+    {
+        "code": "77.39",
+        "description": "Location et location-bail d'autres machines, équipements et biens matériels n.c.a. "
+    },
+    {
+        "code": "77.39Z",
+        "description": "Location et location-bail d'autres machines, équipements et biens matériels n.c.a. "
+    },
+    {
+        "code": "77.4",
+        "description": "Location-bail de propriété intellectuelle et de produits similaires, à l'exception des œuvres soumises à copyright"
+    },
+    {
+        "code": "77.40",
+        "description": "Location-bail de propriété intellectuelle et de produits similaires, à l'exception des œuvres soumises à copyright"
+    },
+    {
+        "code": "77.40Z",
+        "description": "Location-bail de propriété intellectuelle et de produits similaires, à l'exception des œuvres soumises à copyright"
+    },
+    {
+        "code": "78",
+        "description": "Activités liées à l'emploi"
+    },
+    {
+        "code": "78.1",
+        "description": "Activités des agences de placement de main-d'œuvre"
+    },
+    {
+        "code": "78.10",
+        "description": "Activités des agences de placement de main-d'œuvre "
+    },
+    {
+        "code": "78.10Z",
+        "description": "Activités des agences de placement de main-d'œuvre "
+    },
+    {
+        "code": "78.2",
+        "description": "Activités des agences de travail temporaire"
+    },
+    {
+        "code": "78.20",
+        "description": "Activités des agences de travail temporaire "
+    },
+    {
+        "code": "78.20Z",
+        "description": "Activités des agences de travail temporaire "
+    },
+    {
+        "code": "78.3",
+        "description": "Autre mise à disposition de ressources humaines"
+    },
+    {
+        "code": "78.30",
+        "description": "Autre mise à disposition de ressources humaines"
+    },
+    {
+        "code": "78.30Z",
+        "description": "Autre mise à disposition de ressources humaines"
+    },
+    {
+        "code": "79",
+        "description": "Activités des agences de voyage, voyagistes, services de réservation et activités connexes"
+    },
+    {
+        "code": "79.1",
+        "description": "Activités des agences de voyage et voyagistes"
+    },
+    {
+        "code": "79.11",
+        "description": "Activités des agences de voyage"
+    },
+    {
+        "code": "79.11Z",
+        "description": "Activités des agences de voyage"
+    },
+    {
+        "code": "79.12",
+        "description": "Activités des voyagistes"
+    },
+    {
+        "code": "79.12Z",
+        "description": "Activités des voyagistes"
+    },
+    {
+        "code": "79.9",
+        "description": "Autres services de réservation et activités connexes"
+    },
+    {
+        "code": "79.90",
+        "description": "Autres services de réservation et activités connexes"
+    },
+    {
+        "code": "79.90Z",
+        "description": "Autres services de réservation et activités connexes"
+    },
+    {
+        "code": "80",
+        "description": "Enquêtes et sécurité"
+    },
+    {
+        "code": "80.1",
+        "description": "Activités de sécurité privée"
+    },
+    {
+        "code": "80.10",
+        "description": "Activités de sécurité privée "
+    },
+    {
+        "code": "80.10Z",
+        "description": "Activités de sécurité privée "
+    },
+    {
+        "code": "80.2",
+        "description": "Activités liées aux systèmes de sécurité"
+    },
+    {
+        "code": "80.20",
+        "description": "Activités liées aux systèmes de sécurité "
+    },
+    {
+        "code": "80.20Z",
+        "description": "Activités liées aux systèmes de sécurité "
+    },
+    {
+        "code": "80.3",
+        "description": "Activités d'enquête"
+    },
+    {
+        "code": "80.30",
+        "description": "Activités d'enquête"
+    },
+    {
+        "code": "80.30Z",
+        "description": "Activités d'enquête"
+    },
+    {
+        "code": "81",
+        "description": "Services relatifs aux bâtiments et aménagement paysager"
+    },
+    {
+        "code": "81.1",
+        "description": "Activités combinées de soutien lié aux bâtiments"
+    },
+    {
+        "code": "81.10",
+        "description": "Activités combinées de soutien lié aux bâtiments "
+    },
+    {
+        "code": "81.10Z",
+        "description": "Activités combinées de soutien lié aux bâtiments "
+    },
+    {
+        "code": "81.2",
+        "description": "Activités de nettoyage"
+    },
+    {
+        "code": "81.21",
+        "description": "Nettoyage courant des bâtiments"
+    },
+    {
+        "code": "81.21Z",
+        "description": "Nettoyage courant des bâtiments"
+    },
+    {
+        "code": "81.22",
+        "description": "Autres activités de nettoyage des bâtiments et nettoyage industriel"
+    },
+    {
+        "code": "81.22Z",
+        "description": "Autres activités de nettoyage des bâtiments et nettoyage industriel"
+    },
+    {
+        "code": "81.29",
+        "description": "Autres activités de nettoyage"
+    },
+    {
+        "code": "81.29A",
+        "description": "Désinfection, désinsectisation, dératisation"
+    },
+    {
+        "code": "81.29B",
+        "description": "Autres activités de nettoyage n.c.a."
+    },
+    {
+        "code": "81.3",
+        "description": "Services d'aménagement paysager"
+    },
+    {
+        "code": "81.30",
+        "description": "Services d'aménagement paysager "
+    },
+    {
+        "code": "81.30Z",
+        "description": "Services d'aménagement paysager "
+    },
+    {
+        "code": "82",
+        "description": "Activités administratives et autres activités de soutien aux entreprises"
+    },
+    {
+        "code": "82.1",
+        "description": "Activités administratives "
+    },
+    {
+        "code": "82.11",
+        "description": "Services administratifs combinés de bureau"
+    },
+    {
+        "code": "82.11Z",
+        "description": "Services administratifs combinés de bureau"
+    },
+    {
+        "code": "82.19",
+        "description": "Photocopie, préparation de documents et autres activités spécialisées de soutien de bureau"
+    },
+    {
+        "code": "82.19Z",
+        "description": "Photocopie, préparation de documents et autres activités spécialisées de soutien de bureau"
+    },
+    {
+        "code": "82.2",
+        "description": "Activités de centres d'appels"
+    },
+    {
+        "code": "82.20",
+        "description": "Activités de centres d'appels"
+    },
+    {
+        "code": "82.20Z",
+        "description": "Activités de centres d'appels"
+    },
+    {
+        "code": "82.3",
+        "description": "Organisation de salons professionnels et congrès"
+    },
+    {
+        "code": "82.30",
+        "description": "Organisation de salons professionnels et congrès"
+    },
+    {
+        "code": "82.30Z",
+        "description": "Organisation de foires, salons professionnels et congrès"
+    },
+    {
+        "code": "82.9",
+        "description": "Activités de soutien aux entreprises n.c.a."
+    },
+    {
+        "code": "82.91",
+        "description": "Activités des agences de recouvrement de factures et des sociétés d'information financière sur la clientèle"
+    },
+    {
+        "code": "82.91Z",
+        "description": "Activités des agences de recouvrement de factures et des sociétés d'information financière sur la clientèle"
+    },
+    {
+        "code": "82.92",
+        "description": "Activités de conditionnement"
+    },
+    {
+        "code": "82.92Z",
+        "description": "Activités de conditionnement"
+    },
+    {
+        "code": "82.99",
+        "description": "Autres activités de soutien aux entreprises n.c.a."
+    },
+    {
+        "code": "82.99Z",
+        "description": "Autres activités de soutien aux entreprises n.c.a."
+    },
+    {
+        "code": "84",
+        "description": "Administration publique et défense ; sécurité sociale obligatoire"
+    },
+    {
+        "code": "84.1",
+        "description": "Administration générale, économique et sociale"
+    },
+    {
+        "code": "84.11",
+        "description": "Administration publique générale"
+    },
+    {
+        "code": "84.11Z",
+        "description": "Administration publique générale"
+    },
+    {
+        "code": "84.12",
+        "description": "Administration publique (tutelle) de la santé, de la formation, de la culture et des services sociaux, autre que sécurité sociale "
+    },
+    {
+        "code": "84.12Z",
+        "description": "Administration publique (tutelle) de la santé, de la formation, de la culture et des services sociaux, autre que sécurité sociale "
+    },
+    {
+        "code": "84.13",
+        "description": "Administration publique (tutelle) des activités économiques"
+    },
+    {
+        "code": "84.13Z",
+        "description": "Administration publique (tutelle) des activités économiques"
+    },
+    {
+        "code": "84.2",
+        "description": "Services de prérogative publique"
+    },
+    {
+        "code": "84.21",
+        "description": "Affaires étrangères"
+    },
+    {
+        "code": "84.21Z",
+        "description": "Affaires étrangères"
+    },
+    {
+        "code": "84.22",
+        "description": "Défense"
+    },
+    {
+        "code": "84.22Z",
+        "description": "Défense"
+    },
+    {
+        "code": "84.23",
+        "description": "Justice"
+    },
+    {
+        "code": "84.23Z",
+        "description": "Justice"
+    },
+    {
+        "code": "84.24",
+        "description": "Activités d’ordre public et de sécurité"
+    },
+    {
+        "code": "84.24Z",
+        "description": "Activités d’ordre public et de sécurité"
+    },
+    {
+        "code": "84.25",
+        "description": "Services du feu et de secours"
+    },
+    {
+        "code": "84.25Z",
+        "description": "Services du feu et de secours"
+    },
+    {
+        "code": "84.3",
+        "description": "Sécurité sociale obligatoire"
+    },
+    {
+        "code": "84.30",
+        "description": "Sécurité sociale obligatoire"
+    },
+    {
+        "code": "84.30A",
+        "description": "Activités générales de sécurité sociale"
+    },
+    {
+        "code": "84.30B",
+        "description": "Gestion des retraites complémentaires"
+    },
+    {
+        "code": "84.30C",
+        "description": "Distribution sociale de revenus"
+    },
+    {
+        "code": "85",
+        "description": "Enseignement"
+    },
+    {
+        "code": "85.1",
+        "description": "Enseignement pré-primaire"
+    },
+    {
+        "code": "85.10",
+        "description": "Enseignement pré-primaire"
+    },
+    {
+        "code": "85.10Z",
+        "description": "Enseignement pré-primaire"
+    },
+    {
+        "code": "85.2",
+        "description": "Enseignement primaire"
+    },
+    {
+        "code": "85.20",
+        "description": "Enseignement primaire"
+    },
+    {
+        "code": "85.20Z",
+        "description": "Enseignement primaire"
+    },
+    {
+        "code": "85.3",
+        "description": "Enseignement secondaire"
+    },
+    {
+        "code": "85.31",
+        "description": "Enseignement secondaire général"
+    },
+    {
+        "code": "85.31Z",
+        "description": "Enseignement secondaire général"
+    },
+    {
+        "code": "85.32",
+        "description": "Enseignement secondaire technique ou professionnel"
+    },
+    {
+        "code": "85.32Z",
+        "description": "Enseignement secondaire technique ou professionnel"
+    },
+    {
+        "code": "85.4",
+        "description": "Enseignement supérieur et post-secondaire non supérieur"
+    },
+    {
+        "code": "85.41",
+        "description": "Enseignement post-secondaire non supérieur"
+    },
+    {
+        "code": "85.41Z",
+        "description": "Enseignement post-secondaire non supérieur"
+    },
+    {
+        "code": "85.42",
+        "description": "Enseignement supérieur"
+    },
+    {
+        "code": "85.42Z",
+        "description": "Enseignement supérieur"
+    },
+    {
+        "code": "85.5",
+        "description": "Autres activités d'enseignement"
+    },
+    {
+        "code": "85.51",
+        "description": "Enseignement de disciplines sportives et d'activités de loisirs"
+    },
+    {
+        "code": "85.51Z",
+        "description": "Enseignement de disciplines sportives et d'activités de loisirs"
+    },
+    {
+        "code": "85.52",
+        "description": "Enseignement culturel"
+    },
+    {
+        "code": "85.52Z",
+        "description": "Enseignement culturel"
+    },
+    {
+        "code": "85.53",
+        "description": "Enseignement de la conduite"
+    },
+    {
+        "code": "85.53Z",
+        "description": "Enseignement de la conduite"
+    },
+    {
+        "code": "85.59",
+        "description": "Enseignements divers"
+    },
+    {
+        "code": "85.59A",
+        "description": "Formation continue d'adultes"
+    },
+    {
+        "code": "85.59B",
+        "description": "Autres enseignements"
+    },
+    {
+        "code": "85.6",
+        "description": "Activités de soutien à l'enseignement"
+    },
+    {
+        "code": "85.60",
+        "description": "Activités de soutien à l'enseignement"
+    },
+    {
+        "code": "85.60Z",
+        "description": "Activités de soutien à l'enseignement"
+    },
+    {
+        "code": "86",
+        "description": "Activités pour la santé humaine"
+    },
+    {
+        "code": "86.1",
+        "description": "Activités hospitalières"
+    },
+    {
+        "code": "86.10",
+        "description": "Activités hospitalières"
+    },
+    {
+        "code": "86.10Z",
+        "description": "Activités hospitalières"
+    },
+    {
+        "code": "86.2",
+        "description": "Activité des médecins et des dentistes"
+    },
+    {
+        "code": "86.21",
+        "description": "Activité des médecins généralistes"
+    },
+    {
+        "code": "86.21Z",
+        "description": "Activité des médecins généralistes"
+    },
+    {
+        "code": "86.22",
+        "description": "Activité des médecins spécialistes"
+    },
+    {
+        "code": "86.22A",
+        "description": "Activités de radiodiagnostic et de radiothérapie"
+    },
+    {
+        "code": "86.22B",
+        "description": "Activités chirurgicales"
+    },
+    {
+        "code": "86.22C",
+        "description": "Autres activités des médecins spécialistes"
+    },
+    {
+        "code": "86.23",
+        "description": "Pratique dentaire"
+    },
+    {
+        "code": "86.23Z",
+        "description": "Pratique dentaire"
+    },
+    {
+        "code": "86.9",
+        "description": "Autres activités pour la santé humaine"
+    },
+    {
+        "code": "86.90",
+        "description": "Autres activités pour la santé humaine"
+    },
+    {
+        "code": "86.90A",
+        "description": "Ambulances"
+    },
+    {
+        "code": "86.90B",
+        "description": "Laboratoires d'analyses médicales"
+    },
+    {
+        "code": "86.90C",
+        "description": "Centres de collecte et banques d'organes"
+    },
+    {
+        "code": "86.90D",
+        "description": "Activités des infirmiers et des sages-femmes"
+    },
+    {
+        "code": "86.90E",
+        "description": "Activités des professionnels de la rééducation, de l’appareillage et des pédicures-podologues"
+    },
+    {
+        "code": "86.90F",
+        "description": "Activités de santé humaine non classées ailleurs"
+    },
+    {
+        "code": "87",
+        "description": "Hébergement médico-social et social"
+    },
+    {
+        "code": "87.1",
+        "description": "Hébergement médicalisé"
+    },
+    {
+        "code": "87.10",
+        "description": "Hébergement médicalisé"
+    },
+    {
+        "code": "87.10A",
+        "description": "Hébergement médicalisé pour personnes âgées"
+    },
+    {
+        "code": "87.10B",
+        "description": "Hébergement médicalisé pour enfants handicapés "
+    },
+    {
+        "code": "87.10C",
+        "description": "Hébergement médicalisé pour adultes handicapés et autre hébergement médicalisé \n"
+    },
+    {
+        "code": "87.2",
+        "description": "Hébergement social pour personnes handicapées mentales, malades mentales et toxicomanes"
+    },
+    {
+        "code": "87.20",
+        "description": "Hébergement social pour personnes handicapées mentales, malades mentales et toxicomanes"
+    },
+    {
+        "code": "87.20A",
+        "description": "Hébergement social pour handicapés mentaux et malades mentaux "
+    },
+    {
+        "code": "87.20B",
+        "description": "Hébergement social pour toxicomanes"
+    },
+    {
+        "code": "87.3",
+        "description": "Hébergement social pour personnes âgées ou handicapées physiques "
+    },
+    {
+        "code": "87.30",
+        "description": "Hébergement social pour personnes âgées ou handicapées physiques "
+    },
+    {
+        "code": "87.30A",
+        "description": "Hébergement social pour personnes âgées"
+    },
+    {
+        "code": "87.30B",
+        "description": "Hébergement social pour handicapés  physiques"
+    },
+    {
+        "code": "87.9",
+        "description": "Autres activités d’hébergement social "
+    },
+    {
+        "code": "87.90",
+        "description": "Autres activités d’hébergement social "
+    },
+    {
+        "code": "87.90A",
+        "description": "Hébergement social pour enfants en difficultés "
+    },
+    {
+        "code": "87.90B",
+        "description": "Hébergement social pour adultes et familles en difficultés et autre hébergement social "
+    },
+    {
+        "code": "88",
+        "description": "Action sociale sans hébergement"
+    },
+    {
+        "code": "88.1",
+        "description": "Action sociale sans hébergement pour personnes âgées et pour personnes handicapées "
+    },
+    {
+        "code": "88.10",
+        "description": "Action sociale sans hébergement pour personnes âgées et pour personnes handicapées "
+    },
+    {
+        "code": "88.10A",
+        "description": "Aide à domicile  "
+    },
+    {
+        "code": "88.10B",
+        "description": "Accueil ou accompagnement sans hébergement d’adultes handicapés ou de  personnes âgées"
+    },
+    {
+        "code": "88.10C",
+        "description": "Aide par le travail "
+    },
+    {
+        "code": "88.9",
+        "description": "Autre action sociale sans hébergement"
+    },
+    {
+        "code": "88.91",
+        "description": "Action sociale sans hébergement pour jeunes enfants"
+    },
+    {
+        "code": "88.91A",
+        "description": "Accueil de jeunes enfants"
+    },
+    {
+        "code": "88.91B",
+        "description": "Accueil ou accompagnement sans hébergement d’enfants handicapés"
+    },
+    {
+        "code": "88.99",
+        "description": "Autre action sociale sans hébergement n.c.a."
+    },
+    {
+        "code": "88.99A",
+        "description": "Autre accueil ou accompagnement sans hébergement d’enfants\n et d’adolescents\n"
+    },
+    {
+        "code": "88.99B",
+        "description": "Action sociale sans hébergement n.c.a."
+    },
+    {
+        "code": "90",
+        "description": "Activités créatives, artistiques et de spectacle "
+    },
+    {
+        "code": "90.0",
+        "description": "Activités créatives, artistiques et de spectacle "
+    },
+    {
+        "code": "90.01",
+        "description": "Arts du spectacle vivant"
+    },
+    {
+        "code": "90.01Z",
+        "description": "Arts du spectacle vivant"
+    },
+    {
+        "code": "90.02",
+        "description": "Activités de soutien au spectacle vivant"
+    },
+    {
+        "code": "90.02Z",
+        "description": "Activités de soutien au spectacle vivant"
+    },
+    {
+        "code": "90.03",
+        "description": "Création artistique"
+    },
+    {
+        "code": "90.03A",
+        "description": "Création artistique relevant des arts plastiques"
+    },
+    {
+        "code": "90.03B",
+        "description": "Autre création artistique"
+    },
+    {
+        "code": "90.04",
+        "description": "Gestion de salles de spectacles"
+    },
+    {
+        "code": "90.04Z",
+        "description": "Gestion de salles de spectacles"
+    },
+    {
+        "code": "91",
+        "description": "Bibliothèques, archives, musées et autres activités culturelles"
+    },
+    {
+        "code": "91.0",
+        "description": "Bibliothèques, archives, musées et autres activités culturelles"
+    },
+    {
+        "code": "91.01",
+        "description": "Gestion des bibliothèques et des archives"
+    },
+    {
+        "code": "91.01Z",
+        "description": "Gestion des bibliothèques et des archives"
+    },
+    {
+        "code": "91.02",
+        "description": "Gestion des musées"
+    },
+    {
+        "code": "91.02Z",
+        "description": "Gestion des musées"
+    },
+    {
+        "code": "91.03",
+        "description": "Gestion des sites et monuments historiques et des attractions touristiques similaires"
+    },
+    {
+        "code": "91.03Z",
+        "description": "Gestion des sites et monuments historiques et des attractions touristiques similaires"
+    },
+    {
+        "code": "91.04",
+        "description": "Gestion des jardins botaniques et zoologiques et des réserves naturelles"
+    },
+    {
+        "code": "91.04Z",
+        "description": "Gestion des jardins botaniques et zoologiques et des réserves naturelles"
+    },
+    {
+        "code": "92",
+        "description": "Organisation de jeux de hasard et d'argent"
+    },
+    {
+        "code": "92.0",
+        "description": "Organisation de jeux de hasard et d'argent"
+    },
+    {
+        "code": "92.00",
+        "description": "Organisation de jeux de hasard et d'argent"
+    },
+    {
+        "code": "92.00Z",
+        "description": "Organisation de jeux de hasard et d'argent"
+    },
+    {
+        "code": "93",
+        "description": "Activités sportives, récréatives et de loisirs"
+    },
+    {
+        "code": "93.1",
+        "description": "Activités liées au sport"
+    },
+    {
+        "code": "93.11",
+        "description": "Gestion d'installations sportives"
+    },
+    {
+        "code": "93.11Z",
+        "description": "Gestion d'installations sportives"
+    },
+    {
+        "code": "93.12",
+        "description": "Activités de clubs de sports"
+    },
+    {
+        "code": "93.12Z",
+        "description": "Activités de clubs de sports"
+    },
+    {
+        "code": "93.13",
+        "description": "Activités des centres de culture physique"
+    },
+    {
+        "code": "93.13Z",
+        "description": "Activités des centres de culture physique"
+    },
+    {
+        "code": "93.19",
+        "description": "Autres activités liées au sport"
+    },
+    {
+        "code": "93.19Z",
+        "description": "Autres activités liées au sport"
+    },
+    {
+        "code": "93.2",
+        "description": "Activités récréatives et de loisirs"
+    },
+    {
+        "code": "93.21",
+        "description": "Activités des parcs d'attractions et parcs à thèmes"
+    },
+    {
+        "code": "93.21Z",
+        "description": "Activités des parcs d'attractions et parcs à thèmes"
+    },
+    {
+        "code": "93.29",
+        "description": "Autres activités récréatives et de loisirs "
+    },
+    {
+        "code": "93.29Z",
+        "description": "Autres activités récréatives et de loisirs"
+    },
+    {
+        "code": "94",
+        "description": "Activités des organisations associatives"
+    },
+    {
+        "code": "94.1",
+        "description": "Activités des organisations économiques, patronales et professionnelles"
+    },
+    {
+        "code": "94.11",
+        "description": "Activités des organisations patronales et consulaires"
+    },
+    {
+        "code": "94.11Z",
+        "description": "Activités des organisations patronales et consulaires"
+    },
+    {
+        "code": "94.12",
+        "description": "Activités des organisations professionnelles"
+    },
+    {
+        "code": "94.12Z",
+        "description": "Activités des organisations professionnelles"
+    },
+    {
+        "code": "94.2",
+        "description": "Activités des syndicats de salariés"
+    },
+    {
+        "code": "94.20",
+        "description": "Activités des syndicats de salariés"
+    },
+    {
+        "code": "94.20Z",
+        "description": "Activités des syndicats de salariés"
+    },
+    {
+        "code": "94.9",
+        "description": "Activités des autres organisations associatives"
+    },
+    {
+        "code": "94.91",
+        "description": "Activités des organisations religieuses"
+    },
+    {
+        "code": "94.91Z",
+        "description": "Activités des organisations religieuses"
+    },
+    {
+        "code": "94.92",
+        "description": "Activités des organisations politiques"
+    },
+    {
+        "code": "94.92Z",
+        "description": "Activités des organisations politiques"
+    },
+    {
+        "code": "94.99",
+        "description": "Activités des organisations associatives n.c.a."
+    },
+    {
+        "code": "94.99Z",
+        "description": "Autres organisations fonctionnant par adhésion volontaire"
+    },
+    {
+        "code": "95",
+        "description": "Réparation d'ordinateurs et de biens personnels et domestiques"
+    },
+    {
+        "code": "95.1",
+        "description": "Réparation d'ordinateurs et d'équipements de communication "
+    },
+    {
+        "code": "95.11",
+        "description": "Réparation d'ordinateurs et d'équipements périphériques"
+    },
+    {
+        "code": "95.11Z",
+        "description": "Réparation d'ordinateurs et d'équipements périphériques"
+    },
+    {
+        "code": "95.12",
+        "description": "Réparation d'équipements de communication"
+    },
+    {
+        "code": "95.12Z",
+        "description": "Réparation d'équipements de communication"
+    },
+    {
+        "code": "95.2",
+        "description": "Réparation de biens personnels et domestiques"
+    },
+    {
+        "code": "95.21",
+        "description": "Réparation de produits électroniques grand public"
+    },
+    {
+        "code": "95.21Z",
+        "description": "Réparation de produits électroniques grand public"
+    },
+    {
+        "code": "95.22",
+        "description": "Réparation d'appareils électroménagers et d'équipements pour la maison et le jardin"
+    },
+    {
+        "code": "95.22Z",
+        "description": "Réparation d'appareils électroménagers et d'équipements pour la maison et le jardin"
+    },
+    {
+        "code": "95.23",
+        "description": "Réparation de chaussures et d'articles en cuir"
+    },
+    {
+        "code": "95.23Z",
+        "description": "Réparation de chaussures et d'articles en cuir"
+    },
+    {
+        "code": "95.24",
+        "description": "Réparation de meubles et d'équipements du foyer"
+    },
+    {
+        "code": "95.24Z",
+        "description": "Réparation de meubles et d'équipements du foyer"
+    },
+    {
+        "code": "95.25",
+        "description": "Réparation d'articles d'horlogerie et de bijouterie"
+    },
+    {
+        "code": "95.25Z",
+        "description": "Réparation d'articles d'horlogerie et de bijouterie"
+    },
+    {
+        "code": "95.29",
+        "description": "Réparation d'autres biens personnels et domestiques"
+    },
+    {
+        "code": "95.29Z",
+        "description": "Réparation d'autres biens personnels et domestiques"
+    },
+    {
+        "code": "96",
+        "description": "Autres services personnels"
+    },
+    {
+        "code": "96.0",
+        "description": "Autres services personnels"
+    },
+    {
+        "code": "96.01",
+        "description": "Blanchisserie-teinturerie"
+    },
+    {
+        "code": "96.01A",
+        "description": "Blanchisserie-teinturerie de gros"
+    },
+    {
+        "code": "96.01B",
+        "description": "Blanchisserie-teinturerie de détail"
+    },
+    {
+        "code": "96.02",
+        "description": "Coiffure et soins de beauté"
+    },
+    {
+        "code": "96.02A",
+        "description": "Coiffure"
+    },
+    {
+        "code": "96.02B",
+        "description": "Soins de beauté"
+    },
+    {
+        "code": "96.03",
+        "description": "Services funéraires"
+    },
+    {
+        "code": "96.03Z",
+        "description": "Services funéraires"
+    },
+    {
+        "code": "96.04",
+        "description": "Entretien corporel"
+    },
+    {
+        "code": "96.04Z",
+        "description": "Entretien corporel"
+    },
+    {
+        "code": "96.09",
+        "description": "Autres services personnels n.c.a."
+    },
+    {
+        "code": "96.09Z",
+        "description": "Autres services personnels n.c.a."
+    },
+    {
+        "code": "97",
+        "description": "Activités des ménages en tant qu'employeurs de personnel domestique"
+    },
+    {
+        "code": "97.0",
+        "description": "Activités des ménages en tant qu'employeurs de personnel domestique"
+    },
+    {
+        "code": "97.00",
+        "description": "Activités des ménages en tant qu'employeurs de personnel domestique"
+    },
+    {
+        "code": "97.00Z",
+        "description": "Activités des ménages en tant qu'employeurs de personnel domestique"
+    },
+    {
+        "code": "98",
+        "description": "Activités indifférenciées des ménages en tant que producteurs de biens et services pour usage propre"
+    },
+    {
+        "code": "98.1",
+        "description": "Activités indifférenciées des ménages en tant que producteurs de biens pour usage propre"
+    },
+    {
+        "code": "98.10",
+        "description": "Activités indifférenciées des ménages en tant que producteurs de biens pour usage propre"
+    },
+    {
+        "code": "98.10Z",
+        "description": "Activités indifférenciées des ménages en tant que producteurs de biens pour usage propre"
+    },
+    {
+        "code": "98.2",
+        "description": "Activités indifférenciées des ménages en tant que producteurs de services pour usage propre"
+    },
+    {
+        "code": "98.20",
+        "description": "Activités indifférenciées des ménages en tant que producteurs de services pour usage propre"
+    },
+    {
+        "code": "98.20Z",
+        "description": "Activités indifférenciées des ménages en tant que producteurs de services pour usage propre"
+    },
+    {
+        "code": "99",
+        "description": "Activités des organisations et organismes extraterritoriaux"
+    },
+    {
+        "code": "99.0",
+        "description": "Activités des organisations et organismes extraterritoriaux"
+    },
+    {
+        "code": "99.00",
+        "description": "Activités des organisations et organismes extraterritoriaux"
+    },
+    {
+        "code": "99.00Z",
+        "description": "Activités des organisations et organismes extraterritoriaux"
+    }
+]
