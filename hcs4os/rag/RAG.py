@@ -210,17 +210,20 @@ class RAGChainOfThought(dspy.Module):
         )
         dspy.configure(lm=self.lm)
 
+        print("Loading classification system")
         self.classification_name = classification_name
         self.classification_system = get_classification_system(
             classification_name
         )
 
+        print("Creating VectorDB")
         self.store = VectorStore(
             collection_name=collection_name,
             model_name=embedding_model_name,
             chromadb_path=chromadb_path,
         )
         if create_new_collection:
+            print("Indexing classification system")
             self.index()
 
         
@@ -231,18 +234,16 @@ class RAGChainOfThought(dspy.Module):
     def index(
         self
     )->None:
-        
-        def flatten(c: dict) -> dict:
-            meta = {}
-            for k, v in c.items():
-                if k == "description":
-                    continue
-                if isinstance(v, dict):
-                    for sub_k, sub_v in v.items():
-                        meta[f"{k}_{sub_k}"] = sub_v
-                else:
-                    meta[k] = v
-            return meta
+        def flatten(c):
+           out = dict()
+           for k, v in c.items():
+               if k == "description":
+                   continue
+               elif not isinstance(v, dict):
+                   out[k]=v
+               else:
+                   out[k]=json.dumps(v, ensure_ascii=False)
+           return out
         
         codes = [c.to_dict() for c in self.classification_system.codes]
         
@@ -259,11 +260,13 @@ class RAGChainOfThought(dspy.Module):
     def search_category(
         self,
         query:str,
-        k:int
+        k:int,
+        where:dict|None=None
     ):
         result = self.store.collection.query(
             query_texts=[query],
-            n_results=k
+            n_results=k,
+            where=where
         )
         if result is not None:
             output = result["metadatas"][0] # type: ignore
@@ -274,11 +277,13 @@ class RAGChainOfThought(dspy.Module):
         else:
             raise Exception("Error occured while searching for code")
     
-    def forward(self, query:str, k:int):
-        
-        retrieved_context = self.search_category(query, k)
+    def forward(self, query: str, k: int, where: dict|None = None):
+        retrieved_context = self.search_category(query, k, where=where)
         retrieved_context_str = json.dumps(retrieved_context, indent=4, ensure_ascii=False)
-        self.CoT(query, retrieved_context_str)
+        return self.CoT(
+            input_expense=query,
+            retrieved_candidates=retrieved_context_str,
+        )
         
         
         

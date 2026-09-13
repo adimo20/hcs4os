@@ -1,8 +1,10 @@
 from typing import Literal
 import dspy
+from dspy.core.types import json
 from ...classification_system import get_classification_system
 from .vector_database import VectorStore
 from .registry import tool_descriptions
+import json
 
 class RAGAgent(dspy.Module):
     
@@ -61,16 +63,11 @@ class RAGAgent(dspy.Module):
     )->None:
         
         def flatten(c: dict) -> dict:
-            meta = {}
-            for k, v in c.items():
-                if k == "description":
-                    continue
-                if isinstance(v, dict):
-                    for sub_k, sub_v in v.items():
-                        meta[f"{k}_{sub_k}"] = sub_v
-                else:
-                    meta[k] = v
-            return meta
+            return {
+                k: (v if isinstance(v, (str, int, float, bool, type(None))) else json.dumps(v, ensure_ascii=False)) # this is sketchy dont know why this is the fix, for chroma raising an error, chroma dont likes when the meta dict itself contains dicts
+                for k, v in c.items()
+                if k != "description"
+            }
         
         codes = [c.to_dict() for c in self.classification_system.codes]
         
