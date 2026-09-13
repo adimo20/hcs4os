@@ -2,7 +2,7 @@ from ..BaseClassificationSystem import ClassificationSystem
 from ..registry import register
 import re
 
-@register("NAF")
+@register("NAF_rev2")
 class ClassificationSystemNAF(ClassificationSystem):
 
     def get_root_categories(self) -> list[dict]:

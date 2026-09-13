@@ -106,10 +106,83 @@ class IcatusRAGChainOfThoughtSignature(dspy.Signature):
     explaination: str = dspy.OutputField(
         desc="Concise reasoning explaining which retrieved candidate was chosen and why, citing the includes/excludes notes that justified it, plus any rejected alternative."
     )
+    
+    
+class SeaRAGChainOfThoughtSignature(dspy.Signature):
+    """
+    Classify a private-household income or expenditure item into a single SEA
+    2021 code by reasoning over a set of pre-retrieved candidate codes, rather
+    than relying on memorized codes.
 
+    The SEA 2021 (Systematik der Einnahmen und Ausgaben der privaten
+    Haushalte, Statistisches Bundesamt) is a hierarchy of numeric codes across
+    THREE parts: Abteilung 00 (Einnahmen / household income); Abteilungen
+    01-15 (Verwendungszwecke des Individualkonsums / individual consumption,
+    mirroring COICOP 2018; households 01-13, private non-profit institutions
+    14, government 15); and Abteilung 16 (Ausgaben ohne Individualkonsum /
+    non-consumption expenditure: taxes, social- and private-insurance
+    contributions, membership fees, donations, loan repayment/interest, and
+    formation of tangible/financial wealth). Levels: Abteilung (2 digits) ->
+    Gruppe (3) -> Klasse (4) -> Unterklasse (5) -> Kategorie (6) ->
+    Unterkategorie (7), e.g. 01 -> 011 -> 0111 -> 0111 1 -> 0111 10 ->
+    0111 101, written with a space after the 4th digit. A valid final answer is
+    a real code present in the retrieved candidates; prefer the most specific
+    code that correctly covers the item.
+
+    Reasoning protocol:
+    1. Identify the essence of the item. First decide which of the three parts
+       it belongs to: INCOME (Einnahme -> Abteilung 00), a CONSUMPTION purchase
+       of a good/service (Individualkonsum -> 01-15), or a NON-CONSUMPTION
+       outflow such as a tax, contribution, donation, loan repayment or
+       saving/investment (-> Abteilung 16). This choice is the most
+       consequential (e.g. an insurance premium is 16, a household appliance is
+       05). Note any consumption detail that affects placement: home vs.
+       immediate consumption (the latter usually -> 1111), state/form (fresh,
+       frozen, prepared/Fertiggericht), good vs. service.
+    2. Compare the item against every retrieved candidate's Bezeichnung and
+       notes:
+       - Read the 'Eingeschlossen sind' (includes) notes to confirm a match.
+       - Read the 'Ausgeschlossen sind' (excludes) notes carefully: they
+         explicitly redirect items that look like they belong here but are
+         classified elsewhere, and usually name the correct code in
+         parentheses. If the redirected code is itself among the candidates,
+         prefer it.
+    3. Before committing, make sure the chosen code's notes do not exclude this
+       item.
+    4. If no candidate fits specifically, choose the most appropriate
+       "Andere ... , a.n.g." (residual) candidate within the correct branch
+       rather than guessing a code from a different branch.
+
+    Rules:
+    - Never invent or guess a code from memory. The final sea_code must be an
+      exact code string that appears in retrieved_candidates, not a paraphrase
+      or a made-up variant, formatted with the space after the 4th digit
+      (e.g. '0111 101').
+    - The target level for the classification of the item is **5** (the
+      Unterklasse); always try to find a level-5 code among the candidates,
+      descending to Kategorie/Unterkategorie (levels 6-7) only when the
+      evidence clearly supports a more specific base unit.
+    - When evidence is ambiguous, prefer the interpretation supported by the
+      Eingeschlossen/Ausgeschlossen notes over intuition.
+    """
+
+    input_expense: str = dspy.InputField(
+        desc="A private-household income or expenditure item to classify, e.g. a receipt line item, a Haushaltsbuch entry, or a short description of a purchased good/service or a source of income."
+    )
+    retrieved_candidates: str = dspy.InputField(
+        desc="The pre-retrieved candidate SEA 2021 records most semantically similar to the item, each with its code, Bezeichnung (label), level, and 'Eingeschlossen'/'Ausgeschlossen' notes. Choose the final code only from these records."
+    )
+    sea_code: str = dspy.OutputField(
+        desc="The single most specific SEA 2021 code from retrieved_candidates that correctly covers the item, exactly as given (e.g. '0111 101')."
+    )
+    explaination: str = dspy.OutputField(
+        desc="Concise reasoning explaining which retrieved candidate was chosen and why, citing the Eingeschlossen/Ausgeschlossen notes that justified it, plus any rejected alternative."
+    )
+    
 mapping = {
     "COICOP_2018":CoicopRAGChainOfThoughtSignature,
-    "ICATUS_2016":IcatusRAGChainOfThoughtSignature
+    "ICATUS_2016":IcatusRAGChainOfThoughtSignature,
+    "SEA_2021":SeaRAGChainOfThoughtSignature
 }
 
 class RAGChainOfThought(dspy.Module):

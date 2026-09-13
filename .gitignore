@@ -13,3 +13,4 @@ Klassifikationsverzeichnis.xlsx
 data/
 chroma/
 *.ipynb
+dist/

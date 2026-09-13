@@ -4,8 +4,8 @@ def make_path(filename:str):
     return Path(__file__).resolve().parent.parent / "_data" / filename
 
 mapping = {
-    "NAF":{
-        "classification_system":"NAF", # Decorater-ID within classification system, which implements the given logic
+    "NAF_rev2":{
+        "classification_system":"NAF_rev2", # Decorater-ID within classification system, which implements the given logic
         "loader_name":"JSON", # Decorater-ID within dataloaders, which implements the given logic
         "data_path":make_path("NAF_INSEE.json"), # Softpath to the xml or ... file which contains the classification system
         "metadata":{

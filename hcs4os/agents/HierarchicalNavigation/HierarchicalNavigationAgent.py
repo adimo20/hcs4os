@@ -15,7 +15,7 @@ class HierarchicalNavigationAgent(dspy.Module):
     
     def __init__(
         self,
-        classification_name:Literal["COICOP_2028", "ICATUS_2016"],
+        classification_name:Literal["COICOP_2028", "ICATUS_2016", "NAF_rev2", "SEA_2021"],
         api_key:str,
         model_name:str,
         api_base:str|None=None,
