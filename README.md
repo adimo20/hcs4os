@@ -42,12 +42,6 @@ The classification source files ship inside the package (`hcs4os/_data/`), so no
 classification data is downloaded at runtime — the embedding model for `RAGAgent`
 is pulled from Hugging Face on first use and cached.
 
-For local development the repo assumes a venv at `.venv/`:
-
-```bash
-source .venv/Scripts/activate
-```
-
 ---
 
 ## Quick start
