@@ -501,6 +501,189 @@ tool_descriptions = {
         """,
         "signature": NafHierarchicalSearchAgentSignature
     },
+    "SEA_2021_REPHRASED": {
+        "system_prompt": """
+        Classify a private-household income or expenditure item into a single SEA
+        2021 code by searching the classification hierarchy top-down, using the
+        available tools rather than relying on memorized codes.
+
+        The SEA 2021 (Systematik der Einnahmen und Ausgaben der privaten
+        Haushalte, Statistisches Bundesamt) is a tree with THREE parts, each under
+        its own top-level Abteilung:
+        - Abteilung 00: Einnahmen der privaten Haushalte (household income).
+        - Abteilungen 01-15: Verwendungszwecke des Individualkonsums (individual
+            consumption; this part mirrors COICOP 2018). Households = 01-13,
+            private non-profit institutions = 14, government = 15.
+        - Abteilung 16: Ausgaben (ohne Individualkonsum) — non-consumption
+            expenditure such as taxes, social-insurance and private-insurance
+            contributions, membership fees, donations, loan repayment/interest,
+            and formation of tangible/financial wealth.
+
+        Codes are numeric and positional, up to 7 digits, with these levels:
+        Abteilung (2 digits, e.g. "01") -> Gruppe (3, e.g. "011") ->
+        Klasse (4, e.g. "0111") -> Unterklasse (5, e.g. "0111 1") ->
+        Kategorie (6, e.g. "0111 10") -> Unterkategorie (7, e.g. "0111 101").
+        Codes are written with a SPACE after the 4th digit (e.g. "0111 101").
+        A valid final answer is a real code that exists in the system; prefer the
+        most specific (deepest) code that correctly covers the item.
+
+        Tools:
+        - get_root_categories_tool(): list the top-level Abteilungen. Start here.
+        - get_children_tool(code): list the direct child codes one level down, each
+            with its Bezeichnung (label) and Eingeschlossen/Ausgeschlossen notes.
+        - get_code_tool(code): read one code's full record (Bezeichnung, elaborated
+            definition, and 'Eingeschlossen sind' (includes) / 'Ausgeschlossen
+            sind' (excludes) notes).
+        - get_parent_tool(code): move one level up to re-read broader context or
+            reconsider a branch.
+
+        Reasoning protocol:
+        1. Identify the essence of the item. First decide which of the three parts
+            it belongs to: is it INCOME (Einnahme -> Abteilung 00), a CONSUMPTION
+            purchase of a good/service (Individualkonsum -> 01-15), or a
+            NON-CONSUMPTION outflow such as a tax, contribution, donation, loan
+            repayment or saving/investment (-> Abteilung 16)? This choice is the
+            most consequential; note any detail that affects it (e.g. an insurance
+            PREMIUM is 16, but a household appliance is 05).
+        2. Within consumption, note details that drive placement: whether the good
+            is for home consumption vs. immediate consumption in a
+            restaurant/cafe (the latter usually -> 1111), its state/form (fresh,
+            frozen, prepared/Fertiggericht), whether it is a good or a service,
+            and its durability.
+        3. Call get_root_categories() and choose the single best-fitting Abteilung.
+            If two Abteilungen seem plausible, note the alternative to revisit.
+        4. Descend one level at a time with get_children on the current code.
+            At each level:
+            - Compare the item against every child's Bezeichnung and notes.
+            - Read 'Eingeschlossen sind' to confirm a match.
+            - Read 'Ausgeschlossen sind' carefully: these notes explicitly
+                redirect items that look like they belong here but are classified
+                elsewhere, and name the correct code in parentheses (e.g.
+                "... (0119 1)"). Follow those pointers instead of forcing a fit.
+            - Pick the best-matching child and repeat.
+        5. Continue descending until you reach a leaf (get_children returns an
+            empty list) or until no deeper code fits better than the current one.
+        6. Before committing, verify the chosen code with get_code and check that
+            its notes do not exclude this item. If they do, backtrack using
+            get_parent or return to a noted alternative branch and search again.
+        7. If, after searching, no specific code fits, choose the most appropriate
+            "Andere ... , a.n.g." (residual) code within the correct branch rather
+            than guessing a code from a different branch.
+
+        Rules:
+        - Never invent or guess a code from memory. Every code in the final answer
+            and in your reasoning must have been returned by a tool.
+        - The final sea_code must be an exact code string that the tools returned,
+            formatted with the space after the 4th digit (e.g. "0111 101"), not a
+            paraphrase or a made-up variant.
+        - The target level for the classification is **4** (the Klasse), the
+            depth targeted by the EVS from 2023; always try to reach a level-**4**
+            code. Descend further to Kategorie/Unterkategorie (levels 6-7) when the
+            evidence clearly supports a more specific base unit and full depth is
+            wanted. The level of a code is returned by get_code.
+        - When evidence is ambiguous, prefer the interpretation supported by the
+            Eingeschlossen/Ausgeschlossen notes over intuition.
+
+        Output:
+        - sea_code: the single most specific SEA 2021 code that correctly
+            classifies the item.
+        - explaination: a concise justification tracing the path taken (Abteilung
+            -> Gruppe -> Klasse -> ... -> final code) and citing the decisive
+            Eingeschlossen/Ausgeschlossen note(s) that determined the choice,
+            including any branch you rejected and why.
+        """,
+
+        "get_children": """
+        List the direct child codes one level below the given code.
+
+        Use this to drill down the hierarchy: given a code you've decided the item
+        falls under, this returns the candidate sub-codes to choose from next. Each
+        child comes with its full record (Bezeichnung, Eingeschlossen/
+        Ausgeschlossen notes), so you can compare siblings and pick the best match
+        without additional lookups. Returns an empty list for leaf codes.
+
+        The hierarchy has up to six levels below the top:
+        Abteilung (2 digits, e.g. "01") -> Gruppe (3, e.g. "011") ->
+        Klasse (4, e.g. "0111") -> Unterklasse (5, e.g. "0111 1") ->
+        Kategorie (6, e.g. "0111 10") -> Unterkategorie (7, e.g. "0111 101").
+
+        Args:
+            code: The parent classification code, e.g. "0111".
+
+        Returns:
+            A list of Code objects for the direct children (e.g. "0111 1",
+            "0111 2", ...), each with the same fields as get_code returns.
+        """,
+
+        "get_code": """
+        Retrieve the full record for a single classification code.
+
+        Use this to inspect one specific code in detail — its Bezeichnung (label),
+        level in the hierarchy, and the definition plus 'Eingeschlossen sind'
+        (includes) and 'Ausgeschlossen sind' (excludes) notes that disambiguate
+        what belongs under it. The 'Ausgeschlossen sind' notes are especially
+        useful: they point to the correct sibling or related code (given in
+        parentheses) when an item looks like it fits here but doesn't.
+
+        The hierarchy has up to six levels below the top:
+        Abteilung (2 digits, e.g. "01") -> Gruppe (3, e.g. "011") ->
+        Klasse (4, e.g. "0111") -> Unterklasse (5, e.g. "0111 1") ->
+        Kategorie (6, e.g. "0111 10") -> Unterkategorie (7, e.g. "0111 101").
+
+        Args:
+            code: The classification code, e.g. "0111 101".
+
+        Returns:
+            A Code object with fields:
+                - code: the code string (e.g. "0111 101")
+                - description: short label (e.g. "Reis, z.B. Reis im Kochbeutel")
+                - level: depth in the hierarchy (2 = Abteilung, 3 = Gruppe,
+                    4 = Klasse, 5 = Unterklasse, 6 = Kategorie,
+                    7 = Unterkategorie)
+                - detailled_description: longer prose definition (may be empty)
+                - details: dict with 'Eingeschlossen'/'Ausgeschlossen' notes
+                    (may be empty strings at higher levels)
+        """,
+
+        "get_parent": """
+        Retrieve the immediate parent (one level up) of the given code.
+
+        Use this to move back up the hierarchy — to reconsider a branch, read the
+        broader category's definition for context, or verify that a code sits under
+        the intended higher-level Gruppe/Klasse. Returns the parent's full record.
+
+        The hierarchy has up to six levels below the top:
+        Abteilung (2 digits, e.g. "01") -> Gruppe (3, e.g. "011") ->
+        Klasse (4, e.g. "0111") -> Unterklasse (5, e.g. "0111 1") ->
+        Kategorie (6, e.g. "0111 10") -> Unterkategorie (7, e.g. "0111 101").
+
+        Args:
+            code: The classification code whose parent you want, e.g. "0111 101".
+
+        Returns:
+            A Code object for the parent (e.g. "0111 1"), with the same fields as
+            get_code returns. The scope note on a parent often summarises what the
+            whole branch covers and excludes.
+        """,
+
+        "get_root_categories": """
+        List the top-level Abteilungen of the classification system.
+
+        Use this as the entry point when starting a classification: it returns the
+        broadest categories across the SEA 2021's three parts — Abteilung 00
+        (Einnahmen), Abteilungen 01-15 (Verwendungszwecke des Individualkonsums,
+        e.g. "01" Nahrungsmittel und alkoholfreie Getränke, "07" Verkehr), and
+        Abteilung 16 (Ausgaben ohne Individualkonsum) — from which you select the
+        most appropriate branch and then descend using get_children.
+
+        Returns:
+            A list of dicts, each with:
+                - code: the top-level code (e.g. "01")
+                - description: its label (e.g. "Nahrungsmittel und alkoholfreie
+                    Getränke")
+        """,
+        "signature": SeaHierarchicalSearchAgentSignature
+    },  
     "SEA_2021": {
         "system_prompt": """
         Classify a private-household income or expenditure item into a single SEA

@@ -20,6 +20,16 @@ mapping = {
             "url":"https://unstats.un.org/unsd/demographic-social/time-use/icatus-2016/tableview",
         }
     },
+    "SEA_2021_REPHRASED":{
+        "classification_system":"SEA", # Decorater-ID within classification system, which implements the given logic
+        "loader_name":"JSON", # Decorater-ID within dataloaders, which implements the given logic
+        "data_path":make_path("sea_2021_augmented.json"), # Softpath to the xml or ... file which contains the classification system
+        "metadata":{
+            "url":"https://klassifikationsserver.de/klassService/thyme/variant/sea_2021",
+            "model":"mistral/zai-glm-5-2",
+            "date":"15.09.2026"
+        }
+    },
     "SEA_2021":{
         "classification_system":"SEA", # Decorater-ID within classification system, which implements the given logic
         "loader_name":"KLASS_SERVER", # Decorater-ID within dataloaders, which implements the given logic
@@ -59,12 +69,6 @@ mapping = {
         "metadata":{}
     }
     ,
-    "SEA_2021_REPHRASED":{
-        "classification_system":"SEA_NS",      
-        "loader_name":"JSON",
-        "data_path":make_path("classification_system_SEA_2021.json"),
-        "metadata":{}
-    },
     "EAV":{
         "classification_system":"EAV",      
         "loader_name":"KLASS_SERVER",

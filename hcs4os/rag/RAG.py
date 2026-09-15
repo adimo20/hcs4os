@@ -182,7 +182,8 @@ class SeaRAGChainOfThoughtSignature(dspy.Signature):
 mapping = {
     "COICOP_2018":CoicopRAGChainOfThoughtSignature,
     "ICATUS_2016":IcatusRAGChainOfThoughtSignature,
-    "SEA_2021":SeaRAGChainOfThoughtSignature
+    "SEA_2021":SeaRAGChainOfThoughtSignature,
+    "SEA_2021_REPHRASED":SeaRAGChainOfThoughtSignature
 }
 
 class RAGChainOfThought(dspy.Module):
