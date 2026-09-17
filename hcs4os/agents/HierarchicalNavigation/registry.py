@@ -117,6 +117,24 @@ tool_descriptions = {
         """,
         
         "get_children":"""
+        List the direct child codes one level below the given code.
+
+        Use this to drill down the hierarchy: given a code you've decided the
+        item falls under, this returns the candidate sub-codes to choose from
+        next. Each child comes with its full record (description, includes/
+        excludes notes), so you can compare siblings and pick the best match
+        without additional lookups. Returns an empty list for leaf codes that
+        have no children.
+
+        Args:
+            code: The parent classification code, e.g. "01.1.1".
+
+        Returns:
+            A list of Code objects for the direct children (e.g. "01.1.1.1",
+            "01.1.1.2", ...), each with the same fields as get_code returns.
+        """,
+
+        "get_code":"""
         Retrieve the full record for a single classification code.
 
         Use this to inspect one specific code in detail — its description,
@@ -137,24 +155,6 @@ tool_descriptions = {
                 - detailled_description: longer prose definition (may be empty)
                 - details: dict with 'includes', 'alsoIncludes', 'excludes' notes
                     (may be empty strings at higher levels)
-        """,
-        
-        "get_code":"""
-        List the direct child codes one level below the given code.
-
-        Use this to drill down the hierarchy: given a code you've decided the
-        item falls under, this returns the candidate sub-codes to choose from
-        next. Each child comes with its full record (description, includes/
-        excludes notes), so you can compare siblings and pick the best match
-        without additional lookups. Returns an empty list for leaf codes that
-        have no children.
-
-        Args:
-            code: The parent classification code, e.g. "01.1.1".
-
-        Returns:
-            A list of Code objects for the direct children (e.g. "01.1.1.1",
-            "01.1.1.2", ...), each with the same fields as get_code returns.
         """,
         "get_parent":"""
         Retrieve the immediate parent (one level up) of the given code.
