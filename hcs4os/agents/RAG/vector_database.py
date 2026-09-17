@@ -19,6 +19,7 @@ class VectorStore:
         self.model_name = model_name
         self.chromadb_path = chromadb_path
         self.chroma_client = chromadb.PersistentClient(path=chromadb_path)
+        print("Setting up embedding function and collection!")
         self.collection = self.chroma_client.get_or_create_collection(
             name=collection_name,
             embedding_function=SentenceTransformerEmbeddingFunction(model_name), # type: ignore
