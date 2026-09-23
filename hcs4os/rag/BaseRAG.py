@@ -20,7 +20,8 @@ class BaseRAGCoT(dspy.Module):
         codes_to_include:list[str]|None=None,
         api_base:str|None=None,
         chromadb_path:str="./data/chroma",
-        create_new_collection:bool=True,             
+        create_new_collection:bool=True,  
+        include_hierarchy=False,           
     )->None:
 
         assert api_key is not None
@@ -35,14 +36,20 @@ class BaseRAGCoT(dspy.Module):
         self.signature:dspy.Signature = signature
         self.query_field = query_field
         self.context_field = context_field
+        self.include_hierarchy = include_hierarchy
 
 
         self.lm = dspy.LM(
             api_key=api_key,
             api_base=api_base,
-            model=model_name
+            model=model_name,
+            model_type="chat",
+            temperature=0,
+            max_tokens=2048,     
+            timeout=120,       
+            num_retries=3,
         )
-        dspy.configure(lm=self.lm)
+        dspy.configure(lm=self.lm, max_errors=10000)
 
         print("Loading classification system")
         self.classification_name = classification_name
@@ -107,11 +114,28 @@ class BaseRAGCoT(dspy.Module):
             n_results=k,
             where=where
         )
+
         if result is not None:
-            output = result["metadatas"][0] # type: ignore
-            docs = result["documents"][0] # type: ignore
-            for o, d in zip(output, docs):
-                o["description"] = d # type: ignore
+            
+            metas = result["metadatas"][0] 
+            docs = result["documents"][0]
+
+            output = []
+
+            for d, m in zip(docs, metas):
+
+                curr_code = {
+                    "code":m["code"],
+                    "description":d
+                }
+                if self.include_hierarchy:
+                    
+                    includes_info = json.loads(m["details"]) if isinstance(m["details"], str) else m["details"]
+                    
+                    curr_code["includes"] = list(set(includes_info.get("includes",[])))
+
+                output.append(curr_code)
+
             return output
         else:
             raise Exception("Error occured while searching for code")
