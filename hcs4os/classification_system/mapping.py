@@ -38,10 +38,18 @@ mapping = {
             "url":"https://klassifikationsserver.de/klassService/thyme/variant/sea_2021",
         }
     },
-    "SEA_2021_KEYWORDS":{
+    "SEA_2021_ADDED_MISSING_CODES":{
         "classification_system":"SEA", # Decorater-ID within classification system, which implements the given logic
         "loader_name":"JSON", # Decorater-ID within dataloaders, which implements the given logic
-        "data_path":make_path("sea.json"), # Softpath to the xml or ... file which contains the classification system
+        "data_path":make_path("SEA_ADD_MISSING_CODES.json"), # Softpath to the xml or ... file which contains the classification system
+        "metadata":{
+            "url":"https://klassifikationsserver.de/klassService/thyme/variant/sea_2021",
+        }
+    },
+    "SEA_2021_ADDED_CONTEXT":{
+        "classification_system":"SEA", # Decorater-ID within classification system, which implements the given logic
+        "loader_name":"JSON", # Decorater-ID within dataloaders, which implements the given logic
+        "data_path":make_path("sea_additional_context.json"), # Softpath to the xml or ... file which contains the classification system
         "metadata":{
             "url":"https://klassifikationsserver.de/klassService/thyme/variant/sea_2021",
         }
