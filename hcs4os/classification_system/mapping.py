@@ -38,6 +38,14 @@ mapping = {
             "url":"https://klassifikationsserver.de/klassService/thyme/variant/sea_2021",
         }
     },
+    "SEA_2021_KEYWORDS":{
+        "classification_system":"SEA", # Decorater-ID within classification system, which implements the given logic
+        "loader_name":"JSON", # Decorater-ID within dataloaders, which implements the given logic
+        "data_path":make_path("sea.json"), # Softpath to the xml or ... file which contains the classification system
+        "metadata":{
+            "url":"https://klassifikationsserver.de/klassService/thyme/variant/sea_2021",
+        }
+    },
     "COICOP_2018":{
         "classification_system":"COICOP", # Decorater-ID within classification system, which implements the given logic
         "loader_name":"COICOP", # Decorater-ID within dataloaders, which implements the given logic
