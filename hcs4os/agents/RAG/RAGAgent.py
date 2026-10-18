@@ -1,6 +1,5 @@
 from typing import Literal
 import dspy
-from dspy.core.types import json
 from ...classification_system import get_classification_system
 from .vector_database import VectorStore
 from .registry import tool_descriptions
