@@ -3,7 +3,6 @@ import dspy
 from dspy.utils.saving import sys
 from ...classification_system import get_classification_system
 import warnings
-from .registry import tool_descriptions
 
 warnings.filterwarnings(
   "ignore", 
@@ -15,7 +14,7 @@ class BaseHierarchicalNavigationAgent(dspy.Module):
     
     def __init__(
         self,
-        classification_name:Literal["COICOP_2028", "ICATUS_2016", "NAF_rev2", "SEA_2021"],
+        classification_name:Literal["COICOP_2018", "ICATUS_2016", "NAF_rev2", "SEA_2021"],
         api_key:str,
         model_name:str,
         signature:dspy.Signature,
