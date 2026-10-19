@@ -1,8 +1,7 @@
-import dspy
-from ..agents.RAG.vector_database import VectorStore
-from ..classification_system.registry import get_classification_system
 from typing import Literal
 import json
+import dspy
+from .BaseRAG import BaseRAGCoT
 
 class CoicopRAGChainOfThoughtSignature(dspy.Signature):
     """
@@ -179,115 +178,340 @@ class SeaRAGChainOfThoughtSignature(dspy.Signature):
         desc="Concise reasoning explaining which retrieved candidate was chosen and why, citing the Eingeschlossen/Ausgeschlossen notes that justified it, plus any rejected alternative."
     )
     
-mapping = {
-    "COICOP_2018":CoicopRAGChainOfThoughtSignature,
-    "ICATUS_2016":IcatusRAGChainOfThoughtSignature,
-    "SEA_2021":SeaRAGChainOfThoughtSignature,
-    "SEA_2021_REPHRASED":SeaRAGChainOfThoughtSignature
-}
 
-class RAGChainOfThought(dspy.Module):
+class RAGChainOfThought(BaseRAGCoT):
+    
+    CONFIGS = {
+        "COICOP_2018":{
+            "signature":CoicopRAGChainOfThoughtSignature,
+            "query_field":"input_expense",
+            "context_field":"retrieved_candidates"
+        },
+        "ICATUS_2016":{
+            "signature":IcatusRAGChainOfThoughtSignature,
+            "query_field":"input_activity",
+            "context_field":"retrieved_candidates"
+        },    
+        "SEA_2021":{
+            "signature":SeaRAGChainOfThoughtSignature,
+            "query_field":"input_expense",
+            "context_field":"retrieved_candidates"
+        },
+        "SEA_2021_REPHRASED":{
+            "signature":SeaRAGChainOfThoughtSignature,
+            "query_field":"input_expense",
+            "context_field":"retrieved_candidates"
+        },
+    }
     
     def __init__(
         self,
-        embedding_model_name:str,
-        collection_name:str,
-        classification_name:Literal["COICOP_2018", "ICATUS_2016"],
-        api_key:str,
-        model_name:str,
-        api_base:str|None=None,
-        chromadb_path:str="./data/chroma",
-        create_new_collection:bool=True,             
-    )->None:
-
-        assert api_key is not None
-        assert model_name is not None
-        assert classification_name is not None and classification_name in mapping.keys()
-
-        self.lm = dspy.LM(
-            api_key=api_key,
-            api_base=api_base,
-            model=model_name
-        )
-        dspy.configure(lm=self.lm)
-
-        print("Loading classification system")
-        self.classification_name = classification_name
-        self.classification_system = get_classification_system(
-            classification_name
-        )
-
-        print("Creating VectorDB")
-        self.store = VectorStore(
-            collection_name=collection_name,
-            model_name=embedding_model_name,
-            chromadb_path=chromadb_path,
-        )
-        if create_new_collection:
-            print("Indexing classification system")
-            self.index()
-
+        classification_name:Literal["COICOP_2018", "ICATUS_2016", "SEA_2021", "SEA_2021_REPHRASED"],
+        **kwargs,
+    ) -> None:
         
-        self.CoT = dspy.ChainOfThought(
-            mapping[self.classification_name]
+        if classification_name not in self.CONFIGS:
+            raise ValueError(f"Unknown classification system: {classification_name}")
+
+        super().__init__(
+            classification_name=classification_name,
+            **self.CONFIGS[classification_name],
+            **kwargs,
         )
         
-    def index(
-        self
-    )->None:
-        def flatten(c):
-           out = dict()
-           for k, v in c.items():
-               if k == "description":
-                   continue
-               elif not isinstance(v, dict):
-                   out[k]=v
-               else:
-                   out[k]=json.dumps(v, ensure_ascii=False)
-           return out
-        
-        codes = [c.to_dict() for c in self.classification_system.codes]
-        
-        ids = [f"id_{c["code"]}" for c in codes]
-        documents = [c["description"] for c in codes]
-        metadatas = [flatten(c=c) for c in codes]
-        
-        self.store.create_collection(
-            ids=ids,
-            documents=documents,
-            metadatas=metadatas # type: ignore
-        )
-        
-    def search_category(
+
+# ---------------------------------------------------------------------------
+# Rewrite step: rephraser signatures
+#
+# The vector store only embeds each code's short `description` label
+# (e.g. "Eggplants (aubergines), fresh or chilled", "Steinobstkonserven, z.B.
+# Pflaumen-, ... Pfirsichkonserven", "Eating meals/snack"). Raw items (receipt
+# lines, brands, diary shorthand) sit far from those labels in embedding space.
+# The rephraser translates the item into the vocabulary of the labels; it does
+# NOT classify. The original item still goes to the Read step unchanged.
+# ---------------------------------------------------------------------------
+
+
+class CoicopRephrasingSignature(dspy.Signature):
+    """
+    Rewrite a household expense into a search query that reads like a COICOP
+    2018 category title, so that semantic search over those titles retrieves
+    the right candidate codes. You are NOT classifying the expense: never
+    output a code and never decide between categories.
+
+    The search index contains only the short English titles of the COICOP
+    codes, for example "Eggplants (aubergines), fresh or chilled",
+    "Ice, ice cream and sorbets", "School uniforms", "Repair of electric
+    appliances for personal care", "Life and accident insurance". Raw expense
+    text — receipt abbreviations, brand names, shop wording, quantities — is
+    far from these titles in embedding space. Your job is to translate the
+    expense into the vocabulary of these titles.
+
+    Rewriting protocol:
+    1. Work out what was actually bought. Expand receipt shorthand and
+       abbreviations (e.g. "BIO VOLLM 3,8%" -> organic whole milk) and replace
+       brand or product names with the generic good or service they stand for
+       (e.g. "Nutella" -> chocolate hazelnut spread; "Netflix" -> video
+       streaming subscription service). Translate non-English input into
+       English.
+    2. Name it with the plain generic term an official classification would
+       use. Where you are certain of the broader product group, put it first
+       and the specific item after it (e.g. "vegetables, fresh or chilled:
+       eggplant").
+    3. Keep every attribute that changes where the item is classified:
+       - state or form: fresh, chilled, frozen, dried, preserved/canned,
+         ready-made meal;
+       - good vs. service: purchase vs. repair, rental, hire, installation,
+         maintenance, insurance, subscription, fee;
+       - consumed at home vs. served in a restaurant, café or canteen;
+       - new vs. second-hand;
+       - intended user or purpose where stated (children, pets, vehicle,
+         school, sport, medical use).
+    4. Drop everything that does not change placement: brand, shop, quantity,
+       pack size, price, date, promotional or marketing wording.
+
+    Rules:
+    - Output one short noun phrase (about 2-12 words) in English. No full
+      sentences, no explanations, no code numbers, no "(ND)"/"(S)" suffixes.
+    - Do not force a category word you are unsure of: a wrong broader term
+      pulls retrieval into the wrong branch. When in doubt, describe the item
+      itself generically and leave the category out.
+    - Do not add facts that are not in, or clearly implied by, the input.
+    - If the input is already a clean generic description, return it almost
+      unchanged.
+    """
+
+    input_expense: str = dspy.InputField(
+        desc="A raw household expense as it appears in the data, e.g. a receipt line item or a short free-text description of a purchased good or service."
+    )
+    rephrased_query: str = dspy.OutputField(
+        desc="A short English noun phrase naming the generic good or service in the wording of a COICOP title, keeping placement-relevant attributes (form, good vs. service, at home vs. away, purpose). No codes."
+    )
+
+
+class IcatusRephrasingSignature(dspy.Signature):
+    """
+    Rewrite a time-use activity into a search query that reads like an ICATUS
+    2016 activity title, so that semantic search over those titles retrieves
+    the right candidate codes. You are NOT classifying the activity: never
+    output a code and never decide between categories.
+
+    The search index contains only the short English titles of the ICATUS
+    codes, for example "Eating meals/snack", "Travelling and commuting for
+    employment", "Agriculture, forestry, fishing and mining for own final
+    use", "Providing paid business and professional services in households
+    and household enterprises", "Travelling time related to unpaid volunteer,
+    trainee and other unpaid work". These titles are organised less by WHAT
+    the person did than by the ECONOMIC NATURE of the activity and FOR WHOM it
+    was done. Raw diary entries ("did the dishes", "drove Tom to school",
+    "Mathe-Nachhilfe gegeben") are far from these titles in embedding space.
+    Your job is to translate the entry into their vocabulary.
+
+    Rewriting protocol:
+    1. Work out what the person was actually doing. Expand shorthand and
+       translate non-English input into English.
+    2. Make the economic nature explicit whenever the input states or clearly
+       implies it: for pay or profit (employment, own business), for own
+       final use (producing goods or services for one's own household),
+       unpaid domestic service or unpaid caregiving for household or family
+       members, unpaid volunteer work for others, learning, or a personal /
+       leisure / self-care activity.
+    3. Make the beneficiary explicit when stated: oneself, a child of the
+       household, a dependent or non-dependent adult household or family
+       member, another household, the community or an organisation.
+    4. If the entry is travel, say that it is travelling and what it was
+       related to (e.g. "travelling time related to childcare: taking child
+       to school").
+    5. Drop names of people and places, times, durations and other detail
+       that does not change placement.
+
+    Rules:
+    - Output one short phrase (about 3-15 words) in English, in the style of
+      an ICATUS title. No full sentences, no explanations, no code numbers.
+    - Do not invent a pay status or beneficiary that is not stated or
+      clearly implied; a wrong one pulls retrieval into the wrong major
+      division. When unknown, describe the activity itself and leave it out.
+    - If the input is already a clean generic description, return it almost
+      unchanged.
+    """
+
+    input_activity: str = dspy.InputField(
+        desc="A raw time-use activity as it appears in the data, e.g. a diary line item or a short free-text description of what a person spent time on."
+    )
+    rephrased_query: str = dspy.OutputField(
+        desc="A short English phrase in the style of an ICATUS title, stating the activity and, where known, its economic nature (paid, own use, unpaid care, volunteering, leisure) and beneficiary. No codes."
+    )
+
+
+class SeaRephrasingSignature(dspy.Signature):
+    """
+    Rewrite a private-household income or expenditure item into a German
+    search query that reads like an SEA 2021 Bezeichnung (category label), so
+    that semantic search over those labels retrieves the right candidate
+    codes. You are NOT classifying the item: never output a code and never
+    decide between categories.
+
+    The search index contains only the German labels (Bezeichnungen) of the
+    SEA 2021 codes, for example "Steinobstkonserven, z.B. Pflaumen-,
+    Mirabellen-, Kirsch-, Pfirsich- und Aprikosenkonserven", "Gartenmöbel
+    (ohne Sonnenschirme ...), z.B. Gartenbänke, Balkonmöbel",
+    "Versicherungsdienstleistungen", "Kredite für Hochzeiten, Familienfeiern
+    u.Ä.", "Gastronomie- und Beherbergungsdienstleistungen". Many labels name
+    a generic group followed by typical examples ("z.B. ..."). Raw items —
+    receipt abbreviations, brand names, bank-statement text, quantities — are
+    far from these labels in embedding space. Your job is to translate the
+    item into their vocabulary.
+
+    Rewriting protocol:
+    1. Work out what the item is. Expand receipt and bank-statement shorthand
+       (e.g. "BIO VOLLM 3,8%" -> Bio-Vollmilch; "LASTSCHRIFT ALLIANZ KFZ" ->
+       Beitrag Kfz-Haftpflichtversicherung) and replace brand or product names
+       with the generic good or service (e.g. "Nutella" ->
+       Nuss-Nougat-Creme; "Netflix" -> Video-Streaming-Abonnement). Translate
+       non-German input into German.
+    2. Make the direction of the money flow explicit when it is clear:
+       an Einnahme (income: Lohn/Gehalt, Rente, Kindergeld, Mieteinnahme,
+       Zinsen, ...), a Konsumausgabe for a good or service, or an Ausgabe
+       ohne Konsum (Steuer, Sozialversicherungs- oder Versicherungsbeitrag,
+       Mitgliedsbeitrag, Spende, Tilgung oder Zinsen eines Kredits,
+       Sparen/Geldanlage). Use the wording of that area (e.g.
+       "Beitrag zur ...", "Einnahmen aus ...", "Tilgung ...").
+    3. Name it with the generic term an official German classification would
+       use. Where you are certain of the broader group, write it first and
+       the specific item after it, mirroring the "Gruppe, z.B. Artikel"
+       pattern of the labels (e.g. "Steinobstkonserven, Pfirsichkonserve").
+    4. Keep every attribute that changes placement:
+       - Zustand/Form: frisch, gekühlt, tiefgefroren, getrocknet, Konserve,
+         Fertiggericht;
+       - Ware vs. Dienstleistung: Kauf vs. Reparatur, Miete, Leihe,
+         Installation, Wartung, Gebühr, Abonnement;
+       - Verzehr zu Hause vs. im Restaurant, Café, Imbiss oder in der Kantine;
+       - neu vs. gebraucht;
+       - Verwendungszweck oder Nutzer, wenn genannt (Kinder, Haustier,
+         Fahrzeug, Schule, Sport, Gesundheit).
+    5. Drop everything that does not change placement: brand, shop, quantity,
+       pack size, price, date, IBAN, reference numbers, promotional wording.
+
+    Rules:
+    - Output one short German noun phrase (about 2-12 words). No full
+      sentences, no explanations, no code numbers.
+    - Do not force a group word or a money-flow direction you are unsure of:
+      a wrong one pulls retrieval into the wrong Abteilung. When in doubt,
+      describe the item itself generically and leave it out.
+    - Do not add facts that are not in, or clearly implied by, the input.
+    - If the input is already a clean generic German description, return it
+      almost unchanged.
+    """
+
+    input_expense: str = dspy.InputField(
+        desc="A raw private-household income or expenditure item as it appears in the data, e.g. a receipt line, a Haushaltsbuch entry, a bank-statement line, or a short free-text description."
+    )
+    rephrased_query: str = dspy.OutputField(
+        desc="A short German noun phrase in the wording of an SEA 2021 Bezeichnung, keeping placement-relevant attributes (money-flow direction, form, good vs. service, at home vs. away, purpose). No codes."
+    )
+
+
+# ---------------------------------------------------------------------------
+# Rewrite step: QueryRephraser
+# ---------------------------------------------------------------------------
+
+
+class QueryRephraser(dspy.Module):
+    """
+    Rewrites a raw item into a retrieval query in the vocabulary of the
+    classification's labels. It does not classify.
+
+    Picks the rephrasing signature for `classification_name` from
+    `self.mapping` and runs it on its own `lm`, which can be the same LM as
+    the Read step or a smaller, cheaper one.
+
+    Called as `rephraser(query=...)`; returns a `dspy.Prediction` with
+    `rephrased_query`. The input field name of the signature
+    (`input_expense` / `input_activity`) is handled internally, so callers
+    never need to know it.
+    """
+
+    def __init__(
         self,
-        query:str,
-        k:int,
-        where:dict|None=None
-    ):
-        result = self.store.collection.query(
-            query_texts=[query],
-            n_results=k,
-            where=where
+        lm: dspy.LM,
+        classification_name: str,
+    ) -> None:
+        super().__init__()
+        self.lm = lm
+        self.mapping = {
+            "COICOP_2018": CoicopRephrasingSignature,
+            "ICATUS_2016": IcatusRephrasingSignature,
+            "SEA_2021": SeaRephrasingSignature,
+            "SEA_2021_REPHRASED": SeaRephrasingSignature,
+        }
+        assert classification_name in self.mapping, (
+            f"No rephrasing signature for '{classification_name}'"
         )
-        if result is not None:
-            output = result["metadatas"][0] # type: ignore
-            docs = result["documents"][0] # type: ignore
-            for o, d in zip(output, docs):
-                o["description"] = d # type: ignore
-            return output
-        else:
-            raise Exception("Error occured while searching for code")
-    
-    def forward(self, query: str, k: int, where: dict|None = None):
-        retrieved_context = self.search_category(query, k, where=where)
-        retrieved_context_str = json.dumps(retrieved_context, indent=4, ensure_ascii=False)
-        return self.CoT(
-            input_expense=query,
-            retrieved_candidates=retrieved_context_str,
-        )
-        
-        
-        
-            
-        
 
+        self.classification_name = classification_name
+        self.signature = self.mapping[classification_name]
+        self.input_field = next(iter(self.signature.input_fields))
+        self.rephrase = dspy.Predict(self.signature)
+
+    def forward(self, query: str) -> dspy.Prediction:
+        with dspy.context(lm=self.lm):
+            prediction = self.rephrase(**{self.input_field: query})
+        rephrased = (prediction.rephrased_query or "").strip()
+        print(rephrased)
+        return dspy.Prediction(rephrased_query=rephrased or query)
+
+
+# ---------------------------------------------------------------------------
+# Rewrite-Retrieve-Read pipeline
+# ---------------------------------------------------------------------------
+
+
+class RRR_RAGChainOfThought(RAGChainOfThought):
+    """
+    Rewrite-Retrieve-Read on top of `RAGChainOfThought`.
+
+    1. Rewrite - `self.rephrasing_module` (a `QueryRephraser`) turns the raw
+       item into a query in the vocabulary of the classification's labels.
+    2. Retrieve - the rephrased query is embedded and the k nearest codes are
+       pulled from the vector store (optionally merged with the hits for the
+       original query, see `retrieve_with_original`).
+    3. Read - the parent's ChainOfThought classifies the ORIGINAL item over
+       the retrieved candidates. The rewrite only steers retrieval; it never
+       replaces the item the model has to classify, so detail the rephraser
+       dropped is not lost.
+
+    Parameters (on top of `RAGChainOfThought`):
+        rephraser_lm (dspy.LM | None) - LM for the rewrite step; None reuses
+            the Read step's `self.lm`.
+        retrieve_with_original (bool) - also retrieve with the raw query and
+            interleave both result lists (rephrased first, deduplicated by
+            code), capped at k. Guards against a bad rewrite while keeping
+            the context the same size as the baseline.
+    """
+
+    def __init__(
+        self,
+        *args,
+        **kwargs,
+    ) -> None:
+        super().__init__(*args, **kwargs)
+
+        self.rephrasing_module = QueryRephraser(
+            self.lm,
+            classification_name=self.classification_name,
+        )
+
+    
+    def forward(self, query: str, k: int, where: dict | None = None):
+        rephrased_query = self.rephrasing_module(query=query).rephrased_query
+        retrieved_context = self.search_category(rephrased_query, k, where=where)
+        retrieved_context_str = json.dumps(
+            retrieved_context, indent=4, ensure_ascii=False
+        )
+        prediction = self.CoT(**{
+            self.query_field: query,
+            self.context_field: retrieved_context_str,
+        })
+        # Keep the rewritten query for logging and info later
+        prediction.rephrased_query = rephrased_query
+        return prediction

@@ -11,7 +11,7 @@ class BaseRAGCoT(dspy.Module):
         self,
         embedding_model_name:str,
         collection_name:str,
-        classification_name:Literal["COICOP_2018", "ICATUS_2016"],
+        classification_name,
         api_key:str,
         model_name:str,
         signature:dspy.Signature,
