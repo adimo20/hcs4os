@@ -5,7 +5,7 @@
 navigable Python object, and puts LLM agents on top of it that classify a free-text
 item against the real classification instead of recalling a code from memory.
 
-Three classifier styles solve that same task from different directions:
+Four classifier styles solve that same task from different directions:
 
 - **`HierarchicalNavigationAgent`** (`dspy.ReAct`) walks the tree top-down with tools
   — roots, children, parent, code — one level at a time.
@@ -14,12 +14,15 @@ Three classifier styles solve that same task from different directions:
   and reason its way to one of them, re-querying when the notes point elsewhere.
 - **`RAGChainOfThought`** (`dspy.ChainOfThought`) does one retrieval and one reasoning
   pass over the candidates — no loop, no tool calls, the cheap baseline.
+- **`RRR_RAGChainOfThought`** adds a Rewrite step in front of that baseline: a small
+  model first restates the raw item in the vocabulary of the classification's labels,
+  and only that rewritten query is embedded.
 
-All three end at the same `ClassificationSystem` and emit the same output fields
+All four end at the same `ClassificationSystem` and emit the same output fields
 (`<system>_code` + `explaination`), which is what makes them comparable on the same
-data. Each also has a `Base…` variant that takes its prompts and signature as
-constructor arguments instead of reading them from a registry. The base variants integrate
-all possible classification systems, as well with custom classification systems
+data. Each is a thin subclass of a `Base…` class that takes its prompts and signature
+as constructor arguments; the subclass only supplies a registered configuration. The
+base variants work with any classification in `mapping.py`, and with custom ones.
 
 Alongside them, **`ClassificationsSystemAugmenter`** works on the classification
 itself rather than on items: it writes the missing prose descriptions for parent
@@ -150,6 +153,28 @@ rather than something the model decides, and `where` is passed through to chroma
 metadata filter — `{"level": 5}` is the useful case, since it forces candidates to the
 depth actually being predicted.
 
+### Classifying with a rewrite step (RRR)
+
+```python
+from hcs4os.rag.RAG import RRR_RAGChainOfThought
+
+rrr = RRR_RAGChainOfThought(          # same arguments as RAGChainOfThought
+    classification_name="COICOP_2018",
+    embedding_model_name="sentence-transformers/all-MiniLM-L12-v2",
+    collection_name="coicop_full",
+    api_key=os.getenv("MISTRAL_API_KEY"),
+    model_name="mistral/mistral-small-latest",
+)
+
+result = rrr(query="BASMATI REIS 1KG BTL", k=10)
+print(result.rephrased_query)   # 'rice, milled' — what was actually embedded
+print(result.coicop_code, result.explaination)
+```
+
+Drop-in replacement for `RAGChainOfThought`: identical constructor, identical
+`forward(query, k, where=None)`, one extra field on the prediction
+(`rephrased_query`) recording what the retrieval actually searched for.
+
 The model string of every classifier is passed straight to `dspy.LM`, i.e. any
 LiteLLM-supported provider works (`openai/…`, `anthropic/…`, `ollama_chat/…`); pass
 `api_base=` for self-hosted endpoints.
@@ -171,9 +196,9 @@ The library is four layers, each one replaceable on its own:
             │        │                                              (how codes nest)
             │        └── taxonomy_refinement/ ── writes back a richer dataset
             ▼
-  agents/  ReAct over tools  ─┐
-  rag/     retrieve + CoT     ├──►  code + explanation              reasoning layer
-                              ┘
+  agents/  ReAct over tools        ─┐
+  rag/     retrieve + CoT           ├──►  code + explanation        reasoning layer
+  rag/     rewrite + retrieve + CoT ┘
 ```
 
 Wiring between the layers happens in one table: `classification_system/mapping.py`.
@@ -296,19 +321,38 @@ Currently mapped keys:
 
 ### 5. ReAct agents ([agents/](hcs4os/agents))
 
-Both agents follow the same layout: a thin `dspy.Module` next to a `registry.py`
-holding all the prose (system prompts, signatures, tool descriptions) keyed by
-classification name. Prompts live in the registry, not in the agent, so retargeting
-an agent is an edit to data rather than to control flow. On construction each agent
-looks its `classification_name` up in its own `registry.py`, assigns the matching
-`dspy.Signature`, sets that signature's `__doc__` to the `system_prompt`, and builds
-a `dspy.ReAct` whose tool descriptions come from the same registry entry.
+Both agents follow the same layout: a `Base…` class holding all the machinery, and a
+thin subclass that supplies nothing but a configuration. The subclass is the whole
+file:
+
+```python
+class RAGAgent(BaseRAGAgent):
+    CONFIGS = registry                     # from ./registry.py
+
+    def __init__(self, classification_name, **kwargs):
+        if classification_name not in self.CONFIGS:
+            raise ValueError(f"Unknown classification system: {classification_name}")
+        super().__init__(classification_name=classification_name,
+                         **self.CONFIGS[classification_name], **kwargs)
+```
+
+So the registry entry is literally a bundle of keyword arguments for the base
+constructor, and its keys are the base's parameter names — `signature` plus
+`get_root_categories_doc` / `get_children_doc` / `get_code_doc` / `get_parent_doc`
+for the navigation agent, `signature` plus `search_category_tool_doc` for the RAG one.
+Rename a base parameter and the registry must follow.
+
+There is no longer a `system_prompt` key, and nothing mutates `signature.__doc__` at
+construction: **each system prompt lives in its `dspy.Signature` docstring**, where
+dspy reads it anyway. Prompt and I/O contract are now edited in one place.
 
 `classification_name` is passed straight through to `get_classification_system`, so
 it is the dataset key `mapping.py` uses, and both registries are keyed on those same
 strings — `HierarchicalNavigation/registry.py` on `COICOP_2018`, `ICATUS_2016`,
 `NAF_rev2`, `SEA_2021` and `SEA_2021_REPHRASED`, `RAG/registry.py` on the same set
-minus `NAF_rev2`.
+minus `NAF_rev2`. A key that is not in the registry raises
+`ValueError: Unknown classification system: …` before any model or embedding work
+starts.
 
 **[HierarchicalNavigationAgent](hcs4os/agents/HierarchicalNavigation/HierarchicalNavigationAgent.py)** —
 `dspy.ReAct` over four thin tool methods that forward to the classification system
@@ -334,7 +378,7 @@ did not come from a tool.
 - **Retrieval and selection.** The agent is a `dspy.ReAct` over one tool,
   `search_category(query, k)`, which embeds the query, pulls the `k` nearest codes,
   and returns each one's flattened metadata with its `description` joined back on.
-  The `system_prompt` drives the loop: search with a focused query, read the
+  The signature docstring drives the loop: search with a focused query, read the
   includes/excludes notes on the candidates, refine the query and search again when
   the notes point elsewhere, and never emit a code the tool did not return.
 
@@ -351,13 +395,13 @@ runs at `create_new_collection=False` or a fresh `collection_name`.
 #### The `Base…` variants
 
 [BaseAgent.py](hcs4os/agents/HierarchicalNavigation/BaseAgent.py) and
-[BaseAgentRAG.py](hcs4os/agents/RAG/BaseAgentRAG.py) hold the same machinery but take
-the prose as constructor arguments — `signature`, plus `get_root_categories_doc` /
-`get_children_doc` / `get_code_doc` / `get_parent_doc` for the navigation agent, or
-`search_category_tool_doc` for the RAG one — instead of looking them up in a registry.
+[BaseAgentRAG.py](hcs4os/agents/RAG/BaseAgentRAG.py) hold the machinery: the LM, the
+classification system, the tool methods, the indexing, and the `dspy.ReAct`. Every
+registered agent is one of these with a `CONFIGS` lookup in front, so instantiating a
+base class directly is the same code path, just with the prose passed in by hand.
 
 Use them to run a classification the registry does not cover, or to A/B a prompt
-without editing shared files; the registry classes stay the right home for a prompt
+without editing shared files; the registry subclasses stay the right home for a prompt
 you intend to keep. `classification_name` still goes to `get_classification_system`,
 so the classification itself must be in `mapping.py` either way.
 
@@ -379,9 +423,7 @@ The differences that matter in practice:
   experimental parameter rather than a model decision.
 - `where` is forwarded to chroma as a metadata filter (`{"level": 5}`).
 - The candidates are rendered as indented JSON into a `retrieved_candidates` input
-  field, and the whole reasoning protocol lives in the signature's own docstring —
-  there is no separate prompt registry, just a `mapping` dict from dataset key to
-  signature class (`COICOP_2018`, `ICATUS_2016`, `SEA_2021`, `SEA_2021_REPHRASED`).
+  field, and the whole reasoning protocol lives in the signature's own docstring.
 - One retrieval, one answer: it cannot recover from a bad shortlist the way the ReAct
   agent can by re-querying. That is the trade for costing a single model call.
 
@@ -389,6 +431,95 @@ The differences that matter in practice:
 `signature` plus `query_field` and `context_field` naming which of its input fields
 receive the item and the retrieved candidates, and asserts at construction that both
 names really exist on the signature.
+
+`RAGChainOfThought` is the registered subclass, and because the base needs the field
+names too, its `CONFIGS` carries three things per classification rather than one:
+
+```python
+CONFIGS = {
+    "COICOP_2018": {"signature":     CoicopRAGChainOfThoughtSignature,
+                    "query_field":   "input_expense",
+                    "context_field": "retrieved_candidates"},
+    ...   # ICATUS_2016, SEA_2021, SEA_2021_REPHRASED
+}
+```
+
+#### Rewrite-Retrieve-Read
+
+`RRR_RAGChainOfThought` subclasses `RAGChainOfThought` and puts a rewrite step in
+front of retrieval. The motivation is a property of the index: only each code's short
+`description` label is embedded — `"Eggplants (aubergines), fresh or chilled"`,
+`"Steinobstkonserven, z.B. Pflaumen-, … Pfirsichkonserven"`, `"Eating meals/snack"`.
+Real items do not look like that. Receipt shorthand, brand names, bank-statement text
+and diary abbreviations sit far from those labels in embedding space, so retrieval
+misses before the reasoning model ever gets a chance.
+
+Measured on the COICOP collection, the raw receipt line `"BASMATI REIS 1KG BTL"`
+retrieves `01.1.1.1.5` Millet, `12.2.9.1` Remittances fees and `01.1.1.3` Bread —
+rice is nowhere in the top 3. Rewritten to `"rice, milled"`, the same store returns
+`01.1.1.1.2` Rice first.
+
+The three steps:
+
+1. **Rewrite** — `self.rephrasing_module`, a `QueryRephraser`, restates the item in
+   the vocabulary of the labels. It explicitly does **not** classify: the signatures
+   forbid emitting a code or choosing between categories.
+2. **Retrieve** — the rewritten query is embedded and the `k` nearest codes are pulled
+   from the store.
+3. **Read** — the inherited `ChainOfThought` classifies the **original** item over
+   those candidates. The rewrite only steers retrieval; it never replaces what the
+   model has to classify, so detail the rephraser dropped is not lost from the
+   decision.
+
+`forward(query, k, where=None)` matches the parent exactly, and the prediction carries
+one extra field, `rephrased_query`, so you can see and log what was actually searched
+for. That makes `RRR_RAGChainOfThought` a drop-in A/B against `RAGChainOfThought` on
+the same collection.
+
+**`QueryRephraser`** is a standalone `dspy.Module` and usable on its own. It picks a
+signature from its own `mapping` (`COICOP_2018`, `ICATUS_2016`, `SEA_2021`,
+`SEA_2021_REPHRASED`), runs `dspy.Predict`, and hides which input field that signature
+uses — callers always pass `query=`:
+
+```python
+from hcs4os.rag.RAG import QueryRephraser
+
+rephraser = QueryRephraser(lm=cheap_lm, classification_name="SEA_2021")
+rephraser(query="LASTSCHRIFT ALLIANZ KFZ").rephrased_query
+# intended shape of the output: 'Beitrag Kfz-Haftpflichtversicherung'
+```
+
+It runs inside `with dspy.context(lm=self.lm)`, so it uses the LM handed to its
+constructor regardless of what is globally configured. If the model returns an empty
+rewrite, the raw query is used instead.
+
+The rephrasing prompts are the most classification-specific prose in the library,
+because what has to survive the rewrite differs per system. COICOP and SEA keep
+placement-driving attributes — state or form (fresh, frozen, canned, ready-made), good
+vs. service, consumed at home vs. served, new vs. second-hand — and drop brand, shop,
+quantity and price. SEA additionally has to pin down the direction of the money flow,
+since an insurance premium (Abteilung 16) and a household appliance (05) are different
+parts of the system, and it answers in German to match the German labels. ICATUS
+instead has to surface the economic nature of the activity and who it was done for,
+because its titles are organised by that rather than by what the person did. All three
+end with the same guard: do not force a category term you are unsure of, because a
+wrong one pulls retrieval into the wrong branch.
+
+Three things to know before building on it:
+
+- The class docstring lists `rephraser_lm` and `retrieve_with_original` parameters.
+  **Neither is implemented.** `__init__` only forwards `*args, **kwargs` to
+  `RAGChainOfThought`, so passing `rephraser_lm=` raises
+  `TypeError: BaseRAGCoT.__init__() got an unexpected keyword argument`, and
+  `forward` retrieves with the rewritten query alone — there is no merge with the raw
+  query's hits. To use a cheaper rewrite model today, assign
+  `rrr.rephrasing_module.lm = my_lm` after construction.
+- Retrieval depends entirely on one rewrite. A bad rewrite is unrecoverable, where
+  plain `RAGChainOfThought` at least embeds the item's own words. This is the risk
+  `retrieve_with_original` was meant to hedge.
+- `QueryRephraser.forward` ends in a bare `print(rephrased)`, so every call writes to
+  stdout. Noisy in batch evaluation; `rephrased_query` on the prediction carries the
+  same value.
 
 ### 7. Taxonomy refinement ([taxonomy_refinement/](hcs4os/taxonomy_refinement))
 
@@ -484,48 +615,59 @@ system), skip the loader entirely: dump a JSON list of `Code`-shaped dicts into
 
 ### D. Change what the agent reads and says
 
-Everything the model reads lives in the agent's `registry.py`, keyed by
-classification name. In increasing order of intrusiveness:
+Prompts live in signature docstrings, tool wording in the agent's `registry.py`. In
+increasing order of intrusiveness:
 
-1. **Tool wording** (navigation agent) — edit the `get_children` / `get_code` /
-   `get_parent` / `get_root_categories` entries in
+1. **Tool wording** (navigation agent) — edit the `get_children_doc` / `get_code_doc`
+   / `get_parent_doc` / `get_root_categories_doc` entries in
    [HierarchicalNavigation/registry.py](hcs4os/agents/HierarchicalNavigation/registry.py).
-   These are what the model sees when deciding which tool to call.
-2. **Search behaviour** — edit the `system_prompt` entry (descent protocol,
-   tie-breaking rules, residual-code policy, target level).
+   These are what the model sees when deciding which tool to call. The RAG agent has
+   the single `search_category_tool_doc`.
+2. **Search behaviour and the I/O contract** — edit the `dspy.Signature`. Its
+   docstring is the system prompt (descent protocol, tie-breaking rules, residual-code
+   policy, target level); its fields are the contract. They are deliberately in one
+   file, since renaming an output field changes what the prompt can refer to. Field
+   _names_ are part of the prompt, so keep them descriptive.
 3. **Retrieval behaviour** — in `RAGAgent` the shortlist length `k` is chosen by the
-   model per call and steered by the `system_prompt` (edit the "use a k large enough"
-   guidance there); in `RAGChainOfThought` you pass `k` and `where` yourself.
-   `codes_to_include` (on `BaseRAGAgent`) narrows what is indexed at all.
-   `embedding_model_name` is usually the biggest single lever on retrieval quality — a
-   generic multilingual MiniLM is a weak retriever for German product text, and a
-   domain- or language-matched model is worth more than any prompt edit. Changing it
-   means indexing into a fresh `collection_name`, since a collection is only
-   meaningful with the model that built it.
-4. **Input/output contract** — edit the `dspy.Signature` to rename fields, or add
-   outputs (a confidence score, the runner-up code). Field _names_ are part of the
-   prompt, so they carry meaning: keep them descriptive. For `RAGChainOfThought` the
-   reasoning protocol lives in the signature docstring, so prompt and contract are
-   edited in the same place.
+   model per call and steered by the signature docstring (edit the "use a k large
+   enough" guidance there); in `RAGChainOfThought` you pass `k` and `where` yourself.
+   `codes_to_include` (on `BaseRAGAgent` / `BaseRAGCoT`) narrows what is indexed at
+   all. `embedding_model_name` is usually the biggest single lever on retrieval
+   quality — a generic multilingual MiniLM is a weak retriever for German product
+   text, and a domain- or language-matched model is worth more than any prompt edit.
+   Changing it means indexing into a fresh `collection_name`, since a collection is
+   only meaningful with the model that built it.
+4. **The query itself** — switch `RAGChainOfThought` for `RRR_RAGChainOfThought`, or
+   edit the rephrasing signature in [rag/RAG.py](hcs4os/rag/RAG.py). When retrieval
+   misses because the item's wording is nothing like the labels, this beats every
+   prompt edit above it; `rephrased_query` on the prediction tells you whether the
+   rewrite is helping.
 
 ### E. Add an agent for another classification
 
-Both agents are already generic over the classification — the work is a registry
-entry, not new control flow. Add an entry to the relevant agent's `registry.py`,
-keyed by the dataset name that `mapping.py` uses (e.g. `"COICOP_2018"`, the same
-string you pass as `classification_name`):
+Every classifier is already generic over the classification — the work is a
+configuration entry, not new control flow. Keyed by the dataset name that `mapping.py`
+uses (e.g. `"COICOP_2018"`, the same string you pass as `classification_name`), add:
 
-- a `dspy.Signature` with input/output fields named for the new domain,
-- a `system_prompt` describing _that_ tree (its level names, its code shape, an
-  example path), and
-- the tool descriptions for that agent — the four navigation tools
-  (`get_root_categories` / `get_children` / `get_code` / `get_parent`) for the
-  hierarchical agent, or the single `search_category` description for the RAG agent.
+- a `dspy.Signature` whose **docstring** describes _that_ tree (its level names, its
+  code shape, an example path, the target level) and whose fields are named for the
+  new domain, then
+- an entry wherever that classifier reads its config, with keys matching the base
+  constructor's parameters:
 
-The tool methods and retrieval code need no changes — that is the point of the
-uniform `ClassificationSystem` interface. For `RAGChainOfThought` the equivalent is
-one entry in the `mapping` dict in [rag/RAG.py](hcs4os/rag/RAG.py), pointing at a
-signature whose docstring carries the protocol.
+| classifier                                  | config lives in                           | keys                                                                                     |
+| ------------------------------------------- | ------------------------------------------ | ---------------------------------------------------------------------------------------- |
+| `HierarchicalNavigationAgent`               | `HierarchicalNavigation/registry.py`       | `signature`, `get_root_categories_doc`, `get_children_doc`, `get_code_doc`, `get_parent_doc` |
+| `RAGAgent`                                  | `RAG/registry.py`                          | `signature`, `search_category_tool_doc`                                                  |
+| `RAGChainOfThought` / `RRR_RAGChainOfThought` | `RAGChainOfThought.CONFIGS` in `rag/RAG.py` | `signature`, `query_field`, `context_field`                                              |
+
+For `RRR_RAGChainOfThought` also add a rephrasing signature to `QueryRephraser`'s
+`mapping` in the same file — without one, construction fails the assertion
+`No rephrasing signature for '<key>'`.
+
+The tool methods, indexing and retrieval code need no changes — that is the point of
+the uniform `ClassificationSystem` interface. Widen the `Literal` type hint on the
+subclass's `classification_name` too; it is not enforced, but it is what readers trust.
 
 ### F. Try a prompt without touching the registry
 
