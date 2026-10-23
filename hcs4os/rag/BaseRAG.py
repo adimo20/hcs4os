@@ -40,7 +40,8 @@ class BaseRAGCoT(dspy.Module):
         self.lm = dspy.LM(
             api_key=api_key,
             api_base=api_base,
-            model=model_name
+            model=model_name,
+            track_usage=True
         )
         dspy.configure(lm=self.lm)
 
