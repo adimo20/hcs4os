@@ -40,10 +40,12 @@ class BaseRAGCoT(dspy.Module):
         self.lm = dspy.LM(
             api_key=api_key,
             api_base=api_base,
-            model=model_name,
+            model=model_name
+        )
+        dspy.configure(
+            lm=self.lm,
             track_usage=True
         )
-        dspy.configure(lm=self.lm)
 
         print("Loading classification system")
         self.classification_name = classification_name
