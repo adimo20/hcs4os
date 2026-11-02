@@ -1,5 +1,5 @@
 import dspy
-from ..agents.RAG.vector_database import VectorStore
+from .._vector_database.vector_store import VectorStore, EFType
 from ..classification_system.registry import get_classification_system
 from typing import Literal
 import json
@@ -9,18 +9,16 @@ class BaseRAGCoT(dspy.Module):
     
     def __init__(
         self,
-        embedding_model_name:str,
-        collection_name:str,
         classification_name,
         api_key:str,
         model_name:str,
         signature:dspy.Signature,
         query_field:str,
         context_field:str,
+        store: VectorStore,        
         codes_to_include:list[str]|None=None,
         api_base:str|None=None,
-        chromadb_path:str="./data/chroma",
-        create_new_collection:bool=True,             
+        create_new_collection:bool=True                          
     )->None:
 
         assert api_key is not None
@@ -53,16 +51,13 @@ class BaseRAGCoT(dspy.Module):
             classification_name
         )
 
-        print("Creating VectorDB")
-        self.store = VectorStore(
-            collection_name=collection_name,
-            model_name=embedding_model_name,
-            chromadb_path=chromadb_path,
-        )
+        print("Creating VectorDB")        
+        self.store = store
+        
         if create_new_collection:
             print("Indexing classification system")
             self.index(self.codes_to_include)
-
+        print("Create vector store")
         
         self.CoT = dspy.ChainOfThought(
             signature=self.signature # type: ignore 
