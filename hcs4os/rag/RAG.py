@@ -504,7 +504,7 @@ class RRR_RAGChainOfThought(RAGChainOfThought):
     
     def forward(self, query: str, k: int, where: dict | None = None):
         rephrased_query = self.rephrasing_module(query=query).rephrased_query
-        retrieved_context = self.search_category(rephrased_query, k, where=where)
+        retrieved_context = self.store.search_category(rephrased_query, k, where=where)
         retrieved_context_str = json.dumps(
             retrieved_context, indent=4, ensure_ascii=False
         )

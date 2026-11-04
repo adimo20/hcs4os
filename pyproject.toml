@@ -4,8 +4,9 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "hcs4os"
-version = "0.2.6"
+version = "0.2.7"
 requires-python = ">=3.11"
+license-files = ["LICENSE"]
 authors = [{ name = "Adrian Montag", email = "adrimontag@gmail.com" }]
 keywords = [
     "classification",
@@ -33,9 +34,11 @@ dependencies = [
     "openpyxl",
     "dspy",
     "chromadb",
-    "sentence-transformers"
+    "sentence-transformers",
+    "ollama",
 ]
-license-files = ["LICENSE"]
+[project.optional-dependencies]
+system_one = ["typesafe-sdk>=0.7"]
 
 [tool.setuptools.packages.find]
 where = ["."]
