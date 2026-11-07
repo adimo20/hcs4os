@@ -434,7 +434,8 @@ class QueryRephraser(dspy.Module):
     def __init__(
         self,
         lm: dspy.LM,
-        classification_name: str,
+        classification_name: str|None,
+        signature: dspy.Signature|None=None,
     ) -> None:
         super().__init__()
         self.lm = lm
@@ -444,12 +445,15 @@ class QueryRephraser(dspy.Module):
             "SEA_2021": SeaRephrasingSignature,
             "SEA_2021_REPHRASED": SeaRephrasingSignature,
         }
-        assert classification_name in self.mapping, (
+        assert classification_name in self.mapping or None, (
             f"No rephrasing signature for '{classification_name}'"
         )
 
         self.classification_name = classification_name
-        self.signature = self.mapping[classification_name]
+        self.signature = self.mapping.get(classification_name, signature)
+        assert self.signature is not None, (
+            f"Signature for rephrasing must be provided either by using the fields signature or use predifined signature specifying classification_name"
+        )
         self.input_field = next(iter(self.signature.input_fields))
         self.rephrase = dspy.Predict(self.signature)
 
@@ -491,15 +495,13 @@ class RRR_RAGChainOfThought(RAGChainOfThought):
 
     def __init__(
         self,
+        rephraser: QueryRephraser,
         *args,
         **kwargs,
     ) -> None:
         super().__init__(*args, **kwargs)
 
-        self.rephrasing_module = QueryRephraser(
-            self.lm,
-            classification_name=self.classification_name,
-        )
+        self.rephrasing_module = rephraser
 
     
     def forward(self, query: str, k: int, where: dict | None = None):
@@ -508,10 +510,11 @@ class RRR_RAGChainOfThought(RAGChainOfThought):
         retrieved_context_str = json.dumps(
             retrieved_context, indent=4, ensure_ascii=False
         )
-        prediction = self.CoT(**{
-            self.query_field: query,
-            self.context_field: retrieved_context_str,
-        })
+        with dspy.context(lm=self.lm, track_usage=True):
+            prediction = self.CoT(**{
+                self.query_field: query,
+                self.context_field: retrieved_context_str,
+            })
         # Keep the rewritten query for logging and info later
         prediction.rephrased_query = rephrased_query
         return prediction
