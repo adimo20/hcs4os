@@ -22,12 +22,16 @@ All four end at the same `ClassificationSystem` and emit the same output fields
 (`<system>_code` + `explaination`), which is what makes them comparable on the same
 data. Each is a thin subclass of a `Base…` class that takes its prompts and signature
 as constructor arguments; the subclass only supplies a registered configuration. The
-base variants work with any classification in `mapping.py`, and with custom ones.
+base variants work with any classification in `mapping.py`, and with custom ones. The
+three retrieval-based ones take a `VectorStore` you build yourself, so the embedding
+backend — a local `sentence-transformers` model, a self-hosted Ollama server, or
+OpenAI — is independent of the reasoning model and shared across classifiers.
 
-Alongside them, **`ClassificationsSystemAugmenter`** works on the classification
-itself rather than on items: it writes the missing prose descriptions for parent
-categories from their children, and the result is saved back into `_data/` as a new
-dataset.
+Two more pieces sit beside them, working on the classification rather than on items:
+**`ClassificationsSystemAugmenter`** writes the missing prose descriptions for parent
+categories from their children, saving the result back into `_data/` as a new dataset;
+**`KlassServerModule`** queries the Statistisches Bundesamt's live classification
+service over SOAP instead of a vendored snapshot.
 
 Two things follow from the design:
 
@@ -49,10 +53,17 @@ pip install git+https://github.com/adimo20/hcs4os.git
 ```
 
 Requires Python ≥ 3.11. Runtime dependencies: `pandas`, `openpyxl`, `dspy`,
-`chromadb` and `sentence-transformers` (the last two only matter for the
-retrieval-based classifiers). The classification source files ship inside the package
-(`hcs4os/_data/`), so no classification data is downloaded at runtime — the embedding
-model is pulled from Hugging Face on first use and cached.
+`chromadb`, `sentence-transformers` and `ollama` (the last three only matter for the
+retrieval-based classifiers). There is one optional extra:
+
+```bash
+pip install "hcs4os[system_one] @ git+https://github.com/adimo20/hcs4os.git"   # adds typesafe-sdk
+```
+
+The classification source files ship inside the package (`hcs4os/_data/`), so no
+classification data is downloaded at runtime. A local `sentence-transformers`
+embedding model is pulled from Hugging Face on first use and cached; the `openai` and
+`ollama` embedding backends call out over HTTP instead and download nothing.
 
 ---
 
@@ -93,12 +104,55 @@ agent = HierarchicalNavigationAgent(
     model_name="mistral/mistral-small-latest",
 )
 
-result = agent.agent(input_expense="Basmati rice 1kg bag")
+result = agent(input_expense="Basmati rice 1kg bag")
 print(result.coicop_code, result.explaination)
+print(result.get_lm_usage())          # token usage, tracked by default
 ```
 
-> Note: `HierarchicalNavigationAgent` subclasses `dspy.Module` but does not define
-> `forward()`, so call the inner `.agent` as shown rather than the module itself.
+Every classifier now defines `forward()`, so call the module directly. Input field
+names are checked up front — a wrong or missing one raises
+`ValueError: Missing input fields: ['input_expense']` rather than failing inside dspy.
+
+### Building a vector store
+
+Every retrieval-based classifier takes a `VectorStore` you build yourself, so the
+embedding backend is a decision you make once and can reuse across classifiers:
+
+```python
+from hcs4os._vector_database.vector_store import VectorStore
+
+# local model, downloaded and run in-process
+store = VectorStore(
+    collection_name="coicop_full",
+    chromadb_path="./data/chroma",            # where the persistent collection lives
+    embedding_function_type="sentence_transformers",
+    model_name="sentence-transformers/all-MiniLM-L12-v2",
+)
+
+# or a self-hosted Ollama server
+store = VectorStore(
+    collection_name="sea_2021",
+    chromadb_path="./data/chroma",
+    embedding_function_type="ollama",
+    url="http://localhost:11434",
+    model_name="mxbai-embed-large",
+)
+
+# or OpenAI
+store = VectorStore(
+    collection_name="coicop_openai",
+    chromadb_path="./data/chroma",
+    embedding_function_type="openai",
+    api_key=os.getenv("OPENAI_API_KEY"),
+    model_name="text-embedding-3-small",
+    embedding_batch_size=64,
+)
+```
+
+Everything after `embedding_function_type` is `**embedding_kwargs`, forwarded
+untouched to the matching chroma embedding function — so whatever that backend accepts
+works here. `embedding_batch_size` (default `16`) controls how many documents go per
+`collection.add` call; raise it for a local model, keep it low for a remote API.
 
 ### Classifying by retrieval
 
@@ -108,25 +162,19 @@ from hcs4os.agents.RAG.RAGAgent import RAGAgent
 
 agent = RAGAgent(
     classification_name="COICOP_2018",
-    embedding_model_name="sentence-transformers/all-MiniLM-L12-v2",
-    collection_name="coicop_full",
     api_key=os.getenv("MISTRAL_API_KEY"),
     model_name="mistral/mistral-small-latest",
-    chromadb_path="./data/chroma",         # where the persistent collection lives
+    store=store,
     create_new_collection=True,            # index the classification on construction
 )
 
-result = agent.agent(input_expense="Basmati rice 1kg bag")   # input_activity for ICATUS
-print(result.coicop_code, result.explaination)               # sea_code for SEA
+result = agent(input_expense="Basmati rice 1kg bag")   # input_activity for ICATUS
+print(result.coicop_code, result.explaination)         # sea_code for SEA
 ```
 
-> Note: like `HierarchicalNavigationAgent`, `RAGAgent` subclasses `dspy.Module` but
-> does not define `forward()`, so call the inner `.agent` as shown rather than the
-> module itself.
-
-The first call embeds the classification and persists it under `chromadb_path`
-(`./data/chroma` by default); later runs reuse the collection (pass
-`create_new_collection=False` to skip re-indexing).
+The first run embeds the classification into the store and persists it under
+`chromadb_path`; later runs reuse the collection — pass
+`create_new_collection=False` to skip re-indexing.
 
 ### Classifying by retrieval, without the loop
 
@@ -135,10 +183,9 @@ from hcs4os.rag.RAG import RAGChainOfThought
 
 rag = RAGChainOfThought(
     classification_name="SEA_2021",
-    embedding_model_name="deutsche-telekom/gbert-large-paraphrase-cosine",
-    collection_name="sea_2021",
     api_key=os.getenv("MISTRAL_API_KEY"),
     model_name="mistral/mistral-small-latest",
+    store=store,
 )
 
 result = rag(query="frisches Brot vom Bäcker", k=10)
@@ -148,22 +195,26 @@ print(result.sea_code, result.explaination)
 result = rag(query="Beitrag zur Krankenversicherung", k=10, where={"level": 5})
 ```
 
-This one _does_ define `forward()`, so it is called directly. `k` is an argument
-rather than something the model decides, and `where` is passed through to chroma as a
-metadata filter — `{"level": 5}` is the useful case, since it forces candidates to the
-depth actually being predicted.
+`k` is an argument rather than something the model decides, and `where` is passed
+through to chroma as a metadata filter — `{"level": 5}` is the useful case, since it
+forces candidates to the depth actually being predicted.
 
 ### Classifying with a rewrite step (RRR)
 
 ```python
-from hcs4os.rag.RAG import RRR_RAGChainOfThought
+import dspy
+from hcs4os.rag.RAG import RRR_RAGChainOfThought, QueryRephraser
 
-rrr = RRR_RAGChainOfThought(          # same arguments as RAGChainOfThought
+rrr = RRR_RAGChainOfThought(
+    # the rewrite step is injected, so it can run on a smaller, cheaper model
+    rephraser=QueryRephraser(
+        lm=dspy.LM(model="mistral/mistral-small-latest", api_key=os.getenv("MISTRAL_API_KEY")),
+        classification_name="COICOP_2018",
+    ),
     classification_name="COICOP_2018",
-    embedding_model_name="sentence-transformers/all-MiniLM-L12-v2",
-    collection_name="coicop_full",
     api_key=os.getenv("MISTRAL_API_KEY"),
-    model_name="mistral/mistral-small-latest",
+    model_name="mistral/mistral-large-latest",
+    store=store,
 )
 
 result = rrr(query="BASMATI REIS 1KG BTL", k=10)
@@ -171,19 +222,26 @@ print(result.rephrased_query)   # 'rice, milled' — what was actually embedded
 print(result.coicop_code, result.explaination)
 ```
 
-Drop-in replacement for `RAGChainOfThought`: identical constructor, identical
+Otherwise a drop-in replacement for `RAGChainOfThought`: identical
 `forward(query, k, where=None)`, one extra field on the prediction
 (`rephrased_query`) recording what the retrieval actually searched for.
 
 The model string of every classifier is passed straight to `dspy.LM`, i.e. any
 LiteLLM-supported provider works (`openai/…`, `anthropic/…`, `ollama_chat/…`); pass
-`api_base=` for self-hosted endpoints.
+`api_base=` for self-hosted endpoints. The reasoning LM and the embedding backend are
+chosen independently — a local MiniLM store with a hosted reasoning model, or an
+OpenAI store with a local Ollama reasoner, are both fine.
+
+Usage tracking is on for every classifier: `prediction.get_lm_usage()` returns the
+per-model token counts for that call. Note that `forward()` pins the classifier's own
+`self.lm` through `dspy.context`, so a global `dspy.configure(lm=…)` at call time is
+ignored — to swap the model after construction, set the `.lm` attribute.
 
 ---
 
 ## How the components work
 
-The library is four layers, each one replaceable on its own:
+The library is five layers, each one replaceable on its own:
 
 ```
   _data/*.xml|xlsx|csv|json          raw published documentation
@@ -196,12 +254,17 @@ The library is four layers, each one replaceable on its own:
             │        │                                              (how codes nest)
             │        └── taxonomy_refinement/ ── writes back a richer dataset
             ▼
+  _vector_database/ ── index() / search_category() ──► candidates   retrieval layer
+            │                                          (how codes are found)
+            ▼
   agents/  ReAct over tools        ─┐
   rag/     retrieve + CoT           ├──►  code + explanation        reasoning layer
   rag/     rewrite + retrieve + CoT ┘
 ```
 
 Wiring between the layers happens in one table: `classification_system/mapping.py`.
+The retrieval layer is skipped entirely by the hierarchy-navigating agent, which
+reaches the classification system directly through its four tools.
 
 ### 1. `Code` — the common currency ([Code.py](hcs4os/_shared/Code.py))
 
@@ -319,7 +382,54 @@ Currently mapped keys:
 `NAF_rev2`, `ICATUS_2016`, `SEA_2021`, `SEA_2021_REPHRASED`, `COICOP_2018`,
 `WZ_2008`, `KLDB_2010`, `KLDB_2010_REPHRASED`, `EAV`, `VUL`, `NST`, `GP`
 
-### 5. ReAct agents ([agents/](hcs4os/agents))
+### 5. The vector store ([\_vector_database/](hcs4os/_vector_database))
+
+[vector_store.py](hcs4os/_vector_database/vector_store.py) owns everything between the
+classification and the retrieval-based classifiers. It used to live inside
+`agents/RAG/`; pulling it out made it shareable by `agents/RAG/` and `rag/` alike, and
+turned the embedding backend into a choice rather than a hard-coded import.
+
+**Pluggable embedding backends.** `get_ef()` is a small factory over three chroma
+embedding functions, selected by `embedding_function_type` (`EFType`):
+
+| type                   | runs                        | typical kwargs                                        |
+| ---------------------- | --------------------------- | ----------------------------------------------------- |
+| `sentence_transformers` | in-process, local model     | `model_name`, `device`, `normalize_embeddings`         |
+| `ollama`               | HTTP, self-hosted           | `url`, `model_name`, `timeout`                         |
+| `openai`               | HTTP, hosted API            | `api_key`, `model_name`, `api_base`, `dimensions`      |
+
+Everything beyond `embedding_function_type` is collected as `**embedding_kwargs` and
+handed straight to that function, so the store never has to know what any backend
+accepts. An unknown type fails fast with
+`ValueError: Unknown embedding function: 'cohere'`. The collection itself is always a
+persistent chroma collection in cosine space.
+
+**`store.index(codes_to_include, classification_system)`** fills it. Every `Code` is
+embedded by its **`description` only**; the rest of the record goes into the chroma
+metadata under the id `id_<code>` — `code`, `level` and `detailled_description` as
+they are, and the nested `details` dict JSON-dumped into one string, because chroma
+accepts only flat scalars. So the embedding sees the short label alone, while the long
+includes/excludes notes ride along and reach the model with the candidate.
+`codes_to_include=None` indexes everything; a list of code strings narrows it.
+
+**`store.search_category(query, k, where=None)`** embeds the query, pulls the `k`
+nearest codes, and joins each one's `description` back onto its metadata.
+`where` is a chroma metadata filter over the flat fields — `{"level": 5}` being the
+one that matters, since it confines candidates to the depth being predicted. The
+JSON-dumped `details` cannot be filtered on, only read.
+
+One store, one embedding model, one collection: a collection is only meaningful
+together with the model that built it, so changing `embedding_function_type` or
+`model_name` means a fresh `collection_name`.
+
+> ⚠️ `hcs4os/_vector_database/` has no `__init__.py`, so `find_packages` skips it and
+> a built distribution ships without `hcs4os._vector_database`. Since
+> `BaseAgentRAG.py` imports from it, `RAGAgent` is then unimportable
+> (`ModuleNotFoundError: No module named 'hcs4os._vector_database'`) even though
+> `import hcs4os` succeeds. Source checkouts are fine. Adding an empty
+> `__init__.py` fixes it — the same gap that `hcs4os/agents/` had.
+
+### 6. ReAct agents ([agents/](hcs4os/agents))
 
 Both agents follow the same layout: a `Base…` class holding all the machinery, and a
 thin subclass that supplies nothing but a configuration. The subclass is the whole
@@ -361,44 +471,28 @@ start at the roots, compare every child, _follow the `excludes` pointers instead
 forcing a fit_, verify the leaf, backtrack if excluded, and never produce a code that
 did not come from a tool.
 
-**[RAGAgent](hcs4os/agents/RAG/RAGAgent.py)** — retrieve, then choose. Three parts:
+**[RAGAgent](hcs4os/agents/RAG/RAGAgent.py)** — retrieve, then choose. It takes a
+ready-made `store` (see section 5) rather than embedding parameters, calls
+`store.index(...)` once on construction when `create_new_collection=True`, and is a
+`dspy.ReAct` over a single tool: the store's own `search_category`, handed to the model
+under `search_category_tool_doc`. The signature docstring drives the loop — search with
+a focused query, read the includes/excludes notes on the candidates, refine the query
+and search again when the notes point elsewhere, and never emit a code the tool did not
+return. Its outputs are the domain code (`coicop_code` / `icatus_code` / `sea_code`)
+and `explaination`.
 
-- **Indexing.** On construction (when `create_new_collection=True`) `index()` walks
-  every `Code` in the classification, embeds its **`description` only** as the
-  document, and puts the rest of the record into the chroma metadata under
-  `id_<code>`: `code`, `level` and `detailled_description` as they are, and the
-  nested `details` dict JSON-dumped into a single string, because chroma accepts only
-  flat scalars. So the embedding sees the short label alone, while the long notes ride
-  along and reach the model through the tool result. `RAGAgent` indexes every code
-  with no level filtering; `BaseRAGAgent` can narrow that with `codes_to_include`.
-- **[vector_database.py](hcs4os/agents/RAG/vector_database.py)** wraps a persistent
-  chroma collection (cosine space, sentence-transformers embeddings). `VectorStore`
-  exposes `create_collection` (a batched `add`), and the underlying
-  `collection.query` is used directly for search.
-- **Retrieval and selection.** The agent is a `dspy.ReAct` over one tool,
-  `search_category(query, k)`, which embeds the query, pulls the `k` nearest codes,
-  and returns each one's flattened metadata with its `description` joined back on.
-  The signature docstring drives the loop: search with a focused query, read the
-  includes/excludes notes on the candidates, refine the query and search again when
-  the notes point elsewhere, and never emit a code the tool did not return.
-
-`RAGAgent` does not define `forward()`, so it is called as `agent.agent(...)`. Its
-signature outputs are the domain code (`coicop_code` / `icatus_code` / `sea_code`) and
-`explaination`.
-
-Indexing runs whenever `create_new_collection=True`; pass `False` to reuse an
-already-populated collection. Because the ids are deterministic (`id_<code>`),
-re-indexing the same collection re-sends the same ids — chroma skips them with a
-warning rather than duplicating — so it is wasted work, not corruption; point later
-runs at `create_new_collection=False` or a fresh `collection_name`.
+Because the ids are deterministic (`id_<code>`), re-indexing the same collection
+re-sends the same ids — chroma skips them with a warning rather than duplicating — so
+it is wasted work, not corruption; point later runs at `create_new_collection=False`
+or a fresh `collection_name`.
 
 #### The `Base…` variants
 
 [BaseAgent.py](hcs4os/agents/HierarchicalNavigation/BaseAgent.py) and
 [BaseAgentRAG.py](hcs4os/agents/RAG/BaseAgentRAG.py) hold the machinery: the LM, the
-classification system, the tool methods, the indexing, and the `dspy.ReAct`. Every
-registered agent is one of these with a `CONFIGS` lookup in front, so instantiating a
-base class directly is the same code path, just with the prose passed in by hand.
+classification system, the tool methods, and the `dspy.ReAct`. Every registered agent
+is one of these with a `CONFIGS` lookup in front, so instantiating a base class
+directly is the same code path, just with the prose passed in by hand.
 
 Use them to run a classification the registry does not cover, or to A/B a prompt
 without editing shared files; the registry subclasses stay the right home for a prompt
@@ -410,15 +504,33 @@ those codes. Restricting the collection to the level actually being predicted, o
 one branch, is the cheapest available lever on retrieval quality, because it removes
 whole classes of wrong answers before the model ever sees them.
 
-### 6. Retrieval without the loop ([rag/](hcs4os/rag))
+#### `forward()` and usage tracking
 
-[RAG.py](hcs4os/rag/RAG.py) holds `RAGChainOfThought`: same indexing and same
-`search_category`, but a single `dspy.ChainOfThought` instead of a ReAct loop. It
-retrieves once and reasons once.
+Both base agents define `forward(**kwargs)`, so the module is callable directly and
+`agent.agent(...)` is no longer needed. It does two things beyond delegating to the
+`dspy.ReAct`:
+
+- **Validates the input fields.** `set(signature.input_fields) - kwargs.keys()` is
+  checked first, so a typo'd or forgotten field raises
+  `ValueError: Missing input fields: ['input_expense']` immediately instead of
+  surfacing as a confusing dspy error several calls later.
+- **Pins the LM and tracks usage.** The body runs inside
+  `dspy.context(lm=self.lm, track_usage=True)`, so each classifier uses the LM it was
+  constructed with regardless of global dspy state, and `prediction.get_lm_usage()`
+  carries the token counts. The flip side: `dspy.configure(lm=…)` at call time has no
+  effect — assign `agent.lm` instead.
+
+### 7. Retrieval without the loop ([rag/](hcs4os/rag))
+
+The module is laid out like `agents/`: [registry.py](hcs4os/rag/registry.py) holds all
+the prose — the three ChainOfThought signatures and the three rephrasing signatures —
+and [RAG.py](hcs4os/rag/RAG.py) holds only the classes that use them.
+
+`RAGChainOfThought` uses the same store and the same `search_category`, but a single
+`dspy.ChainOfThought` instead of a ReAct loop. It retrieves once and reasons once.
 
 The differences that matter in practice:
 
-- It defines `forward(query, k, where=None)`, so it is callable directly.
 - `k` is set by the caller, not chosen by the model — retrieval depth becomes an
   experimental parameter rather than a model decision.
 - `where` is forwarded to chroma as a metadata filter (`{"level": 5}`).
@@ -430,19 +542,24 @@ The differences that matter in practice:
 [BaseRAG.py](hcs4os/rag/BaseRAG.py) is its configurable twin: `BaseRAGCoT` takes the
 `signature` plus `query_field` and `context_field` naming which of its input fields
 receive the item and the retrieved candidates, and asserts at construction that both
-names really exist on the signature.
+names really exist on the signature. Like the agents, it takes an injected `store`.
 
 `RAGChainOfThought` is the registered subclass, and because the base needs the field
 names too, its `CONFIGS` carries three things per classification rather than one:
 
 ```python
 CONFIGS = {
-    "COICOP_2018": {"signature":     CoicopRAGChainOfThoughtSignature,
+    "COICOP_2018": {"signature":     registry.CoicopRAGChainOfThoughtSignature,
                     "query_field":   "input_expense",
                     "context_field": "retrieved_candidates"},
     ...   # ICATUS_2016, SEA_2021, SEA_2021_REPHRASED
 }
 ```
+
+Its `forward(query, k, where=None)` differs from the agents' in one respect worth
+knowing: it calls `self.CoT` without a `dspy.context` wrapper, so unlike the ReAct
+agents and unlike `RRR_RAGChainOfThought` it does not pin its own LM per call and
+relies on the `dspy.configure` done at construction.
 
 #### Rewrite-Retrieve-Read
 
@@ -471,13 +588,27 @@ The three steps:
    model has to classify, so detail the rephraser dropped is not lost from the
    decision.
 
-`forward(query, k, where=None)` matches the parent exactly, and the prediction carries
-one extra field, `rephrased_query`, so you can see and log what was actually searched
-for. That makes `RRR_RAGChainOfThought` a drop-in A/B against `RAGChainOfThought` on
-the same collection.
+`forward(query, k, where=None)` matches the parent's, and the prediction carries one
+extra field, `rephrased_query`, so you can see and log what was actually searched for.
+That makes `RRR_RAGChainOfThought` a drop-in A/B against `RAGChainOfThought` on the
+same collection. The Read step runs under `dspy.context(lm=self.lm, track_usage=True)`.
 
-**`QueryRephraser`** is a standalone `dspy.Module` and usable on its own. It picks a
-signature from its own `mapping` (`COICOP_2018`, `ICATUS_2016`, `SEA_2021`,
+**The rephraser is injected.** `RRR_RAGChainOfThought(rephraser, *args, **kwargs)`
+takes a built `QueryRephraser` as its first argument, so the rewrite step carries its
+own LM and the two halves of the pipeline can run on different models — a small cheap
+model to restate the item, a stronger one to decide the code:
+
+```python
+rrr = RRR_RAGChainOfThought(
+    rephraser=QueryRephraser(lm=cheap_lm, classification_name="COICOP_2018"),
+    classification_name="COICOP_2018",
+    model_name="mistral/mistral-large-latest",   # the Read step
+    api_key=..., store=store,
+)
+```
+
+**`QueryRephraser`** is a standalone `dspy.Module`, usable on its own. It resolves a
+signature from its `mapping` (`COICOP_2018`, `ICATUS_2016`, `SEA_2021`,
 `SEA_2021_REPHRASED`), runs `dspy.Predict`, and hides which input field that signature
 uses — callers always pass `query=`:
 
@@ -493,6 +624,10 @@ It runs inside `with dspy.context(lm=self.lm)`, so it uses the LM handed to its
 constructor regardless of what is globally configured. If the model returns an empty
 rewrite, the raw query is used instead.
 
+It also accepts a `signature=` argument, intended for rewriting against a
+classification that has no registered rephrasing signature — but that path is
+currently unreachable, see below.
+
 The rephrasing prompts are the most classification-specific prose in the library,
 because what has to survive the rewrite differs per system. COICOP and SEA keep
 placement-driving attributes — state or form (fresh, frozen, canned, ready-made), good
@@ -507,21 +642,27 @@ wrong one pulls retrieval into the wrong branch.
 
 Three things to know before building on it:
 
-- The class docstring lists `rephraser_lm` and `retrieve_with_original` parameters.
-  **Neither is implemented.** `__init__` only forwards `*args, **kwargs` to
-  `RAGChainOfThought`, so passing `rephraser_lm=` raises
-  `TypeError: BaseRAGCoT.__init__() got an unexpected keyword argument`, and
-  `forward` retrieves with the rewritten query alone — there is no merge with the raw
-  query's hits. To use a cheaper rewrite model today, assign
-  `rrr.rephrasing_module.lm = my_lm` after construction.
-- Retrieval depends entirely on one rewrite. A bad rewrite is unrecoverable, where
+- The class docstring still lists `rephraser_lm` and `retrieve_with_original`.
+  Injection has superseded `rephraser_lm`, but **`retrieve_with_original` does not
+  exist** — `forward` retrieves with the rewritten query alone, with no merge of the
+  raw query's hits.
+- So retrieval depends entirely on one rewrite. A bad rewrite is unrecoverable, where
   plain `RAGChainOfThought` at least embeds the item's own words. This is the risk
   `retrieve_with_original` was meant to hedge.
 - `QueryRephraser.forward` ends in a bare `print(rephrased)`, so every call writes to
   stdout. Noisy in batch evaluation; `rephrased_query` on the prediction carries the
   same value.
 
-### 7. Taxonomy refinement ([taxonomy_refinement/](hcs4os/taxonomy_refinement))
+And one blocker, as of this commit: **`rag/RAG.py` cannot be imported.** Line 5 reads
+`import registry` where it needs `from . import registry`, so every example in this
+section raises `ModuleNotFoundError: No module named 'registry'`. `agents/` is
+unaffected. Relatedly, the `signature=` escape hatch on `QueryRephraser` is dead code:
+its guard is `assert classification_name in self.mapping or None`, and because `None`
+is falsy, any unregistered name — including `None` itself — fails the assertion before
+`signature` is ever consulted. It wants to be
+`assert classification_name in self.mapping or signature is not None`.
+
+### 8. Taxonomy refinement ([taxonomy_refinement/](hcs4os/taxonomy_refinement))
 
 Published classifications document their leaves well and their inner nodes barely at
 all — a division often has nothing but a two-word label. That hurts retrieval most,
@@ -544,6 +685,38 @@ Two things to know before using it:
   `mapping.py` entry with a `JSON` loader — that is how `SEA_2021_REPHRASED` and
   `sea_2021_augmented.json` came to exist. Keep the generated dataset beside the
   original rather than replacing it, so the two remain comparable.
+
+### 9. Live Klassifikationsserver lookups ([klass_server/](hcs4os/classification_system/klass_server))
+
+Everything above reads a downloaded snapshot out of `_data/`.
+[KlassServerModule.py](hcs4os/classification_system/klass_server/KlassServerModule.py)
+is the other direction: a `zeep` SOAP client against the Statistisches Bundesamt's
+live classification service, for lookups that should not go through a vendored file.
+
+```python
+from hcs4os.classification_system.klass_server.KlassServerModule import KlassServerModule
+
+klass = KlassServerModule()                       # anonymous/anonymous, language "DE"
+klass.ping()
+klass.search_item("Systemadmin", classification="kldb2010")
+# [{'key': ..., 'title': ...}, ...]
+```
+
+`search_item` is the service's own free-text search, so it returns the server's
+`{key, title}` hits rather than `Code` objects — it complements the local hierarchy
+rather than feeding it. The timestamp the service requires is filled in automatically
+with `Europe/Berlin` now, which is what selects the edition in force. A corrected
+`klassservice_fixed.wsdl` is bundled next to the module, so no schema is fetched at
+runtime.
+
+This module is newer than the rest and not yet wired into `mapping.py`, the loaders or
+any classifier. Two caveats before depending on it:
+
+- It needs `zeep` (and `requests`), **neither of which is in the project
+  dependencies** — add them to `pyproject.toml` before shipping anything that imports
+  it.
+- The directory has no `__init__.py`, so it is excluded from a built distribution (see
+  the note under section 5).
 
 ---
 
@@ -631,17 +804,19 @@ increasing order of intrusiveness:
 3. **Retrieval behaviour** — in `RAGAgent` the shortlist length `k` is chosen by the
    model per call and steered by the signature docstring (edit the "use a k large
    enough" guidance there); in `RAGChainOfThought` you pass `k` and `where` yourself.
-   `codes_to_include` (on `BaseRAGAgent` / `BaseRAGCoT`) narrows what is indexed at
-   all. `embedding_model_name` is usually the biggest single lever on retrieval
-   quality — a generic multilingual MiniLM is a weak retriever for German product
-   text, and a domain- or language-matched model is worth more than any prompt edit.
-   Changing it means indexing into a fresh `collection_name`, since a collection is
-   only meaningful with the model that built it.
-4. **The query itself** — switch `RAGChainOfThought` for `RRR_RAGChainOfThought`, or
-   edit the rephrasing signature in [rag/RAG.py](hcs4os/rag/RAG.py). When retrieval
-   misses because the item's wording is nothing like the labels, this beats every
-   prompt edit above it; `rephrased_query` on the prediction tells you whether the
-   rewrite is helping.
+   `codes_to_include` narrows what is indexed at all.
+4. **The embedding backend** — the store's `embedding_function_type` and `model_name`
+   are usually the biggest single lever on retrieval quality. A generic multilingual
+   MiniLM is a weak retriever for German product text, and a domain- or
+   language-matched model is worth more than any prompt edit above. Since the store is
+   injected, swapping it is a change at the call site rather than inside a classifier —
+   just index into a fresh `collection_name`, because a collection is only meaningful
+   with the model that built it.
+5. **The query itself** — switch `RAGChainOfThought` for `RRR_RAGChainOfThought`, or
+   edit the rephrasing signature in [rag/registry.py](hcs4os/rag/registry.py). When
+   retrieval misses because the item's wording is nothing like the labels, this beats
+   every prompt edit above it; `rephrased_query` on the prediction tells you whether
+   the rewrite is helping.
 
 ### E. Add an agent for another classification
 
@@ -655,15 +830,15 @@ uses (e.g. `"COICOP_2018"`, the same string you pass as `classification_name`), 
 - an entry wherever that classifier reads its config, with keys matching the base
   constructor's parameters:
 
-| classifier                                  | config lives in                           | keys                                                                                     |
-| ------------------------------------------- | ------------------------------------------ | ---------------------------------------------------------------------------------------- |
-| `HierarchicalNavigationAgent`               | `HierarchicalNavigation/registry.py`       | `signature`, `get_root_categories_doc`, `get_children_doc`, `get_code_doc`, `get_parent_doc` |
-| `RAGAgent`                                  | `RAG/registry.py`                          | `signature`, `search_category_tool_doc`                                                  |
-| `RAGChainOfThought` / `RRR_RAGChainOfThought` | `RAGChainOfThought.CONFIGS` in `rag/RAG.py` | `signature`, `query_field`, `context_field`                                              |
+| classifier                                    | signatures live in  | config lives in                             | keys                                                                                         |
+| --------------------------------------------- | ------------------- | ------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `HierarchicalNavigationAgent`                 | `HierarchicalNavigation/registry.py` | same file (`registry`)     | `signature`, `get_root_categories_doc`, `get_children_doc`, `get_code_doc`, `get_parent_doc` |
+| `RAGAgent`                                    | `RAG/registry.py`   | same file (`registry`)                      | `signature`, `search_category_tool_doc`                                                      |
+| `RAGChainOfThought` / `RRR_RAGChainOfThought` | `rag/registry.py`   | `RAGChainOfThought.CONFIGS` in `rag/RAG.py` | `signature`, `query_field`, `context_field`                                                  |
 
-For `RRR_RAGChainOfThought` also add a rephrasing signature to `QueryRephraser`'s
-`mapping` in the same file — without one, construction fails the assertion
-`No rephrasing signature for '<key>'`.
+For `RRR_RAGChainOfThought` also add a rephrasing signature to `rag/registry.py` and
+register it in `QueryRephraser.mapping` — without one, construction fails the
+assertion `No rephrasing signature for '<key>'`.
 
 The tool methods, indexing and retrieval code need no changes — that is the point of
 the uniform `ClassificationSystem` interface. Widen the `Literal` type hint on the
@@ -676,6 +851,7 @@ Instantiate the `Base…` class directly and pass the prose in:
 ```python
 from hcs4os.agents.RAG.BaseAgentRAG import BaseRAGAgent
 from hcs4os.classification_system import get_classification_system
+from hcs4os._vector_database.vector_store import VectorStore
 
 wz = get_classification_system("WZ_2008")
 
@@ -684,8 +860,12 @@ agent = BaseRAGAgent(
     signature=MyWzSignature,              # its __doc__ is the system prompt
     search_category_tool_doc="...",
     codes_to_include=[c.code for c in wz.codes if c.level == 3],
-    embedding_model_name="deutsche-telekom/gbert-large-paraphrase-cosine",
-    collection_name="wz_level3",
+    store=VectorStore(
+        collection_name="wz_level3",
+        chromadb_path="./data/chroma",
+        embedding_function_type="sentence_transformers",
+        model_name="deutsche-telekom/gbert-large-paraphrase-cosine",
+    ),
     api_key=..., model_name=...,
 )
 ```

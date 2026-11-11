@@ -2,7 +2,7 @@ from typing import Literal
 import json
 import dspy
 from .BaseRAG import BaseRAGCoT
-import registry
+from . import registry
     
 
 class RAGChainOfThought(BaseRAGCoT):
