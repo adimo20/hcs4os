@@ -80,15 +80,14 @@ class QueryRephraser(dspy.Module):
             "SEA_2021": registry.SeaRephrasingSignature,
             "SEA_2021_REPHRASED": registry.SeaRephrasingSignature,
         }
-        assert classification_name in self.mapping or None, (
+        
+        assert classification_name in self.mapping or signature is not None, (
             f"No rephrasing signature for '{classification_name}'"
         )
-
+        
         self.classification_name = classification_name
         self.signature = self.mapping.get(classification_name, signature)
-        assert self.signature is not None, (
-            f"Signature for rephrasing must be provided either by using the fields signature or use predifined signature specifying classification_name"
-        )
+        
         self.input_field = next(iter(self.signature.input_fields))
         self.rephrase = dspy.Predict(self.signature)
 
