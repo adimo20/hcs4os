@@ -392,11 +392,11 @@ turned the embedding backend into a choice rather than a hard-coded import.
 **Pluggable embedding backends.** `get_ef()` is a small factory over three chroma
 embedding functions, selected by `embedding_function_type` (`EFType`):
 
-| type                   | runs                        | typical kwargs                                        |
-| ---------------------- | --------------------------- | ----------------------------------------------------- |
-| `sentence_transformers` | in-process, local model     | `model_name`, `device`, `normalize_embeddings`         |
-| `ollama`               | HTTP, self-hosted           | `url`, `model_name`, `timeout`                         |
-| `openai`               | HTTP, hosted API            | `api_key`, `model_name`, `api_base`, `dimensions`      |
+| type                    | runs                    | typical kwargs                                    |
+| ----------------------- | ----------------------- | ------------------------------------------------- |
+| `sentence_transformers` | in-process, local model | `model_name`, `device`, `normalize_embeddings`    |
+| `ollama`                | HTTP, self-hosted       | `url`, `model_name`, `timeout`                    |
+| `openai`                | HTTP, hosted API        | `api_key`, `model_name`, `api_base`, `dimensions` |
 
 Everything beyond `embedding_function_type` is collected as `**embedding_kwargs` and
 handed straight to that function, so the store never has to know what any backend
@@ -686,38 +686,6 @@ Two things to know before using it:
   `sea_2021_augmented.json` came to exist. Keep the generated dataset beside the
   original rather than replacing it, so the two remain comparable.
 
-### 9. Live Klassifikationsserver lookups ([klass_server/](hcs4os/classification_system/klass_server))
-
-Everything above reads a downloaded snapshot out of `_data/`.
-[KlassServerModule.py](hcs4os/classification_system/klass_server/KlassServerModule.py)
-is the other direction: a `zeep` SOAP client against the Statistisches Bundesamt's
-live classification service, for lookups that should not go through a vendored file.
-
-```python
-from hcs4os.classification_system.klass_server.KlassServerModule import KlassServerModule
-
-klass = KlassServerModule()                       # anonymous/anonymous, language "DE"
-klass.ping()
-klass.search_item("Systemadmin", classification="kldb2010")
-# [{'key': ..., 'title': ...}, ...]
-```
-
-`search_item` is the service's own free-text search, so it returns the server's
-`{key, title}` hits rather than `Code` objects — it complements the local hierarchy
-rather than feeding it. The timestamp the service requires is filled in automatically
-with `Europe/Berlin` now, which is what selects the edition in force. A corrected
-`klassservice_fixed.wsdl` is bundled next to the module, so no schema is fetched at
-runtime.
-
-This module is newer than the rest and not yet wired into `mapping.py`, the loaders or
-any classifier. Two caveats before depending on it:
-
-- It needs `zeep` (and `requests`), **neither of which is in the project
-  dependencies** — add them to `pyproject.toml` before shipping anything that imports
-  it.
-- The directory has no `__init__.py`, so it is excluded from a built distribution (see
-  the note under section 5).
-
 ---
 
 ## Adapting the content
@@ -830,11 +798,11 @@ uses (e.g. `"COICOP_2018"`, the same string you pass as `classification_name`), 
 - an entry wherever that classifier reads its config, with keys matching the base
   constructor's parameters:
 
-| classifier                                    | signatures live in  | config lives in                             | keys                                                                                         |
-| --------------------------------------------- | ------------------- | ------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `HierarchicalNavigationAgent`                 | `HierarchicalNavigation/registry.py` | same file (`registry`)     | `signature`, `get_root_categories_doc`, `get_children_doc`, `get_code_doc`, `get_parent_doc` |
-| `RAGAgent`                                    | `RAG/registry.py`   | same file (`registry`)                      | `signature`, `search_category_tool_doc`                                                      |
-| `RAGChainOfThought` / `RRR_RAGChainOfThought` | `rag/registry.py`   | `RAGChainOfThought.CONFIGS` in `rag/RAG.py` | `signature`, `query_field`, `context_field`                                                  |
+| classifier                                    | signatures live in                   | config lives in                             | keys                                                                                         |
+| --------------------------------------------- | ------------------------------------ | ------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `HierarchicalNavigationAgent`                 | `HierarchicalNavigation/registry.py` | same file (`registry`)                      | `signature`, `get_root_categories_doc`, `get_children_doc`, `get_code_doc`, `get_parent_doc` |
+| `RAGAgent`                                    | `RAG/registry.py`                    | same file (`registry`)                      | `signature`, `search_category_tool_doc`                                                      |
+| `RAGChainOfThought` / `RRR_RAGChainOfThought` | `rag/registry.py`                    | `RAGChainOfThought.CONFIGS` in `rag/RAG.py` | `signature`, `query_field`, `context_field`                                                  |
 
 For `RRR_RAGChainOfThought` also add a rephrasing signature to `rag/registry.py` and
 register it in `QueryRephraser.mapping` — without one, construction fails the
