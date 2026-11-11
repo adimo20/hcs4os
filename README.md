@@ -27,11 +27,10 @@ three retrieval-based ones take a `VectorStore` you build yourself, so the embed
 backend — a local `sentence-transformers` model, a self-hosted Ollama server, or
 OpenAI — is independent of the reasoning model and shared across classifiers.
 
-Two more pieces sit beside them, working on the classification rather than on items:
-**`ClassificationsSystemAugmenter`** writes the missing prose descriptions for parent
-categories from their children, saving the result back into `_data/` as a new dataset;
-**`KlassServerModule`** queries the Statistisches Bundesamt's live classification
-service over SOAP instead of a vendored snapshot.
+Alongside them, **`ClassificationsSystemAugmenter`** works on the classification
+itself rather than on items: it writes the missing prose descriptions for parent
+categories from their children, and the result is saved back into `_data/` as a new
+dataset.
 
 Two things follow from the design:
 
@@ -422,13 +421,6 @@ One store, one embedding model, one collection: a collection is only meaningful
 together with the model that built it, so changing `embedding_function_type` or
 `model_name` means a fresh `collection_name`.
 
-> ⚠️ `hcs4os/_vector_database/` has no `__init__.py`, so `find_packages` skips it and
-> a built distribution ships without `hcs4os._vector_database`. Since
-> `BaseAgentRAG.py` imports from it, `RAGAgent` is then unimportable
-> (`ModuleNotFoundError: No module named 'hcs4os._vector_database'`) even though
-> `import hcs4os` succeeds. Source checkouts are fine. Adding an empty
-> `__init__.py` fixes it — the same gap that `hcs4os/agents/` had.
-
 ### 6. ReAct agents ([agents/](hcs4os/agents))
 
 Both agents follow the same layout: a `Base…` class holding all the machinery, and a
@@ -624,9 +616,19 @@ It runs inside `with dspy.context(lm=self.lm)`, so it uses the LM handed to its
 constructor regardless of what is globally configured. If the model returns an empty
 rewrite, the raw query is used instead.
 
-It also accepts a `signature=` argument, intended for rewriting against a
-classification that has no registered rephrasing signature — but that path is
-currently unreachable, see below.
+For a classification with no registered rephrasing signature, pass your own as
+`signature=` and leave `classification_name=None`:
+
+```python
+QueryRephraser(lm=cheap_lm, classification_name=None, signature=MyWzRephrasingSignature)
+```
+
+Whichever input field that signature declares first is the one the query is fed to,
+so callers still only pass `query=`. Supplying neither a registered name nor a
+`signature` fails at construction with
+`AssertionError: No rephrasing signature for '<name>'`. Note that a registered name
+takes priority: pass both and the registered signature wins, so `signature=` is for
+classifications the registry does not cover rather than for overriding one it does.
 
 The rephrasing prompts are the most classification-specific prose in the library,
 because what has to survive the rewrite differs per system. COICOP and SEA keep
@@ -652,15 +654,6 @@ Three things to know before building on it:
 - `QueryRephraser.forward` ends in a bare `print(rephrased)`, so every call writes to
   stdout. Noisy in batch evaluation; `rephrased_query` on the prediction carries the
   same value.
-
-And one blocker, as of this commit: **`rag/RAG.py` cannot be imported.** Line 5 reads
-`import registry` where it needs `from . import registry`, so every example in this
-section raises `ModuleNotFoundError: No module named 'registry'`. `agents/` is
-unaffected. Relatedly, the `signature=` escape hatch on `QueryRephraser` is dead code:
-its guard is `assert classification_name in self.mapping or None`, and because `None`
-is falsy, any unregistered name — including `None` itself — fails the assertion before
-`signature` is ever consulted. It wants to be
-`assert classification_name in self.mapping or signature is not None`.
 
 ### 8. Taxonomy refinement ([taxonomy_refinement/](hcs4os/taxonomy_refinement))
 
