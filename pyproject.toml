@@ -34,10 +34,12 @@ dependencies = [
     "pandas",
     "openpyxl",
     "dspy",
-    "chromadb",
-    "sentence-transformers",
-    "ollama",
 ]
+
+[project.optional-dependencies]
+local  = ["chromadb", "sentence-transformers"]
+ollama = ["chromadb", "ollama"]
+openai = ["chromadb", "openai"]
 
 [tool.setuptools.packages.find]
 where = ["."]

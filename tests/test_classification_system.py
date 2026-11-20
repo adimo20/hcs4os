@@ -1,7 +1,6 @@
 import pytest
 from hcs4os.classification_system.registry import get_classification_system
 
-
 @pytest.mark.parametrize(
     "input_code, formatted_output",
     [
@@ -52,4 +51,5 @@ def test_classification_system_coicop(input_code, formatted_output):
     codes = coicop.get_children(input_code)
     codes = [c.code for c in codes]
     assert codes == formatted_output
+
 

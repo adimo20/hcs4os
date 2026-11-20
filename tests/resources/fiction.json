@@ -1,0 +1,232 @@
+[
+    {
+        "code": "1",
+        "description": "Star Wars characters",
+        "level": 1,
+        "detailled_description": "Characters from the Star Wars franchise (films, series, books and games), set in a galaxy far, far away. Characters are classified by the allegiance or role they are best known for.",
+        "details": {
+            "includes": "Characters from the main saga, the prequels, sequels and spin-off series",
+            "excludes": "Characters from Middle-earth (2)"
+        }
+    },
+    {
+        "code": "11",
+        "description": "Force users",
+        "level": 2,
+        "detailled_description": "Characters whose defining trait is their trained use of the Force, on either the light or the dark side.",
+        "details": {
+            "includes": "Jedi, Sith, Force-sensitive warriors and their apprentices",
+            "excludes": "Characters who are Force-sensitive but never trained or act mainly as soldiers or politicians (12)"
+        }
+    },
+    {
+        "code": "111",
+        "description": "Jedi and light side Force users",
+        "level": 3,
+        "detailled_description": "Members of the Jedi Order, their apprentices and other users of the light side of the Force.",
+        "details": {
+            "includes": "Luke Skywalker, Obi-Wan Kenobi, Yoda, Mace Windu, Ahsoka Tano, Rey",
+            "excludes": "Jedi who fell to the dark side and are best known as Sith, e.g. Darth Vader (112)",
+            "keywords": ["Jedi", "Padawan", "lightsaber", "light side", "Jedi Council"]
+        }
+    },
+    {
+        "code": "112",
+        "description": "Sith and dark side Force users",
+        "level": 3,
+        "detailled_description": "Sith Lords, their apprentices and other users of the dark side of the Force.",
+        "details": {
+            "includes": "Darth Vader, Emperor Palpatine, Darth Maul, Count Dooku, Kylo Ren",
+            "excludes": "Non-Force-sensitive Imperial officers and soldiers (122)",
+            "keywords": ["Sith", "Darth", "dark side", "Inquisitor", "Knights of Ren"]
+        }
+    },
+    {
+        "code": "12",
+        "description": "Soldiers, leaders and politicians",
+        "level": 2,
+        "detailled_description": "Characters without trained Force abilities who are defined by their role in one of the galaxy's political or military factions.",
+        "details": {
+            "includes": "Military commanders, pilots, senators, rulers and rank-and-file soldiers",
+            "excludes": "Droids (131); characters who work mainly for money rather than a cause (132)"
+        }
+    },
+    {
+        "code": "121",
+        "description": "Republic, Rebellion and Resistance",
+        "level": 3,
+        "detailled_description": "Characters fighting for the Galactic Republic, the Rebel Alliance, the New Republic or the Resistance.",
+        "details": {
+            "includes": "Leia Organa, Han Solo, Padmé Amidala, Poe Dameron, Finn, Chewbacca, Lando Calrissian",
+            "excludes": "Clone troopers serving the Empire after Order 66 (122)",
+            "keywords": ["Rebel Alliance", "Resistance", "Republic", "senator", "X-wing pilot"]
+        }
+    },
+    {
+        "code": "122",
+        "description": "Empire, First Order and Separatists",
+        "level": 3,
+        "detailled_description": "Characters serving the Galactic Empire, the First Order or the Confederacy of Independent Systems, excluding Force users.",
+        "details": {
+            "includes": "Grand Moff Tarkin, General Hux, General Grievous, Captain Phasma, stormtroopers",
+            "excludes": "Sith leaders of these factions, e.g. Palpatine or Darth Vader (112); battle droids (131)",
+            "keywords": ["Empire", "First Order", "stormtrooper", "Separatist", "Imperial officer"]
+        }
+    },
+    {
+        "code": "13",
+        "description": "Droids and outlaws",
+        "level": 2,
+        "detailled_description": "Characters outside the political factions: artificial beings and those who live on the fringes of the law.",
+        "details": {
+            "includes": "Droids of all kinds, bounty hunters, smugglers and crime lords",
+            "excludes": "Cyborgs with an organic body, e.g. General Grievous (122)"
+        }
+    },
+    {
+        "code": "131",
+        "description": "Droids",
+        "level": 3,
+        "detailled_description": "Mechanical or artificially intelligent characters, regardless of which side they serve.",
+        "details": {
+            "includes": "R2-D2, C-3PO, BB-8, K-2SO, battle droids",
+            "excludes": "Cyborgs (122)",
+            "keywords": ["droid", "astromech", "protocol droid", "robot"]
+        }
+    },
+    {
+        "code": "132",
+        "description": "Bounty hunters, smugglers and crime lords",
+        "level": 3,
+        "detailled_description": "Characters who work for money or for the criminal underworld rather than for a political cause.",
+        "details": {
+            "includes": "Boba Fett, Jango Fett, Din Djarin, Jabba the Hutt, Greedo",
+            "excludes": "Former smugglers best known as heroes of the Rebellion, e.g. Han Solo (121)",
+            "keywords": ["bounty hunter", "smuggler", "Hutt", "Mandalorian", "crime syndicate"]
+        }
+    },
+    {
+        "code": "2",
+        "description": "Lord of the Rings characters",
+        "level": 1,
+        "detailled_description": "Characters from Middle-earth as depicted in The Hobbit and The Lord of the Rings, in the books and their film adaptations. Characters are classified by the people they belong to or the side they are best known for.",
+        "details": {
+            "includes": "Characters from The Hobbit, The Lord of the Rings and their adaptations",
+            "excludes": "Characters from the Star Wars galaxy (1)"
+        }
+    },
+    {
+        "code": "21",
+        "description": "Free peoples of Middle-earth",
+        "level": 2,
+        "detailled_description": "Members of the mortal and immortal peoples who oppose Sauron: hobbits, men, elves and dwarves.",
+        "details": {
+            "includes": "Members of the Fellowship of the Ring and their allies",
+            "excludes": "Wizards, even when travelling with the Fellowship (231); men who serve Sauron or Saruman (22)"
+        }
+    },
+    {
+        "code": "211",
+        "description": "Hobbits",
+        "level": 3,
+        "detailled_description": "Halflings from the Shire, Bree and the surrounding lands.",
+        "details": {
+            "includes": "Frodo Baggins, Samwise Gamgee, Bilbo Baggins, Merry Brandybuck, Pippin Took",
+            "excludes": "Gollum, a former hobbit-like Stoor corrupted by the Ring (223)",
+            "keywords": ["hobbit", "halfling", "Shire", "Baggins", "Took"]
+        }
+    },
+    {
+        "code": "212",
+        "description": "Men of the West",
+        "level": 3,
+        "detailled_description": "Men of Gondor, Rohan, the Dúnedain and other free realms of Men.",
+        "details": {
+            "includes": "Aragorn, Boromir, Faramir, Éowyn, Théoden, Éomer",
+            "excludes": "Men who serve Sauron, e.g. the Mouth of Sauron (221); Gríma Wormtongue (223)",
+            "keywords": ["Gondor", "Rohan", "Ranger", "Dúnedain", "king"]
+        }
+    },
+    {
+        "code": "213",
+        "description": "Elves and Dwarves",
+        "level": 3,
+        "detailled_description": "The immortal Elves and the Dwarves of the mountain halls.",
+        "details": {
+            "includes": "Legolas, Galadriel, Elrond, Arwen, Gimli, Thorin Oakenshield",
+            "keywords": ["elf", "elven", "Rivendell", "Lothlórien", "dwarf", "Erebor", "Moria"]
+        }
+    },
+    {
+        "code": "22",
+        "description": "Servants of the Shadow",
+        "level": 2,
+        "detailled_description": "Characters who serve Sauron or Saruman, or who have been corrupted by the One Ring.",
+        "details": {
+            "includes": "Sauron and his servants, the armies of Mordor and Isengard, corrupted individuals",
+            "excludes": "Ancient monsters acting for themselves, e.g. Shelob or the Balrog (232)"
+        }
+    },
+    {
+        "code": "221",
+        "description": "Sauron, the Nazgûl and their lieutenants",
+        "level": 3,
+        "detailled_description": "The Dark Lord and the commanders of his forces.",
+        "details": {
+            "includes": "Sauron, the Witch-king of Angmar, the Nazgûl, the Mouth of Sauron",
+            "excludes": "Common orcs and trolls (222)",
+            "keywords": ["Dark Lord", "Ringwraith", "Nazgûl", "Barad-dûr", "Mordor"]
+        }
+    },
+    {
+        "code": "222",
+        "description": "Orcs, Uruk-hai and trolls",
+        "level": 3,
+        "detailled_description": "The rank-and-file creatures of the armies of Mordor and Isengard.",
+        "details": {
+            "includes": "Orcs, goblins, Uruk-hai, trolls, Azog, Lurtz, Gothmog",
+            "keywords": ["orc", "goblin", "Uruk-hai", "troll", "warg rider"]
+        }
+    },
+    {
+        "code": "223",
+        "description": "Traitors and the corrupted",
+        "level": 3,
+        "detailled_description": "Characters who began on the side of the free peoples or the wise, and were turned by the Ring, by Sauron or by their own ambition.",
+        "details": {
+            "includes": "Saruman, Gollum (Sméagol), Gríma Wormtongue",
+            "excludes": "Characters only briefly tempted by the Ring, e.g. Boromir (212)",
+            "keywords": ["traitor", "corrupted", "Isengard", "precious", "betrayal"]
+        }
+    },
+    {
+        "code": "23",
+        "description": "Wizards and ancient powers",
+        "level": 2,
+        "detailled_description": "Beings older or more powerful than the peoples of Middle-earth, who stand partly outside the war between the free peoples and the Shadow.",
+        "details": {
+            "includes": "Wizards, Ents, ancient spirits and monsters"
+        }
+    },
+    {
+        "code": "231",
+        "description": "Wizards (Istari)",
+        "level": 3,
+        "detailled_description": "The wizards sent to Middle-earth to oppose Sauron.",
+        "details": {
+            "includes": "Gandalf, Radagast the Brown",
+            "excludes": "Saruman, classified by his betrayal (223)",
+            "keywords": ["wizard", "Istari", "staff", "Grey", "White"]
+        }
+    },
+    {
+        "code": "232",
+        "description": "Ancient beings and monsters",
+        "level": 3,
+        "detailled_description": "Ancient creatures and spirits that act on their own account, whether kindly or malevolent.",
+        "details": {
+            "includes": "Tom Bombadil, Treebeard and the Ents, the Balrog of Moria, Shelob, Smaug",
+            "keywords": ["Ent", "Balrog", "dragon", "giant spider", "Old Forest"]
+        }
+    }
+]
