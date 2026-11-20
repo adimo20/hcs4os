@@ -17,11 +17,9 @@ class BaseRAGCoT(dspy.Module):
         context_field:str,
         store: VectorStore,        
         codes_to_include:list[str]|None=None,
-        api_base:str|None=None,
-        create_new_collection:bool=True                          
+        api_base:str|None=None                      
     )->None:
 
-        assert api_key is not None
         assert model_name is not None
         assert query_field is not None
         assert context_field is not None       
@@ -53,14 +51,6 @@ class BaseRAGCoT(dspy.Module):
 
         print("Creating VectorDB")        
         self.store = store
-        
-        if create_new_collection:
-            print("Indexing classification system")
-            self.store.index(
-                self.codes_to_include,
-                self.classification_system
-            )
-        print("Create vector store")
         
         self.CoT = dspy.ChainOfThought(
             signature=self.signature # type: ignore 

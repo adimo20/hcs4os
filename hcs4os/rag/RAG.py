@@ -138,7 +138,12 @@ class RRR_RAGChainOfThought(RAGChainOfThought):
         self.rephrasing_module = rephraser
 
     
-    def forward(self, query: str, k: int, where: dict | None = None):
+    def forward(
+        self, 
+        query: str, 
+        k: int, 
+        where: dict | None = None
+    ) -> dspy.Prediction:
         rephrased_query = self.rephrasing_module(query=query).rephrased_query
         retrieved_context = self.store.search_category(rephrased_query, k, where=where)
         retrieved_context_str = json.dumps(

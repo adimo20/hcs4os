@@ -73,8 +73,8 @@ class VectorStore:
         
     def index(
         self,
-        codes_to_include:list[str]|None,
-        classification_system:ClassificationSystem 
+        classification_system:ClassificationSystem,
+        codes_to_include:list[str]|None=None,
     )->None:
         
         def flatten(c: dict) -> dict:

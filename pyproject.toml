@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "hcs4os"
-version = "0.2.7"
-requires-python = ">=3.11"
+version = "0.2.8"
+requires-python = ">=3.12"
 license-files = ["LICENSE"]
 authors = [{ name = "Adrian Montag", email = "adrimontag@gmail.com" }]
 keywords = [
@@ -23,9 +23,10 @@ classifiers = [
     "Natural Language :: German",
     "Natural Language :: English",
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
     "Programming Language :: Python :: 3.13",   
+    "Programming Language :: Python :: 3.14",   
+    "Programming Language :: Python :: 3.15",   
     "Operating System :: OS Independent",
     "Typing :: Typed",
 ]
@@ -37,8 +38,6 @@ dependencies = [
     "sentence-transformers",
     "ollama",
 ]
-[project.optional-dependencies]
-system_one = ["typesafe-sdk>=0.7"]
 
 [tool.setuptools.packages.find]
 where = ["."]
