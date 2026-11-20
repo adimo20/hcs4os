@@ -100,7 +100,7 @@ class ClassificationSystem(ABC):
         if num_prefixes > 1:
             return self.get_code(
                 code=prefixes[num_prefixes-2]
-            ).to_dict()
+            )
         
 
     def get_code_trace(
