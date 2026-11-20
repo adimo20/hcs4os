@@ -16,3 +16,4 @@ chroma/
 dist/
 starwars.json
 hcs4os/classification_system/klass_server
+.pytest_cache/
