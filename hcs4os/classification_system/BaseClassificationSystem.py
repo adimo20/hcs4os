@@ -13,7 +13,6 @@ class ClassificationSystem(ABC):
 
         self.loader = loader
         self.codes = self.loader.load()
-        self._children_register = {}
         self.__initialise()
 
     def __initialise(
@@ -21,11 +20,18 @@ class ClassificationSystem(ABC):
     )->None:
 
         self._lookup: dict[str, Code] = {c.code: c for c in self.codes}
-        for parent in self.codes:
-            self._children_register[parent.code] = [
-                code for code in self.codes 
-                if self._is_child(parent.code, code.code)
-            ]
+        self._children_register:dict[str, list[Code]] = {c.code: [] for c in self.codes}
+        
+        for child in self.codes:
+            
+            prefixes = self.get_prefixes(code=child.code)
+            num_prefixes = len(prefixes)
+            
+            if (
+                num_prefixes >= 2 and
+                prefixes[num_prefixes-2] in self._children_register
+            ):
+                self._children_register[prefixes[num_prefixes-2]].append(child)
 
     @abstractmethod
     def get_prefixes(
