@@ -1,6 +1,7 @@
 from typing import Literal
 import json
 import chromadb
+from .Retriever import Retriever
 from ..classification_system.BaseClassificationSystem import ClassificationSystem
 from chromadb.utils.embedding_functions import( 
     SentenceTransformerEmbeddingFunction, 
@@ -42,7 +43,7 @@ def get_ef(embedding_function_type: EFType, **kwargs):
             ) from e
         raise
 
-class VectorStore:
+class VectorStore(Retriever):
     """
     Interface for filling and querying the chromaDB (persistent) client.
 
@@ -74,6 +75,7 @@ class VectorStore:
             configuration={"hnsw": {"space": "cosine"}},
         )
 
+
     def create_collection(
         self,
         ids:list[str],
@@ -95,6 +97,7 @@ class VectorStore:
         self,
         classification_system:ClassificationSystem,
         codes_to_include:list[str]|None=None,
+        **kwargs
     )->None:
         
         def flatten(c: dict) -> dict:

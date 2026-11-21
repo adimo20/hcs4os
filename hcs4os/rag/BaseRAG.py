@@ -1,5 +1,5 @@
 import dspy
-from .._vector_database.vector_store import VectorStore
+from .._vector_database.Retriever import Retriever
 from ..classification_system.registry import get_classification_system
 from typing import Literal
 import json
@@ -15,7 +15,7 @@ class BaseRAGCoT(dspy.Module):
         signature:dspy.Signature,
         query_field:str,
         context_field:str,
-        store: VectorStore,        
+        store: Retriever,        
         codes_to_include:list[str]|None=None,
         api_base:str|None=None                      
     )->None:

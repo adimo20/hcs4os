@@ -1,7 +1,7 @@
 from typing import Any
 import dspy
 from ...classification_system import get_classification_system
-from ..._vector_database.vector_store import VectorStore
+from ..._vector_database.Retriever import Retriever
 
 class BaseRAGAgent(dspy.Module):
     
@@ -12,7 +12,7 @@ class BaseRAGAgent(dspy.Module):
         model_name:str,
         signature:type[dspy.Signature],
         search_category_tool_doc:str,
-        store:VectorStore,
+        store:Retriever,
         codes_to_include:list[str]|None=None,
         api_base:str|None=None           
     )->None:
