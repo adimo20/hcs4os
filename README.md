@@ -2,16 +2,16 @@
 
 `hcs4os` turns the published documentation of official statistical classifications
 (COICOP, SEA 2021, WZ 2008, KldB 2010, ICATUS 2016, GP, NST, …) into a uniform,
-navigable Python object, and puts LLM agents on top of it that classify a free-text
-item against the real classification instead of recalling a code from memory.
+navigable Python object, and puts LLM agents and RAG-based approaches on top of it that classify a free-text
+item against the classification systems descriptions.
 
 Four classifier styles solve that same task from different directions:
 
 - **`HierarchicalNavigationAgent`** (`dspy.ReAct`) walks the tree top-down with tools
   — roots, children, parent, code — one level at a time.
-- **`RAGAgent`** (`dspy.ReAct`) embeds every code once into a vector store and gives
-  the model a single `search_category` tool to pull candidates by semantic similarity
-  and reason its way to one of them, re-querying when the notes point elsewhere.
+- **`RAGAgent`** (`dspy.ReAct`) searches a vector store of the whole classification
+  through a single `search_category` tool, pulling candidates by semantic similarity
+  and reasoning its way to one of them, re-querying when the notes point elsewhere.
 - **`RAGChainOfThought`** (`dspy.ChainOfThought`) does one retrieval and one reasoning
   pass over the candidates — no loop, no tool calls, the cheap baseline.
 - **`RRR_RAGChainOfThought`** adds a Rewrite step in front of that baseline: a small
@@ -51,12 +51,15 @@ Installation via pip:
 pip install git+https://github.com/adimo20/hcs4os.git
 ```
 
-Requires Python ≥ 3.11. Runtime dependencies: `pandas`, `openpyxl`, `dspy`,
-`chromadb`, `sentence-transformers` and `ollama` (the last three only matter for the
-retrieval-based classifiers). There is one optional extra:
+Requires Python ≥ 3.12. The core install is parsing and navigation only — its
+dependencies are `pandas`, `openpyxl` and `dspy`. The retrieval-based classifiers need
+a vector-store backend, which ships as an optional extra (each pulls in `chromadb`
+plus one embedding backend) — install the one you will use:
 
 ```bash
-pip install "hcs4os[system_one] @ git+https://github.com/adimo20/hcs4os.git"   # adds typesafe-sdk
+pip install "hcs4os[local]  @ git+https://github.com/adimo20/hcs4os.git"   # chromadb + sentence-transformers (in-process)
+pip install "hcs4os[ollama] @ git+https://github.com/adimo20/hcs4os.git"   # chromadb + ollama (self-hosted HTTP)
+pip install "hcs4os[openai] @ git+https://github.com/adimo20/hcs4os.git"   # chromadb + openai (hosted API)
 ```
 
 The classification source files ship inside the package (`hcs4os/_data/`), so no
@@ -108,13 +111,9 @@ print(result.coicop_code, result.explaination)
 print(result.get_lm_usage())          # token usage, tracked by default
 ```
 
-Every classifier now defines `forward()`, so call the module directly. Input field
-names are checked up front — a wrong or missing one raises
-`ValueError: Missing input fields: ['input_expense']` rather than failing inside dspy.
-
 ### Building a vector store
 
-Every retrieval-based classifier takes a `VectorStore` you build yourself, so the
+Every retrieval-based classifier takes a `VectorStore` you index yourself, so the
 embedding backend is a decision you make once and can reuse across classifiers:
 
 ```python
@@ -137,7 +136,7 @@ store = VectorStore(
     model_name="mxbai-embed-large",
 )
 
-# or OpenAI
+# or OpenAI/OpenAI compatible endpoint
 store = VectorStore(
     collection_name="coicop_openai",
     chromadb_path="./data/chroma",
@@ -153,6 +152,23 @@ untouched to the matching chroma embedding function — so whatever that backend
 works here. `embedding_batch_size` (default `16`) controls how many documents go per
 `collection.add` call; raise it for a local model, keep it low for a remote API.
 
+Fill the store once, from the classification you will query — this is what the
+retrieval classifiers search.
+
+```python
+from hcs4os.classification_system import get_classification_system
+
+store.index(classification_system=get_classification_system("COICOP_2018"))
+# store.index(classification_system=..., codes_to_include=[...])   # optional: index a subset
+```
+
+`index()` embeds every code's `description` and persists the collection under
+`chromadb_path`, so it is a one-time cost: on later runs rebuild the same
+`VectorStore(collection_name=…)` and go straight to querying. Re-running `index()` on a
+populated collection is a harmless no-op (ids are deterministic), and a collection is
+only meaningful with the embedding model that built it — change the backend or
+`model_name` and you index into a fresh `collection_name`.
+
 ### Classifying by retrieval
 
 ```python
@@ -163,17 +179,16 @@ agent = RAGAgent(
     classification_name="COICOP_2018",
     api_key=os.getenv("MISTRAL_API_KEY"),
     model_name="mistral/mistral-small-latest",
-    store=store,
-    create_new_collection=True,            # index the classification on construction
+    store=store,                           # the indexed store from above
 )
 
 result = agent(input_expense="Basmati rice 1kg bag")   # input_activity for ICATUS
 print(result.coicop_code, result.explaination)         # sea_code for SEA
 ```
 
-The first run embeds the classification into the store and persists it under
-`chromadb_path`; later runs reuse the collection — pass
-`create_new_collection=False` to skip re-indexing.
+`RAGAgent` does not build or fill the store — it queries the one you pass in, so index
+it once (above) before the first call. The agent wraps the store's `search_category`
+as a single ReAct tool and re-queries as it reasons.
 
 ### Classifying by retrieval, without the loop
 
@@ -235,6 +250,206 @@ Usage tracking is on for every classifier: `prediction.get_lm_usage()` returns t
 per-model token counts for that call. Note that `forward()` pins the classifier's own
 `self.lm` through `dspy.context`, so a global `dspy.configure(lm=…)` at call time is
 ignored — to swap the model after construction, set the `.lm` attribute.
+
+---
+
+## Bringing your own classification (no source edits)
+
+Everything in the built-in catalogue — COICOP, ICATUS, SEA, … — is wired together
+through three small registries and one plain dictionary. All four are ordinary
+importable Python objects, so you can register your own classification **from your own
+script, against the installed package**, without forking or editing anything inside
+`hcs4os`. Once registered, your classification is indistinguishable from a built-in
+one: the same `get_classification_system(...)`, the same navigation, the same vector
+store.
+
+You supply three things and tie them together with a fourth:
+
+| You write                   | Answers the question                  | Contract                                                   |
+| --------------------------- | ------------------------------------- | ---------------------------------------------------------- |
+| a **loader**                | _how do I read my file?_              | one method: `to_records() -> list[dict]`                   |
+| a **classification system** | _how do my codes nest?_               | one method: `get_prefixes(code)` (+ `get_root_categories`) |
+| a **mapping entry**         | _what is this dataset called?_        | a dict tying the loader + system + file together           |
+| (`Code`)                    | the uniform record every code becomes | provided — you just emit its fields                        |
+
+The worked example below registers the UN **HS (Harmonized System)** commodity codes
+and searches them, end to end.
+
+### 0. Install with an embedding backend
+
+The core install does parsing and navigation only. The vector store is optional and
+pulls its embedding backend from an extra — pick the one you'll use:
+
+```bash
+pip install "hcs4os[local]"    # sentence-transformers, runs in-process, offline
+# or
+pip install "hcs4os[ollama]"   # embeddings from a (self-hosted) Ollama server
+# or
+pip install "hcs4os[openai]"   # embeddings from the OpenAI API
+```
+
+### 1. Teach it to read your file — a loader
+
+A loader subclasses
+[`ClassificationLoader`](hcs4os/dataloaders/BaseDataLoader.py) and implements exactly
+one method, `to_records()`, returning a list of `Code`-shaped dicts. The base class
+has already stored the source path as `self.path` (a `pathlib.Path`) and checked that
+it exists; how you parse it is entirely up to you.
+
+```python
+import pandas as pd
+from hcs4os.dataloaders.BaseDataLoader import ClassificationLoader
+from hcs4os.dataloaders.registry import register as register_loader
+from hcs4os._shared.Code import Code
+
+@register_loader("HS_CODE")                 # <- the id you'll reference from the mapping, for convinience
+class HSCodeLoader(ClassificationLoader):
+    def to_records(self) -> list[dict]:
+        df = pd.read_csv(self.path, dtype=str)
+        return df.apply(
+            lambda row: Code(
+                code=row["id"],
+                description=row["text"],
+                level=row["aggrlevel"],
+            ).to_dict(),
+            axis=1,
+        ).to_list()
+```
+
+[`Code`](hcs4os/_shared/Code.py) has five fields — `code`, `description`, `level`,
+`detailled_description`, and `details` (a free-form dict for includes / excludes /
+keywords / …). Fill only what you have: anything you omit defaults to empty, and any
+extra keys you emit are dropped silently. Building each record with `Code(...).to_dict()`
+is the safe way to get a correctly shaped dict, but a hand-built dict with the same
+keys works too.
+
+### 2. Teach it how codes nest — a classification system
+
+A classification system subclasses
+[`ClassificationSystem`](hcs4os/classification_system/BaseClassificationSystem.py) and
+implements two methods. Everything else — `get_children`, `get_parent`, `get_code`,
+`get_code_trace` — is derived for free from the first one:
+
+```python
+from hcs4os.classification_system.BaseClassificationSystem import ClassificationSystem
+from hcs4os.classification_system.registry import register as register_classification_system
+
+@register_classification_system("HS_CODE")
+class ClassificationSystemHSCode(ClassificationSystem):
+    def get_root_categories(self) -> list[dict]:
+        # the entry points: HS chapters are the 2-digit codes
+        return [{"code": c.code, "description": c.description}
+                for c in self.codes if len(c.code) == 2]
+
+    def get_prefixes(self, code: str) -> list[str]:
+        # HS codes step two digits per level: "010121" -> ["01", "0101", "010121"]
+        return [code[:i] for i in range(2, len(code) + 1, 2)]
+```
+
+`get_prefixes` is the only real logic you write, and it defines the entire hierarchy.
+The rule the rest of the library builds on: **return the chain of ancestors of a code,
+ending with the code itself; the parent of any code is then its second-to-last
+prefix.** Get that right and parents, children and traces all fall out automatically.
+HS codes are fixed-width prefix codes that grow two digits per level, so the ancestors
+are simply the 2-, 4- and 6-digit slices. `get_root_categories` returns the top-level
+entries as `{code, description}` dicts — where a top-down search (or a human) would
+start.
+
+> How your codes are strung together is the one thing only you know. Dot-separated
+> (`01.1.1`), fixed-width prefixes (HS), irregular level jumps — each is just a
+> different `get_prefixes`. After writing it, sanity-check with
+> `cs.get_code_trace("<a deep code>")`: every rung should be present with no gaps.
+
+### 3. Name the dataset — a mapping entry
+
+The `mapping` dict is the lookup table that `get_classification_system(name)` consults.
+It is an ordinary dict; add your entry to it at runtime:
+
+```python
+from hcs4os.classification_system.mapping import mapping
+
+mapping["HS_CODE_2022"] = {
+    "classification_system": "HS_CODE",   # the register_classification_system id from step 2
+    "loader_name":           "HS_CODE",   # the register_loader id from step 1
+    "data_path":             r"C:\data\hscode_unsd.csv",
+    "metadata":              {"url": "https://unstats.un.org/..."},
+}
+```
+
+The key (`"HS_CODE_2022"`) is the name you ask for later. `classification_system` and
+`loader_name` are independent ids on purpose — the same hierarchy logic can be fed from
+a different file or format just by pointing a new mapping key at a different loader.
+
+### 4. Build it, index it, search it
+
+From here your classification behaves exactly like a built-in one. Build the navigable
+object, embed every code once into a persistent vector store, then query it:
+
+```python
+from hcs4os.classification_system import get_classification_system
+from hcs4os._vector_database.vector_store import VectorStore
+
+hs = get_classification_system("HS_CODE_2022")   # navigable immediately
+# hs.get_root_categories(); hs.get_children("01"); hs.get_code_trace("010121"); ...
+
+store = VectorStore(
+    collection_name="HS_CODE_2022",
+    chromadb_path=r"C:\data\chroma",
+    embedding_function_type="ollama",            # or "sentence_transformers" / "openai"
+    url="http://192.168.178.48:11434",           # backend-specific kwargs pass straight through
+    model_name="qwen3-embedding:0.6b",
+)
+
+store.index(classification_system=hs)            # one-time: embeds every code, persists to disk
+
+hits = store.search_category(
+    "Ishihara color-blindness test book, leather cover",
+    k=20,
+    where={"level": "6"},                         # optional metadata filter
+)
+```
+
+`index()` walks every `Code`, embeds its `description`, and stores the remaining
+fields (`level`, `detailled_description`, `details`) as metadata beside it; pass
+`codes_to_include=[...]` to index only a subset of codes. `search_category()` returns
+the `k` nearest codes, each as a dict of that metadata with its `description` joined
+back on.
+
+### Running it again
+
+Indexing is a one-time cost: the collection is written under `chromadb_path` and
+reused on later runs. Each code is stored under a deterministic id, so re-running
+`index()` on a populated collection is a harmless no-op (chroma skips existing ids with
+a warning) — but wasted work, so on later runs just construct the `VectorStore` with
+the same `collection_name` and go straight to `search_category`. A collection is only
+meaningful with the embedding model that built it; to change `model_name` or backend,
+index into a fresh `collection_name`.
+
+### Three things that catch people out
+
+- **Registration happens on import.** The `@register_*` decorators and the
+  `mapping[...] = ` assignment only take effect when that code actually runs, so the
+  module that defines your loader and system and adds the mapping entry must be
+  imported _before_ you call `get_classification_system`. In a single script, keep
+  steps 1–3 above the first use; in a package, import that module early.
+- **Metadata filters match the stored type.** Whatever type a field has when it leaves
+  your loader is what lands in the vector-store metadata. The HS loader reads the CSV
+  with `dtype=str`, so `level` is the string `"6"` — hence `where={"level": "6"}`, not
+  `{"level": 6}`. Store levels as ints and you filter with ints. (Nested dicts like
+  `details` are serialized to a JSON string on the way in, so they come back but are
+  not practically filterable.)
+- **The embedding extra must match the backend.** `embedding_function_type="ollama"`
+  needs `hcs4os[ollama]`, `"sentence_transformers"` needs `hcs4os[local]`, and so on;
+  otherwise construction raises an `ImportError` naming the extra to install.
+
+### Driving an LLM agent over it
+
+Navigation and retrieval above work for any registered classification with zero extra
+wiring. The two LLM classifiers (`RAGAgent` and the ReAct navigator) additionally need
+a prose entry — a signature, a system prompt, tool descriptions — keyed by your dataset
+name in the agent's own `registry.py`, because those are classification-specific. That
+step is covered in _Adapting the content → E_; everything in this section is
+independent of it.
 
 ---
 
@@ -464,19 +679,14 @@ forcing a fit_, verify the leaf, backtrack if excluded, and never produce a code
 did not come from a tool.
 
 **[RAGAgent](hcs4os/agents/RAG/RAGAgent.py)** — retrieve, then choose. It takes a
-ready-made `store` (see section 5) rather than embedding parameters, calls
-`store.index(...)` once on construction when `create_new_collection=True`, and is a
-`dspy.ReAct` over a single tool: the store's own `search_category`, handed to the model
-under `search_category_tool_doc`. The signature docstring drives the loop — search with
-a focused query, read the includes/excludes notes on the candidates, refine the query
-and search again when the notes point elsewhere, and never emit a code the tool did not
-return. Its outputs are the domain code (`coicop_code` / `icatus_code` / `sea_code`)
-and `explaination`.
-
-Because the ids are deterministic (`id_<code>`), re-indexing the same collection
-re-sends the same ids — chroma skips them with a warning rather than duplicating — so
-it is wasted work, not corruption; point later runs at `create_new_collection=False`
-or a fresh `collection_name`.
+ready-made, already-indexed `store` (see section 5) rather than embedding parameters:
+it never indexes anything itself — filling the store with `store.index(...)` is the
+caller's job — and is a `dspy.ReAct` over a single tool, the store's own
+`search_category`, handed to the model under `search_category_tool_doc`. The signature
+docstring drives the loop — search with a focused query, read the includes/excludes
+notes on the candidates, refine the query and search again when the notes point
+elsewhere, and never emit a code the tool did not return. Its outputs are the domain
+code (`coicop_code` / `icatus_code` / `sea_code`) and `explaination`.
 
 #### The `Base…` variants
 
@@ -491,10 +701,13 @@ without editing shared files; the registry subclasses stay the right home for a 
 you intend to keep. `classification_name` still goes to `get_classification_system`,
 so the classification itself must be in `mapping.py` either way.
 
-`BaseRAGAgent` additionally takes `codes_to_include: list[str] | None` — index only
-those codes. Restricting the collection to the level actually being predicted, or to
-one branch, is the cheapest available lever on retrieval quality, because it removes
-whole classes of wrong answers before the model ever sees them.
+Restricting the collection to the level actually being predicted, or to one branch, is
+the cheapest available lever on retrieval quality — it removes whole classes of wrong
+answers before the model ever sees them. That restriction is applied when you fill the
+store (`store.index(codes_to_include=[...])`), not on the agent. `BaseRAGAgent` still
+accepts a `codes_to_include` argument for symmetry with the other classifiers, but
+since the agent no longer does its own indexing the argument is currently inert —
+narrow the collection at `store.index` instead.
 
 #### `forward()` and usage tracking
 
@@ -642,19 +855,6 @@ because its titles are organised by that rather than by what the person did. All
 end with the same guard: do not force a category term you are unsure of, because a
 wrong one pulls retrieval into the wrong branch.
 
-Three things to know before building on it:
-
-- The class docstring still lists `rephraser_lm` and `retrieve_with_original`.
-  Injection has superseded `rephraser_lm`, but **`retrieve_with_original` does not
-  exist** — `forward` retrieves with the rewritten query alone, with no merge of the
-  raw query's hits.
-- So retrieval depends entirely on one rewrite. A bad rewrite is unrecoverable, where
-  plain `RAGChainOfThought` at least embeds the item's own words. This is the risk
-  `retrieve_with_original` was meant to hedge.
-- `QueryRephraser.forward` ends in a bare `print(rephrased)`, so every call writes to
-  stdout. Noisy in batch evaluation; `rephrased_query` on the prediction carries the
-  same value.
-
 ### 8. Taxonomy refinement ([taxonomy_refinement/](hcs4os/taxonomy_refinement))
 
 Published classifications document their leaves well and their inner nodes barely at
@@ -765,7 +965,7 @@ increasing order of intrusiveness:
 3. **Retrieval behaviour** — in `RAGAgent` the shortlist length `k` is chosen by the
    model per call and steered by the signature docstring (edit the "use a k large
    enough" guidance there); in `RAGChainOfThought` you pass `k` and `where` yourself.
-   `codes_to_include` narrows what is indexed at all.
+   `store.index(codes_to_include=[...])` narrows what is in the collection at all.
 4. **The embedding backend** — the store's `embedding_function_type` and `model_name`
    are usually the biggest single lever on retrieval quality. A generic multilingual
    MiniLM is a weak retriever for German product text, and a domain- or
@@ -816,17 +1016,21 @@ from hcs4os._vector_database.vector_store import VectorStore
 
 wz = get_classification_system("WZ_2008")
 
+store = VectorStore(
+    collection_name="wz_level3",
+    chromadb_path="./data/chroma",
+    embedding_function_type="sentence_transformers",
+    model_name="deutsche-telekom/gbert-large-paraphrase-cosine",
+)
+# fill the store yourself — restrict it to the level you predict
+store.index(classification_system=wz,
+            codes_to_include=[c.code for c in wz.codes if c.level == 3])
+
 agent = BaseRAGAgent(
     classification_name="WZ_2008",        # any key in mapping.py
     signature=MyWzSignature,              # its __doc__ is the system prompt
     search_category_tool_doc="...",
-    codes_to_include=[c.code for c in wz.codes if c.level == 3],
-    store=VectorStore(
-        collection_name="wz_level3",
-        chromadb_path="./data/chroma",
-        embedding_function_type="sentence_transformers",
-        model_name="deutsche-telekom/gbert-large-paraphrase-cosine",
-    ),
+    store=store,
     api_key=..., model_name=...,
 )
 ```
@@ -864,7 +1068,7 @@ If you use `hcs4os` in published work, please cite it:
 @software{montag_hcs4os,
   author  = {Montag, Adrian},
   title   = {{hcs4os}: Hierarchical Classification Systems for Official Statistics},
-  version = {0.2.7},
+  version = {0.2.8},
   year    = {2026},
   url     = {https://github.com/adimo20/hcs4os},
   license = {EUPL-1.2}
