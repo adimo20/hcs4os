@@ -1,6 +1,7 @@
 from typing import Literal
 import json
 import chromadb
+from .Retriever import Retriever
 from ..classification_system.BaseClassificationSystem import ClassificationSystem
 from chromadb.utils.embedding_functions import( 
     SentenceTransformerEmbeddingFunction, 
@@ -16,13 +17,33 @@ _EMEBEDDIG_FUNCTIONS = {
     "sentence_transformers":SentenceTransformerEmbeddingFunction
 }
 
+_EXTRA = {"sentence_transformers": "local", "ollama": "ollama", "openai": "openai"}
+
 def get_ef(embedding_function_type: EFType, **kwargs):
+    """
+    Takes an embedding function type, maps the embedding function type 
+    to the correct interface and returns the loaded ef interface, given the 
+    defined kwargs.
+    
+    embedding_function_type:Literal["openai", "ollama", "sentence_transformers"]
+    **kwargs arguments used to specify what model and paramters to use when loading the embedding function
+    
+    """
     try:
-        return _EMEBEDDIG_FUNCTIONS[embedding_function_type](**kwargs)
+        ef_cls = _EMEBEDDIG_FUNCTIONS[embedding_function_type]
     except KeyError:
         raise ValueError(f"Unknown embedding function: {embedding_function_type!r}") from None
+    try:
+        return ef_cls(**kwargs)
+    except (ImportError, ValueError) as e:
+        if "not installed" in str(e) or isinstance(e, ImportError):
+            raise ImportError(
+                f"If you want to use the {embedding_function_type} please install hcs4os[{_EXTRA[embedding_function_type]}]"
+                f'pip install "hcs4os[{_EXTRA[embedding_function_type]}]"'
+            ) from e
+        raise
 
-class VectorStore:
+class VectorStore(Retriever):
     """
     Interface for filling and querying the chromaDB (persistent) client.
 
@@ -54,6 +75,7 @@ class VectorStore:
             configuration={"hnsw": {"space": "cosine"}},
         )
 
+
     def create_collection(
         self,
         ids:list[str],
@@ -73,8 +95,9 @@ class VectorStore:
         
     def index(
         self,
-        codes_to_include:list[str]|None,
-        classification_system:ClassificationSystem 
+        classification_system:ClassificationSystem,
+        codes_to_include:list[str]|None=None,
+        **kwargs
     )->None:
         
         def flatten(c: dict) -> dict:

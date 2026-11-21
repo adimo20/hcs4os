@@ -21,7 +21,6 @@ class BaseHierarchicalNavigationAgent(dspy.Module):
         api_base:str|None=None,
     )->None:
         
-        assert api_key is not None
         assert model_name is not None
         assert classification_name is not None
         

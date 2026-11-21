@@ -95,7 +95,6 @@ class QueryRephraser(dspy.Module):
         with dspy.context(lm=self.lm):
             prediction = self.rephrase(**{self.input_field: query})
         rephrased = (prediction.rephrased_query or "").strip()
-        print(rephrased)
         return dspy.Prediction(rephrased_query=rephrased or query)
 
 
@@ -111,8 +110,7 @@ class RRR_RAGChainOfThought(RAGChainOfThought):
     1. Rewrite - `self.rephrasing_module` (a `QueryRephraser`) turns the raw
        item into a query in the vocabulary of the classification's labels.
     2. Retrieve - the rephrased query is embedded and the k nearest codes are
-       pulled from the vector store (optionally merged with the hits for the
-       original query, see `retrieve_with_original`).
+       pulled from the vector store.
     3. Read - the parent's ChainOfThought classifies the ORIGINAL item over
        the retrieved candidates. The rewrite only steers retrieval; it never
        replaces the item the model has to classify, so detail the rephraser
@@ -120,11 +118,7 @@ class RRR_RAGChainOfThought(RAGChainOfThought):
 
     Parameters (on top of `RAGChainOfThought`):
         rephraser_lm (dspy.LM | None) - LM for the rewrite step; None reuses
-            the Read step's `self.lm`.
-        retrieve_with_original (bool) - also retrieve with the raw query and
-            interleave both result lists (rephrased first, deduplicated by
-            code), capped at k. Guards against a bad rewrite while keeping
-            the context the same size as the baseline.
+            the Read step's `self.lm`.        
     """
 
     def __init__(
@@ -138,7 +132,12 @@ class RRR_RAGChainOfThought(RAGChainOfThought):
         self.rephrasing_module = rephraser
 
     
-    def forward(self, query: str, k: int, where: dict | None = None):
+    def forward(
+        self, 
+        query: str, 
+        k: int, 
+        where: dict | None = None
+    ) -> dspy.Prediction:
         rephrased_query = self.rephrasing_module(query=query).rephrased_query
         retrieved_context = self.store.search_category(rephrased_query, k, where=where)
         retrieved_context_str = json.dumps(
