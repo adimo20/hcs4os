@@ -5,10 +5,7 @@ from hcs4os.classification_system import registry as cs_registry
 from hcs4os.classification_system.mapping import mapping
 from hcs4os.classification_system.registry import get_classification_system
 
-# GP needs >1 minute because children are computed by comparing every pair of codes
-FAST_KEYS = [k for k in mapping if k != "GP"]
-ALL_KEYS = FAST_KEYS + [pytest.param("GP", marks=pytest.mark.slow)]
-
+ALL_KEYS = [k for k in mapping]
 
 @pytest.fixture(scope="module")
 def systems():
