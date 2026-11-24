@@ -1,9 +1,10 @@
 # hcs4os — Hierarchical Classification Systems for Official Statistics
 
 `hcs4os` turns the published documentation of official statistical classifications
-(COICOP, SEA 2021, WZ 2008, KldB 2010, ICATUS 2016, GP, NST, …) into a uniform,
+(COICOP 2018, SEA 2021, WZ 2008, KldB 2010, ICATUS 2016, NAF rév. 2) into a uniform,
 navigable Python object, and puts LLM agents and RAG-based approaches on top of it that classify a free-text
-item against the classification systems descriptions.
+item against the classification systems descriptions. Any further classification can
+be added without touching the library — see _Bringing your own classification_ below.
 
 Four classifier styles solve that same task from different directions:
 
@@ -86,7 +87,7 @@ sea.get_children("0111")
 # [Code(code='0111 1', description='Getreide', level=4, ...), ...]
 
 sea.get_code("0111 1").to_dict()
-sea.get_parent("0111 1")          # -> dict of the parent code
+sea.get_parent("0111 1")          # -> Code(code='0111', description='Getreide und …')
 sea.get_code_trace("0111 1")
 # [('01', 'Nahrungsmittel und alkoholfreie Getränke'),
 #  ('011', 'Nahrungsmittel'),
@@ -525,8 +526,13 @@ provides all navigation for free. On construction it loads the codes and builds 
 indices:
 
 - `_lookup` — `code → Code`
-- `_children_register` — `code → list[Code]`, computed by testing every pair with
-  `_is_child()`
+- `_children_register` — `code → list[Code]`
+
+Both are built in a single pass over the codes: each code's own prefix chain names its
+parent, so it appends itself to that parent's list. That makes construction linear in
+the number of codes — loading the largest shipped classification (SEA 2021, 2,654
+codes) takes well under a tenth of a second, and what time loading does cost is
+spent in the loader parsing the source file, not in building the hierarchy.
 
 The whole hierarchy is derived from **one abstract method**:
 
@@ -534,9 +540,14 @@ The whole hierarchy is derived from **one abstract method**:
 def get_prefixes(self, code: str) -> list[str]: ...
 ```
 
-It returns the chain of ancestors of a code, ending with the code itself. `_is_child`
-then simply says: _parent is the second-to-last prefix of the child_. Get this right
-and `get_children`, `get_parent`, and `get_code_trace` all follow.
+It returns the chain of ancestors of a code, ending with the code itself. The
+second-to-last prefix is the parent. Get this right and `get_children`, `get_parent`,
+and `get_code_trace` all follow.
+
+Lookups are forgiving in one direction only: `get_children` on an unknown code returns
+`[]`, the same as for a leaf, while `get_code` raises `ValueError`. So an empty child
+list never tells you whether you reached a leaf or mistyped the code — check with
+`get_code` if that distinction matters.
 
 Subclasses also implement `get_root_categories()` — the entry point the agents start
 from — which is usually just "all codes whose string has length 1 or 2".
@@ -546,20 +557,15 @@ implementations in
 [ClassificationSystems.py](hcs4os/classification_system/systems/ClassificationSystems.py):
 
 - **COICOP** is dot-separated → split on `"."` (`01` → `01.1` → `01.1.1`).
-- **ICATUS / KldB / VUL** are pure prefix codes → every string prefix is an ancestor.
+- **ICATUS / KldB** are pure prefix codes → every string prefix is an ancestor.
 - **SEA 2021** is a prefix code _with a formatting quirk_: from digit 5 on, a space
   is inserted (`0111` → `0111 1`), so `get_prefixes` re-inserts it.
-- **NAF rev. 2** (French) inserts a dot after the 2nd digit instead (`43` → `43.3` →
+- **NAF rév. 2** (French) inserts a dot after the 2nd digit instead (`43` → `43.3` →
   `43.34`), so `get_prefixes` strips the dot and re-inserts it at a fixed position.
 - **WZ 2008** carries trailing dots that must be stripped, and de-duplicated.
-- **GP** jumps levels — only lengths 2, 3, 4, 6, 7, 9, 10, 11 are real codes.
-- **NST** has only two meaningful levels.
 
-`SEA_NS` is the same SEA hierarchy without the space quirk. It is registered but no
-longer referenced from `mapping.py` — the JSON-sourced SEA variant now keeps the
-official spacing and uses the plain `SEA` class.
-
-Systems register under a string ID the same way loaders do.
+Six classes are registered — `COICOP`, `ICATUS`, `KLDB`, `SEA`, `WZ`, `NAF_rev2` —
+under a string ID the same way loaders are.
 
 ### 4. `mapping.py` — the wiring table
 
@@ -591,17 +597,41 @@ same `SEA` class. For generated datasets `metadata` carries the provenance:
 },
 ```
 
-Currently mapped keys:
+The seven mapped keys, and what each resolves to:
 
-`NAF_rev2`, `ICATUS_2016`, `SEA_2021`, `SEA_2021_REPHRASED`, `COICOP_2018`,
-`WZ_2008`, `KLDB_2010`, `KLDB_2010_REPHRASED`, `EAV`, `VUL`, `NST`, `GP`
+| key                  | system class | loader         | source                             |
+| -------------------- | ------------ | -------------- | ---------------------------------- |
+| `COICOP_2018`        | `COICOP`     | `COICOP`       | `COICOP_2018_English_structure.xlsx` |
+| `ICATUS_2016`        | `ICATUS`     | `ICATUS`       | `UNSD_Time_Use_Statistics.csv`     |
+| `SEA_2021`           | `SEA`        | `KLASS_SERVER` | `sea2021.xml`                      |
+| `SEA_2021_REPHRASED` | `SEA`        | `JSON`         | `sea_2021_augmented.json`          |
+| `WZ_2008`            | `WZ`         | `KLASS_SERVER` | `wz2008.xml`                       |
+| `KLDB_2010`          | `KLDB`       | `KLASS_SERVER` | `kldb_2010.xml`                    |
+| `NAF_rev2`           | `NAF_rev2`   | `JSON`         | `NAF_INSEE.json`                   |
+
+Anything beyond these you add yourself, without editing the library — see _Bringing
+your own classification_ above.
 
 ### 5. The vector store ([\_vector_database/](hcs4os/_vector_database))
 
-[vector_store.py](hcs4os/_vector_database/vector_store.py) owns everything between the
-classification and the retrieval-based classifiers. It used to live inside
-`agents/RAG/`; pulling it out made it shareable by `agents/RAG/` and `rag/` alike, and
-turned the embedding backend into a choice rather than a hard-coded import.
+This package owns everything between the classification and the retrieval-based
+classifiers. It used to live inside `agents/RAG/`; pulling it out made it shareable by
+`agents/RAG/` and `rag/` alike, and turned the embedding backend into a choice rather
+than a hard-coded import.
+
+**The retrieval contract.** [Retriever.py](hcs4os/_vector_database/Retriever.py) is an
+ABC declaring `create_collection`, `index` and `search_category` (plus `__init__`, so
+a subclass must define its own), and every classifier types its `store` parameter as
+`Retriever`, not as `VectorStore`. So
+the chroma store is one implementation rather than the only one: anything satisfying
+that contract can be passed in, which is the seam for swapping in a different
+retrieval approach (a BM25 or hybrid index, a managed vector service, a reranking
+wrapper around another retriever) without touching the classifiers. Only
+`search_category` is called at inference time; `index` and `create_collection` matter
+only when you build the collection.
+
+[vector_store.py](hcs4os/_vector_database/vector_store.py) holds `VectorStore`, the
+chroma implementation of that contract.
 
 **Pluggable embedding backends.** `get_ef()` is a small factory over three chroma
 embedding functions, selected by `embedding_function_type` (`EFType`):
@@ -618,8 +648,8 @@ accepts. An unknown type fails fast with
 `ValueError: Unknown embedding function: 'cohere'`. The collection itself is always a
 persistent chroma collection in cosine space.
 
-**`store.index(codes_to_include, classification_system)`** fills it. Every `Code` is
-embedded by its **`description` only**; the rest of the record goes into the chroma
+**`store.index(classification_system, codes_to_include=None)`** fills it. Every `Code`
+is embedded by its **`description` only**; the rest of the record goes into the chroma
 metadata under the id `id_<code>` — `code`, `level` and `detailled_description` as
 they are, and the nested `details` dict JSON-dumped into one string, because chroma
 accepts only flat scalars. So the embedding sees the short label alone, while the long
@@ -945,7 +975,7 @@ then reference `"MY_FORMAT"` from `mapping.py`.
 For one-off or generated content (LLM-rephrased descriptions, a subset, a merged
 system), skip the loader entirely: dump a JSON list of `Code`-shaped dicts into
 `_data/` and use `"loader_name": "JSON"` — that is what `SEA_2021_REPHRASED` and
-`KLDB_2010_REPHRASED` do.
+`NAF_rev2` do.
 
 ### D. Change what the agent reads and says
 
@@ -1076,5 +1106,5 @@ If you use `hcs4os` in published work, please cite it:
 ```
 
 Montag, A. (2026). _hcs4os: Hierarchical Classification Systems for Official
-Statistics_ (Version 0.2.7) [Computer software].
+Statistics_ (Version 0.2.8) [Computer software].
 https://github.com/adimo20/hcs4os

@@ -5,25 +5,25 @@ def make_path(filename:str):
 
 mapping = {
     "NAF_rev2":{
-        "classification_system":"NAF_rev2", # Decorater-ID within classification system, which implements the given logic
-        "loader_name":"JSON", # Decorater-ID within dataloaders, which implements the given logic
-        "data_path":make_path("NAF_INSEE.json"), # Softpath to the xml or ... file which contains the classification system
+        "classification_system":"NAF_rev2", 
+        "loader_name":"JSON", 
+        "data_path":make_path("NAF_INSEE.json"), 
         "metadata":{
             "url":"https://unstats.un.org/unsd/demographic-social/time-use/icatus-2016/tableview",
         }
     },
     "ICATUS_2016":{
-        "classification_system":"ICATUS", # Decorater-ID within classification system, which implements the given logic
-        "loader_name":"ICATUS", # Decorater-ID within dataloaders, which implements the given logic
-        "data_path":make_path("UNSD_Time_Use_Statistics.csv"), # Softpath to the xml or ... file which contains the classification system
+        "classification_system":"ICATUS", 
+        "loader_name":"ICATUS", 
+        "data_path":make_path("UNSD_Time_Use_Statistics.csv"), 
         "metadata":{
             "url":"https://unstats.un.org/unsd/demographic-social/time-use/icatus-2016/tableview",
         }
     },
     "SEA_2021_REPHRASED":{
-        "classification_system":"SEA", # Decorater-ID within classification system, which implements the given logic
-        "loader_name":"JSON", # Decorater-ID within dataloaders, which implements the given logic
-        "data_path":make_path("sea_2021_augmented.json"), # Softpath to the xml or ... file which contains the classification system
+        "classification_system":"SEA", 
+        "loader_name":"JSON", 
+        "data_path":make_path("sea_2021_augmented.json"), 
         "metadata":{
             "url":"https://klassifikationsserver.de/klassService/thyme/variant/sea_2021",
             "model":"mistral/zai-glm-5-2",
@@ -31,17 +31,17 @@ mapping = {
         }
     },
     "SEA_2021":{
-        "classification_system":"SEA", # Decorater-ID within classification system, which implements the given logic
-        "loader_name":"KLASS_SERVER", # Decorater-ID within dataloaders, which implements the given logic
-        "data_path":make_path("sea2021.xml"), # Softpath to the xml or ... file which contains the classification system
+        "classification_system":"SEA", 
+        "loader_name":"KLASS_SERVER", 
+        "data_path":make_path("sea2021.xml"), 
         "metadata":{
             "url":"https://klassifikationsserver.de/klassService/thyme/variant/sea_2021",
         }
     },
     "COICOP_2018":{
-        "classification_system":"COICOP", # Decorater-ID within classification system, which implements the given logic
-        "loader_name":"COICOP", # Decorater-ID within dataloaders, which implements the given logic
-        "data_path":make_path("COICOP_2018_English_structure.xlsx"), # Softpath to the xml or ... file which contains the classification system
+        "classification_system":"COICOP", 
+        "loader_name":"COICOP", 
+        "data_path":make_path("COICOP_2018_English_structure.xlsx"), 
         "metadata":{
             "url":"",
         }
@@ -61,39 +61,5 @@ mapping = {
         "metadata":{
             "url":"https://klassifikationsserver.de/klassService/thyme/variant/kldb2010"
         }
-    },
-    "KLDB_2010_REPHRASED":{
-        "classification_system":"KLDB",      
-        "loader_name":"JSON",
-        "data_path":make_path("classification_system_KldB_2010.json"),
-        "metadata":{}
     }
-    ,
-    "EAV":{
-        "classification_system":"EAV",      
-        "loader_name":"KLASS_SERVER",
-        "data_path":make_path("EAV2026.xml"),
-        "metadata":{}
-    },
-    "VUL":{
-        "classification_system":"VUL",      
-        "loader_name":"KLASS_SERVER",
-        "data_path":make_path("VUL_2025-2026-03-13-Gliederung_mit_Erläuterung.xml"),
-        "metadata":{}
-    },
-    "NST":{
-        "classification_system":"NST",      
-        "loader_name":"KLASS_SERVER",
-        "data_path":make_path("NST_2007-2024-08-27-Gliederung_mit_Erläuterung.xml"),
-        "metadata":{}
-        
-    },
-    "GP":{
-        "classification_system":"GP",      
-        "loader_name":"KLASS_SERVER",
-        "data_path":make_path("GP_2026-2026-04-10-Structure.xml"),
-        "metadata":{}
-        
-    }
-
 }
