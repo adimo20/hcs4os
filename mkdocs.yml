@@ -1,0 +1,84 @@
+site_name: hcs4os
+site_description: Hierarchical Classification Systems for Official Statistics
+site_url: https://adimo20.github.io/hcs4os/
+repo_url: https://github.com/adimo20/hcs4os
+repo_name: adimo20/hcs4os
+copyright: Copyright &copy; 2026 Adrian Montag — EUPL v. 1.2
+
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - content.code.copy
+    - search.suggest
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          options:
+            docstring_style: google
+            show_source: true
+            show_root_heading: true
+            show_symbol_type_heading: true
+            members_order: source
+            separate_signature: true
+            heading_level: 3
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - pymdownx.details
+
+nav:
+  - Home: index.md
+  - Quick start:
+      - quickstart/index.md
+      - Navigating a classification: quickstart/navigating.md
+      - Walking the hierarchy: quickstart/walking-the-hierarchy.md
+      - Building a vector store: quickstart/vector-store.md
+      - Classifying by retrieval: quickstart/retrieval.md
+      - Retrieval without the loop: quickstart/retrieval-no-loop.md
+      - Rewrite-Retrieve-Read: quickstart/rewrite-retrieve-read.md
+  - Guides:
+      - Bringing your own classification: guides/custom-classification.md
+      - Adapting the content: guides/adapting.md
+  - Concepts:
+      - concepts/index.md
+      - Code: concepts/code.md
+      - Data loaders: concepts/data-loaders.md
+      - Classification systems: concepts/classification-systems.md
+      - mapping.py: concepts/mapping.md
+      - Vector store: concepts/vector-store.md
+      - ReAct agents: concepts/react-agents.md
+      - Retrieval without the loop: concepts/rag.md
+      - Taxonomy refinement: concepts/taxonomy-refinement.md
+  - Prompt reference:
+      - prompts/index.md
+      - Navigation: prompts/navigation.md
+      - Retrieval: prompts/retrieval.md
+      - Rephrasing: prompts/rephrasing.md
+  - API reference: api/index.md
+  - About: about.md
