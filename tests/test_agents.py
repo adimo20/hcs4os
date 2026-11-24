@@ -27,7 +27,7 @@ def test_navigation_registry_entries_match_constructor(name, config):
     assert set(config) == _required_config_keys(BaseHierarchicalNavigationAgent)
     assert all(isinstance(v, str) and v.strip() for k, v in config.items() if k.endswith("_doc"))
     assert config["signature"].__doc__.strip()
-    assert "explaination" in config["signature"].output_fields
+    assert "explanation" in config["signature"].output_fields
 
 
 def test_rag_agent_registry_entries_match_constructor():
@@ -38,7 +38,7 @@ def test_rag_agent_registry_entries_match_constructor():
         assert name in mapping
         assert set(config) == _required_config_keys(BaseRAGAgent)
         assert config["search_category_tool_doc"].strip()
-        assert "explaination" in config["signature"].output_fields
+        assert "explanation" in config["signature"].output_fields
 
 
 # ---------------------------------------------------------------------------
@@ -96,7 +96,7 @@ def test_navigation_forward_validates_input_fields(nav_agent):
 
 
 def test_navigation_forward_delegates_with_own_lm(nav_agent, fake_module, monkeypatch):
-    fake = fake_module(coicop_code="01.1.1.1", explaination="")
+    fake = fake_module(coicop_code="01.1.1.1", explanation="")
     monkeypatch.setattr(nav_agent, "agent", fake)
     dspy.configure(lm=dspy.LM("openai/some-other-model"))
     prediction = nav_agent(input_expense="rice")
@@ -161,7 +161,7 @@ def test_rag_agent_forward_validates_input_fields(rag_agent):
 
 
 def test_rag_agent_forward_delegates_with_own_lm(rag_agent, fake_module, monkeypatch):
-    fake = fake_module(icatus_code="110", explaination="")
+    fake = fake_module(icatus_code="110", explanation="")
     monkeypatch.setattr(rag_agent, "agent", fake)
     dspy.configure(lm=dspy.LM("openai/some-other-model"))
     assert rag_agent(input_activity="cooking dinner").icatus_code == "110"

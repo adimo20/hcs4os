@@ -20,7 +20,7 @@ Four classifier styles solve that same task from different directions:
   and only that rewritten query is embedded.
 
 All four end at the same `ClassificationSystem` and emit the same output fields
-(`<system>_code` + `explaination`), which is what makes them comparable on the same
+(`<system>_code` + `explanation`), which is what makes them comparable on the same
 data. Each is a thin subclass of a `Base…` class that takes its prompts and signature
 as constructor arguments; the subclass only supplies a registered configuration. The
 base variants work with any classification in `mapping.py`, and with custom ones. The
@@ -108,7 +108,7 @@ agent = HierarchicalNavigationAgent(
 )
 
 result = agent(input_expense="Basmati rice 1kg bag")
-print(result.coicop_code, result.explaination)
+print(result.coicop_code, result.explanation)
 print(result.get_lm_usage())          # token usage, tracked by default
 ```
 
@@ -184,7 +184,7 @@ agent = RAGAgent(
 )
 
 result = agent(input_expense="Basmati rice 1kg bag")   # input_activity for ICATUS
-print(result.coicop_code, result.explaination)         # sea_code for SEA
+print(result.coicop_code, result.explanation)         # sea_code for SEA
 ```
 
 `RAGAgent` does not build or fill the store — it queries the one you pass in, so index
@@ -204,7 +204,7 @@ rag = RAGChainOfThought(
 )
 
 result = rag(query="frisches Brot vom Bäcker", k=10)
-print(result.sea_code, result.explaination)
+print(result.sea_code, result.explanation)
 
 # restrict the candidates to one level of the hierarchy
 result = rag(query="Beitrag zur Krankenversicherung", k=10, where={"level": 5})
@@ -234,7 +234,7 @@ rrr = RRR_RAGChainOfThought(
 
 result = rrr(query="BASMATI REIS 1KG BTL", k=10)
 print(result.rephrased_query)   # 'rice, milled' — what was actually embedded
-print(result.coicop_code, result.explaination)
+print(result.coicop_code, result.explanation)
 ```
 
 Otherwise a drop-in replacement for `RAGChainOfThought`: identical
@@ -716,7 +716,7 @@ caller's job — and is a `dspy.ReAct` over a single tool, the store's own
 docstring drives the loop — search with a focused query, read the includes/excludes
 notes on the candidates, refine the query and search again when the notes point
 elsewhere, and never emit a code the tool did not return. Its outputs are the domain
-code (`coicop_code` / `icatus_code` / `sea_code`) and `explaination`.
+code (`coicop_code` / `icatus_code` / `sea_code`) and `explanation`.
 
 #### The `Base…` variants
 

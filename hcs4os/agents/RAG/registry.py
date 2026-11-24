@@ -52,7 +52,7 @@ class CoicopRAGSearchAgentSignature(dspy.Signature):
         Output:
         - coicop_code: the single most specific COICOP code that correctly
             classifies the expense.
-        - explaination: a concise justification naming the decisive retrieved
+        - explanation: a concise justification naming the decisive retrieved
             candidate and the includes/excludes note(s) that determined the
             choice, including any candidate you rejected and why.
     """
@@ -62,7 +62,7 @@ class CoicopRAGSearchAgentSignature(dspy.Signature):
     coicop_code: str = dspy.OutputField(
         desc="The single most specific COICOP code that correctly covers the expense, exactly as returned by the tools (e.g. '01.1.1.1')."
     )
-    explaination: str = dspy.OutputField(
+    explanation: str = dspy.OutputField(
         desc="Concise reasoning explaining which retrieved candidate was chosen and why, citing the includes/excludes notes that justified it, plus any rejected alternative."
     )
 
@@ -121,7 +121,7 @@ class IcatusRAGSearchAgentSignature(dspy.Signature):
         Output:
         - icatus_code: the single most specific ICATUS code that correctly
             classifies the activity.
-        - explaination: a concise justification naming the decisive retrieved
+        - explanation: a concise justification naming the decisive retrieved
             candidate and the includes/excludes note(s) that determined the
             choice, including any candidate you rejected and why.
     """
@@ -131,7 +131,7 @@ class IcatusRAGSearchAgentSignature(dspy.Signature):
     icatus_code: str = dspy.OutputField(
         desc="The single most specific ICATUS code that correctly covers the activity, exactly as returned by the tools (e.g. '110')."
     )
-    explaination: str = dspy.OutputField(
+    explanation: str = dspy.OutputField(
         desc="Concise reasoning explaining which retrieved candidate was chosen and why, citing the includes/excludes notes that justified it, plus any rejected alternative."
     )
 
@@ -211,7 +211,7 @@ class SeaRAGSearchAgentSignature(dspy.Signature):
         Output:
         - sea_code: the single most specific SEA 2021 code that correctly
             classifies the item.
-        - explaination: a concise justification naming the decisive retrieved
+        - explanation: a concise justification naming the decisive retrieved
             candidate and the Eingeschlossen/Ausgeschlossen note(s) that determined
             the choice, including any candidate you rejected and why.
     """
@@ -221,7 +221,7 @@ class SeaRAGSearchAgentSignature(dspy.Signature):
     sea_code: str = dspy.OutputField(
         desc="The single most specific SEA 2021 code that correctly covers the item, exactly as returned by the tools (e.g. '0111 101'). Written with a space after the 4th digit."
     )
-    explaination: str = dspy.OutputField(
+    explanation: str = dspy.OutputField(
         desc="Concise reasoning explaining which retrieved candidate was chosen and why, citing the Eingeschlossen/Ausgeschlossen notes that justified it, plus any rejected alternative."
     )
 

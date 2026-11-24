@@ -114,7 +114,7 @@ def test_registered_configs_are_consistent(name, config):
     inputs = config["signature"].input_fields
     assert config["query_field"] in inputs
     assert config["context_field"] in inputs
-    assert "explaination" in config["signature"].output_fields
+    assert "explanation" in config["signature"].output_fields
     assert config["signature"].__doc__.strip()
 
 
@@ -130,7 +130,7 @@ def test_registered_classifier_end_to_end(make_store, fake_module):
     store.index(classification_system=get_classification_system("COICOP_2018"))
     rag = RAGChainOfThought(classification_name="COICOP_2018", api_key=None,
                             model_name="openai/x", store=store)
-    rag.CoT = fake_module(coicop_code="01.1.1.1", explaination="rice")
+    rag.CoT = fake_module(coicop_code="01.1.1.1", explanation="rice")
     prediction = rag(query="rice", k=5)
     assert prediction.coicop_code == "01.1.1.1"
     assert set(rag.CoT.calls[0]) == {"input_expense", "retrieved_candidates"}
@@ -195,7 +195,7 @@ def coicop_rrr(make_store, fake_module):
     rephraser.rephrase = fake_module(rephrased_query="Rice")
     rrr = RRR_RAGChainOfThought(rephraser, classification_name="COICOP_2018",
                                 api_key=None, model_name="openai/large", store=store)
-    rrr.CoT = fake_module(coicop_code="01.1.1.1.2", explaination="")
+    rrr.CoT = fake_module(coicop_code="01.1.1.1.2", explanation="")
     return rrr
 
 

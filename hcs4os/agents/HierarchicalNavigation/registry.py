@@ -61,7 +61,7 @@ class CoicopHierarchicalSearchAgentSignature(dspy.Signature):
         Output:
         - coicop_code: the single most specific COICOP code that correctly
             classifies the expense.
-        - explaination: a concise justification tracing the path taken (division
+        - explanation: a concise justification tracing the path taken (division
             -> ... -> final code) and citing the decisive includes/excludes note(s)
             that determined the choice, including any branch you rejected and why.
     """
@@ -71,7 +71,7 @@ class CoicopHierarchicalSearchAgentSignature(dspy.Signature):
     coicop_code: str = dspy.OutputField(
         desc="The single most specific COICOP code that correctly covers the expense, exactly as returned by the tools (e.g. '01.1.1.1')."
     )
-    explaination: str = dspy.OutputField(
+    explanation: str = dspy.OutputField(
         desc="Concise reasoning tracing the top-down path to the code and citing the includes/excludes notes that justified it, plus any rejected alternative."
     )    
     
@@ -140,7 +140,7 @@ class IcatusHierarchicalSearchAgentSignature(dspy.Signature):
         Output:
         - icatus_code: the single most specific ICATUS code that correctly
             classifies the activity.
-        - explaination: a concise justification tracing the path taken (major
+        - explanation: a concise justification tracing the path taken (major
             division -> ... -> final code) and citing the decisive includes/excludes
             note(s) that determined the choice, including any branch you rejected
             and why.
@@ -151,7 +151,7 @@ class IcatusHierarchicalSearchAgentSignature(dspy.Signature):
     icatus_code: str = dspy.OutputField(
         desc="The single most specific ICATUS code that correctly covers the activity, exactly as returned by the tools (e.g. '110')."
     )
-    explaination: str = dspy.OutputField(
+    explanation: str = dspy.OutputField(
         desc="Concise reasoning tracing the top-down path to the code and citing the includes/excludes notes that justified it, plus any rejected alternative."
     )    
  
@@ -228,7 +228,7 @@ class NafHierarchicalSearchAgentSignature(dspy.Signature):
         Output:
         - naf_code: the single most specific NAF code that correctly classifies
             the activity.
-        - explaination: a concise justification tracing the path taken (section
+        - explanation: a concise justification tracing the path taken (section
             -> division -> group -> class -> sub-class) and citing the decisive
             includes/excludes note(s) that determined the choice, including any
             branch you rejected and why.
@@ -240,7 +240,7 @@ class NafHierarchicalSearchAgentSignature(dspy.Signature):
     naf_code: str = dspy.OutputField(
         desc="The single most specific NAF code that correctly covers the activity, exactly as returned by the tools (e.g. '10.11A')."
     )
-    explaination: str = dspy.OutputField(
+    explanation: str = dspy.OutputField(
         desc="Concise reasoning tracing the top-down path to the code and citing the includes/excludes notes that justified it, plus any rejected alternative."
     )
 
@@ -330,7 +330,7 @@ class SeaHierarchicalSearchAgentSignature(dspy.Signature):
         Output:
         - sea_code: the single most specific SEA 2021 code that correctly
             classifies the item.
-        - explaination: a concise justification tracing the path taken (Abteilung
+        - explanation: a concise justification tracing the path taken (Abteilung
             -> Gruppe -> Klasse -> ... -> final code) and citing the decisive
             Eingeschlossen/Ausgeschlossen note(s) that determined the choice,
             including any branch you rejected and why.
@@ -341,7 +341,7 @@ class SeaHierarchicalSearchAgentSignature(dspy.Signature):
     sea_code: str = dspy.OutputField(
         desc="The single most specific SEA 2021 code that correctly covers the item, exactly as returned by the tools (e.g. '0111 101'). Written with a space after the 4th digit."
     )
-    explaination: str = dspy.OutputField(
+    explanation: str = dspy.OutputField(
         desc="Concise reasoning tracing the top-down path to the code and citing the Eingeschlossen/Ausgeschlossen notes that justified it, plus any rejected alternative."
     )
 

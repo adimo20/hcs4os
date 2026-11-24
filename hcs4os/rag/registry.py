@@ -47,7 +47,7 @@ class CoicopRAGChainOfThoughtSignature(dspy.Signature):
     coicop_code: str = dspy.OutputField(
         desc="The single most specific COICOP code from retrieved_candidates that correctly covers the expense, exactly as given (e.g. '01.1.1.1')."
     )
-    explaination: str = dspy.OutputField(
+    explanation: str = dspy.OutputField(
         desc="Concise reasoning explaining which retrieved candidate was chosen and why, citing the includes/excludes notes that justified it, plus any rejected alternative."
     )
 
@@ -100,7 +100,7 @@ class IcatusRAGChainOfThoughtSignature(dspy.Signature):
     icatus_code: str = dspy.OutputField(
         desc="The single most specific ICATUS code from retrieved_candidates that correctly covers the activity, exactly as given (e.g. '110')."
     )
-    explaination: str = dspy.OutputField(
+    explanation: str = dspy.OutputField(
         desc="Concise reasoning explaining which retrieved candidate was chosen and why, citing the includes/excludes notes that justified it, plus any rejected alternative."
     )
     
@@ -172,7 +172,7 @@ class SeaRAGChainOfThoughtSignature(dspy.Signature):
     sea_code: str = dspy.OutputField(
         desc="The single most specific SEA 2021 code from retrieved_candidates that correctly covers the item, exactly as given (e.g. '0111 101')."
     )
-    explaination: str = dspy.OutputField(
+    explanation: str = dspy.OutputField(
         desc="Concise reasoning explaining which retrieved candidate was chosen and why, citing the Eingeschlossen/Ausgeschlossen notes that justified it, plus any rejected alternative."
     )
 
