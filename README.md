@@ -599,15 +599,15 @@ same `SEA` class. For generated datasets `metadata` carries the provenance:
 
 The seven mapped keys, and what each resolves to:
 
-| key                  | system class | loader         | source                             |
-| -------------------- | ------------ | -------------- | ---------------------------------- |
+| key                  | system class | loader         | source                               |
+| -------------------- | ------------ | -------------- | ------------------------------------ |
 | `COICOP_2018`        | `COICOP`     | `COICOP`       | `COICOP_2018_English_structure.xlsx` |
-| `ICATUS_2016`        | `ICATUS`     | `ICATUS`       | `UNSD_Time_Use_Statistics.csv`     |
-| `SEA_2021`           | `SEA`        | `KLASS_SERVER` | `sea2021.xml`                      |
-| `SEA_2021_REPHRASED` | `SEA`        | `JSON`         | `sea_2021_augmented.json`          |
-| `WZ_2008`            | `WZ`         | `KLASS_SERVER` | `wz2008.xml`                       |
-| `KLDB_2010`          | `KLDB`       | `KLASS_SERVER` | `kldb_2010.xml`                    |
-| `NAF_rev2`           | `NAF_rev2`   | `JSON`         | `NAF_INSEE.json`                   |
+| `ICATUS_2016`        | `ICATUS`     | `ICATUS`       | `UNSD_Time_Use_Statistics.csv`       |
+| `SEA_2021`           | `SEA`        | `KLASS_SERVER` | `sea2021.xml`                        |
+| `SEA_2021_REPHRASED` | `SEA`        | `JSON`         | `sea_2021_augmented.json`            |
+| `WZ_2008`            | `WZ`         | `KLASS_SERVER` | `wz2008.xml`                         |
+| `KLDB_2010`          | `KLDB`       | `KLASS_SERVER` | `kldb_2010.xml`                      |
+| `NAF_rev2`           | `NAF_rev2`   | `JSON`         | `NAF_INSEE.json`                     |
 
 Anything beyond these you add yourself, without editing the library — see _Bringing
 your own classification_ above.
@@ -1098,7 +1098,7 @@ If you use `hcs4os` in published work, please cite it:
 @software{montag_hcs4os,
   author  = {Montag, Adrian},
   title   = {{hcs4os}: Hierarchical Classification Systems for Official Statistics},
-  version = {0.2.8},
+  version = {0.2.9},
   year    = {2026},
   url     = {https://github.com/adimo20/hcs4os},
   license = {EUPL-1.2}
@@ -1106,5 +1106,5 @@ If you use `hcs4os` in published work, please cite it:
 ```
 
 Montag, A. (2026). _hcs4os: Hierarchical Classification Systems for Official
-Statistics_ (Version 0.2.8) [Computer software].
+Statistics_ (Version 0.2.9) [Computer software].
 https://github.com/adimo20/hcs4os
