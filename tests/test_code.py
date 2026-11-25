@@ -1,7 +1,7 @@
 """Code: the dataclass every classification is normalised into."""
 import json
 
-from hcs4os._shared.Code import Code
+from rac4os._shared.Code import Code
 
 
 def test_defaults_are_empty():

@@ -38,8 +38,8 @@ def get_ef(embedding_function_type: EFType, **kwargs):
     except (ImportError, ValueError) as e:
         if "not installed" in str(e) or isinstance(e, ImportError):
             raise ImportError(
-                f"If you want to use the {embedding_function_type} please install hcs4os[{_EXTRA[embedding_function_type]}]"
-                f'pip install "hcs4os[{_EXTRA[embedding_function_type]}]"'
+                f"If you want to use the {embedding_function_type} please install rac4os[{_EXTRA[embedding_function_type]}]"
+                f'pip install "rac4os[{_EXTRA[embedding_function_type]}]"'
             ) from e
         raise
 

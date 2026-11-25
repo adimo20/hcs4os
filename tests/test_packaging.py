@@ -6,7 +6,7 @@ from pathlib import Path
 
 import pytest
 
-from hcs4os.classification_system.mapping import mapping
+from rac4os.classification_system.mapping import mapping
 
 ROOT = Path(__file__).parent.parent
 
@@ -25,19 +25,19 @@ def _loaded_optional_modules(statement: str) -> set[str]:
 
 
 @pytest.mark.parametrize("statement", [
-    "import hcs4os",
-    "from hcs4os.classification_system import get_classification_system",
-    "from hcs4os.agents.HierarchicalNavigation import HierarchicalNavigationAgent",
+    "import rac4os",
+    "from rac4os.classification_system import get_classification_system",
+    "from rac4os.agents.HierarchicalNavigation import HierarchicalNavigationAgent",
 ])
 def test_core_imports_do_not_need_optional_extras(statement):
-    """The core install has no chromadb/torch, so hcs4os itself must not import them.
+    """The core install has no chromadb/torch, so rac4os itself must not import them.
 
     dspy (via litellm) may import some of these on its own when they happen to be
-    installed; that is not hcs4os's doing, so whatever `import dspy` loads is subtracted.
+    installed; that is not rac4os's doing, so whatever `import dspy` loads is subtracted.
     """
     from_dspy = _loaded_optional_modules("import dspy")
-    added_by_hcs4os = _loaded_optional_modules(statement) - from_dspy
-    assert added_by_hcs4os == set()
+    added_by_rac4os = _loaded_optional_modules(statement) - from_dspy
+    assert added_by_rac4os == set()
 
 
 def test_optional_extras_are_declared():
@@ -68,8 +68,8 @@ def test_every_mapped_data_file_is_bundled(name):
 
 @pytest.mark.parametrize("name", list(mapping))
 def test_mapping_entries_reference_registered_components(name):
-    from hcs4os.classification_system.registry import _REGISTRY_CS
-    from hcs4os.dataloaders.registry import _REGISTRY_DL
+    from rac4os.classification_system.registry import _REGISTRY_CS
+    from rac4os.dataloaders.registry import _REGISTRY_DL
     entry = mapping[name]
     assert entry["classification_system"] in _REGISTRY_CS
     assert entry["loader_name"] in _REGISTRY_DL

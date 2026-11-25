@@ -1,5 +1,5 @@
 """
-Shared fixtures for the hcs4os test suite.
+Shared fixtures for the rac4os test suite.
 
 Design rules for the suite:
 - No network and no real LLM in the default run. LLM calls are replaced by
@@ -60,11 +60,11 @@ def register_fiction(monkeypatch):
 
     Everything is undone after the test. Returns the mapping key.
     """
-    from hcs4os.dataloaders import registry as dl_registry
-    from hcs4os.dataloaders.BaseDataLoader import ClassificationLoader
-    from hcs4os.classification_system import registry as cs_registry
-    from hcs4os.classification_system import mapping as mapping_module
-    from hcs4os.classification_system.BaseClassificationSystem import ClassificationSystem
+    from rac4os.dataloaders import registry as dl_registry
+    from rac4os.dataloaders.BaseDataLoader import ClassificationLoader
+    from rac4os.classification_system import registry as cs_registry
+    from rac4os.classification_system import mapping as mapping_module
+    from rac4os.classification_system.BaseClassificationSystem import ClassificationSystem
 
     class FictionLoader(ClassificationLoader):
         def to_records(self):
@@ -91,7 +91,7 @@ def register_fiction(monkeypatch):
 
 @pytest.fixture
 def fiction(register_fiction):
-    from hcs4os.classification_system import get_classification_system
+    from rac4os.classification_system import get_classification_system
     return get_classification_system(register_fiction)
 
 
@@ -120,7 +120,7 @@ def _make_fake_ef_class():
 
         @staticmethod
         def name():
-            return "hcs4os-test-fake"
+            return "rac4os-test-fake"
 
         def get_config(self):
             return {}
@@ -135,8 +135,8 @@ def _make_fake_ef_class():
 @pytest.fixture
 def fake_ef(monkeypatch):
     """Makes embedding_function_type='fake' available in VectorStore."""
-    pytest.importorskip("chromadb", reason="vector store needs an extra: pip install 'hcs4os[ollama]'")
-    import hcs4os._vector_database.vector_store as vs
+    pytest.importorskip("chromadb", reason="vector store needs an extra: pip install 'rac4os[ollama]'")
+    import rac4os._vector_database.vector_store as vs
     cls = _make_fake_ef_class()
     monkeypatch.setitem(vs._EMEBEDDIG_FUNCTIONS, "fake", cls)
     return cls
@@ -145,7 +145,7 @@ def fake_ef(monkeypatch):
 @pytest.fixture
 def make_store(fake_ef, tmp_path):
     """Factory for fresh, empty VectorStores in a temporary folder."""
-    from hcs4os._vector_database.vector_store import VectorStore
+    from rac4os._vector_database.vector_store import VectorStore
 
     def _make(collection_name: str = "test_collection") -> VectorStore:
         return VectorStore(

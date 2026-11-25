@@ -3,10 +3,10 @@ import json
 
 import pytest
 
-pytest.importorskip("chromadb", reason="vector store needs an extra: pip install 'hcs4os[ollama]'")
+pytest.importorskip("chromadb", reason="vector store needs an extra: pip install 'rac4os[ollama]'")
 
-import hcs4os._vector_database.vector_store as vs  # noqa: E402
-from hcs4os._vector_database.vector_store import VectorStore, get_ef  # noqa: E402
+import rac4os._vector_database.vector_store as vs  # noqa: E402
+from rac4os._vector_database.vector_store import VectorStore, get_ef  # noqa: E402
 
 
 # ---------------------------------------------------------------------------
@@ -34,7 +34,7 @@ def test_get_ef_missing_package_points_to_the_right_extra(monkeypatch, backend, 
     def raises(**kwargs):
         raise error
     monkeypatch.setitem(vs._EMEBEDDIG_FUNCTIONS, backend, raises)
-    with pytest.raises(ImportError, match=rf'pip install "hcs4os\[{extra}\]"'):
+    with pytest.raises(ImportError, match=rf'pip install "rac4os\[{extra}\]"'):
         get_ef(backend)
 
 

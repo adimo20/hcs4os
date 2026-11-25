@@ -1,8 +1,8 @@
-site_name: hcs4os
+site_name: rac4os
 site_description: Retrieval Augmented Classification for Official Statistics
 site_url: https://adimo20.github.io/rac4os/
 repo_url: https://github.com/adimo20/rac4os
-repo_name: adimo20/hcs4os
+repo_name: adimo20/rac4os
 copyright: Copyright &copy; 2026 Adrian Montag — EUPL v. 1.2
 
 theme:
@@ -54,18 +54,39 @@ markdown_extensions:
 
 nav:
   - Home: index.md
-  - Guides:
-      - Bringing your own classification: guides/custom-classification.md
-      - Adapting the content: guides/adapting.md
-  - Concepts:
-      - concepts/index.md
-      - Code: concepts/code.md
-      - Data loaders: concepts/data-loaders.md
-      - Classification systems: concepts/classification-systems.md
-      - mapping.py: concepts/mapping.md
-      - Vector store: concepts/vector-store.md
-      - ReAct agents: concepts/react-agents.md
-      - Retrieval without the loop: concepts/rag.md
-      - Taxonomy refinement: concepts/taxonomy-refinement.md
-  - API reference: api/index.md
+  - Getting Started:
+      - Installation: getting-started/installation.md
+      - Quickstart: getting-started/quickstart.md
+  - Your Own Taxonomy:
+      - Overview: taxonomy/overview.md
+      - Data Loaders: taxonomy/loaders.md
+      - Classification Systems: taxonomy/systems.md
+      - Datasets and the Registry: taxonomy/datasets.md
+      - Retrievers: taxonomy/retrievers.md
+      - Candidate Augmentation: taxonomy/augmentation.md
+  - Hierarchy Traversal Agent:
+      - Usage: traversal/usage.md
+      - How It Works: traversal/how-it-works.md
+      - Adapting Overview: traversal/adapting.md
+      - Prompt Overview: traversal/prompts.md
+  - Linear RAG:
+      - Usage: linear-rag/usage.md
+      - How It Works: linear-rag/how-it-works.md
+      - Rewrite-Retrieve-Read: linear-rag/rrr.md
+      - Adapting Overview: linear-rag/adapting.md
+      - Prompt Overview: linear-rag/prompts.md
+  - Agentic RAG:
+      - Usage: agentic-rag/usage.md
+      - How It Works: agentic-rag/how-it-works.md
+      - Adapting Overview: agentic-rag/adapting.md
+      - Prompt Overview: agentic-rag/prompts.md
+  - Taxonomy Refinement:
+      - Usage: refinement/usage.md
+      - How It Works: refinement/how-it-works.md
+  - Package Reference:
+      - Classification System: reference/classification-system.md
+      - Data Loaders: reference/dataloaders.md
+      - Retrievers: reference/retrievers.md
+      - Classifiers: reference/classifiers.md
+      - Taxonomy Refinement: reference/taxonomy-refinement.md
   - About: about.md

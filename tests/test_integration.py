@@ -2,9 +2,9 @@
 
 Skipped unless configured, so the default `pytest` run stays offline:
 
-    HCS4OS_OLLAMA_URL=http://192.168.178.48:11434
-    HCS4OS_EMBEDDING_MODEL=qwen3-embedding:0.6b
-    HCS4OS_LLM_MODEL=ollama_chat/qwen3:4b          # optional, for the classifier test
+    rac4os_OLLAMA_URL=http://192.168.178.48:11434
+    rac4os_EMBEDDING_MODEL=qwen3-embedding:0.6b
+    rac4os_LLM_MODEL=ollama_chat/qwen3:4b          # optional, for the classifier test
     pytest -m integration
 
 The variables can also live in a .env file (needs python-dotenv).
@@ -21,21 +21,21 @@ except ImportError:
 
 pytest.importorskip("chromadb")
 
-OLLAMA_URL = os.getenv("HCS4OS_OLLAMA_URL")
-EMBEDDING_MODEL = os.getenv("HCS4OS_EMBEDDING_MODEL")
-LLM_MODEL = os.getenv("HCS4OS_LLM_MODEL")
-API_KEY = os.getenv("HCS4OS_TEST_API_KEY")
+OLLAMA_URL = os.getenv("rac4os_OLLAMA_URL")
+EMBEDDING_MODEL = os.getenv("rac4os_EMBEDDING_MODEL")
+LLM_MODEL = os.getenv("rac4os_LLM_MODEL")
+API_KEY = os.getenv("rac4os_TEST_API_KEY")
 
 pytestmark = [
     pytest.mark.integration,
     pytest.mark.skipif(not (OLLAMA_URL and EMBEDDING_MODEL),
-                       reason="set HCS4OS_OLLAMA_URL and HCS4OS_EMBEDDING_MODEL"),
+                       reason="set rac4os_OLLAMA_URL and rac4os_EMBEDDING_MODEL"),
 ]
 
 
 @pytest.fixture
 def ollama_fiction_store(tmp_path, fiction):
-    from hcs4os._vector_database.vector_store import VectorStore
+    from rac4os._vector_database.vector_store import VectorStore
     store = VectorStore(
         collection_name="fiction_integration",
         chromadb_path=str(tmp_path / "chroma"),
@@ -59,14 +59,14 @@ def test_retrieval_recall_at_5(ollama_fiction_store, input_text, expected_code):
     assert expected_code in [r["code"] for r in results]
 
 
-@pytest.mark.skipif(not LLM_MODEL, reason="set HCS4OS_LLM_MODEL")
+@pytest.mark.skipif(not LLM_MODEL, reason="set rac4os_LLM_MODEL")
 @pytest.mark.parametrize("input_text, expected_code", [
     ("Darth Vader Sith Lord", "112"),      
     ("Han Solo Rebellion", "121"),           
 ])
 def test_rag_classifier_end_to_end(ollama_fiction_store, register_fiction, input_text, expected_code):
     import dspy
-    from hcs4os.rag.BaseRAG import BaseRAGCoT
+    from rac4os.rag.BaseRAG import BaseRAGCoT
 
     class Sig(dspy.Signature):
         """Classify the fictional character into exactly one level-3 code from the

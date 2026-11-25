@@ -8,11 +8,11 @@ import json
 import dspy
 import pytest
 
-pytest.importorskip("chromadb", reason="RAG needs an extra: pip install 'hcs4os[ollama]'")
+pytest.importorskip("chromadb", reason="RAG needs an extra: pip install 'rac4os[ollama]'")
 
-from hcs4os.rag import registry as rag_registry  # noqa: E402
-from hcs4os.rag.BaseRAG import BaseRAGCoT  # noqa: E402
-from hcs4os.rag.RAG import QueryRephraser, RAGChainOfThought, RRR_RAGChainOfThought  # noqa: E402
+from rac4os.rag import registry as rag_registry  # noqa: E402
+from rac4os.rag.BaseRAG import BaseRAGCoT  # noqa: E402
+from rac4os.rag.RAG import QueryRephraser, RAGChainOfThought, RRR_RAGChainOfThought  # noqa: E402
 
 
 class FictionSignature(dspy.Signature):
@@ -125,7 +125,7 @@ def test_unknown_classification_raises(make_store):
 
 
 def test_registered_classifier_end_to_end(make_store, fake_module):
-    from hcs4os.classification_system import get_classification_system
+    from rac4os.classification_system import get_classification_system
     store = make_store("coicop")
     store.index(classification_system=get_classification_system("COICOP_2018"))
     rag = RAGChainOfThought(classification_name="COICOP_2018", api_key=None,
@@ -188,7 +188,7 @@ def test_rephraser_falls_back_to_raw_query(fake_module, empty):
 
 @pytest.fixture
 def coicop_rrr(make_store, fake_module):
-    from hcs4os.classification_system import get_classification_system
+    from rac4os.classification_system import get_classification_system
     store = make_store("coicop_rrr")
     store.index(classification_system=get_classification_system("COICOP_2018"))
     rephraser = QueryRephraser(lm=dspy.LM("openai/small"), classification_name="COICOP_2018")

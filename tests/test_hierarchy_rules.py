@@ -5,7 +5,7 @@ quirk documented in the README gets a test here.
 """
 import pytest
 
-from hcs4os.classification_system.registry import _REGISTRY_CS
+from rac4os.classification_system.registry import _REGISTRY_CS
 
 
 def prefixes(system_id: str, code: str) -> list[str]:
