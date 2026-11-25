@@ -1,9 +1,9 @@
 """Classification systems: navigation API, every bundled dataset, registration."""
 import pytest
 
-from hcs4os.classification_system import registry as cs_registry
-from hcs4os.classification_system.mapping import mapping
-from hcs4os.classification_system.registry import get_classification_system
+from rac4os.classification_system import registry as cs_registry
+from rac4os.classification_system.mapping import mapping
+from rac4os.classification_system.registry import get_classification_system
 
 ALL_KEYS = [k for k in mapping]
 
@@ -168,7 +168,7 @@ def test_registration_does_not_leak_between_tests():
 
 
 def test_register_decorator_adds_system(monkeypatch):
-    from hcs4os.classification_system.BaseClassificationSystem import ClassificationSystem
+    from rac4os.classification_system.BaseClassificationSystem import ClassificationSystem
     monkeypatch.setattr(cs_registry, "_REGISTRY_CS", dict(cs_registry._REGISTRY_CS))
 
     @cs_registry.register("MY_SYSTEM")

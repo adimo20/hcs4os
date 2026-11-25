@@ -3,11 +3,11 @@ import json
 
 import pytest
 
-from hcs4os._shared.Code import Code
-from hcs4os.classification_system.mapping import make_path
-from hcs4os.dataloaders import registry as dl_registry
-from hcs4os.dataloaders.BaseDataLoader import ClassificationLoader
-from hcs4os.dataloaders.registry import get_loader, register
+from rac4os._shared.Code import Code
+from rac4os.classification_system.mapping import make_path
+from rac4os.dataloaders import registry as dl_registry
+from rac4os.dataloaders.BaseDataLoader import ClassificationLoader
+from rac4os.dataloaders.registry import get_loader, register
 
 
 # ---------------------------------------------------------------------------

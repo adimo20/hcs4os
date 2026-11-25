@@ -4,10 +4,10 @@ import inspect
 import dspy
 import pytest
 
-from hcs4os.agents.HierarchicalNavigation import HierarchicalNavigationAgent
-from hcs4os.agents.HierarchicalNavigation.BaseAgent import BaseHierarchicalNavigationAgent
-from hcs4os.agents.HierarchicalNavigation.registry import registry as nav_registry
-from hcs4os.classification_system.mapping import mapping
+from rac4os.agents.HierarchicalNavigation import HierarchicalNavigationAgent
+from rac4os.agents.HierarchicalNavigation.BaseAgent import BaseHierarchicalNavigationAgent
+from rac4os.agents.HierarchicalNavigation.registry import registry as nav_registry
+from rac4os.classification_system.mapping import mapping
 
 
 # ---------------------------------------------------------------------------
@@ -32,8 +32,8 @@ def test_navigation_registry_entries_match_constructor(name, config):
 
 def test_rag_agent_registry_entries_match_constructor():
     pytest.importorskip("chromadb")
-    from hcs4os.agents.RAG.BaseAgentRAG import BaseRAGAgent
-    from hcs4os.agents.RAG.registry import registry as rag_agent_registry
+    from rac4os.agents.RAG.BaseAgentRAG import BaseRAGAgent
+    from rac4os.agents.RAG.registry import registry as rag_agent_registry
     for name, config in rag_agent_registry.items():
         assert name in mapping
         assert set(config) == _required_config_keys(BaseRAGAgent)
@@ -127,13 +127,13 @@ def test_base_navigation_agent_with_custom_prompt(fiction, register_fiction):
 @pytest.fixture
 def rag_agent(make_store):
     pytest.importorskip("chromadb")
-    from hcs4os.agents.RAG.RAGAgent import RAGAgent
+    from rac4os.agents.RAG.RAGAgent import RAGAgent
     return RAGAgent(classification_name="ICATUS_2016", api_key=None,
                     model_name="openai/test", store=make_store("icatus_agent"))
 
 
 def test_rag_agent_unknown_classification_raises(make_store):
-    from hcs4os.agents.RAG.RAGAgent import RAGAgent
+    from rac4os.agents.RAG.RAGAgent import RAGAgent
     with pytest.raises(ValueError, match="Unknown classification system"):
         RAGAgent(classification_name="WZ_2008", api_key=None,  # type: ignore[arg-type]
                  model_name="openai/x", store=make_store())

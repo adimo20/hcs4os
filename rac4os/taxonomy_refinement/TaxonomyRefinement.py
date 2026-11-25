@@ -77,8 +77,8 @@ class ClassificationsSystemAugmenter:
           
           parent = self.classification_system.get_parent(current_child)
           if parent is None: continue
-          parent_code = parent.get("code")
-          if parent_code is None: continue
+          parent_code = parent.code
+          if not parent_code: continue
           
           children = self.classification_system.get_children(parent_code)
           children_codes = [c.code for c in children]
@@ -86,8 +86,8 @@ class ClassificationsSystemAugmenter:
           level_x_codes = [codex for codex in level_x_codes if codex not in children_codes]
           
           pair = {
-            "parent":parent,
-            "children":[c.to_dict() for c in children]   
+            "parent":parent.to_dict(),
+            "children":[c.to_dict() for c in children]
           }
           
           try:

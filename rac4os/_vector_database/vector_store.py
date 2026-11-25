@@ -38,8 +38,8 @@ def get_ef(embedding_function_type: EFType, **kwargs):
     except (ImportError, ValueError) as e:
         if "not installed" in str(e) or isinstance(e, ImportError):
             raise ImportError(
-                f"If you want to use the {embedding_function_type} please install hcs4os[{_EXTRA[embedding_function_type]}]"
-                f'pip install "hcs4os[{_EXTRA[embedding_function_type]}]"'
+                f"If you want to use the {embedding_function_type} please install rac4os[{_EXTRA[embedding_function_type]}]"
+                f'pip install "rac4os[{_EXTRA[embedding_function_type]}]"'
             ) from e
         raise
 
@@ -48,11 +48,16 @@ class VectorStore(Retriever):
     Interface for filling and querying the chromaDB (persistent) client.
 
     Parameters:
-        collection_name (str) - name of the collection to create/load
-        model_name (str) - sentence-transformers model used to embed documents
-            and queries. Both sides go through the same model, so a collection
-            is only meaningful together with the model that built it.
-        chromadb_path (str) - path of the persistent client to load or create
+        collection_name (str): name of the collection to create/load
+        chromadb_path (str): path of the persistent client to load or create
+        embedding_function_type (str): which backend embeds documents and
+            queries - "openai", "ollama" or "sentence_transformers".
+        embedding_batch_size (int): how many documents go per `collection.add`
+            call. Raise it for a local model, keep it low for a remote API.
+        **embedding_kwargs (Any): forwarded untouched to the chosen embedding
+            function, e.g. `model_name`, `url`, `api_key`. Both sides of a
+            collection go through the same model, so a collection is only
+            meaningful together with the model that built it.
     """
 
     def __init__(

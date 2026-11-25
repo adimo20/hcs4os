@@ -1,0 +1,92 @@
+site_name: rac4os
+site_description: Retrieval Augmented Classification for Official Statistics
+site_url: https://adimo20.github.io/rac4os/
+repo_url: https://github.com/adimo20/rac4os
+repo_name: adimo20/rac4os
+copyright: Copyright &copy; 2026 Adrian Montag — EUPL v. 1.2
+
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - content.code.copy
+    - search.suggest
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          options:
+            docstring_style: google
+            show_source: true
+            show_root_heading: true
+            show_symbol_type_heading: true
+            members_order: source
+            separate_signature: true
+            heading_level: 3
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - pymdownx.details
+
+nav:
+  - Home: index.md
+  - Getting Started:
+      - Installation: getting-started/installation.md
+      - Quickstart: getting-started/quickstart.md
+  - Your Own Taxonomy:
+      - Overview: taxonomy/overview.md
+      - Data Loaders: taxonomy/loaders.md
+      - Classification Systems: taxonomy/systems.md
+      - Datasets and the Registry: taxonomy/datasets.md
+      - Retrievers: taxonomy/retrievers.md
+      - Candidate Augmentation: taxonomy/augmentation.md
+  - Hierarchy Traversal Agent:
+      - Usage: traversal/usage.md
+      - How It Works: traversal/how-it-works.md
+      - Adapting Overview: traversal/adapting.md
+      - Prompt Overview: traversal/prompts.md
+  - Linear RAG:
+      - Usage: linear-rag/usage.md
+      - How It Works: linear-rag/how-it-works.md
+      - Rewrite-Retrieve-Read: linear-rag/rrr.md
+      - Adapting Overview: linear-rag/adapting.md
+      - Prompt Overview: linear-rag/prompts.md
+  - Agentic RAG:
+      - Usage: agentic-rag/usage.md
+      - How It Works: agentic-rag/how-it-works.md
+      - Adapting Overview: agentic-rag/adapting.md
+      - Prompt Overview: agentic-rag/prompts.md
+  - Taxonomy Refinement:
+      - Usage: refinement/usage.md
+      - How It Works: refinement/how-it-works.md
+  - Package Reference:
+      - Classification System: reference/classification-system.md
+      - Data Loaders: reference/dataloaders.md
+      - Retrievers: reference/retrievers.md
+      - Classifiers: reference/classifiers.md
+      - Taxonomy Refinement: reference/taxonomy-refinement.md
+  - About: about.md
