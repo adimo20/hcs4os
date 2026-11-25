@@ -1,7 +1,7 @@
 site_name: hcs4os
-site_description: Hierarchical Classification Systems for Official Statistics
-site_url: https://adimo20.github.io/hcs4os/
-repo_url: https://github.com/adimo20/hcs4os
+site_description: Retrieval Augmented Classification for Official Statistics
+site_url: https://adimo20.github.io/rac4os/
+repo_url: https://github.com/adimo20/rac4os
 repo_name: adimo20/hcs4os
 copyright: Copyright &copy; 2026 Adrian Montag — EUPL v. 1.2
 
@@ -54,14 +54,6 @@ markdown_extensions:
 
 nav:
   - Home: index.md
-  - Quick start:
-      - quickstart/index.md
-      - Navigating a classification: quickstart/navigating.md
-      - Walking the hierarchy: quickstart/walking-the-hierarchy.md
-      - Building a vector store: quickstart/vector-store.md
-      - Classifying by retrieval: quickstart/retrieval.md
-      - Retrieval without the loop: quickstart/retrieval-no-loop.md
-      - Rewrite-Retrieve-Read: quickstart/rewrite-retrieve-read.md
   - Guides:
       - Bringing your own classification: guides/custom-classification.md
       - Adapting the content: guides/adapting.md
@@ -75,10 +67,5 @@ nav:
       - ReAct agents: concepts/react-agents.md
       - Retrieval without the loop: concepts/rag.md
       - Taxonomy refinement: concepts/taxonomy-refinement.md
-  - Prompt reference:
-      - prompts/index.md
-      - Navigation: prompts/navigation.md
-      - Retrieval: prompts/retrieval.md
-      - Rephrasing: prompts/rephrasing.md
   - API reference: api/index.md
   - About: about.md

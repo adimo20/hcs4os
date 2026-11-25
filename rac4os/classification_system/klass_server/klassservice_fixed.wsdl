@@ -1,0 +1,2422 @@
+<?xml version='1.0' encoding='utf-8'?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://webservice.klassservice.statistik.lfstad.bayern.de/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://webservice.klassservice.statistik.lfstad.bayern.de/" name="klassserviceService">    
+  <wsdl:types>
+    <xsd:schema xmlns:tns="http://webservice.klassservice.statistik.lfstad.bayern.de/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:jaxb="http://java.sun.com/xml/ns/jaxb" xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc" version="1.0" jaxb:version="2.0" targetNamespace="http://webservice.klassservice.statistik.lfstad.bayern.de/" jaxb:extensionBindingPrefixes="xjc" elementFormDefault="unqualified" attributeFormDefault="unqualified">
+      <xs:annotation>
+        <xs:documentation>Converter für JAXB</xs:documentation>
+        <xs:appinfo>
+          <jaxb:globalBindings generateIsSetMethod="true" collectionType="java.util.ArrayList" generateElementProperty="false">
+            <xjc:serializable uid="2"/>                     
+            <xjc:javaType name="java.util.Calendar" xmlType="xsd:dateTime" adapter="de.bayern.lfstad.statistik.klassservice.webservice.adapter.DateTimeAdapter"/> 
+            <xjc:javaType name="java.util.Calendar" xmlType="xsd:date" adapter="de.bayern.lfstad.statistik.klassservice.webservice.adapter.DateAdapter"/> 
+            <xjc:javaType name="java.util.Calendar" xmlType="xsd:time" adapter="de.bayern.lfstad.statistik.klassservice.webservice.adapter.TimeAdapter"/> 
+          </jaxb:globalBindings>
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:element name="AuthenticationException" type="tns:AuthenticationException"/>
+      <xs:element name="LanguageNotSupportedException" type="tns:LanguageNotSupportedException"/>
+      <xs:element name="NotFoundException" type="tns:NotFoundException"/>
+      <xs:element name="InternalException" type="tns:InternalException"/>
+      <xs:element name="RequestReturnsNullException" type="tns:RequestReturnsNullException"/>             
+      <xs:complexType name="levelClass">
+        <xs:sequence>
+          <xs:element name="levelnumber" type="xs:integer" minOccurs="0">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>Levelnumber</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>Levelnumber</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="levelname" type="xs:string" minOccurs="0">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>Levelname</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>Levelname</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="leveldescription" type="xs:string" minOccurs="0">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>Leveldescription</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>Leveldescription</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="languageId" type="xs:integer" minOccurs="0">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>Language-Id</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>Language-Id</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:complexType>           
+      <xs:complexType name="searchResult">
+        <xs:sequence>
+          <xs:element name="key" type="xs:string" minOccurs="0">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>Item Schlüssel</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>Item Schlüssel</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="title" type="xs:string" minOccurs="0">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>offizieller Item-Titel</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>offizieller Item-Titel</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="searchResultExtended">
+        <xs:sequence>
+          <xs:element name="key" type="xs:string" minOccurs="0">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>Item Schlüssel</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>Item Schlüssel</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="officialTitle" type="xs:string" minOccurs="0">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>offizieller Item-Titel</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>offizieller Item-Titel</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="shortTitle" type="xs:string" minOccurs="0">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>Item-Kurzitel</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>Item-Kurztitel</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="mediumTitle" type="xs:string" minOccurs="0">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>Item-Mitteltitel</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>Item-Mitteltitel</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="longTitle" type="xs:string" minOccurs="0">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>Item-Langtitel</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>Item-Langtitel</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="isConcatenation" type="xs:boolean" minOccurs="0">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>UND-Verknüpfung aller Suchwörter</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>UND-Verknüpfung aller Suchwörter</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="score" type="xs:double" minOccurs="0">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>Trefferanteil</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>Trefferanteil</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="childItemExists" type="xs:boolean" minOccurs="0">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>Kennzeichen, ob Item in einer untergeordneten Ebene existiert</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>Kennzeichen, ob Item in einer untergeordneten Ebene existiert</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="modifiedTerm" type="xs:string" minOccurs="0">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>Alternativbegriff</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>Alternativbegriff der über die Ähnlichkeitssuche gefunden wurde</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:complexType>
+            
+      <xs:complexType name="getFilteredSearchWords">
+        <xs:sequence> 
+          <xs:element name="key" type="xs:string" minOccurs="0">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>Item Schlüssel</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>Item Schlüssel</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="searchWordView" type="xs:string" minOccurs="0">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>Stichwort zur Anzeige.</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>Stichwort zur Anzeige.</xs:documentation>
+            </xs:annotation>
+          </xs:element> 
+        </xs:sequence>
+      </xs:complexType>
+      
+      <xs:complexType name="getItemToCodePart">
+        <xs:sequence> 
+          <xs:element name="key" type="xs:string" minOccurs="0">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>Item Schlüssel</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>Item Schlüssel</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="searchWordView" type="xs:string" minOccurs="0">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>Stichwort zur Anzeige.</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>Stichwort zur Anzeige.</xs:documentation>
+            </xs:annotation>
+          </xs:element> 
+        </xs:sequence>
+      </xs:complexType>
+             
+      <xs:complexType name="klassifikationsfamilie">
+        <xs:sequence>
+          <xs:element name="identifier" type="xs:string" minOccurs="0">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>Family Identifier</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>Family Identifier</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="title" type="xs:string" minOccurs="0">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>offizieller Item-Titel</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>offizieller Item-Titel</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="description" type="xs:string" minOccurs="0">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>offizielle Family-Beschreibung</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>offizielle Family-Beschreibung</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="klassifikation">
+        <xs:sequence>
+          <xs:element name="identifier" type="xs:string" minOccurs="0">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>Klassifikation Identifier</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>Klassifikation Identifier</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="title" type="xs:string" minOccurs="0">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>offizieller Klassifikation-Titel</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>offizieller Klassifikation-Titel</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="klassifikationData">
+        <xs:sequence>
+          <xs:element name="title" type="xs:string" minOccurs="0">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>offizieller Klassifikation-Titel</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>offizieller Klassifikation-Titel</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="description" type="xs:string" minOccurs="0">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>offizielle Klassifikation-Beschreibung</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>offizielle Klassifikation-Beschreibung</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="context" type="xs:string" minOccurs="0">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>Kontextbezeichnung der Klassifikation zum gegebenen Sprachkennzeichen.</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>Kontextbezeichnung der Klassifikation zum gegebenen Sprachkennzeichen.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="owner" type="xs:string" minOccurs="0">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>Eigentümer der Klassifikationsversion zum gegebenen Sprachkennzeichen.</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>Eigentümer der Klassifikationsversion zum gegebenen Sprachkennzeichen.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="footnote" type="xs:string" minOccurs="0">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>Fußnote zur Klassifikation zum gegebenen Sprachkennzeichen.</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>Fußnote zur Klassifikation zum gegebenen Sprachkennzeichen.</xs:documentation>
+            </xs:annotation>
+          </xs:element>   
+        </xs:sequence>
+      </xs:complexType>            
+      <xs:complexType name="klassifikationsversion">
+        <xs:sequence>
+          <xs:element name="identifier" type="xs:string" minOccurs="0">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>Version Identifier</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>Version Identifier</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="title" type="xs:string" minOccurs="0">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>offizieller Versions-Titel</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>offizieller Versions-Titel</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:complexType>             
+      <xs:complexType name="klassifikationsversionData">
+        <xs:sequence>
+          <xs:element name="title" type="xs:string" minOccurs="0">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>offizieller Version-Titel</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>offizieller Version-Titel</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="description" type="xs:string" minOccurs="0">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>offizielle Version-Beschreibung</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>offizielle Version-Beschreibung</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="releaseDate" type="xs:dateTime" minOccurs="0">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>Release Date - Version</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>Release Date - Version</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="terminationDate" type="xs:dateTime" minOccurs="0">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>Termination Date - Version</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>Termination Date - Version</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="lastUpdate" type="xs:dateTime" minOccurs="0">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>Letzte Aktualisierung der Klassifikationsversion.</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>Letzte Aktualisierung der Klassifikationsversion.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="lastUpdateKeywords" type="xs:dateTime" minOccurs="0">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>Letzte Aktualisierung der Stichwörter</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>Letzte Aktualisierung der Stichwörter</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="releaseDateAsString" type="xs:string" minOccurs="0">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>Release Date - Version</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>Release Date - Version</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="terminationDateAsString" type="xs:string" minOccurs="0">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>Termination Date - Version</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>Termination Date - Version</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="lastUpdateAsString" type="xs:string" minOccurs="0">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>Letzte Aktualisierung der Klassifikationsversion.</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>Letzte Aktualisierung der Klassifikationsversion.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="lastUpdateKeywordsAsString" type="xs:string" minOccurs="0">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>Letzte Aktualisierung der Stichwörter</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>Letzte Aktualisierung der Stichwörter</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="copyright" type="xs:string" minOccurs="0">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>Copyright der Klassifikationsversion zum gegebenen Sprachkennzeichen.</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>Copyright der Klassifikationsversion zum gegebenen Sprachkennzeichen.</xs:documentation>
+            </xs:annotation>
+          </xs:element>                     
+          <xs:element name="linkArray">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>Liste von Links auf Ressourcen in verschiedenen Formaten zur Klassifikationsversion zum gegebenen Sprachkennzeichen.</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>Liste von Links auf Ressourcen in verschiedenen Formaten zur Klassifikationsversion zum gegebenen Sprachkennzeichen.</xs:documentation>
+            </xs:annotation>                        
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element maxOccurs="26" name="links" type="xs:string"/>
+              </xs:sequence>
+            </xs:complexType>                  
+          </xs:element>                    
+          <xs:element name="owner" type="xs:string" minOccurs="0">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>Eigentümer der Klassifikationsversion zum gegebenen Sprachkennzeichen.</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>Eigentümer der Klassifikationsversion zum gegebenen Sprachkennzeichen.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="contactPerson" type="xs:string" minOccurs="0">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>Ansprechpartner der Klassifikationsversion zum gegebenen Sprachkennzeichen.</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>Ansprechpartner der Klassifikationsversion zum gegebenen Sprachkennzeichen.</xs:documentation>
+            </xs:annotation>
+          </xs:element>    
+          <xs:element name="legalBase" type="xs:string" minOccurs="0">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>Rechtsgrundlage zum gegebenen Sprachkennzeichen.</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>Rechtsgrundlage zum gegebenen Sprachkennzeichen.</xs:documentation>
+            </xs:annotation>
+          </xs:element>                         
+          <xs:element name="levels" type="tns:levelClass" minOccurs="0" maxOccurs="unbounded" nillable="true">                      
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>Liste der Klassifikationsversionsebenen mit den Attributen (levelNumber, levelName, levelDescription)</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>Liste der Klassifikationsversionsebenen mit den Attributen (levelNumber, levelName, levelDescription)</xs:documentation>                            
+            </xs:annotation>                                                                                                                 
+          </xs:element>                                                
+        </xs:sequence>
+      </xs:complexType>                     
+      <xs:complexType name="levelItem">
+        <xs:sequence>
+          <xs:element name="parentitemKey" type="xs:string" minOccurs="0">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>Übergeordnetes Item - Schlüssel.</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>Übergeordnetes Item - Schlüssel..</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="key" type="xs:string" minOccurs="0">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>Schlüssel des Items.</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>Schlüssel des Items.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="title" type="xs:string" minOccurs="0">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>Name des Items.</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>Name des Items.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="generalnote" type="xs:string" minOccurs="0">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>Zusätzliche Informationen zum Item.</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>Zusätzliche Informationen zum Item.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="includes" type="xs:string" minOccurs="0">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>Einschlüsse.</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>Einschlüsse.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="includesAlso" type="xs:string" minOccurs="0">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>Umfasst ferner.</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>Umfasst ferner.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="excludes" type="xs:string" minOccurs="0">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>Ausschlüsse.</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>Ausschlüsse.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="generated" type="xs:boolean" minOccurs="0">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>Kennzeichnung als Dummy-Item.</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>Kennzeichnung als Dummy-Item.</xs:documentation>
+            </xs:annotation>
+          </xs:element>                
+        </xs:sequence>
+      </xs:complexType>             
+      <xs:complexType name="childrenItem">
+        <xs:sequence>
+          <xs:element name="key" type="xs:string" minOccurs="0">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>Schlüssel des Items.</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>Schlüssel des Items.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="longTitle" type="xs:string" minOccurs="0">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>Langtitel des Items.</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>Langtitel des Items.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="mediumTitle" type="xs:string" minOccurs="0">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>Mitteltitel des Items.</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>Mitteltitel des Items.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="officialTitle" type="xs:string" minOccurs="0">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>offizieller Titel des Items.</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>offizieller Titel des Items.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="shortTitle" type="xs:string" minOccurs="0">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>Kurztitel des Items.</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>Kurztitel des Items.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="generalnote" type="xs:string" minOccurs="0">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>Zusätzliche Informationen zum Item.</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>Zusätzliche Informationen zum Item.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="includes" type="xs:string" minOccurs="0">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>Einschlüsse.</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>Einschlüsse.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="includesAlso" type="xs:string" minOccurs="0">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>Umfasst ferner.</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>Umfasst ferner.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="excludes" type="xs:string" minOccurs="0">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>Ausschlüsse.</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>Ausschlüsse.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="generated" type="xs:boolean" minOccurs="0">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>Kennzeichnung als Dummy-Item.</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>Kennzeichnung als Dummy-Item.</xs:documentation>
+            </xs:annotation>
+          </xs:element> 
+          <xs:element name="childItemExists" type="xs:boolean" minOccurs="0">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>Einschlüsse.</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>Einschlüsse.</xs:documentation>
+            </xs:annotation>
+          </xs:element>    
+          <xs:element name="modifiedTerm" type="xs:string" minOccurs="0">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>Alternativbegriff.</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>Alternativbegriff der über die Ähnlichkeitssuche ermittelt wurde.</xs:documentation>
+            </xs:annotation>
+          </xs:element>                                                         
+        </xs:sequence>
+      </xs:complexType>                     
+      <xs:complexType name="AuthenticationException">
+        <xs:sequence>
+          <xs:element name="message" type="xs:string" minOccurs="0">
+            <xs:annotation>
+              <xs:appinfo>                      
+                <jaxb:property>
+                  <jaxb:javadoc>Fehlermeldung für eine fehlerhafte Authentifizierung.</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>Fehlermeldung für eine fehlerhafte Authentifizierung.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="LanguageNotSupportedException">
+        <xs:sequence>
+          <xs:element name="message" type="xs:string" minOccurs="0">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>Fehlermeldung für eine nicht unterstützte Sprache.</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>Fehlermeldung für eine nicht unterstützte Sprache.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="NotFoundException">
+        <xs:sequence>
+          <xs:element name="message" type="xs:string" minOccurs="0">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>Fehlermeldung wenn mindestens ein Parameter null ist 
+                    oder zum übergebenen Identifikator bzw. Sprachkennzeichen keine Klassifikation(-sversion) gefunden wurde 
+                    oder die Klassifikation(-sversion) außerhalb der Sichtbarkeit des Mandanten liegt
+                  </jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>Fehlermeldung wenn mindestens ein Parameter null ist 
+                oder zum übergebenen Identifikator bzw. Sprachkennzeichen keine Klassifikation(-sversion) gefunden wurde 
+                oder die Klassifikation(-sversion) außerhalb der Sichtbarkeit des Mandanten liegt.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="InternalException">
+        <xs:sequence>
+          <xs:element name="message" type="xs:string" minOccurs="0">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>Interner Fehler
+                  </jaxb:javadoc>
+                </jaxb:property>
+              </xs:appinfo>
+              <xs:documentation>Interner Fehler.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="RequestReturnsNullException">
+        <xs:sequence>
+          <xs:element name="message" type="xs:string" minOccurs="0">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>Fehlermeldung wenn null zurückgegeben wird.</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>Fehlermeldung wenn null zurückgegeben wird.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="item">
+        <xs:sequence>
+          <xs:element name="level" type="xs:int" minOccurs="0">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>Level (optional)</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>Level (optional)</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="commentTitle" type="xs:string" minOccurs="0">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>Erläuterungstitel (optional)</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>Erläuterungstitel (optional)</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="excludes" type="xs:string" minOccurs="0">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>Ausschlüsse (optional)</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>Ausschlüsse (optional)</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="generalNote" type="xs:string" minOccurs="0">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>Allgemeine Bemerkungen (optional)</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>Allgemeine Bemerkungen (optional)</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="includes" type="xs:string" minOccurs="0">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>Einschlüsse (optional)</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>Einschlüsse (optional)</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="includesAlso" type="xs:string" minOccurs="0">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>umfasst ferner (optional)</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>umfasst ferner (optional)</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="key" type="xs:string" minOccurs="0">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>Item Schlüssel</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>Item Schlüssel</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="longTitle" type="xs:string" minOccurs="0">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>Langtitel (optional)</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>Langtitel (optional)</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="measurement" type="xs:string" minOccurs="0">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>Maßeinheit (optional)</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>Maßeinheit (optional)</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="shortTitle" type="xs:string" minOccurs="0">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>Kurztitel (optional)</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>Kurztitel (optional)</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="mediumTitle" type="xs:string" minOccurs="0">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>Mitteltitel (optional)</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>Mitteltitel (optional)</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="officialTitle" type="xs:string" minOccurs="0">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>offizieller Titel</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>offizieller Titel</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="searchWords" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>Stichwörter (optional)</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>Stichwörter (optional)</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:complexType>
+            
+      <xs:complexType name="itemExtended">
+        <xs:sequence>       
+          <xs:element name="item" minOccurs="1" maxOccurs="1" type="tns:item"/>
+          <xs:element name="correspondenceItems" minOccurs="0" maxOccurs="1" type="tns:correspondenceItems"/>
+          <xs:element name="structure" type="tns:structure" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+      </xs:complexType>
+       
+      <xs:complexType name="correspondenceItems">
+        <xs:sequence><xs:element name="itemsOfVersion" minOccurs="0" maxOccurs="unbounded" type="tns:itemsOfVersion"/>
+      </xs:sequence></xs:complexType>
+      
+      <xs:complexType name="itemsOfVersion">
+        <xs:sequence>
+          <xs:element name="versionTitle" type="xs:string" minOccurs="1" maxOccurs="1"/>
+          <xs:element name="correspondenceItem" minOccurs="0" maxOccurs="unbounded" type="tns:correspondenceItem"/>
+        </xs:sequence>
+      </xs:complexType>
+     
+      <xs:complexType name="correspondenceItem">
+        <xs:sequence>
+          <xs:element name="sourceItem" type="tns:corrItem"/>
+          <xs:element name="description" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>Beschreibung (optional)</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>Beschreibung (optional)</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="targetItem" type="tns:corrItem"/>
+        </xs:sequence>
+      </xs:complexType>
+      
+      <xs:complexType name="corrItem">
+        <xs:sequence>
+          <xs:element name="type" type="xs:string" minOccurs="0">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>Typ (optional)</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>Typ (optional)</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="key" type="xs:string" minOccurs="0">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>Item Schlüssel</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>Item Schlüssel</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="title" type="xs:string" minOccurs="0">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>Titel (optional)</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>Titel (optional)</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:complexType>
+            
+      <xs:complexType name="structure-item">
+        <xs:sequence>      
+          <xs:element name="itemId" type="xs:int" minOccurs="0">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>itemId</jaxb:javadoc>
+                </jaxb:property>
+              </xs:appinfo>
+              <xs:documentation>itemId</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="level" type="xs:int" minOccurs="0">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>ID der Klassifikationsebene des Items</jaxb:javadoc>
+                </jaxb:property>
+              </xs:appinfo>
+              <xs:documentation>ID der Klassifikationsebene des Items</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="type" type="xs:string" minOccurs="0">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>type </jaxb:javadoc>
+                </jaxb:property>
+              </xs:appinfo>
+              <xs:documentation>type</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="key" type="xs:string" minOccurs="0">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>Item Schlüssel</jaxb:javadoc>
+                </jaxb:property>
+              </xs:appinfo>
+              <xs:documentation>Item Schlüssel</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="label" minOccurs="0" maxOccurs="1" type="tns:label"> 
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>label</jaxb:javadoc>
+                </jaxb:property>
+              </xs:appinfo>
+              <xs:documentation>label</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>        
+      </xs:complexType>
+      
+	  <xs:complexType name="label">
+        <xs:sequence>          
+          <xs:element name="qualifier" type="xs:string"/>
+          <xs:element name="labelText" type="xs:string" minOccurs="0">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>Label Text</jaxb:javadoc>
+                </jaxb:property>
+              </xs:appinfo>
+              <xs:documentation>Label Text</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="language" type="xs:string" minOccurs="0">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>Language</jaxb:javadoc>
+                </jaxb:property>
+              </xs:appinfo>
+              <xs:documentation>Language</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence> 
+      </xs:complexType>
+      
+      <xs:complexType name="structure">
+            <xs:sequence><xs:element name="item" minOccurs="0" maxOccurs="unbounded" type="tns:structure-item"/>
+      </xs:sequence></xs:complexType> 
+            
+      <xs:complexType name="searchResultArray" final="#all">
+        <xs:sequence>
+          <xs:element name="item" type="tns:searchResult" minOccurs="0" maxOccurs="unbounded" nillable="true">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>Ergebnisliste</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>Ergebnisliste</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="searchResultExtendedArray" final="#all">
+        <xs:sequence>
+          <xs:element name="item" type="tns:searchResultExtended" minOccurs="0" maxOccurs="unbounded" nillable="true">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>Ergebnisliste</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>Ergebnisliste</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getFilteredSearchWordsArray" final="#all">
+        <xs:sequence>
+          <xs:element name="item" type="tns:getFilteredSearchWords" minOccurs="0" maxOccurs="unbounded" nillable="true">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>Ergebnisliste</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>Ergebnisliste</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getItemToCodePartArray" final="#all">
+        <xs:sequence>
+          <xs:element name="item" type="tns:getItemToCodePart" minOccurs="0" maxOccurs="unbounded" nillable="true">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>Ergebnisliste</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>Ergebnisliste</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="searchResultFamilyArray" final="#all">
+        <xs:sequence>
+          <xs:element name="family" type="tns:klassifikationsfamilie" minOccurs="0" maxOccurs="unbounded" nillable="true">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>Ergebnisliste</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>Ergebnisliste</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="searchResultFamilyData" final="#all">
+        <xs:sequence>
+          <xs:element name="family" type="tns:klassifikationsfamilie" minOccurs="0" maxOccurs="unbounded" nillable="true">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>Ergebnis</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>Ergebnis</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="searchResultClassificationArray" final="#all">
+        <xs:sequence>
+          <xs:element name="classification" type="tns:klassifikation" minOccurs="0" maxOccurs="unbounded" nillable="true">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>Ergebnisliste</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>Ergebnisliste</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="searchResultClassificationDataArray" final="#all">
+        <xs:sequence>
+          <xs:element name="classification" type="tns:klassifikationData" minOccurs="0" maxOccurs="unbounded" nillable="true">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>Ergebnisliste</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>Ergebnisliste</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:complexType>            
+      <xs:complexType name="searchResultVersionArray" final="#all">
+        <xs:sequence>
+          <xs:element name="version" type="tns:klassifikationsversion" minOccurs="0" maxOccurs="unbounded" nillable="true">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>Ergebnisliste</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>Ergebnisliste</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="searchResultVersionDataArray" final="#all">
+        <xs:sequence>
+          <xs:element name="version" type="tns:klassifikationsversionData" minOccurs="0" maxOccurs="unbounded" nillable="true">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>Ergebnisliste</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>Ergebnisliste</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="searchResultLevelItemArray" final="#all">
+        <xs:sequence>
+          <xs:element name="levelItem" type="tns:levelItem" minOccurs="0" maxOccurs="unbounded" nillable="true">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>Ergebnisliste</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>Ergebnisliste</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="searchResultLevelItemChildrenArray" final="#all">
+        <xs:sequence>
+          <xs:element name="childrenItem" type="tns:childrenItem" minOccurs="0" maxOccurs="unbounded" nillable="true">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>Ergebnisliste</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>Ergebnisliste</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:complexType>             
+    </xsd:schema>
+    <xsd:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:jaxb="http://java.sun.com/xml/ns/jaxb" version="1.0" jaxb:version="2.0" targetNamespace="http://jaxb.dev.java.net/array">
+      <xs:complexType name="stringArray" final="#all">
+        <xs:sequence>
+          <xs:element name="item" type="xs:string" minOccurs="0" maxOccurs="unbounded" nillable="true">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>Ergebnisliste</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>Ergebnisliste</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:complexType>
+    </xsd:schema>
+        
+    <xsd:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:jaxb="http://java.sun.com/xml/ns/jaxb" version="1.0" jaxb:version="2.0" targetNamespace="http://jaxb.dev.java.net/array">
+      <xs:complexType name="chunkByteArray" final="#all">
+        <xs:sequence>
+          <xs:element name="zip" type="xsd:base64Binary" minOccurs="0" maxOccurs="unbounded" nillable="true">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>TAR.GZ als Byte-Array.</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>TAR.GZ als Byte-Array.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="filename" type="xs:string" minOccurs="0" nillable="true">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>Name der temporären tar.gz-Datei</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>Name der temporären tar.gz-Datei</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="chunknumber" type="xs:int" minOccurs="0" nillable="true">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>Nummer des aktuellen chunks</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>Nummer des aktuellen chunks</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="chunkcount" type="xs:int" minOccurs="0" nillable="true">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>Gesamtanzahl chunks</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>Gesamtanzahl chunks</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="lastChunk" type="xs:boolean" default="false">
+            <xs:annotation>
+              <xs:appinfo>
+                <jaxb:property>
+                  <jaxb:javadoc>Kennzeichen ist true wenn letztes Paket gesendet wurde.</jaxb:javadoc>
+                </jaxb:property>			
+              </xs:appinfo>
+              <xs:documentation>Kennzeichen ist true wenn letztes Paket gesendet wurde.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="getSupportedLanguages"/>
+  <wsdl:message name="getSupportedLanguagesResponse">
+    <wsdl:part xmlns:ns1="http://jaxb.dev.java.net/array" name="return" type="ns1:stringArray"/>
+  </wsdl:message>
+  <wsdl:message name="getVariants">
+    <wsdl:part name="versionIdentifier" type="xsd:string"/>
+  </wsdl:message>
+  <wsdl:message name="getVariantsResponse">
+    <wsdl:part xmlns:ns2="http://jaxb.dev.java.net/array" name="identifiers" type="ns2:stringArray"/>
+  </wsdl:message>
+  <wsdl:message name="AuthenticationException">
+    <wsdl:part name="fault" element="tns:AuthenticationException">
+      <wsdl:documentation>Wird geworfen bei fehlerhafter Authentifizierung bzw. wenn keine Rechte auf die Klassifikations-Version/Variante vorhanden sind.</wsdl:documentation>
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="InternalException">
+    <wsdl:part name="fault" element="tns:InternalException">
+      <wsdl:documentation>Interner Fehler
+      </wsdl:documentation>
+    </wsdl:part>
+  </wsdl:message>
+
+  <wsdl:message name="NotFoundException">
+    <wsdl:part name="fault" element="tns:NotFoundException">
+      <wsdl:documentation>Fehlermeldung wenn mindestens ein Parameter null ist 
+        oder zum übergebenen Identifikator bzw. Sprachkennzeichen keine Klassifikation(-sversion) gefunden wurde 
+        oder die Klassifikation(-sversion) außerhalb der Sichtbarkeit des Mandanten liegt
+      </wsdl:documentation>
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="RequestReturnsNullException">
+    <wsdl:part name="fault" element="tns:RequestReturnsNullException">
+      <wsdl:documentation>Wird geworfen, wenn null zurückgeliefert wird.</wsdl:documentation>
+    </wsdl:part>
+  </wsdl:message> 
+  <wsdl:message name="extractForOfflineUse">
+    <wsdl:part xmlns:ns2="http://jaxb.dev.java.net/array" name="identifier" type="ns2:stringArray">
+      <wsdl:documentation>Array mit ausgewaehlten Identifikatoren der Klassifikationsversionen (z.B. "WZ2008") die geliefert werden sollen.</wsdl:documentation>
+    </wsdl:part>
+    <wsdl:part name="date" type="xsd:dateTime">
+      <wsdl:documentation>
+        Datum des letzten Thesaurus-Updates. Hat sich dieser Zeitpunkt nicht geändert, wird kein neuer Thesaurus Bestand geliefert. 
+				
+        Achtung : Im System wird die Zeitzone CET (entspricht GMT+01:00 Europe/Berlin) verwendet!
+        Beispiel: 01.01.2008 0:00:00 CET entspricht 31.12.2007 23:00:00 GMT
+      </wsdl:documentation>
+    </wsdl:part>
+    <wsdl:part name="chunknumber" type="xsd:int">
+      <wsdl:documentation>Nummer des aktuellen chunks.</wsdl:documentation>
+    </wsdl:part>
+    <wsdl:part name="chunkcount" type="xsd:int">
+      <wsdl:documentation>Gesamtanzahl chunks. Für die Fortschrittsanzeige.</wsdl:documentation>
+    </wsdl:part>
+    <wsdl:part name="filename" type="xsd:string">
+      <wsdl:documentation>Filename</wsdl:documentation>
+    </wsdl:part> 
+  </wsdl:message>
+  <wsdl:message name="extractForOfflineUseResponse">
+    <wsdl:part xmlns:ns2="http://jaxb.dev.java.net/array" name="return" type="ns2:chunkByteArray">
+      <wsdl:documentation>ByteArray besteht aus tar.gz-Datei die eine import.properties und drei Ordner enthaelt: ths, clasets und Metadaten.</wsdl:documentation>
+    </wsdl:part>
+  </wsdl:message> 
+  
+  <wsdl:message name="extractForOfflineUseUpdate">
+     <wsdl:part xmlns:ns2="http://jaxb.dev.java.net/array" name="identifier" type="ns2:stringArray">
+      <wsdl:documentation>Array mit ausgewaehlten Identifikatoren der Klassifikationsversionen (z.B. "WZ2008") die geliefert werden sollen.</wsdl:documentation>
+    </wsdl:part>
+    <wsdl:part name="date" type="xsd:dateTime">
+      <wsdl:documentation>
+        Datum des letzten Thesaurus-Updates. Hat sich dieser Zeitpunkt nicht geändert, wird kein neuer Thesaurus Bestand geliefert. 
+				
+        Achtung : Im System wird die Zeitzone CET (entspricht GMT+01:00 Europe/Berlin) verwendet!
+        Beispiel: 01.01.2008 0:00:00 CET entspricht 31.12.2007 23:00:00 GMT
+      </wsdl:documentation>
+    </wsdl:part>
+    <wsdl:part name="chunknumber" type="xsd:int">
+      <wsdl:documentation>Nummer des aktuellen chunks.</wsdl:documentation>
+    </wsdl:part>
+    <wsdl:part name="chunkcount" type="xsd:int">
+      <wsdl:documentation>Gesamtanzahl chunks. Für die Fortschrittsanzeige.</wsdl:documentation>
+    </wsdl:part>
+    <wsdl:part name="filename" type="xsd:string">
+      <wsdl:documentation>Filename</wsdl:documentation>
+    </wsdl:part> 
+    <wsdl:part name="newimport" type="xsd:boolean">
+      <wsdl:documentation>Boolean zeigt an, ob ein Neuimport stattfinden soll (true) oder nur ein Update (false).</wsdl:documentation>
+    </wsdl:part> 
+    <wsdl:part name="thsimport" type="xsd:boolean">
+      <wsdl:documentation>Boolean zeigt an, ob der Thesaurus Bestand geliefert werden soll.</wsdl:documentation>
+    </wsdl:part> 
+  </wsdl:message>
+  <wsdl:message name="extractForOfflineUseUpdateResponse">
+    <wsdl:part xmlns:ns2="http://jaxb.dev.java.net/array" name="return" type="ns2:chunkByteArray">
+      <wsdl:documentation>ByteArray besteht aus tar.gz-Datei die eine import.properties und drei Ordner enthaelt: ths, clasets und Metadaten.</wsdl:documentation>
+    </wsdl:part>
+  </wsdl:message> 
+  
+  <wsdl:message name="ping"/>
+  <wsdl:message name="pingResponse">
+    <wsdl:part name="message" type="xsd:string"/>
+  </wsdl:message> 
+  <wsdl:message name="getAllItems">
+    <wsdl:part name="identifier" type="xsd:string">
+      <wsdl:documentation>Eindeutiger Identifikator einer Klassifikationsversion (z.B. "WZ2008")</wsdl:documentation>
+    </wsdl:part>
+    <wsdl:part name="levelnumber" type="xsd:string">
+      <wsdl:documentation>Levelnummer einer Klassifikationsversion (z.B. "1")</wsdl:documentation>
+    </wsdl:part> 
+  </wsdl:message> 
+  <wsdl:message name="getAllItemsResponse">
+    <wsdl:part name="return" type="tns:searchResultLevelItemArray">
+      <wsdl:documentation>Suchergebnisse</wsdl:documentation>
+    </wsdl:part>
+  </wsdl:message> 
+  <wsdl:message name="getAllItemsByLanguage">
+    <wsdl:part name="identifier" type="xsd:string">
+      <wsdl:documentation>Eindeutiger Identifikator einer Klassifikationsversion (z.B. "WZ2008")</wsdl:documentation>
+    </wsdl:part>
+    <wsdl:part name="levelnumber" type="xsd:string">
+      <wsdl:documentation>Levelnummer einer Klassifikationsversion (z.B. "1")</wsdl:documentation>
+    </wsdl:part>
+    <wsdl:part name="language" type="xsd:string">
+      <wsdl:documentation>Sprache (z.B. "DE", "EN")</wsdl:documentation>
+    </wsdl:part>
+  </wsdl:message> 
+  <wsdl:message name="getAllItemsByLanguageResponse">
+    <wsdl:part name="return" type="tns:searchResultLevelItemArray">
+      <wsdl:documentation>Suchergebnisse</wsdl:documentation>
+    </wsdl:part>
+  </wsdl:message> 
+  <wsdl:message name="getChildItems">
+    <wsdl:part name="language" type="xsd:string">
+      <wsdl:documentation>Sprache (z.B. "DE", "EN")</wsdl:documentation>
+    </wsdl:part>
+    <wsdl:part name="identifier" type="xsd:string">
+      <wsdl:documentation>Eindeutiger Identifikator einer Klassifikationsversion (z.B. "WZ2008")</wsdl:documentation>
+    </wsdl:part>
+    <wsdl:part name="itemkey" type="xsd:string">
+      <wsdl:documentation>Schlüssel eines Items. (z.B. "1111" oder 1.1.1.1)</wsdl:documentation>
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getChildItemsResponse">
+    <wsdl:part name="return" type="tns:searchResultLevelItemChildrenArray">
+      <wsdl:documentation>Suchergebnisse</wsdl:documentation>
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getAllVersions">
+    <wsdl:part name="language" type="xsd:string">
+      <wsdl:documentation>Sprache (z.B. "DE", "EN")</wsdl:documentation>
+    </wsdl:part>
+    <wsdl:part name="identifier" type="xsd:string">
+      <wsdl:documentation>Eindeutiger Identifier der Klassifikations-Version (z.B. "WZ2008").</wsdl:documentation>
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getAllVersionsResponse">
+    <wsdl:part name="return" type="tns:searchResultVersionArray">
+      <wsdl:documentation>Suchergebnisse</wsdl:documentation>
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getVersionData">
+    <wsdl:part name="language" type="xsd:string">
+      <wsdl:documentation>Sprache (z.B. "DE", "EN")</wsdl:documentation>
+    </wsdl:part>
+    <wsdl:part name="identifier" type="xsd:string">
+      <wsdl:documentation>Eindeutiger Identifier der Klassifikations-Version (z.B. "WZ2008").</wsdl:documentation>
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getVersionDataResponse">
+    <wsdl:part name="return" type="tns:searchResultVersionDataArray">
+      <wsdl:documentation>Suchergebnisse</wsdl:documentation>
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getAllClassification">
+    <wsdl:part name="language" type="xsd:string">
+      <wsdl:documentation>Sprache (z.B. "DE", "EN")</wsdl:documentation>
+    </wsdl:part>
+    <wsdl:part name="familyIdentifier" type="xsd:string">
+      <wsdl:documentation>Eindeutiger Identifikator einer Klassifikationsfamilie.</wsdl:documentation>
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getAllClassificationResponse">
+    <wsdl:part name="return" type="tns:searchResultClassificationArray">
+      <wsdl:documentation>Suchergebnisse</wsdl:documentation>
+    </wsdl:part>
+  </wsdl:message>    
+  <wsdl:message name="getClassificationData">
+    <wsdl:part name="language" type="xsd:string">
+      <wsdl:documentation>Sprache (z.B. "DE", "EN")</wsdl:documentation>
+    </wsdl:part>
+    <wsdl:part name="classificationIdentifier" type="xsd:string">
+      <wsdl:documentation>Eindeutiger Identifier der Klassifikations-Version (z.B. "WZ2008").</wsdl:documentation>
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getClassificationDataResponse">
+    <wsdl:part name="return" type="tns:searchResultClassificationDataArray">
+      <wsdl:documentation>Suchergebnisse</wsdl:documentation>
+    </wsdl:part>
+  </wsdl:message>  
+  <wsdl:message name="getAllFamilies">
+    <wsdl:part name="language" type="xsd:string">
+      <wsdl:documentation>Sprache (z.B. "DE", "EN")</wsdl:documentation>
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getAllFamiliesResponse">
+    <wsdl:part name="return" type="tns:searchResultFamilyArray">
+      <wsdl:documentation>Suchergebnisse</wsdl:documentation>
+    </wsdl:part>
+  </wsdl:message>    
+  <wsdl:message name="getFamilyData">
+    <wsdl:part name="language" type="xsd:string">
+      <wsdl:documentation>Sprache (z.B. "DE", "EN")</wsdl:documentation>
+    </wsdl:part>
+    <wsdl:part name="familyIdentifier" type="xsd:string">
+      <wsdl:documentation>Eindeutiger Identifikator einer Klassifikationsfamilie.</wsdl:documentation>
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getFamilyDataResponse">
+    <wsdl:part name="return" type="tns:searchResultFamilyData">
+      <wsdl:documentation>Suchergebnisse</wsdl:documentation>
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchItem">
+    <wsdl:part name="language" type="xsd:string">
+      <wsdl:documentation>Sprache (z.B. "DE", "EN")</wsdl:documentation>
+    </wsdl:part>
+    <wsdl:part name="identifier" type="xsd:string">
+      <wsdl:documentation>Eindeutiger Identifier der Klassifikations-Version/Variante (z.B. "WZ2008", "GP2009").</wsdl:documentation>
+    </wsdl:part>
+    <wsdl:part name="date" type="xsd:dateTime">
+      <wsdl:documentation>
+        Datum zu dem die im System hinterlegten Daten geliefert werden sollen (entspricht nicht dem Freigabedatum).
+        Falls zu diesem Zeitpunkt keine Daten hinterlegt waren, wird nichts gefunden. Aktuelles Datum oder Datum in der Zukunft liefert die aktuell im System hinterlegten Daten.
+				
+        Achtung : Im System wird die Zeitzone CET (entspricht GMT+01:00 Europe/Berlin) verwendet!
+        Beispiel: 01.01.2008 0:00:00 CET entspricht 31.12.2007 23:00:00 GMT
+      </wsdl:documentation>
+    </wsdl:part>
+    <wsdl:part name="term" type="xsd:string">
+      <wsdl:documentation>Ein oder mehrere Suchbegriffe (durch Leerzeichen getrennt)</wsdl:documentation>
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchItemResponse">
+    <wsdl:part name="return" type="tns:searchResultArray">
+      <wsdl:documentation>Suchergebnisse (max. 100)</wsdl:documentation>
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchItemExtended">
+    <wsdl:part name="language" type="xsd:string">
+      <wsdl:documentation>Sprache (z.B. "DE", "EN")</wsdl:documentation>
+    </wsdl:part>
+    <wsdl:part name="identifier" type="xsd:string">
+      <wsdl:documentation>Eindeutiger Identifier der Klassifikations-Version/Variante (z.B. "WZ2008", "GP2009").</wsdl:documentation>
+    </wsdl:part>
+    <wsdl:part name="date" type="xsd:dateTime">
+      <wsdl:documentation>
+        Datum zu dem die im System hinterlegten Daten geliefert werden sollen (entspricht nicht dem Freigabedatum).
+        Falls zu diesem Zeitpunkt keine Daten hinterlegt waren, wird nichts gefunden. Aktuelles Datum oder Datum in der Zukunft liefert die aktuell im System hinterlegten Daten.
+				
+        Achtung : Im System wird die Zeitzone CET (entspricht GMT+01:00 Europe/Berlin) verwendet!
+        Beispiel: 01.01.2008 0:00:00 CET entspricht 31.12.2007 23:00:00 GMT
+      </wsdl:documentation>
+    </wsdl:part>
+    <wsdl:part name="term" type="xsd:string">
+      <wsdl:documentation>Ein oder mehrere Suchbegriffe (durch Leerzeichen getrennt)</wsdl:documentation>
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchItemExtendedResponse">
+    <wsdl:part name="return" type="tns:searchResultExtendedArray">
+      <wsdl:documentation>Suchergebnisse (max. 100)</wsdl:documentation>
+    </wsdl:part>
+  </wsdl:message>
+    
+  <wsdl:message name="getFilteredSearchWords">
+    <wsdl:part name="language" type="xsd:string">
+      <wsdl:documentation>Sprache (z.B. "DE", "EN")</wsdl:documentation>
+    </wsdl:part>
+    <wsdl:part name="identifier" type="xsd:string">
+      <wsdl:documentation>Eindeutiger Identifier der Klassifikations-Version/Variante (z.B. "WZ2008", "GP2009").</wsdl:documentation>
+    </wsdl:part> 
+    <wsdl:part name="term" type="xsd:string">
+      <wsdl:documentation>Filterkriterium für die Stichwörter zur Anzeige</wsdl:documentation>
+    </wsdl:part> 
+  </wsdl:message>
+  <wsdl:message name="getFilteredSearchWordsResponse">
+    <wsdl:part name="return" type="tns:getFilteredSearchWordsArray">
+      <wsdl:documentation>Suchergebnisse (max. 100)</wsdl:documentation>
+    </wsdl:part>
+  </wsdl:message>
+   
+  <wsdl:message name="getItemToCodePart">
+    <wsdl:part name="language" type="xsd:string">
+      <wsdl:documentation>Sprache (z.B. "DE", "EN")</wsdl:documentation>
+    </wsdl:part>
+    <wsdl:part name="identifier" type="xsd:string">
+      <wsdl:documentation>Eindeutiger Identifier der Klassifikations-Version/Variante (z.B. "WZ2008", "GP2009").</wsdl:documentation>
+    </wsdl:part> 
+    <wsdl:part name="term" type="xsd:string">
+      <wsdl:documentation>Filterkriterium für die full-code(Postleitzahlen) zur Anzeige</wsdl:documentation>
+    </wsdl:part> 
+  </wsdl:message>
+  <wsdl:message name="getItemToCodePartResponse">
+    <wsdl:part name="return" type="tns:getItemToCodePartArray">
+      <wsdl:documentation>Suchergebnisse (max. 100)</wsdl:documentation>
+    </wsdl:part>
+  </wsdl:message>     
+    
+  <wsdl:message name="LanguageNotSupportedException">
+    <wsdl:part name="fault" element="tns:LanguageNotSupportedException">
+      <wsdl:documentation>Wird geworfen, wenn die übergebene Sprache nicht unterstützt wird.</wsdl:documentation>
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getItemData">
+    <wsdl:part name="language" type="xsd:string">
+      <wsdl:documentation>Sprache (z.B. "DE", "EN")</wsdl:documentation>
+    </wsdl:part>
+    <wsdl:part name="identifier" type="xsd:string">
+      <wsdl:documentation>Eindeutiger Identifier der Klassifikations-Version/Variante (z.B. "WZ2008", "GP2009").</wsdl:documentation>
+    </wsdl:part>
+    <wsdl:part name="date" type="xsd:dateTime">
+      <wsdl:documentation>
+        Datum zu dem die im System hinterlegten Daten geliefert werden sollen (entspricht nicht dem Freigabedatum).
+        Falls zu diesem Zeitpunkt keine Daten hinterlegt waren, wird nichts gefunden. Aktuelles Datum oder Datum in der Zukunft liefert die aktuell im System hinterlegten Daten.
+				
+        Achtung : Im System wird die Zeitzone CET (entspricht GMT+01:00 Europe/Berlin) verwendet!
+        Beispiel: 01.01.2008 0:00:00 CET entspricht 31.12.2007 23:00:00 GMT
+      </wsdl:documentation>
+    </wsdl:part>
+    <wsdl:part name="key" type="xsd:string">
+      <wsdl:documentation>Schlüssel des Items für das die Daten abgerufen werden sollen.</wsdl:documentation>
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getItemDataResponse">
+    <wsdl:part name="return" type="tns:item">
+      <wsdl:documentation>Daten des abgerufenen Items.</wsdl:documentation>
+    </wsdl:part>
+  </wsdl:message>    
+  <wsdl:message name="getItemDataExtended">
+    <wsdl:part name="language" type="xsd:string">
+      <wsdl:documentation>Sprache (z.B. "DE", "EN")</wsdl:documentation>
+    </wsdl:part>
+    <wsdl:part name="identifier" type="xsd:string">
+      <wsdl:documentation>Eindeutiger Identifier der Klassifikations-Version/Variante (z.B. "WZ2008", "GP2009").</wsdl:documentation>
+    </wsdl:part>
+    <wsdl:part name="date" type="xsd:dateTime">
+      <wsdl:documentation>
+        Datum zu dem die im System hinterlegten Daten geliefert werden sollen (entspricht nicht dem Freigabedatum).
+        Falls zu diesem Zeitpunkt keine Daten hinterlegt waren, wird nichts gefunden. Aktuelles Datum oder Datum in der Zukunft liefert die aktuell im System hinterlegten Daten.
+				
+        Achtung : Im System wird die Zeitzone CET (entspricht GMT+01:00 Europe/Berlin) verwendet!
+        Beispiel: 01.01.2008 0:00:00 CET entspricht 31.12.2007 23:00:00 GMT
+      </wsdl:documentation>
+    </wsdl:part>
+    <wsdl:part name="key" type="xsd:string">
+      <wsdl:documentation>Schlüssel des Items für das die Daten abgerufen werden sollen.</wsdl:documentation>
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getItemDataExtendedResponse">
+    <wsdl:part name="return" type="tns:itemExtended">
+      <wsdl:documentation>Daten des abgerufenen Items inklusive der gegenübergestellten Items sowie der Elternelemente.</wsdl:documentation>
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getLastVersion">
+    <wsdl:part name="versionIdentifier" type="xsd:string"/>
+  </wsdl:message>
+  <wsdl:message name="getLastVersionResponse">
+    <wsdl:part name="identifier" type="xsd:string"/>
+  </wsdl:message>
+  <wsdl:message name="getAllItemKeys">
+    <wsdl:part name="identifier" type="xsd:string"/>
+    <wsdl:part name="date" type="xsd:dateTime"/>
+  </wsdl:message>
+  <wsdl:message name="getAllItemKeysResponse">
+    <wsdl:part xmlns:ns3="http://jaxb.dev.java.net/array" name="return" type="ns3:stringArray"/>
+  </wsdl:message>
+  <wsdl:portType name="klassservice">
+    <jaxws:bindings xmlns:jaxws="http://java.sun.com/xml/ns/jaxws">
+      <jaxws:enableWrapperStyle>true</jaxws:enableWrapperStyle>
+      <jaxws:enableAsyncMapping>false</jaxws:enableAsyncMapping>
+    </jaxws:bindings>
+    <wsdl:documentation>KlassService Webservice</wsdl:documentation>
+
+    <wsdl:operation name="getSupportedLanguages">
+      <wsdl:documentation>Diese Methode gibt alle unterstützten Sprachen zurück.</wsdl:documentation>
+      <wsdl:input message="tns:getSupportedLanguages"/>
+      <wsdl:output message="tns:getSupportedLanguagesResponse"/>
+    </wsdl:operation>
+        
+    <wsdl:operation name="getVariants">
+      <wsdl:documentation>
+        Abfrage nach existierenden Varianten.
+
+        Diese Methode liefert zu der übergebenen Klassifikations-Version alle Klassifikations-Varianten.
+      </wsdl:documentation>
+      <wsdl:input message="tns:getVariants"/>
+      <wsdl:output message="tns:getVariantsResponse"/>
+      <wsdl:fault message="tns:AuthenticationException" name="AuthenticationException"/>
+      <wsdl:fault message="tns:NotFoundException" name="NotFoundException"/>
+    </wsdl:operation>        
+    <wsdl:operation name="ping">
+      <wsdl:documentation>Diese Methode dient nur zum Testen der Verbindung.</wsdl:documentation>
+      <wsdl:input message="tns:ping"/>
+      <wsdl:output message="tns:pingResponse"/>                
+    </wsdl:operation>     
+        
+    <wsdl:operation name="getAllItems" parameterOrder="identifier">
+      <wsdl:documentation>
+        Ermittelt alle Items zu einem Level, die zu einer Klassifikationsversion mit dem angegebenen Bezeichner gehören.
+      </wsdl:documentation>
+      <wsdl:input message="tns:getAllItems"/>
+      <wsdl:output message="tns:getAllItemsResponse"/>
+      <wsdl:fault message="tns:AuthenticationException" name="AuthenticationException"/>
+      <wsdl:fault message="tns:LanguageNotSupportedException" name="LanguageNotSupportedException"/>
+      <wsdl:fault message="tns:NotFoundException" name="NotFoundException"/>
+    </wsdl:operation>  
+    <wsdl:operation name="getAllItemsByLanguage" parameterOrder="identifier">
+      <wsdl:documentation>
+        Ermittelt alle Items einer Sprache zu einem Level, die zu einer Klassifikationsversion mit dem angegebenen Bezeichner gehören.
+      </wsdl:documentation>
+      <wsdl:input message="tns:getAllItemsByLanguage"/>
+      <wsdl:output message="tns:getAllItemsByLanguageResponse"/>
+      <wsdl:fault message="tns:AuthenticationException" name="AuthenticationException"/>
+      <wsdl:fault message="tns:LanguageNotSupportedException" name="LanguageNotSupportedException"/>
+      <wsdl:fault message="tns:NotFoundException" name="NotFoundException"/>
+    </wsdl:operation>                
+    <wsdl:operation name="getChildItems" parameterOrder="language">
+      <wsdl:documentation>
+        Ermittelt alle untergeordneten Items zu einem Item anhand des Schlüssels, die zu einer Klassifikationsversion mit dem angegebenen Bezeichner gehören.
+      </wsdl:documentation>
+      <wsdl:input message="tns:getChildItems"/>
+      <wsdl:output message="tns:getChildItemsResponse"/>
+      <wsdl:fault message="tns:AuthenticationException" name="AuthenticationException"/>
+      <wsdl:fault message="tns:LanguageNotSupportedException" name="LanguageNotSupportedException"/>
+      <wsdl:fault message="tns:NotFoundException" name="NotFoundException"/>
+    </wsdl:operation>  
+    <wsdl:operation name="getAllVersions" parameterOrder="language">
+      <wsdl:documentation>
+        Ermittelt alle Klassifikationsversionen, die zu der Klassifikation mit dem angegebenen Bezeichner gehören.
+      </wsdl:documentation>
+      <wsdl:input message="tns:getAllVersions"/>
+      <wsdl:output message="tns:getAllVersionsResponse"/>
+      <wsdl:fault message="tns:AuthenticationException" name="AuthenticationException"/>
+      <wsdl:fault message="tns:LanguageNotSupportedException" name="LanguageNotSupportedException"/>
+      <wsdl:fault message="tns:NotFoundException" name="NotFoundException"/>
+    </wsdl:operation>                
+    <wsdl:operation name="getVersionData" parameterOrder="language">
+      <wsdl:documentation>
+        Ermittelt alle Eckdaten, die zu einer Klassifikationsversion mit dem angegebenen Bezeichner gehören.
+      </wsdl:documentation>
+      <wsdl:input message="tns:getVersionData"/>
+      <wsdl:output message="tns:getVersionDataResponse"/>
+      <wsdl:fault message="tns:AuthenticationException" name="AuthenticationException"/>
+      <wsdl:fault message="tns:LanguageNotSupportedException" name="LanguageNotSupportedException"/>
+      <wsdl:fault message="tns:NotFoundException" name="NotFoundException"/>
+    </wsdl:operation>                   
+    <wsdl:operation name="getAllClassification" parameterOrder="language">
+      <wsdl:documentation>
+        Ermittelt alle Klassifikation anhand des angegebenen Sprachkennzeichens, welche im Klassifikationsserver vorhanden sind.
+      </wsdl:documentation>
+      <wsdl:input message="tns:getAllClassification"/>
+      <wsdl:output message="tns:getAllClassificationResponse"/>
+      <wsdl:fault message="tns:LanguageNotSupportedException" name="LanguageNotSupportedException"/>
+      <wsdl:fault message="tns:NotFoundException" name="NotFoundException"/>
+    </wsdl:operation>
+        
+    <wsdl:operation name="getClassificationData" parameterOrder="language">
+      <wsdl:documentation>
+        Ermittelt alle Eckdaten, die zu einer Klassifikation mit dem angegebenen Bezeichner gehören.
+      </wsdl:documentation>
+      <wsdl:input message="tns:getClassificationData"/>
+      <wsdl:output message="tns:getClassificationDataResponse"/>
+      <wsdl:fault message="tns:LanguageNotSupportedException" name="LanguageNotSupportedException"/>
+      <wsdl:fault message="tns:NotFoundException" name="NotFoundException"/>
+    </wsdl:operation>    
+            
+    <wsdl:operation name="getAllFamilies" parameterOrder="language">
+      <wsdl:documentation>
+        Ermittelt alle Klassifikationsfamilien anhand des angegebenen Sprachkennzeichens, welche im Klassifikationsserver vorhanden sind.
+      </wsdl:documentation>
+      <wsdl:input message="tns:getAllFamilies"/>
+      <wsdl:output message="tns:getAllFamiliesResponse"/>
+      <wsdl:fault message="tns:LanguageNotSupportedException" name="LanguageNotSupportedException"/>
+      <wsdl:fault message="tns:NotFoundException" name="NotFoundException"/>
+    </wsdl:operation>
+        
+    <wsdl:operation name="getFamilyData" parameterOrder="language">
+      <wsdl:documentation>
+        Ermittelt alle Eckdaten, die zu einer Klassifikationsfamilie mit dem angegebenen Bezeichner gehören.
+      </wsdl:documentation>
+      <wsdl:input message="tns:getFamilyData"/>
+      <wsdl:output message="tns:getFamilyDataResponse"/>
+      <wsdl:fault message="tns:LanguageNotSupportedException" name="LanguageNotSupportedException"/>
+      <wsdl:fault message="tns:NotFoundException" name="NotFoundException"/>
+    </wsdl:operation>
+        
+    <wsdl:operation name="searchItem" parameterOrder="language identifier date term">
+      <wsdl:documentation>
+        Freitextsuche eines Klassifikations-Items.
+				
+        Diese Methode sucht innerhalb der übergebenen Klassifikations-Version/Variante nach Items mittels dem übergeben Suchbegriff.
+        Die Ergebnisliste ist nach der Anzahl der Treffer und danach nach dem Item-Schlüsseln sortiert.
+      </wsdl:documentation>
+      <wsdl:input message="tns:searchItem"/>
+      <wsdl:output message="tns:searchItemResponse"/>
+      <wsdl:fault message="tns:AuthenticationException" name="AuthenticationException"/>
+      <wsdl:fault message="tns:LanguageNotSupportedException" name="LanguageNotSupportedException"/>
+      <wsdl:fault message="tns:NotFoundException" name="NotFoundException"/>
+    </wsdl:operation>
+        
+    <wsdl:operation name="extractForOfflineUse" parameterOrder="identifier date chunkNumber chunkCount filename">
+      <wsdl:documentation> 
+        Diese Methode extrahiert die angegebenen Klassifikationen und liefert sie in eine tar.gz-Datei gepackt als ByteArray zurück. 
+        Wenn Sie eine bestimmte Größe überschneidet wird nur ein Teil(chunk) zurückgeliefert. Um die Datei zu vervollständigen muss 
+        die extractForOfflineUse-Methode wiederholt aufgerufen werden. Bis die Benachrichtigung über die letzte Teillieferung erfolgt.
+        Diese Meldung kann beim zurückgelieferten ChunkByteArray-Objekt aufgerufen werden (isLastChunk). 
+        Das ChunkByteArray-Objekt enthält zudem eine Teillieferung der tar.gz-Datei. In dieser sind enthalten: Die Claset-Dateien,
+        der Thesaurus, die Metadaten und eine txt-Datei.
+        Parameter:
+        date:   Das übergebene Datum ist für die Thesaurus-Daten relevant. Wenn das Datum dem im KlassService Online hinterlegten 
+        Datum entspricht, werden die Thesaurus-Daten nicht extrahiert. Das letzte Datum wird in der Datei „import.properties“
+        mitgeliefert (in der Variable „ths.timestamp“).
+        chunknumber: Laufende Nummer der chunks. Beim initialen Aufruf der Methode mit 0 anzugeben. Bei jeden weiteren Aufruf muss 
+        die über chunkByteArray.getChunknumber() gelieferte Chunknumber mitgegeben werden. Kann zur Berechnung einer Fortschrittsanzeige 
+        benutzt werden.
+        chunkcount: Gesamtzahl der Chunks. Beim initialen Aufruf der Methode mit 0 anzugeben. Bei jeden weiteren Aufruf kann die 
+        über chunkByteArray.getChunkcount() gelieferte Chunknumber mitgegeben werden. Kann zur Berechnung einer Fortschrittsanzeige 
+        benutzt werden.
+        filename: Dateiname der im Zielverzeichnis gespeicherten tar.gz-Datei. Initial muss ein leerer String mitgegeben werden. 
+        Bei jeden weiteren Aufruf muss der über ChunkByteArray.getFilename() gelieferte String verwendet werden.   
+        Informationen zum Inhalt der tar.gz:     
+        -Die Datei „import.properties“ wird innerhalb der TAR-Datei unter demselben Namen wie die TAR-Datei gesucht. Am besten wird
+        die Datei nicht umbenannt, ansonsten muss darauf geachtet werden, dass die Namen gleich sind.
+        Bsp.: 
+        Klassifikation der Wirtschaftszweige (WZ) 
+        kssOfflineImport4580926178019107127.tar.gz 
+        kssOfflineImport4580926178019107127.tar 
+        kssOfflineImport4580926178019107127import.properties  
+        -Die angegebene ID ist die ID der Klassifikationsvariante. Wenn Sie eine komplette Familie extrahieren möchten, geben Sie
+        alle IDs dieser Familie an. Z.B. bei den Wirtschaftszweigklassifikationen WZ93, WZ2003, WZ2008.
+        -Wird keine Klassifikation gefunden, werden Metadaten und Thesaurus nicht mitgeliefert.Diese Information findet sich auch in
+        den import.properties wieder.
+      </wsdl:documentation>
+      <wsdl:input message="tns:extractForOfflineUse"/>
+      <wsdl:output message="tns:extractForOfflineUseResponse"/>
+      <wsdl:fault message="tns:AuthenticationException" name="AuthenticationException"/>  
+      <wsdl:fault message="tns:NotFoundException" name="NotFoundException"/>
+      <wsdl:fault message="tns:InternalException" name="InternalException"/>
+      <wsdl:fault message="tns:LanguageNotSupportedException" name="LanguageNotSupportedException"/>
+    </wsdl:operation>
+    <wsdl:operation name="extractForOfflineUseUpdate" parameterOrder="identifier date chunkNumber chunkCount filename newimport thsimport">
+      <wsdl:documentation> 
+        Dies ist die erweiterte Version der Webservice Methode extractForOfflineUse, in der angegeben werden kann, ob die Daten geupdatet oder neuimportiert werden sollen.
+
+        Diese Methode extrahiert die angegebenen Klassifikationen und liefert sie in eine tar.gz-Datei gepackt als ByteArray zurück. 
+        Wenn Sie eine bestimmte Größe überschneidet wird nur ein Teil(chunk) zurückgeliefert. Um die Datei zu vervollständigen muss 
+        die extractForOfflineUseUpdate-Methode wiederholt aufgerufen werden. Bis die Benachrichtigung über die letzte Teillieferung erfolgt.
+        Diese Meldung kann beim zurückgelieferten ChunkByteArray-Objekt aufgerufen werden (isLastChunk). 
+        Das ChunkByteArray-Objekt enthält zudem eine Teillieferung der tar.gz-Datei. In dieser sind enthalten: Die Claset-Dateien,
+        der Thesaurus, die Metadaten und eine txt-Datei.
+        Parameter:
+        date:   Das übergebene Datum ist für die Thesaurus-Daten relevant. Wenn das Datum dem im KlassService Online hinterlegten 
+        Datum entspricht, werden die Thesaurus-Daten nicht extrahiert. Das letzte Datum wird in der Datei „import.properties“
+        mitgeliefert (in der Variable „ths.timestamp“).
+        chunknumber: Laufende Nummer der chunks. Beim initialen Aufruf der Methode mit 0 anzugeben. Bei jeden weiteren Aufruf muss 
+        die über chunkByteArray.getChunknumber() gelieferte Chunknumber mitgegeben werden. Kann zur Berechnung einer Fortschrittsanzeige 
+        benutzt werden.
+        chunkcount: Gesamtzahl der Chunks. Beim initialen Aufruf der Methode mit 0 anzugeben. Bei jeden weiteren Aufruf kann die 
+        über chunkByteArray.getChunkcount() gelieferte Chunknumber mitgegeben werden. Kann zur Berechnung einer Fortschrittsanzeige 
+        benutzt werden.
+        filename: Dateiname der im Zielverzeichnis gespeicherten tar.gz-Datei. Initial muss ein leerer String mitgegeben werden. 
+        Bei jeden weiteren Aufruf muss der über ChunkByteArray.getFilename() gelieferte String verwendet werden.   
+        newimport: Boolean zeigt an, ob ein Neuimport stattfinden soll (true) oder nur ein Update (false). 
+                   Falls ein Neuimport stattfinden soll, wird auch automatisch der Thesaurus mitgeliefert.
+        thsimport: Boolean zeigt an, ob der Thesaurus Bestand geliefert werden soll. Wird automatisch auf true gesetzt, wenn newimport true ist.
+        Informationen zum Inhalt der tar.gz:     
+        -Die Datei „import.properties“ wird innerhalb der TAR-Datei unter demselben Namen wie die TAR-Datei gesucht. Am besten wird
+        die Datei nicht umbenannt, ansonsten muss darauf geachtet werden, dass die Namen gleich sind.
+        Bsp.: 
+        Klassifikation der Wirtschaftszweige (WZ) 
+        kssOfflineImport4580926178019107127.tar.gz 
+        kssOfflineImport4580926178019107127.tar 
+        kssOfflineImport4580926178019107127import.properties  
+        -Die angegebene ID ist die ID der Klassifikationsvariante. Wenn Sie eine komplette Familie extrahieren möchten, geben Sie
+        alle IDs dieser Familie an. Z.B. bei den Wirtschaftszweigklassifikationen WZ93, WZ2003, WZ2008.
+        -Wird keine Klassifikation gefunden, werden Metadaten und Thesaurus nicht mitgeliefert.Diese Information findet sich auch in
+        den import.properties wieder.
+      </wsdl:documentation>
+      <wsdl:input message="tns:extractForOfflineUseUpdate"/>
+      <wsdl:output message="tns:extractForOfflineUseUpdateResponse"/>
+      <wsdl:fault message="tns:AuthenticationException" name="AuthenticationException"/>  
+      <wsdl:fault message="tns:NotFoundException" name="NotFoundException"/>
+      <wsdl:fault message="tns:InternalException" name="InternalException"/>
+      <wsdl:fault message="tns:LanguageNotSupportedException" name="LanguageNotSupportedException"/>
+    </wsdl:operation>
+       
+    <wsdl:operation name="searchItemExtended" parameterOrder="language identifier date term">
+      <wsdl:documentation>
+        Freitextsuche eines Klassifikations-Items.
+				
+        Diese Methode sucht innerhalb der übergebenen Klassifikations-Version/Variante nach Items mittels dem übergeben Suchbegriff.
+        Die Ergebnisliste ist nach dem Trefferanteil und danach nach dem Item-Schlüsseln sortiert.                
+      </wsdl:documentation>
+      <wsdl:input message="tns:searchItemExtended"/>
+      <wsdl:output message="tns:searchItemExtendedResponse"/>
+      <wsdl:fault message="tns:AuthenticationException" name="AuthenticationException"/>
+      <wsdl:fault message="tns:LanguageNotSupportedException" name="LanguageNotSupportedException"/>
+      <wsdl:fault message="tns:NotFoundException" name="NotFoundException"/> 
+    </wsdl:operation>
+        
+    <wsdl:operation name="getFilteredSearchWords" parameterOrder="language identifier term">
+      <wsdl:documentation>
+        Ermittelt alle Stichwörter zur Anzeige zu einem Filterkriterium, die zu einer Klassifikationsversion mit
+        dem angegebenen Bezeichner gehören.
+        Liefert Liste mit Stichwörtern zur Anzeige mit den Texten zu gegebenen Sprachkennzeichen alphabetisch aufsteigend
+        sortiert zurück. Wenn keine Stichwörter zur Anzeige vorliegen wird null zurückgeliefert.               
+      </wsdl:documentation>
+      <wsdl:input message="tns:getFilteredSearchWords"/>
+      <wsdl:output message="tns:getFilteredSearchWordsResponse"/>
+      <wsdl:fault message="tns:AuthenticationException" name="AuthenticationException"/>
+      <wsdl:fault message="tns:LanguageNotSupportedException" name="LanguageNotSupportedException"/>
+      <wsdl:fault message="tns:NotFoundException" name="NotFoundException"/>
+      <wsdl:fault message="tns:RequestReturnsNullException" name="RequestReturnsNullException"/>
+    </wsdl:operation>
+    
+    <wsdl:operation name="getItemToCodePart" parameterOrder="language identifier term">
+      <wsdl:documentation>
+        Ermittelt alle Schlüssel(z. Bsp. Postleitzahlen) und deren dazugehörigen Stichwörtern(z. Bsp. Orte) zur Anzeige zu einem Filterkriterium, die zu einer Klassifikationsversion mit
+        dem angegebenen Bezeichner gehören.
+        Liefert Liste mit full-code und Stichwörter zur Anzeige mit den Texten zu gegebenen Sprachkennzeichen alphabetisch aufsteigend
+        sortiert zurück. Wenn keine full-code/Stichwörter zur Anzeige vorliegen wird null zurückgeliefert.               
+      </wsdl:documentation>
+      <wsdl:input message="tns:getItemToCodePart"/>
+      <wsdl:output message="tns:getItemToCodePartResponse"/>
+      <wsdl:fault message="tns:AuthenticationException" name="AuthenticationException"/>
+      <wsdl:fault message="tns:LanguageNotSupportedException" name="LanguageNotSupportedException"/>
+      <wsdl:fault message="tns:NotFoundException" name="NotFoundException"/>
+      <wsdl:fault message="tns:RequestReturnsNullException" name="RequestReturnsNullException"/>
+    </wsdl:operation>
+        
+    <wsdl:operation name="getItemData" parameterOrder="language identifier date key">
+      <wsdl:documentation>Abruf der Daten eines Klassifikations-Items.</wsdl:documentation>
+      <wsdl:input message="tns:getItemData"/>
+      <wsdl:output message="tns:getItemDataResponse"/>
+      <wsdl:fault message="tns:AuthenticationException" name="AuthenticationException"/>
+      <wsdl:fault message="tns:LanguageNotSupportedException" name="LanguageNotSupportedException"/>
+      <wsdl:fault message="tns:NotFoundException" name="NotFoundException"/>
+    </wsdl:operation>
+        
+    <wsdl:operation name="getItemDataExtended" parameterOrder="language identifier date key">
+      <wsdl:documentation>Abruf der Daten eines Klassifikations-Items sowie der gegenübergestellten Items und eine Auflistung der Elternelemente.</wsdl:documentation>
+      <wsdl:input message="tns:getItemDataExtended"/>
+      <wsdl:output message="tns:getItemDataExtendedResponse"/>
+      <wsdl:fault message="tns:AuthenticationException" name="AuthenticationException"/>
+      <wsdl:fault message="tns:LanguageNotSupportedException" name="LanguageNotSupportedException"/>
+      <wsdl:fault message="tns:NotFoundException" name="NotFoundException"/>
+    </wsdl:operation>
+        
+    <wsdl:operation name="getLastVersion">
+      <wsdl:documentation>
+        Abfrage der aktuellen Klassifikations-Version.
+
+        Dies Methode liefert die aktuelle Klassifikations-Version zu der übergebenen Klassifikations-Version.
+
+        Beispiel:
+
+        Klassifikation der Wirtschaftszweige (WZ)
+        - WZ93
+        - WZ2003
+        - WZ2008
+
+        Aufruf mit "WZ93": Rückgabe "WZ2008"
+      </wsdl:documentation>
+      <wsdl:input message="tns:getLastVersion"/>
+      <wsdl:output message="tns:getLastVersionResponse"/>
+      <wsdl:fault message="tns:AuthenticationException" name="AuthenticationException"/>
+      <wsdl:fault message="tns:NotFoundException" name="NotFoundException"/>
+    </wsdl:operation>
+
+    <wsdl:operation name="getAllItemKeys" parameterOrder="identifier date">
+      <wsdl:documentation>Diese Methode gibt alle Item-Schlüssel einer Klassifiaktionsversion/-variante zurück, bei der als Item Type "OfficialGrouping" definiert ist.</wsdl:documentation>
+      <wsdl:input message="tns:getAllItemKeys"/>
+      <wsdl:output message="tns:getAllItemKeysResponse"/>
+      <wsdl:fault message="tns:AuthenticationException" name="AuthenticationException"/>
+      <wsdl:fault message="tns:NotFoundException" name="NotFoundException"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="klassservicePortBinding" type="tns:klassservice">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc"/>
+    <wsdl:operation name="getSupportedLanguages">
+      <soap:operation soapAction=""/>
+      <wsdl:input>
+        <soap:body use="literal" namespace="http://webservice.klassservice.statistik.lfstad.bayern.de/"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" namespace="http://webservice.klassservice.statistik.lfstad.bayern.de/"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getVariants">
+      <soap:operation soapAction=""/>
+      <wsdl:input>
+        <soap:body use="literal" namespace="http://webservice.klassservice.statistik.lfstad.bayern.de/"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" namespace="http://webservice.klassservice.statistik.lfstad.bayern.de/"/>
+      </wsdl:output>
+      <wsdl:fault name="AuthenticationException">
+        <soap:fault name="AuthenticationException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="NotFoundException">
+        <soap:fault name="NotFoundException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ping">
+      <soap:operation soapAction=""/>
+      <wsdl:input>
+        <soap:body use="literal" namespace="http://webservice.klassservice.statistik.lfstad.bayern.de/"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" namespace="http://webservice.klassservice.statistik.lfstad.bayern.de/"/>
+      </wsdl:output>
+    </wsdl:operation>         
+    <wsdl:operation name="getAllItems">
+      <soap:operation soapAction=""/>
+      <wsdl:input>
+        <soap:body use="literal" namespace="http://webservice.klassservice.statistik.lfstad.bayern.de/"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" namespace="http://webservice.klassservice.statistik.lfstad.bayern.de/"/>
+      </wsdl:output>
+      <wsdl:fault name="AuthenticationException">
+        <soap:fault name="AuthenticationException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="LanguageNotSupportedException">
+        <soap:fault name="LanguageNotSupportedException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="NotFoundException">
+        <soap:fault name="NotFoundException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation> 
+    <wsdl:operation name="getAllItemsByLanguage">
+      <soap:operation soapAction=""/>
+      <wsdl:input>
+        <soap:body use="literal" namespace="http://webservice.klassservice.statistik.lfstad.bayern.de/"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" namespace="http://webservice.klassservice.statistik.lfstad.bayern.de/"/>
+      </wsdl:output>
+      <wsdl:fault name="AuthenticationException">
+        <soap:fault name="AuthenticationException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="LanguageNotSupportedException">
+        <soap:fault name="LanguageNotSupportedException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="NotFoundException">
+        <soap:fault name="NotFoundException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation> 
+    <wsdl:operation name="getChildItems">
+      <soap:operation soapAction=""/>
+      <wsdl:input>
+        <soap:body use="literal" namespace="http://webservice.klassservice.statistik.lfstad.bayern.de/"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" namespace="http://webservice.klassservice.statistik.lfstad.bayern.de/"/>
+      </wsdl:output>
+      <wsdl:fault name="AuthenticationException">
+        <soap:fault name="AuthenticationException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="LanguageNotSupportedException">
+        <soap:fault name="LanguageNotSupportedException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="NotFoundException">
+        <soap:fault name="NotFoundException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getAllVersions">
+      <soap:operation soapAction=""/>
+      <wsdl:input>
+        <soap:body use="literal" namespace="http://webservice.klassservice.statistik.lfstad.bayern.de/"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" namespace="http://webservice.klassservice.statistik.lfstad.bayern.de/"/>
+      </wsdl:output>
+      <wsdl:fault name="AuthenticationException">
+        <soap:fault name="AuthenticationException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="LanguageNotSupportedException">
+        <soap:fault name="LanguageNotSupportedException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="NotFoundException">
+        <soap:fault name="NotFoundException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation> 
+    <wsdl:operation name="getVersionData">
+      <soap:operation soapAction=""/>
+      <wsdl:input>
+        <soap:body use="literal" namespace="http://webservice.klassservice.statistik.lfstad.bayern.de/"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" namespace="http://webservice.klassservice.statistik.lfstad.bayern.de/"/>
+      </wsdl:output>
+      <wsdl:fault name="AuthenticationException">
+        <soap:fault name="AuthenticationException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="LanguageNotSupportedException">
+        <soap:fault name="LanguageNotSupportedException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="NotFoundException">
+        <soap:fault name="NotFoundException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getAllClassification">
+      <soap:operation soapAction=""/>
+      <wsdl:input>
+        <soap:body use="literal" namespace="http://webservice.klassservice.statistik.lfstad.bayern.de/"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" namespace="http://webservice.klassservice.statistik.lfstad.bayern.de/"/>
+      </wsdl:output>
+      <wsdl:fault name="LanguageNotSupportedException">
+        <soap:fault name="LanguageNotSupportedException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="NotFoundException">
+        <soap:fault name="NotFoundException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation> 
+    <wsdl:operation name="getClassificationData">
+      <soap:operation soapAction=""/>
+      <wsdl:input>
+        <soap:body use="literal" namespace="http://webservice.klassservice.statistik.lfstad.bayern.de/"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" namespace="http://webservice.klassservice.statistik.lfstad.bayern.de/"/>
+      </wsdl:output>
+      <wsdl:fault name="LanguageNotSupportedException">
+        <soap:fault name="LanguageNotSupportedException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="NotFoundException">
+        <soap:fault name="NotFoundException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>                      
+    <wsdl:operation name="getAllFamilies">
+      <soap:operation soapAction=""/>
+      <wsdl:input>
+        <soap:body use="literal" namespace="http://webservice.klassservice.statistik.lfstad.bayern.de/"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" namespace="http://webservice.klassservice.statistik.lfstad.bayern.de/"/>
+      </wsdl:output>
+      <wsdl:fault name="LanguageNotSupportedException">
+        <soap:fault name="LanguageNotSupportedException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="NotFoundException">
+        <soap:fault name="NotFoundException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>                
+    <wsdl:operation name="getFamilyData">
+      <soap:operation soapAction=""/>
+      <wsdl:input>
+        <soap:body use="literal" namespace="http://webservice.klassservice.statistik.lfstad.bayern.de/"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" namespace="http://webservice.klassservice.statistik.lfstad.bayern.de/"/>
+      </wsdl:output>
+      <wsdl:fault name="LanguageNotSupportedException">
+        <soap:fault name="LanguageNotSupportedException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="NotFoundException">
+        <soap:fault name="NotFoundException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>        
+    <wsdl:operation name="searchItem">
+      <soap:operation soapAction=""/>
+      <wsdl:input>
+        <soap:body use="literal" namespace="http://webservice.klassservice.statistik.lfstad.bayern.de/"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" namespace="http://webservice.klassservice.statistik.lfstad.bayern.de/"/>
+      </wsdl:output>
+      <wsdl:fault name="AuthenticationException">
+        <soap:fault name="AuthenticationException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="LanguageNotSupportedException">
+        <soap:fault name="LanguageNotSupportedException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="NotFoundException">
+        <soap:fault name="NotFoundException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="searchItemExtended">
+      <soap:operation soapAction=""/>
+      <wsdl:input>
+        <soap:body use="literal" namespace="http://webservice.klassservice.statistik.lfstad.bayern.de/"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" namespace="http://webservice.klassservice.statistik.lfstad.bayern.de/"/>
+      </wsdl:output>
+      <wsdl:fault name="AuthenticationException">
+        <soap:fault name="AuthenticationException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="LanguageNotSupportedException">
+        <soap:fault name="LanguageNotSupportedException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="NotFoundException">
+        <soap:fault name="NotFoundException" use="literal"/>
+      </wsdl:fault> 
+    </wsdl:operation>
+    <wsdl:operation name="getFilteredSearchWords">
+      <soap:operation soapAction=""/>
+      <wsdl:input>
+        <soap:body use="literal" namespace="http://webservice.klassservice.statistik.lfstad.bayern.de/"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" namespace="http://webservice.klassservice.statistik.lfstad.bayern.de/"/>
+      </wsdl:output>
+      <wsdl:fault name="AuthenticationException">
+        <soap:fault name="AuthenticationException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="LanguageNotSupportedException">
+        <soap:fault name="LanguageNotSupportedException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="NotFoundException">
+        <soap:fault name="NotFoundException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="RequestReturnsNullException">
+        <soap:fault name="RequestReturnsNullException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>    
+    <wsdl:operation name="getItemToCodePart">
+      <soap:operation soapAction=""/>
+      <wsdl:input>
+        <soap:body use="literal" namespace="http://webservice.klassservice.statistik.lfstad.bayern.de/"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" namespace="http://webservice.klassservice.statistik.lfstad.bayern.de/"/>
+      </wsdl:output>
+      <wsdl:fault name="AuthenticationException">
+        <soap:fault name="AuthenticationException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="LanguageNotSupportedException">
+        <soap:fault name="LanguageNotSupportedException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="NotFoundException">
+        <soap:fault name="NotFoundException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="RequestReturnsNullException">
+        <soap:fault name="RequestReturnsNullException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getItemData">
+      <soap:operation soapAction=""/>
+      <wsdl:input>
+        <soap:body use="literal" namespace="http://webservice.klassservice.statistik.lfstad.bayern.de/"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" namespace="http://webservice.klassservice.statistik.lfstad.bayern.de/"/>
+      </wsdl:output>
+      <wsdl:fault name="AuthenticationException">
+        <soap:fault name="AuthenticationException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="LanguageNotSupportedException">
+        <soap:fault name="LanguageNotSupportedException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="NotFoundException">
+        <soap:fault name="NotFoundException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getItemDataExtended">
+      <soap:operation soapAction=""/>
+      <wsdl:input>
+        <soap:body use="literal" namespace="http://webservice.klassservice.statistik.lfstad.bayern.de/"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" namespace="http://webservice.klassservice.statistik.lfstad.bayern.de/"/>
+      </wsdl:output>
+      <wsdl:fault name="AuthenticationException">
+        <soap:fault name="AuthenticationException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="LanguageNotSupportedException">
+        <soap:fault name="LanguageNotSupportedException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="NotFoundException">
+        <soap:fault name="NotFoundException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+        
+    <wsdl:operation name="getLastVersion">
+      <soap:operation soapAction=""/>
+      <wsdl:input>
+        <soap:body use="literal" namespace="http://webservice.klassservice.statistik.lfstad.bayern.de/"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" namespace="http://webservice.klassservice.statistik.lfstad.bayern.de/"/>
+      </wsdl:output>
+      <wsdl:fault name="AuthenticationException">
+        <soap:fault name="AuthenticationException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="NotFoundException">
+        <soap:fault name="NotFoundException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getAllItemKeys">
+      <soap:operation soapAction=""/>
+      <wsdl:input>
+        <soap:body use="literal" namespace="http://webservice.klassservice.statistik.lfstad.bayern.de/"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" namespace="http://webservice.klassservice.statistik.lfstad.bayern.de/"/>
+      </wsdl:output>
+      <wsdl:fault name="AuthenticationException">
+        <soap:fault name="AuthenticationException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="NotFoundException">
+        <soap:fault name="NotFoundException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="extractForOfflineUse">
+      <soap:operation soapAction=""/>
+      <wsdl:input>
+        <soap:body use="literal" namespace="http://webservice.klassservice.statistik.lfstad.bayern.de/"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" namespace="http://webservice.klassservice.statistik.lfstad.bayern.de/"/>
+      </wsdl:output>
+      <wsdl:fault name="AuthenticationException">
+        <soap:fault name="AuthenticationException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="NotFoundException">
+        <soap:fault name="NotFoundException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="InternalException">
+        <soap:fault name="InternalException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="LanguageNotSupportedException">
+        <soap:fault name="LanguageNotSupportedException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="extractForOfflineUseUpdate">
+      <soap:operation soapAction=""/>
+      <wsdl:input>
+        <soap:body use="literal" namespace="http://webservice.klassservice.statistik.lfstad.bayern.de/"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" namespace="http://webservice.klassservice.statistik.lfstad.bayern.de/"/>
+      </wsdl:output>
+      <wsdl:fault name="AuthenticationException">
+        <soap:fault name="AuthenticationException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="NotFoundException">
+        <soap:fault name="NotFoundException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="InternalException">
+        <soap:fault name="InternalException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="LanguageNotSupportedException">
+        <soap:fault name="LanguageNotSupportedException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="klassserviceService">
+    <wsdl:documentation>KlassService Webservice</wsdl:documentation>
+    <wsdl:port name="klassservicePort" binding="tns:klassservicePortBinding">
+      <wsdl:documentation>Version 1</wsdl:documentation>
+      <soap:address location="https://www.klassifikationsserver.de:443/klassService/services/klassservice"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -7,19 +7,19 @@ Licensed under the EUPL v. 1.2
 
 ## Citation
 
-If you use `hcs4os` in published work, please cite it:
+If you use `rac4os` in published work, please cite it:
 
 ```bibtex
-@software{montag_hcs4os,
+@software{montag_rac4os,
   author  = {Montag, Adrian},
-  title   = {{hcs4os}: Hierarchical Classification Systems for Official Statistics},
+  title   = {{hcs4os}: Retrieval Augmented Classification for Official Statistics},
   version = {0.2.10},
   year    = {2026},
-  url     = {https://github.com/adimo20/hcs4os},
+  url     = {https://github.com/adimo20/rac4os},
   license = {EUPL-1.2}
 }
 ```
 
-Montag, A. (2026). _hcs4os: Hierarchical Classification Systems for Official
+Montag, A. (2026). _hcs4os: Retrieval Augmented Classification for Official Statistics
 Statistics_ (Version 0.2.10) [Computer software].
-https://github.com/adimo20/hcs4os
+https://github.com/adimo20/rac4os
