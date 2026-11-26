@@ -122,10 +122,9 @@ production coding context the second one is what a human reviewer reads.
     returns, not a measured result. The retrieved candidates and all non-model output
     shown in these docs are real output from the example taxonomy.
 
-## Batch classification
+## Classifying many items
 
-There is no batch API; a loop is the intended usage, and `dspy` handles one call at a
-time:
+A loop is the simplest usage, and `dspy` handles one call at a time:
 
 ```python
 rows = []
@@ -140,8 +139,60 @@ for item in items:
 ```
 
 Keep the usage counts: they are the only cheap signal on what a configuration costs
-before you run it at volume. If you want to apply batch processing adapt [`dpsy.Parallel`](https://dspy.ai/current/api/modules/Parallel/).
-All classifiers of `rac4os` are dspy Modules that can be parallelised by the common dspy approach.
+before you run it at volume.
+
+Because one item spends most of its wall time waiting on the provider, running several
+at once is almost always worth it. `parallel_inference` does that for you:
+
+```python
+from rac4os.inference import parallel_inference
+
+results = parallel_inference(
+    classifier,
+    [{"query": item, "k": 5, "where": {"level": 3}} for item in items],
+    num_threads=5,
+)
+
+results[0].spend_code
+# '101010'
+```
+
+Each dict is one call, and it has to carry **every** argument that classifier's
+`forward` takes — for linear RAG that is `query` and `k`, plus `where` if you filter.
+The classifier is constructed once, before it is handed over, and the same instance is
+shared across the threads.
+
+`num_threads` is concurrency, not a chunk size: nothing is grouped into a single
+request, five threads simply means five calls in flight. Raise it until the provider
+starts rate-limiting you. Any further keyword argument is passed through to
+[`dspy.Parallel`](https://dspy.ai/current/api/modules/Parallel/), which is what does
+the work — every classifier in `rac4os` is a `dspy.Module`, so you can also drive
+`dspy.Parallel` yourself if you want something this wrapper does not expose.
+
+!!! warning "A failed item comes back as `None`, and ten of them end the run"
+
+    The results list is index-aligned with your inputs, and an item that raised is
+    `None` in it rather than missing — so `results[i]` always belongs to `inputs[i]`,
+    and `[i for i, r in enumerate(results) if r is None]` is what failed. The
+    exceptions themselves are only logged, not raised.
+
+    Past `dspy.Parallel`'s `max_errors` (10 by default) the run is cancelled and
+    raises, **discarding the results that already succeeded**. On a long run that
+    turns a handful of rate-limit errors into a total loss, so for anything
+    substantial pass a ceiling you will not reach:
+
+    ```python
+    results = parallel_inference(
+        classifier, inputs, num_threads=5, max_errors=len(inputs) + 1
+    )
+    ```
+
+    Then retry just the failures, serially — which is what actually clears a 429:
+
+    ```python
+    retry = [inp for inp, r in zip(inputs, results) if r is None]
+    recovered = parallel_inference(classifier, retry, num_threads=1)
+    ```
 
 ## Common pitfalls
 

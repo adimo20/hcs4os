@@ -6,10 +6,29 @@ import re
 @register("COICOP")
 class CoicopDataLoader(ClassificationLoader):
         
+    """
+    Loader for the official COICOP 2018 structure as published in xlsx, registered under
+    "COICOP".
+
+    The sheet's three note columns (`includes`, `alsoIncludes`, `excludes`) are folded into
+    the `details` dict rather than dropped, because the exclusion notes are what settle most
+    of the hard cases between neighbouring categories. The level is derived from the code
+    itself, by counting its dot-separated groups.
+    """
     def to_records(
         self
     )->list[dict]:
         
+        """
+        Read the xlsx and return `Code`-shaped dicts.
+
+        Non-breaking spaces and the `_x000D_` carriage returns that the published file contains
+        are replaced with ordinary spaces first; left in, they end up in the embedded text and
+        in the prompt.
+
+        Returns:
+            list[dict]: one dict per COICOP category, with `includes`, `alsoIncludes` and `excludes` kept under `details`.
+        """
         coicop_df = pd.read_excel(self.path, dtype=str).fillna("")
         for col in coicop_df.columns:
             coicop_df[col] = coicop_df[col].apply(lambda s: re.sub(r"(\xa00)|(_x000D_\n)|(\xa0)", " ",s))

@@ -42,12 +42,42 @@ class GenerateParentDescription(dspy.Signature):
 
 class ClassificationsSystemAugmenter:
     
+    """
+    Writes a description for each inner category from the labels of its children.
+
+    Retrieval compares an item against what a category says about itself, and inner
+    categories usually say very little: a few words of label is thin evidence for an
+    embedding model and thin ground for a generator to judge on. The information is not
+    missing from the taxonomy though, it is in the children, whose labels together delimit
+    what the parent covers. This module makes that implicit scope explicit by writing it
+    out as prose and storing it on the parent.
+
+    It is the same idea as candidate augmentation, applied one step earlier: augmentation
+    shows the children to the model at classification time, refinement turns them into a
+    description once, up front.
+
+    Parameters:
+        classification_name (str): dataset name resolved through `get_classification_system`.
+        api_key (str): credential for the LM provider.
+        model (str): LiteLLM model identifier, e.g. "openai/gpt-4o-mini".
+
+    Attributes:
+        classification_system (ClassificationSystem): the taxonomy being refined, modified in place.
+        generator (dspy.ChainOfThought): the generation step over `GenerateParentDescription`.
+    """
     def __init__(
         self,
         classification_name,
         api_key,
         model
     ):
+        """
+        Loads the classification system and configures the LM.
+
+        This calls `dspy.configure` globally and does not pin its LM per call, so construct it
+        in a script of its own rather than alongside classifiers that expect a different
+        model.
+        """
         self.classification_name = classification_name
         self.classification_system = get_classification_system(self.classification_name)
         self.generator = dspy.ChainOfThought(GenerateParentDescription)
@@ -103,9 +133,21 @@ class ClassificationsSystemAugmenter:
             print(e)
             continue
             
-      def get_updated_classification_system(self, path):
-        codes_new = [self.classification_system._lookup[k].to_dict() for k in self.classification_system._lookup.keys()]
-        with open(path, "w", encoding="utf-8") as f:
-          f.write(json.dumps(codes_new, indent=4, ensure_ascii=False))
+    def get_updated_classification_system(self, path):
+      """
+      Write every record in the lookup to a JSON file.
+
+      The result is a complete dataset in `Code` shape, which is exactly what the `"JSON"`
+      loader reads, so the refined taxonomy comes back as a dataset of its own. Treat the
+      written file as the output of a refinement run and load it fresh: only the lookup is
+      updated during the run, while `codes` and the children register still hold what the
+      loader produced.
+
+      Parameters:
+          path (str|Path): file to write the refined dataset to.
+      """
+      codes_new = [self.classification_system._lookup[k].to_dict() for k in self.classification_system._lookup.keys()]
+      with open(path, "w", encoding="utf-8") as f:
+        f.write(json.dumps(codes_new, indent=4, ensure_ascii=False))
         
         

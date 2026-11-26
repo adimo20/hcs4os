@@ -4,6 +4,18 @@ from typing import Literal
 
 class RAGAgent(BaseRAGAgent):
 
+    """
+    `BaseRAGAgent` with the bundled configurations in front of it.
+
+    `CONFIGS` holds a ready-made signature and search-tool description per shipped
+    classification, so only the store, the credentials and the model have to be supplied.
+    For your own taxonomy either add an entry to `CONFIGS` or construct `BaseRAGAgent`
+    directly; both are the same code path.
+
+    Parameters:
+        classification_name (str): a key of `CONFIGS`.
+        **kwargs (Any): forwarded to `BaseRAGAgent`, e.g. `store`, `api_key`, `model_name`.
+    """
     CONFIGS = registry
 
     def __init__(
@@ -11,6 +23,15 @@ class RAGAgent(BaseRAGAgent):
         classification_name: Literal["COICOP_2018", "ICATUS_2016", "SEA_2021"], 
         **kwargs,
     ) -> None:
+        """
+        Looks the configuration up in `CONFIGS` and hands it to the base class.
+
+        Anything you pass yourself is forwarded unchanged, so a bundled entry can be
+        overridden per call.
+
+        Raises:
+            ValueError: if `classification_name` has no entry in `CONFIGS`.
+        """
         if classification_name not in self.CONFIGS:
             raise ValueError(f"Unknown classification system: {classification_name}")
 

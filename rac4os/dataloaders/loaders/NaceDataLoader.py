@@ -18,6 +18,14 @@ REQUIRED_COLS = [
 @register("NACE")
 class NaceLoader(ClassificationLoader):
 
+    """
+    Loader for the NACE Rev. 2.1 structure with explanatory notes as published in xlsx,
+    registered under "NACE".
+
+    The source file is the ShowVoc export named in the comment at the top of this module.
+    Its `Includes`, `IncludesAlso` and `Excludes` columns are kept under `details`, and the
+    level is taken from the file's own `LEVEL` column rather than derived from the code.
+    """
     def to_records(
         self        
     )->list[dict]:

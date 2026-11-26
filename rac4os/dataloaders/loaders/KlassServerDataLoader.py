@@ -5,6 +5,16 @@ import xml.etree.ElementTree as ET
 @register("KLASS_SERVER")
 class KlassServerDataloader(ClassificationLoader):
     
+  """
+  Loader for the XML exports of the German Klassifikationsserver, registered under
+  "KLASS_SERVER".
+
+  One loader covers every classification published there, which is why SEA, WZ and KldB
+  all share it: the export format is the same and only the file differs. The explanatory
+  notes are parsed out of the nested detail elements into `details`, and empty detail
+  dicts are removed so that a category without notes does not carry an empty field into
+  the prompt.
+  """
   def __get_detail_dict(self, item):
 
     """
@@ -76,6 +86,12 @@ class KlassServerDataloader(ClassificationLoader):
         self
     )->list[dict]:
 
+    """
+    Parse the XML export and return `Code`-shaped dicts.
+
+    Returns:
+        list[dict]: one dict per category, with the classification's explanatory notes under `details`.
+    """
     all_labels = self.__parse_xml(self.path)
     all_labels = self.__clean_dict(all_labels)
     return all_labels

@@ -1,6 +1,15 @@
 from pathlib import Path
 
 def make_path(filename:str):
+    """
+    Resolve a filename to the bundled data file of that name.
+
+    Parameters:
+        filename (str): name of a file in the package's `_data` directory.
+
+    Returns:
+        Path: absolute path to that file inside the installed package.
+    """
     return Path(__file__).resolve().parent.parent / "_data" / filename
 
 mapping = {

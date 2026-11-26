@@ -7,6 +7,18 @@ from . import registry
 
 class RAGChainOfThought(BaseRAGCoT):
     
+    """
+    `BaseRAGCoT` with the bundled configurations in front of it.
+
+    `CONFIGS` holds a signature and the two field names per shipped classification, so only
+    the store, the credentials and the model have to be supplied. For your own taxonomy
+    either add an entry to `CONFIGS` or construct `BaseRAGCoT` directly and pass the
+    signature and field names yourself; both are the same code path.
+
+    Parameters:
+        classification_name (str): a key of `CONFIGS`.
+        **kwargs (Any): forwarded to `BaseRAGCoT`, e.g. `store`, `api_key`, `model_name`.
+    """
     CONFIGS = {
         "COICOP_2018":{
             "signature":registry.CoicopRAGChainOfThoughtSignature,
@@ -36,6 +48,15 @@ class RAGChainOfThought(BaseRAGCoT):
         **kwargs,
     ) -> None:
         
+        """
+        Looks the configuration up in `CONFIGS` and hands it to `BaseRAGCoT`.
+
+        Anything you pass yourself is forwarded unchanged, so a bundled signature or field name
+        can be overridden per call.
+
+        Raises:
+            ValueError: if `classification_name` has no entry in `CONFIGS`.
+        """
         if classification_name not in self.CONFIGS:
             raise ValueError(f"Unknown classification system: {classification_name}")
 
@@ -72,6 +93,17 @@ class QueryRephraser(dspy.Module):
         classification_name: str|None,
         signature: dspy.Signature|None=None,
     ) -> None:
+        """
+        Picks the rephrasing signature and builds the one-shot predictor that runs it.
+
+        Either `classification_name` must be a key of the internal mapping or an explicit
+        `signature` must be given; passing `classification_name=None` together with your own
+        signature is how you rephrase for a taxonomy that is not bundled. The signature's first
+        input field is read off here, so callers never have to know what it is called.
+
+        Raises:
+            AssertionError: if neither a known classification name nor a signature was given.
+        """
         super().__init__()
         self.lm = lm
         self.mapping = {
@@ -92,6 +124,19 @@ class QueryRephraser(dspy.Module):
         self.rephrase = dspy.Predict(self.signature)
 
     def forward(self, query: str) -> dspy.Prediction:
+        """
+        Rewrite one item into a retrieval query.
+
+        Runs on this module's own LM through a `dspy.context`, so the rewrite can use a smaller
+        and cheaper model than the classification step. An empty rewrite falls back to the
+        original item, so the pipeline can never end up retrieving on an empty query.
+
+        Parameters:
+            query (str): the raw item.
+
+        Returns:
+            dspy.Prediction: carries `rephrased_query`; the original item if the rewrite came back empty.
+        """
         with dspy.context(lm=self.lm):
             prediction = self.rephrase(**{self.input_field: query})
         rephrased = (prediction.rephrased_query or "").strip()
@@ -127,6 +172,14 @@ class RRR_RAGChainOfThought(RAGChainOfThought):
         *args,
         **kwargs,
     ) -> None:
+        """
+        Builds the linear pipeline and puts the rewrite step in front of it.
+
+        Parameters:
+            rephraser (QueryRephraser): the rewrite step.
+            *args (Any): forwarded to `RAGChainOfThought`.
+            **kwargs (Any): forwarded to `RAGChainOfThought`, e.g. `classification_name`, `store`, `api_key`, `model_name`.
+        """
         super().__init__(*args, **kwargs)
 
         self.rephrasing_module = rephraser
@@ -138,6 +191,23 @@ class RRR_RAGChainOfThought(RAGChainOfThought):
         k: int, 
         where: dict | None = None
     ) -> dspy.Prediction:
+        """
+        Rewrite the item, retrieve on the rewritten query, then classify the original item.
+
+        The rewrite steers retrieval only. The generator still sees the item as it came in, so
+        detail the rephraser dropped cannot be lost from the decision itself. The query that
+        was actually retrieved on is attached to the prediction as `rephrased_query`, which is
+        what you inspect when a result looks wrong: it separates a bad rewrite from a bad
+        choice among good candidates.
+
+        Parameters:
+            query (str): the item to classify.
+            k (int): how many candidates to retrieve.
+            where (dict|None): metadata filter passed straight to the store.
+
+        Returns:
+            dspy.Prediction: the signature's output fields, `reasoning`, and `rephrased_query`.
+        """
         rephrased_query = self.rephrasing_module(query=query).rephrased_query
         retrieved_context = self.store.search_category(rephrased_query, k, where=where)
         retrieved_context_str = json.dumps(
